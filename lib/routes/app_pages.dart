@@ -1,4 +1,10 @@
 import 'package:get/get.dart';
+import 'package:repair_parts/moduls/backet/binding/backet_binding.dart';
+import 'package:repair_parts/moduls/backet/screen/backet_screen.dart';
+import 'package:repair_parts/moduls/message/binding/message_binding.dart';
+import 'package:repair_parts/moduls/message/screen/message_screen.dart';
+import 'package:repair_parts/moduls/orders/binding/order_binding.dart';
+import 'package:repair_parts/moduls/orders/screen/order_screen.dart';
 //START CONTROLLER
 import '/moduls/product/binding/product_binding.dart';
 import '/moduls/profile/binding/profile_binding.dart';
@@ -45,6 +51,21 @@ class AppPages {
         name: Routes.PRODUCT,
         page: () => ProductScreen(),
         binding: ProductBinding(),
+      ),
+      GetPage(
+        name: Routes.BACKET,
+        page: () => BacketScreen(),
+        binding: BacketBinding(),
+      ),
+      GetPage(
+        name: Routes.ORDERS,
+        page: () => OrderScreen(),
+        binding: OrderBinding(),
+      ),
+      GetPage(
+        name: Routes.MESSAGE,
+        page: () => MessageScreen(),
+        binding: MessageBinding(),
       ),
     ];
   }

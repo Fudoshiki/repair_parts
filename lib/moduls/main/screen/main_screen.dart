@@ -1,11 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/moduls/backet/screen/backet_screen.dart';
+import 'package:repair_parts/moduls/backet/screen/backet_screen2.dart';
+import 'package:repair_parts/moduls/backet/screen/pages/done_query.dart';
 import 'package:repair_parts/moduls/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/main/screen/pages/choose_region.dart';
+import 'package:repair_parts/moduls/main/screen/pages/choose_seller.dart';
 import 'package:repair_parts/moduls/main/screen/pages/list_all_screen.dart';
+import 'package:repair_parts/moduls/message/screen/message_screen.dart';
+import 'package:repair_parts/moduls/orders/screen/order_screen.dart';
+import 'package:repair_parts/moduls/orders/screen/order_screen2.dart';
 import 'package:repair_parts/moduls/product/controller/product_controller.dart';
 import 'package:repair_parts/moduls/product/screen/product_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/pages/query_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
 import '../component/bottom_item.dart';
 import 'pages/choose_category.dart';
@@ -33,13 +43,39 @@ class MainScreenState extends State<MainScreen>{
           CatalogScreen(),
           SearchPage(),
           ProductScreen(),
-          ChooseCategory()
+          ChooseCategory(),
+          ChooseRegion(),
+          ChooseSeller(),
         ],
       ),
-      Container(),
-      ListAllScreen(),
-      Container(),
-      ProfileScreen(),
+      PageView(
+        controller: _mainController.controllerOrderPage,
+        children: [
+          OrderScreen(),
+          OrderScreen2()
+        ],
+      ),
+      PageView(
+        controller: _mainController.controllerBacketPage,
+
+        children: [
+          BacketScreen2(),
+          ChooseRegion(),
+          ChooseSeller(),
+          DoneQuery(),
+          BacketScreen(),
+
+        ],
+      ),
+      MessageScreen(),
+      PageView(
+        controller: _mainController.controllerProfilePage,
+        children: [
+          ProfileScreen(),
+          QueryScreen(),
+          QueryScreen2()
+        ],
+      ),
     ];
     setState(() {
     });

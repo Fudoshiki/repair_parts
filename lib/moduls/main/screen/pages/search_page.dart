@@ -710,7 +710,6 @@ class SearchPage extends StatelessWidget{
                                               double width = MediaQuery.of(context).size.width;
                                               double height = MediaQuery.of(context).size.height;
                                               return AlertDialog(
-
                                                   backgroundColor: Colors.transparent,
                                                   contentPadding: EdgeInsets.zero,
                                                   elevation: 0.0,
@@ -860,58 +859,62 @@ class SearchPage extends StatelessWidget{
                                       fontFamily: "Roboto"
                                   ),
                                 ),
-                                Container(
-                                  height: 50,
-                                  width: Get.width-40,
-                                  margin: EdgeInsets.only(
-                                      top: 12
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      border: Border.all(
-                                          width: 1,
-                                          color: Color(0xffD6D6D6)
-                                      )
-                                  ),
-
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 20,
-                                        ),
-                                        child: Text(
-                                          "Не выбрано",
-                                          style: TextStyle(
-                                              color: Color(0xff959595),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Roboto"
+                                GestureDetector(
+                                  child: Container(
+                                    height: 50,
+                                    width: Get.width-40,
+                                    margin: EdgeInsets.only(
+                                        top: 12
+                                    ),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(6),
+                                        border: Border.all(
+                                            width: 1,
+                                            color: Color(0xffD6D6D6)
+                                        )
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 20,
                                           ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 50,
-                                        width: 50,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.only(
-                                                bottomRight: Radius.circular(6),
-                                                topRight: Radius.circular(6)
+                                          child: Text(
+                                            "Не выбрано",
+                                            style: TextStyle(
+                                                color: Color(0xff959595),
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: "Roboto"
                                             ),
-                                            color: Color(0xffF3F3F3)
-
-                                        ),
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.keyboard_arrow_down_sharp,
-                                            color: Color(0xff959595),
                                           ),
                                         ),
-                                      )
-                                    ],
+                                        Container(
+                                          height: 50,
+                                          width: 50,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  bottomRight: Radius.circular(6),
+                                                  topRight: Radius.circular(6)
+                                              ),
+                                              color: Color(0xffF3F3F3)
+
+                                          ),
+                                          child: Center(
+                                            child: Icon(
+                                              Icons.keyboard_arrow_down_sharp,
+                                              color: Color(0xff959595),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
-                                ),
+                                  onTap: (){
+                                    _mainController.controllerMainPage.jumpToPage(4);
+                                  },
+                                )
 
                               ],
                             ),
@@ -932,57 +935,62 @@ class SearchPage extends StatelessWidget{
                                       fontFamily: "Roboto"
                                   ),
                                 ),
-                                Container(
-                                  height: 50,
-                                  width: Get.width-40,
-                                  margin: EdgeInsets.only(
-                                      top: 12
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      border: Border.all(
-                                          width: 1,
-                                          color: Color(0xffD6D6D6)
-                                      )
-                                  ),
+                                GestureDetector(
+                                  child: Container(
+                                    height: 50,
+                                    width: Get.width-40,
+                                    margin: EdgeInsets.only(
+                                        top: 12
+                                    ),
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(6),
+                                        border: Border.all(
+                                            width: 1,
+                                            color: Color(0xffD6D6D6)
+                                        )
+                                    ),
 
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 20,
-                                        ),
-                                        child: Text(
-                                          "Не выбрано",
-                                          style: TextStyle(
-                                              color: Color(0xff959595),
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w400,
-                                              fontFamily: "Roboto"
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 20,
                                           ),
-                                        ),
-                                      ),
-                                      Container(
-                                        height: 50,
-                                        width: 50,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.only(
-                                              bottomRight: Radius.circular(6),
-                                              topRight: Radius.circular(6)
+                                          child: Text(
+                                            "Не выбрано",
+                                            style: TextStyle(
+                                                color: Color(0xff959595),
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: "Roboto"
                                             ),
-                                            color: Color(0xffF3F3F3)
-
-                                        ),
-                                        child: Center(
-                                          child: Icon(
-                                              Icons.keyboard_arrow_down_sharp,
-                                            color: Color(0xff959595),
                                           ),
                                         ),
-                                      )
-                                    ],
+                                        Container(
+                                          height: 50,
+                                          width: 50,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.only(
+                                                  bottomRight: Radius.circular(6),
+                                                  topRight: Radius.circular(6)
+                                              ),
+                                              color: Color(0xffF3F3F3)
+
+                                          ),
+                                          child: Center(
+                                            child: Icon(
+                                              Icons.keyboard_arrow_down_sharp,
+                                              color: Color(0xff959595),
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
+                                  onTap: (){
+                                    _mainController.controllerMainPage.jumpToPage(5);
+                                  },
                                 ),
                               ],
                             ),

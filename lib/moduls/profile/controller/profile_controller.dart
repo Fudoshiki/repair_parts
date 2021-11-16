@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class ProfileController extends GetxController{
-  bool auth = false;
+  bool auth = true;
 
   var numberValid =false.obs;
   TextEditingController number = new TextEditingController();
@@ -10,4 +10,6 @@ class ProfileController extends GetxController{
   var opacity=0.obs;
 
   var time=0.obs;
+
+  var sorted = "Все".obs;
 }

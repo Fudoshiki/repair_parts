@@ -149,25 +149,29 @@ class CatalogScreen extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
-                                height: 44,
                                 width: Get.width-106,
+                                height: 46,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),
-                                    color: Colors.white
+                                    color: Colors.white,
                                 ),
                                 child: TextField(
-                                  enabled: false,
-                                  onTap: (){
-                                  },
+
                                   decoration: InputDecoration(
                                       hintText: "Поиск запчастей",
                                       hintStyle: TextStyle(
                                           fontWeight: FontWeight.w400,
-                                          fontSize: 12,
+                                          fontSize: 14,
                                           color: Color(0xff959595),
                                           fontFamily: "Roboto"
 
                                       ),
+                                      enabledBorder: InputBorder.none,
+                                      border: InputBorder.none,
+                                      focusedErrorBorder: InputBorder.none,
+                                      focusedBorder: InputBorder.none,
+                                      errorBorder: InputBorder.none,
+                                      disabledBorder: InputBorder.none,
                                       prefixIcon: Container(
                                         padding: EdgeInsets.symmetric(
                                             horizontal: 14,
