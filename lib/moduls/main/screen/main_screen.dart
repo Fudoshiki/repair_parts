@@ -17,6 +17,8 @@ import 'package:repair_parts/moduls/product/screen/product_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_delete.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_screen.dart';
 import '../component/bottom_item.dart';
 import 'pages/choose_category.dart';
 import 'pages/search_page.dart';
@@ -73,7 +75,10 @@ class MainScreenState extends State<MainScreen>{
         children: [
           ProfileScreen(),
           QueryScreen(),
-          QueryScreen2()
+          QueryScreen2(),
+
+          QueryItemScreen(),
+          QueryItemDelete()
         ],
       ),
     ];

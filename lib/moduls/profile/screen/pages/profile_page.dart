@@ -257,54 +257,60 @@ class ProfilePage extends StatelessWidget{
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                    bottom: 21,left: 14,
-                    top: 21
-                  ),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                        color: Color(0xffE7E7E7),
-                        width: 1
-                      )
-                    )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 18,
-                            height: 18,
-                            margin: EdgeInsets.only(
-                              right: 20
-                            ),
-                            child: Image.asset("assets/image/zap.png"),
-                          ),
-                          Text(
-                            "Запросы",
-                            style: TextStyle(
-                                color: Color(0xff2E2E33),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 8,
-                        height: 14,
-                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                      )
 
-                    ],
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 21,left: 14,
+                        top: 21
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 18,
+                              height: 18,
+                              margin: EdgeInsets.only(
+                                  right: 20
+                              ),
+                              child: Image.asset("assets/image/zap.png"),
+                            ),
+                            Text(
+                              "Запросы",
+                              style: TextStyle(
+                                  color: Color(0xff2E2E33),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: "Roboto"
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: 8,
+                          height: 14,
+                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                        )
+
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    _mainController.controllerProfilePage.jumpToPage(1);
+                  },
                 ),
                 GestureDetector(
                   child: Container(
@@ -378,9 +384,7 @@ class ProfilePage extends StatelessWidget{
                       ],
                     ),
                   ),
-                  onTap: (){
-                    _mainController.controllerProfilePage.jumpToPage(1);
-                  },
+
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(

@@ -6,6 +6,7 @@ import 'package:repair_parts/moduls/home/controller/home_controller.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/orders/controller/order_controller.dart';
 import 'package:repair_parts/moduls/profile/controller/profile_controller.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_screen.dart';
 
 class QueryScreen extends StatelessWidget{
   ProfileController _profileController = Get.find();
@@ -309,72 +310,77 @@ class QueryScreen extends StatelessWidget{
             child: ListView(
               padding: EdgeInsets.all(0),
               children: [
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                right: 26
-                            ),
-                            width: 15,
-                            height: 15,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffC00000)
-                            ),
-                            child: Center(
-                              child: Text(
-                                "1",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 8,
-                                    color: Colors.white,
-                                    fontFamily: "Roboto"
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        left: 20,
+                        right: 20,
+                        top: 22
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 22
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  right: 26
+                              ),
+                              width: 15,
+                              height: 15,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Color(0xffC00000)
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "1",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 8,
+                                      color: Colors.white,
+                                      fontFamily: "Roboto"
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
-                          Text(
-                            "1-6",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Запрос отправлен",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
+                            Text(
+                              "1-6",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 14,
+                                  color: Color(0xff2e2e33),
+                                  fontFamily: "Roboto"
+                              ),
+                            )
+                          ],
                         ),
-                      )
-                    ],
+                        Text(
+                          "Запрос отправлен",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 12,
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto"
+                          ),
+                        )
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    _mainController.controllerProfilePage.jumpToPage(3);
+                  }
                 ),
                 Container(
                   margin: EdgeInsets.only(
