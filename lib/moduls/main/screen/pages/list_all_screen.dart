@@ -12,6 +12,7 @@ import 'package:repair_parts/moduls/main/screen/pages/choose_region.dart';
 import 'package:repair_parts/moduls/main/screen/pages/choose_seller.dart';
 import 'package:repair_parts/moduls/main/screen/pages/search_page.dart';
 import 'package:repair_parts/moduls/message/screen/message_screen.dart';
+import 'package:repair_parts/moduls/orders/screen/order_item.dart';
 import 'package:repair_parts/moduls/orders/screen/order_screen.dart';
 import 'package:repair_parts/moduls/orders/screen/order_screen2.dart';
 import 'package:repair_parts/moduls/product/screen/product_screen.dart';
@@ -60,7 +61,7 @@ class ListAllScreen extends StatelessWidget{
               Get.back();
             },
           ),
-
+          //1
           GestureDetector(
             child: Container(
 
@@ -92,6 +93,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(HomeScreen());
             },
           ),
+          //2,7,10,10a,10b
           GestureDetector(
             child: Container(
                 margin: EdgeInsets.only(
@@ -125,6 +127,7 @@ class ListAllScreen extends StatelessWidget{
              Get.to(CatalogScreen(bottom: true,));
             },
           ),
+          //66,67,68
           GestureDetector(
             child: Container(
                 margin: EdgeInsets.only(
@@ -159,6 +162,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(RegisterPage());
             },
           ),
+          //21,22
           GestureDetector(
             child: Container(
                 margin: EdgeInsets.only(
@@ -193,6 +197,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(SearchPage(bottom: true,));
             },
           ),
+          //18,19
           GestureDetector(
             child: Container(
                 margin: EdgeInsets.only(
@@ -227,9 +232,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ProductScreen(bottom: true,));
             },
           ),
-
-          //18,19
-
+          //16,16a,17a,17,16b
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -264,6 +267,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ListItems("КАМАЗ",bottom: true,));
             },
           ),
+          //22а 22б 23
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -298,6 +302,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(AddAddress());
             },
           ),
+          //24 24а
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -332,6 +337,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ChooseCategory(bottom: true,));
             },
           ),
+          //53
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -366,6 +372,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ChooseSeller(bottom: true,));
             },
           ),
+          //82 83
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -400,6 +407,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ChooseRegion(bottom: true,));
             },
           ),
+          //69 69а 70 71
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -434,7 +442,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ProfileScreen(bottom: true,));
             },
           ),
-
+          //31
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -469,7 +477,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryScreen2(bottom: true,));
             },
           ),
-
+          //30 33
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -504,6 +512,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryScreen(bottom: true,));
             },
           ),
+          //45 45а 46
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -538,6 +547,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(OrderScreen(bottom: true,));
             },
           ),
+          //49
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -572,6 +582,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(BacketScreen(bottom: true,));
             },
           ),
+          //50 51 54 55
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -606,6 +617,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(BacketScreen2(bottom: true,));
             },
           ),
+          //56
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -640,7 +652,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(MessageScreen(bottom: true,));
             },
           ),
-
+          //30в 30г 30а 30б 30д
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -679,6 +691,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryItemScreen(bottom: true,));
             },
           ),
+          //30е
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -713,6 +726,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(Address());
             },
           ),
+          //30л
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -747,6 +761,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryItemDelete(bottom: true,));
             },
           ),
+          //32
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -781,6 +796,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryItemScreenWithPhoto(bottom: true,));
             },
           ),
+          //34 34б 34в 34г 34д 34а 34а 34б
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -819,7 +835,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryItemScreen2(bottom: true,));
             },
           ),
-
+          //35а 35б
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -854,6 +870,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(TransportCompany(bottom: true,));
             },
           ),
+          //36 36б 36а 37а 37 37б 40 40а 40в 40г
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -891,7 +908,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ListQueryItemScreen2(bottom: true,));
             },
           ),
-
+          //38 38а
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -926,7 +943,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryRegisterScreen(bottom: true,));
             },
           ),
-
+          //41 42 42а
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -961,6 +978,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryRegisterScreenUrFace(bottom: true,));
             },
           ),
+          //43 43а
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -995,10 +1013,44 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryRegisterScreenUrFace2OOO(bottom: true,));
             },
           ),
+          //48д
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 48д 48а 48б 48г",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
 
-          //43 43а
+            ),
+            onTap:(){
+              Get.to(OrderItem(bottom: true,));
+            },
+          ),
 
-          // QueryRegisterScreen
+
+
         ],
       ),
     );
