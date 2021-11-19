@@ -14,10 +14,21 @@ import 'package:repair_parts/moduls/main/screen/pages/search_page.dart';
 import 'package:repair_parts/moduls/message/screen/message_screen.dart';
 import 'package:repair_parts/moduls/orders/screen/order_screen.dart';
 import 'package:repair_parts/moduls/orders/screen/order_screen2.dart';
+import 'package:repair_parts/moduls/product/screen/product_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/register_page.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
+import 'package:repair_parts/moduls/query/screen/add_address.dart';
+import 'package:repair_parts/moduls/query/screen/list_query_item_screen2.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_delete.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_screen.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_screen2.dart';
+import 'package:repair_parts/moduls/query/screen/query_item_screen_with_photo.dart';
+import 'package:repair_parts/moduls/query/screen/query_register_screen.dart';
+import 'package:repair_parts/moduls/query/screen/query_register_screen_ur_face.dart';
+import 'package:repair_parts/moduls/query/screen/query_register_screen_ur_face2_ooo.dart';
+import 'package:repair_parts/moduls/query/screen/transport_company.dart';
 
 import 'add_address.dart';
 
@@ -49,6 +60,7 @@ class ListAllScreen extends StatelessWidget{
               Get.back();
             },
           ),
+
           GestureDetector(
             child: Container(
 
@@ -110,7 +122,7 @@ class ListAllScreen extends StatelessWidget{
                 )
             ),
             onTap:(){
-             Get.to(CatalogScreen());
+             Get.to(CatalogScreen(bottom: true,));
             },
           ),
           GestureDetector(
@@ -167,7 +179,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                        "Screens 21,18,19,22",
+                        "Screens 21,22",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -178,9 +190,46 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(SearchPage());
+              Get.to(SearchPage(bottom: true,));
             },
           ),
+          GestureDetector(
+            child: Container(
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 18,19",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(ProductScreen(bottom: true,));
+            },
+          ),
+
+          //18,19
+
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -212,7 +261,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ListItems("КАМАЗ"));
+              Get.to(ListItems("КАМАЗ",bottom: true,));
             },
           ),
           GestureDetector(
@@ -280,7 +329,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChooseCategory());
+              Get.to(ChooseCategory(bottom: true,));
             },
           ),
           GestureDetector(
@@ -314,7 +363,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChooseSeller());
+              Get.to(ChooseSeller(bottom: true,));
             },
           ),
           GestureDetector(
@@ -348,7 +397,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChooseRegion());
+              Get.to(ChooseRegion(bottom: true,));
             },
           ),
           GestureDetector(
@@ -382,7 +431,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProfileScreen());
+              Get.to(ProfileScreen(bottom: true,));
             },
           ),
 
@@ -406,7 +455,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 31 30 33",
+                      "Screens 31 ",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -417,7 +466,42 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryScreen());
+              Get.to(QueryScreen2(bottom: true,));
+            },
+          ),
+
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 30 33",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryScreen(bottom: true,));
             },
           ),
           GestureDetector(
@@ -451,7 +535,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(OrderScreen());
+              Get.to(OrderScreen(bottom: true,));
             },
           ),
           GestureDetector(
@@ -485,7 +569,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(BacketScreen());
+              Get.to(BacketScreen(bottom: true,));
             },
           ),
           GestureDetector(
@@ -519,7 +603,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(BacketScreen2());
+              Get.to(BacketScreen2(bottom: true,));
             },
           ),
           GestureDetector(
@@ -553,10 +637,368 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MessageScreen());
+              Get.to(MessageScreen(bottom: true,));
             },
           ),
 
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child: Text(
+                        "Screens 30в 30г 30а 30б 30д",
+                        maxLines: 2,
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryItemScreen(bottom: true,));
+            },
+          ),
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 30е",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(Address());
+            },
+          ),
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 30л",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryItemDelete(bottom: true,));
+            },
+          ),
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 32",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryItemScreenWithPhoto(bottom: true,));
+            },
+          ),
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width-51,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-51,
+                      child: Text(
+                        "Screens 34 34б 34в 34г 34д 34а 34а 34б",
+                        maxLines: 2,
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryItemScreen2(bottom: true,));
+            },
+          ),
+
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 35а 35б",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(TransportCompany(bottom: true,));
+            },
+          ),
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child: Text(
+                        "Screens 36 36б 36а 37а 37 37б 40 40а 40в 40г",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(ListQueryItemScreen2(bottom: true,));
+            },
+          ),
+
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 38 38а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryRegisterScreen(bottom: true,));
+            },
+          ),
+
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 41 42 42а ",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryRegisterScreenUrFace(bottom: true,));
+            },
+          ),
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 43 43а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(QueryRegisterScreenUrFace2OOO(bottom: true,));
+            },
+          ),
+
+          //43 43а
+
+          // QueryRegisterScreen
         ],
       ),
     );

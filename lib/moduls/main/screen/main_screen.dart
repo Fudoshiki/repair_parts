@@ -40,6 +40,7 @@ class MainScreenState extends State<MainScreen>{
   void initState() {
     pages=[
       PageView(
+        physics :NeverScrollableScrollPhysics(),
         controller: _mainController.controllerMainPage,
         children: [
           CatalogScreen(),
@@ -51,6 +52,7 @@ class MainScreenState extends State<MainScreen>{
         ],
       ),
       PageView(
+        physics :NeverScrollableScrollPhysics(),
         controller: _mainController.controllerOrderPage,
         children: [
           OrderScreen(),
@@ -58,30 +60,30 @@ class MainScreenState extends State<MainScreen>{
         ],
       ),
       PageView(
+        physics :NeverScrollableScrollPhysics(),
         controller: _mainController.controllerBacketPage,
-
         children: [
           BacketScreen2(),
           ChooseRegion(),
           ChooseSeller(),
           DoneQuery(),
           BacketScreen(),
-
         ],
       ),
       MessageScreen(),
       PageView(
+        physics :NeverScrollableScrollPhysics(),
         controller: _mainController.controllerProfilePage,
         children: [
           ProfileScreen(),
           QueryScreen(),
           QueryScreen2(),
-
           QueryItemScreen(),
           QueryItemDelete()
         ],
       ),
     ];
+
     setState(() {
     });
   }

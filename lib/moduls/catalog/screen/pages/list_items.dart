@@ -5,11 +5,14 @@ import 'package:repair_parts/components_main/item_block.dart';
 import 'package:repair_parts/components_main/item_row.dart';
 import 'package:repair_parts/moduls/catalog/controller/catalog_controller.dart';
 import 'package:repair_parts/moduls/catalog/screen/pages/filter_page.dart';
+import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 
 class ListItems extends StatelessWidget{
   String title;
+  bool? bottom;
+  BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
-  ListItems(@required this.title);
+  ListItems(@required this.title,{@required this.bottom});
   var array=[
     {
       "image":[
@@ -95,6 +98,56 @@ class ListItems extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: bottom!=null? SizedBox(
+        height: 50,
+        child: CupertinoTabBar(
+          border: Border(
+            top: BorderSide(
+              width: 1,
+              color: Color(0xffE7E7E7),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          items: [
+            _bottomNavigationitem.showItem(
+              true,
+              "home_icon.png",
+              18,
+              text: "Главная",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "orders_icon.png",
+              18,
+              text: "Заказы",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "bascket_icon.png",
+              18,
+              text: "Корзина",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "message_icon.png",
+              18,
+              text: "Диалоги",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "profile_icon.png",
+              18,
+              text: "Кабинет",
+
+            ),
+          ],
+        ),
+      ):Container(
+        height: 1,
+      ),
+
       appBar: AppBar(
         backgroundColor: Color(0xffE6332A),
         elevation: 0,

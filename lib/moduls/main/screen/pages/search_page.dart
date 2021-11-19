@@ -17,10 +17,62 @@ class SearchPage extends StatelessWidget{
   CatalogController catalogController =Get.find();
   MainController _mainController =Get.find();
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
+  bool? bottom;
+  SearchPage({@required this.bottom});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: bottom!=null? SizedBox(
+        height: 50,
+        child: CupertinoTabBar(
+          border: Border(
+            top: BorderSide(
+              width: 1,
+              color: Color(0xffE7E7E7),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          items: [
+            _bottomNavigationitem.showItem(
+              true,
+              "home_icon.png",
+              18,
+              text: "Главная",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "orders_icon.png",
+              18,
+              text: "Заказы",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "bascket_icon.png",
+              18,
+              text: "Корзина",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "message_icon.png",
+              18,
+              text: "Диалоги",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "profile_icon.png",
+              18,
+              text: "Кабинет",
+
+            ),
+          ],
+        ),
+      ):Container(
+        height: 1,
+      ),
+
       appBar: AppBar(
         backgroundColor: Color(0xffE6332A),
         elevation: 0,
@@ -46,7 +98,11 @@ class SearchPage extends StatelessWidget{
                         ),
                       ),
                       onTap: (){
-                        _mainController.controllerMainPage.jumpToPage(0);
+                        try{
+                          _mainController.controllerMainPage.jumpToPage(0);
+                        }catch(e){
+                          Get.back();
+                        }
                       },
                     ),
                     Container(

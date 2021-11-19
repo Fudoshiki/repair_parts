@@ -24,7 +24,8 @@ class HomeScreen extends StatelessWidget{
           image: DecorationImage(
             image: AssetImage(
                 "assets/image/Слой 22 1.png"
-            )
+            ),
+            fit: BoxFit.cover
           )
         ),
         child: Center(

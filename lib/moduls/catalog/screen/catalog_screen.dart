@@ -5,13 +5,18 @@ import 'package:repair_parts/moduls/catalog/component/accompanying_item.dart';
 import 'package:repair_parts/moduls/catalog/controller/catalog_controller.dart';
 import 'package:repair_parts/moduls/catalog/screen/pages/list_items.dart';
 import 'package:repair_parts/moduls/home/controller/home_controller.dart';
+import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/main/screen/pages/list_all_screen.dart';
 import 'package:repair_parts/moduls/main/screen/pages/search_page.dart';
 
 import '../component/catalog_item.dart';
 
 class CatalogScreen extends StatelessWidget{
   MainController _mainController = Get.find();
+  bool? bottom;
+  CatalogScreen({@required this.bottom});
+  BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   List<CatalogItem> array =[
     new CatalogItem(
@@ -46,7 +51,7 @@ class CatalogScreen extends StatelessWidget{
         ]),
     new CatalogItem(
         "bus.png",
-        "Автобусы",
+        "Коммерческий ",
         [
           "XCMG",
           "КАМАЗ",
@@ -127,6 +132,56 @@ class CatalogScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: bottom!=null? SizedBox(
+          height: 50,
+          child: CupertinoTabBar(
+            border: Border(
+              top: BorderSide(
+                width: 1,
+                color: Color(0xffE7E7E7),
+              ),
+            ),
+            backgroundColor: Colors.white,
+            items: [
+              _bottomNavigationitem.showItem(
+                true,
+                "home_icon.png",
+                18,
+                text: "Главная",
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "orders_icon.png",
+                18,
+                text: "Заказы",
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "bascket_icon.png",
+                18,
+                text: "Корзина",
+
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "message_icon.png",
+                18,
+                text: "Диалоги",
+
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "profile_icon.png",
+                18,
+                text: "Кабинет",
+
+              ),
+            ],
+          ),
+        ):Container(
+          height: 1,
+        ),
+
         appBar: AppBar(
           backgroundColor: Color(0xffE6332A),
           elevation: 0,
@@ -156,7 +211,7 @@ class CatalogScreen extends StatelessWidget{
                                     color: Colors.white,
                                 ),
                                 child: TextField(
-
+                                  enabled: false,
                                   decoration: InputDecoration(
                                       hintText: "Поиск запчастей",
                                       hintStyle: TextStyle(
@@ -215,80 +270,90 @@ class CatalogScreen extends StatelessWidget{
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          width: (Get.width-50)/2,
-                          height: 50,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 32,
-                              vertical: 16
-                          ),
-                          decoration: BoxDecoration(
-                              color: Color(0xffF3F3F3),
-                              borderRadius: BorderRadius.circular(6)
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 27,
-                                height: 20,
-                                child: Image.asset("assets/image/Group@2x.png"),
-                              ),
-                              SizedBox(
-                                width: 8.8,
-                              ),
-                              Center(
-                                child: Text(
-                                  "Каталог",
-                                  style: TextStyle(
-                                      color: Color(0xffE6332A),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      height: 1.3,
-                                      fontFamily: "Roboto"
-                                  ),
+                        GestureDetector(
+                          child: Container(
+                            width: (Get.width-50)/2,
+                            height: 50,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 32,
+                                vertical: 16
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xffF3F3F3),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 27,
+                                  height: 20,
+                                  child: Image.asset("assets/image/Group@2x.png"),
                                 ),
-                              )
-                            ],
+                                SizedBox(
+                                  width: 8.8,
+                                ),
+                                Center(
+                                  child: Text(
+                                    "Каталог",
+                                    style: TextStyle(
+                                        color: Color(0xffE6332A),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.3,
+                                        fontFamily: "Roboto"
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
+                          onTap: (){
+                            Get.to(ListAllScreen());
+                          },
                         ),
-                        Container(
-                          width: (Get.width-50)/2,
-                          height: 50,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 32,
-                              vertical: 16
-                          ),
-                          decoration: BoxDecoration(
-                              color: Color(0xffFFE9E8),
-                              borderRadius: BorderRadius.circular(6)
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 23,
-                                height: 20,
-                                child: Image.asset("assets/image/Group.png"),
-                              ),
-                              SizedBox(
-                                width: 8.8,
-                              ),
-                              Center(
-                                child: Text(
-                                  "Запчасти",
-                                  style: TextStyle(
-                                      color: Color(0xffE6332A),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w500,
-                                      height: 1.3,
-                                      fontFamily: "Roboto"
-
-                                  ),
+                        GestureDetector(
+                          child: Container(
+                            width: (Get.width-50)/2,
+                            height: 50,
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 32,
+                                vertical: 16
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xffFFE9E8),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  width: 23,
+                                  height: 20,
+                                  child: Image.asset("assets/image/Group.png"),
                                 ),
-                              )
-                            ],
+                                SizedBox(
+                                  width: 8.8,
+                                ),
+                                Center(
+                                  child: Text(
+                                    "Запчасти",
+                                    style: TextStyle(
+                                        color: Color(0xffE6332A),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w500,
+                                        height: 1.3,
+                                        fontFamily: "Roboto"
+
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
+                          onTap: (){
+                            Get.to(ListAllScreen());
+                          },
                         )
                       ],
                     ),

@@ -1,12 +1,68 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
 
 class DoneQuery extends StatelessWidget{
   MainController _mainController =Get.find();
+  bool? bottom;
+  DoneQuery({@required this.bottom});
+  BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: bottom!=null? SizedBox(
+        height: 50,
+        child: CupertinoTabBar(
+          border: Border(
+            top: BorderSide(
+              width: 1,
+              color: Color(0xffE7E7E7),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          items: [
+            _bottomNavigationitem.showItem(
+              true,
+              "home_icon.png",
+              18,
+              text: "Главная",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "orders_icon.png",
+              18,
+              text: "Заказы",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "bascket_icon.png",
+              18,
+              text: "Корзина",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "message_icon.png",
+              18,
+              text: "Диалоги",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "profile_icon.png",
+              18,
+              text: "Кабинет",
+
+            ),
+          ],
+        ),
+      ):Container(
+        height: 1,
+      ),
+
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -20,7 +76,11 @@ class DoneQuery extends StatelessWidget{
                 child: Icon(Icons.arrow_back,color: Color(0xff2e2e33),)
             ),
             onTap: (){
-              _mainController.controllerBacketPage.jumpToPage(0);
+              try{
+                _mainController.controllerBacketPage.jumpToPage(0);
+              }catch(e){
+                Get.back();
+              }
             },
           ),
           Expanded(

@@ -5,11 +5,16 @@ import 'package:repair_parts/moduls/catalog/component/accompanying_item.dart';
 import 'package:repair_parts/moduls/catalog/component/catalog_item.dart';
 import 'package:repair_parts/moduls/catalog/controller/catalog_controller.dart';
 import 'package:repair_parts/moduls/catalog/screen/catalog_screen.dart';
+import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
 
 class ChooseCategory extends StatelessWidget{
   MainController _mainController = Get.find();
   CatalogController _catalogController =Get.find();
+  bool? bottom;
+  ChooseCategory({@required this.bottom});
+  BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
+
   List<CatalogItem> array =[
     new CatalogItem(
         "car.png",
@@ -124,6 +129,56 @@ class ChooseCategory extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        bottomNavigationBar: bottom!=null? SizedBox(
+          height: 50,
+          child: CupertinoTabBar(
+            border: Border(
+              top: BorderSide(
+                width: 1,
+                color: Color(0xffE7E7E7),
+              ),
+            ),
+            backgroundColor: Colors.white,
+            items: [
+              _bottomNavigationitem.showItem(
+                true,
+                "home_icon.png",
+                18,
+                text: "Главная",
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "orders_icon.png",
+                18,
+                text: "Заказы",
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "bascket_icon.png",
+                18,
+                text: "Корзина",
+
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "message_icon.png",
+                18,
+                text: "Диалоги",
+
+              ),
+              _bottomNavigationitem.showItem(
+                false,
+                "profile_icon.png",
+                18,
+                text: "Кабинет",
+
+              ),
+            ],
+          ),
+        ):Container(
+          height: 1,
+        ),
+
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -146,7 +201,11 @@ class ChooseCategory extends StatelessWidget{
                   ),
                 ),
                 onTap:(){
-                  _mainController.controllerMainPage.jumpToPage(1);
+                  try{
+                    _mainController.controllerMainPage.jumpToPage(1);
+                  }catch(e){
+                    Get.back();
+                  }
                 }
             ),
             Expanded(

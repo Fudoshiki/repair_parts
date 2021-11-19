@@ -52,8 +52,8 @@ class CatalogItemState extends State<AccompanyingItems>{
                   Row(
                     children: [
                       Container(
-                        width: 36,
-                        height: 20,
+                        width:26,
+                        height: 26,
                         child: Image.asset("assets/image/$image"),
                       ),
                       SizedBox(
