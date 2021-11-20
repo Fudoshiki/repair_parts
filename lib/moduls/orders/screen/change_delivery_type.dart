@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 
-class TransportCompany extends StatelessWidget{
+class ChangeDeliveryType extends StatelessWidget{
   bool? bottom;
 
   bool open =false;
@@ -16,7 +16,7 @@ class TransportCompany extends StatelessWidget{
   bool open7 =false;
   bool open8 =false;
 
-  TransportCompany({@required this.bottom});
+  ChangeDeliveryType({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
@@ -90,7 +90,7 @@ class TransportCompany extends StatelessWidget{
                         child: Icon(Icons.arrow_back),
                       ),
                       onTap: (){
-                        Get.back();
+                          Get.back();
                       },
                     )
                   ],
@@ -103,7 +103,7 @@ class TransportCompany extends StatelessWidget{
                   top: 20
               ),
               child: Text(
-                "Транспортные компании",
+                "Изменить условия доставки",
                 style: TextStyle(
                     color: Color(0xff2e2e33),
                     fontSize: 22,
@@ -122,7 +122,77 @@ class TransportCompany extends StatelessWidget{
                       right: 20
                   ),
                   children: [
+                    Container(
+                      padding: EdgeInsets.only(
+                        bottom: 21
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border(
+                          bottom: BorderSide(
+                            color: Color(0xffE7E7E7),
+                            width:1
+                          )
+                        )
+                      ),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            child:open? Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                      color: Color(0xffE6332A),
+                                      width: 1
+                                  ),
+                                  color: Color(0xffE6332A)
+                              ),
+                              padding: EdgeInsets.all(7),
+                              child: Image.asset("assets/image/done.png",color: Colors.white,),
+                            )
+                                :Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                      color: Color(0xffE6332A),
+                                      width: 1
+                                  )
+                              ),
+                            ),
+                            onTap: (){
+                              open=!open;
+                              open1=false;
+                              open2=false;
+                              open3=false;
+                              open4=false;
+                              open5=false;
+                              open6=false;
+                              open7=false;
 
+                              Get.forceAppUpdate();
+                            },
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text(
+                            "Самовывоз",
+                            style: TextStyle(
+                                color: Color(0xff2e2e33),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: "Roboto"
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     Row(
                       children: [
                         GestureDetector(
