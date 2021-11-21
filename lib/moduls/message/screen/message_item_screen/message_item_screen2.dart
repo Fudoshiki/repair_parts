@@ -32,15 +32,20 @@ class MessageItemScreen2 extends StatelessWidget{
               children: [
                 Row(
                   children: [
-                    Container(
-                      width: 20,
-                      margin: EdgeInsets.only(
-                          right: 20
+                    GestureDetector(
+                      child: Container(
+                        width: 20,
+                        margin: EdgeInsets.only(
+                            right: 20
+                        ),
+                        child: Icon(
+                          Icons.arrow_back,
+                          color: Color(0xff2e2e33),
+                        ),
                       ),
-                      child: Icon(
-                        Icons.arrow_back,
-                        color: Color(0xff2e2e33),
-                      ),
+                      onTap: (){
+                        Get.back();
+                      },
                     ),
                     Container(
                       width: 34,

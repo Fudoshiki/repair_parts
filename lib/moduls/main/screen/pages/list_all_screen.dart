@@ -41,6 +41,8 @@ import 'package:repair_parts/moduls/profile/screen/pages_favorite/favorite_scree
 import 'package:repair_parts/moduls/profile/screen/pages_favorite/no_favorites_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages_information/information_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/profile_screen_block.dart';
+import 'package:repair_parts/moduls/profile/screen/profile_screen_block_query.dart';
 import 'package:repair_parts/moduls/query/screen/add_address.dart';
 import 'package:repair_parts/moduls/query/screen/list_query_item_screen2.dart';
 import 'package:repair_parts/moduls/query/screen/query_item_delete.dart';
@@ -1779,6 +1781,82 @@ class ListAllScreen extends StatelessWidget{
             ),
             onTap:(){
               Get.to(MessageItemScreen2());
+            },
+          ),
+          //91
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens 91 ",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(ProfileScreenBlock());
+            },
+          ),
+          // 91а 91б
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens  91а 91б",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(ProfileScreenBlockQuery());
             },
           ),
 
