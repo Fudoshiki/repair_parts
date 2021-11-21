@@ -2,15 +2,69 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/main/screen/pages/list_all_screen.dart';
 
 class ProfilePage extends StatelessWidget{
   MainController _mainController =Get.find();
+  bool? bottom;
+  ProfilePage({@required this.bottom});
+  BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      bottomNavigationBar: bottom!=null? SizedBox(
+        height: 50,
+        child: CupertinoTabBar(
+          border: Border(
+            top: BorderSide(
+              width: 1,
+              color: Color(0xffE7E7E7),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          items: [
+            _bottomNavigationitem.showItem(
+              false,
+              "home_icon.png",
+              18,
+              text: "Главная",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "orders_icon.png",
+              18,
+              text: "Заказы",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "bascket_icon.png",
+              18,
+              text: "Корзина",
+
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "message_icon.png",
+              18,
+              text: "Диалоги",
+
+            ),
+            _bottomNavigationitem.showItem(
+              true,
+              "profile_icon.png",
+              18,
+              text: "Кабинет",
+
+            ),
+          ],
+        ),
+      ):Container(
+        height: 1,
+      ),
       body: Column(
         children: [
           Expanded(
@@ -633,50 +687,172 @@ class ProfilePage extends StatelessWidget{
                     },
                   )
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 21,left: 14,
-                      top: 21
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 18,
-                            height: 18,
-                            margin: EdgeInsets.only(
-                                right: 20
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 21,left: 14,
+                        top: 21
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 18,
+                              height: 18,
+                              margin: EdgeInsets.only(
+                                  right: 20
+                              ),
+                              child: Image.asset("assets/image/exit.png"),
                             ),
-                            child: Image.asset("assets/image/exit.png"),
-                          ),
-                          Text(
-                            "Выйти",
-                            style: TextStyle(
-                                color: Color(0xff2E2E33),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: "Roboto"
+                            Text(
+                              "Выйти",
+                              style: TextStyle(
+                                  color: Color(0xff2E2E33),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: "Roboto"
+                              ),
                             ),
+                          ],
+                        ),
+
+
+                      ],
+                    ),
+                  ),
+                  onTap: (){
+                    Get.dialog(
+                      Center(
+                        child: Container(
+                          height: 141,
+                          width: Get.width-40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(6),
+                              color: Colors.white
                           ),
-                        ],
+                          child:Column(
+                            children: [
+                              Container(
+                                padding: EdgeInsets.only(left: 5,right: 5),
+                                height: 90,
+                                decoration: BoxDecoration(
+                                    border: Border(
+                                        bottom: BorderSide(
+                                            color: Color(0xffCBCBCB),
+                                            width: 1
+                                        )
+                                    )
+                                ),
+                                child: Scaffold(
+                                  body: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Text(
+                                              "Обратите внимание",
+                                            style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.w500,
+                                              fontFamily: "Roboto",
+                                              color: Color(0xff2e2e33)
+                                            ),
+                                          ),
+                                          SizedBox(height: 8,),
+                                          Text(
+                                              "Вы уверены, что хотите выйти?",
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: "Roboto",
+                                                color: Color(0xff2e2e33)
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ),
+                              Container(
+                                height: 50,
+                                padding: EdgeInsets.only(left: 5,right: 5),
+
+                                child: Scaffold(
+                                  body: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      GestureDetector(
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              border: Border(
+                                                  right: BorderSide(
+                                                      color: Color(0xffCBCBCB),
+                                                      width: 1
+                                                  )
+                                              )
+                                          ),
+                                          width: (Get.width-50)/2,
+                                          child: Center(
+                                            child: Text(
+                                              "Выйти",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w400,
+                                                  fontFamily: "Roboto",
+                                                  color: Color(0xffE6332A)
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        onTap: (){
+                                          Get.back();
+                                        },
+                                      ),
+                                      GestureDetector(
+                                        child: Container(
+                                          width: (Get.width-50)/2,
+                                          child: Center(
+                                            child: Text(
+                                              "Отмена",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w400,
+                                                  fontFamily: "Roboto",
+                                                  color: Color(0xff2e2e33)
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        onTap: (){
+                                          Get.back();
+                                        },
+                                      )
+
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-
-
-                    ],
-                  ),
+                    );
+                  },
                 ),
 
               ],

@@ -31,9 +31,13 @@ import 'package:repair_parts/moduls/orders/screen/pages_reset/no_obmen.dart';
 import 'package:repair_parts/moduls/orders/screen/pages_reset/no_reset.dart';
 import 'package:repair_parts/moduls/orders/screen/reset_item_order_screen.dart';
 import 'package:repair_parts/moduls/product/screen/product_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/pages/profile_page.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/register_page.dart';
+import 'package:repair_parts/moduls/profile/screen/pages_favorite/favorite_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/pages_favorite/no_favorites_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/pages_information/information_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
 import 'package:repair_parts/moduls/query/screen/add_address.dart';
 import 'package:repair_parts/moduls/query/screen/list_query_item_screen2.dart';
@@ -1553,7 +1557,154 @@ class ListAllScreen extends StatelessWidget{
               Get.to(CloseObmenScreen(bottom: true,));
             },
           ),
-          //HistoryResetObmenOrders
+          //87а
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 87а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(NoFavoriteScreen(bottom: true,));
+            },
+          ),
+          //87
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 87",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(FavoriteScreen(bottom: true,));
+            },
+          ),
+          //88 89  89а 89б 89в  89г 89д
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                   Container(
+                     width: Get.width-40,
+                     child:  Text(
+                       "Screens 88 89  89а 89б 89в  89г 89д",
+                       style: TextStyle(
+                           fontSize: 24,
+                           fontWeight: FontWeight.w700
+                       ),
+                     ),
+                   )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(InformationScreen(bottom: true,));
+            },
+          ),
+          //90
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens 90",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(ProfilePage(bottom: true,));
+            },
+          ),
+
+
 
         ],
       ),
