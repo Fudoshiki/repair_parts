@@ -148,7 +148,7 @@ class OrderItem extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Запрос №1-6",
+                        "Адрес доставки",
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 16,
