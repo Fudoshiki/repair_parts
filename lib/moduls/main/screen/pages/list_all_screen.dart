@@ -11,6 +11,7 @@ import 'package:repair_parts/moduls/main/screen/pages/choose_category.dart';
 import 'package:repair_parts/moduls/main/screen/pages/choose_region.dart';
 import 'package:repair_parts/moduls/main/screen/pages/choose_seller.dart';
 import 'package:repair_parts/moduls/main/screen/pages/search_page.dart';
+import 'package:repair_parts/moduls/message/screen/message_item_screen/message_item_screen.dart';
 import 'package:repair_parts/moduls/message/screen/message_screen.dart';
 import 'package:repair_parts/moduls/orders/screen/change_delivery.dart';
 import 'package:repair_parts/moduls/orders/screen/change_delivery_type.dart';
@@ -1703,7 +1704,44 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ProfilePage(bottom: true,));
             },
           ),
+          //57 62
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens 57 62",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
 
+            ),
+            onTap:(){
+              Get.to(MessageItemScreen());
+            },
+          ),
 
 
         ],
