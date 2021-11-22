@@ -51,6 +51,7 @@ class ItemBlock extends StatelessWidget{
                           width: 36,
                           height: 30,
                           decoration: BoxDecoration(
+                            color: Colors.white,
                               borderRadius: BorderRadius.circular(6),
                               border: Border.all(
                                   color: el['follow']?Color(0xffE6332A):Color(0xffD6D6D6)

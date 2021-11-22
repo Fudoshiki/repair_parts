@@ -9,6 +9,10 @@ class FilterPage extends StatelessWidget{
     CatalogController()
   );
 
+  var open1=false;
+  var open2=false;
+  var open3=false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +56,115 @@ class FilterPage extends StatelessWidget{
               )
             ],
             elevation: 0,
+          ),
+          Container(
+            height: 24,
+            width: Get.width,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 10
+                  ),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 4,
+                    horizontal: 8
+                  ),
+                  height: 24,
+                  decoration: BoxDecoration(
+                    color: Color(0xffE6332A),
+                    borderRadius: BorderRadius.circular(4)
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Ось передняя",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: "Roboto"
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        child: Image.asset("assets/image/close.png"),
+                      )
+                    ],
+                  ),
+                ),
+               Container(
+                  margin: EdgeInsets.only(
+                      left: 10
+                  ),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 4,
+                      horizontal: 8
+                  ),
+                  height: 24,
+                  decoration: BoxDecoration(
+                      color: Color(0xffE6332A),
+                      borderRadius: BorderRadius.circular(4)
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Ось задняя",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "Roboto"
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        child: Image.asset("assets/image/close.png"),
+                      )
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                      left: 10
+                  ),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 4,
+                      horizontal: 8
+                  ),
+                  height: 24,
+                  decoration: BoxDecoration(
+                      color: Color(0xffE6332A),
+                      borderRadius: BorderRadius.circular(4)
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Гусеницы и катки",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: "Roboto"
+                        ),
+                      ),
+                      SizedBox(width: 5,),
+                      Container(
+                        width: 8,
+                        height: 8,
+                        child: Image.asset("assets/image/close.png"),
+                      )
+                    ],
+                  ),
+                ),
+
+              ],
+            ),
           ),
           Expanded(
             child: ListView(

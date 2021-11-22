@@ -130,7 +130,7 @@ class CatalogController extends GetxController{
 
 
   ];
-  var currentIndex = 0.obs;
+  var currentIndex = 1.obs;
 
   RxBool isBlock=false.obs;
 

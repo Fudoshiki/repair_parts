@@ -27,7 +27,10 @@ class ItemRow extends StatelessWidget{
         margin: EdgeInsets.only(
             left: 20,
             right: 20,
-            bottom: 13
+        ),
+        height: 134,
+        padding: EdgeInsets.only(
+          top: 17
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +40,7 @@ class ItemRow extends StatelessWidget{
               width: 80,
               height: 100,
               margin: EdgeInsets.only(
-                  right: 20
+                  right: 30
               ),
               child: Center(
                 child: Container(
@@ -65,6 +68,7 @@ class ItemRow extends StatelessWidget{
                   margin: EdgeInsets.only(
                     bottom: 5
                   ),
+                  height: 35,
                   child: Text(
                     "${el['title']}",
                     style: TextStyle(
@@ -73,6 +77,7 @@ class ItemRow extends StatelessWidget{
                         color: Color(0xff2E2E33),
                         fontFamily: "Roboto",
                     ),
+                    overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                   ),
                 ),
@@ -100,7 +105,7 @@ class ItemRow extends StatelessWidget{
                 ),
                 Container(
                   margin: EdgeInsets.only(
-                    top: 13,
+                    top: 8,
                     bottom: 14
                   ),
                   width: Get.width-170,

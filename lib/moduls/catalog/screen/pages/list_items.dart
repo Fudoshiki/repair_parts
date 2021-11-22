@@ -147,7 +147,7 @@ class ListItems extends StatelessWidget{
       ):Container(
         height: 1,
       ),
-
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Color(0xffE6332A),
         elevation: 0,

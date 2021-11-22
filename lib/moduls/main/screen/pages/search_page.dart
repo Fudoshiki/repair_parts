@@ -72,7 +72,7 @@ class SearchPage extends StatelessWidget{
       ):Container(
         height: 1,
       ),
-
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Color(0xffE6332A),
         elevation: 0,
@@ -192,7 +192,7 @@ class SearchPage extends StatelessWidget{
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            padding: EdgeInsets.all(24),
+                            padding: EdgeInsets.all(16),
                             decoration: BoxDecoration(
                               color: Color(0xffF3F3F3),
                               borderRadius: BorderRadius.circular(6)
@@ -230,9 +230,7 @@ class SearchPage extends StatelessWidget{
                                       ),
                                       Container(
                                         width: Get.width-138,
-                                        margin: EdgeInsets.only(
-                                            bottom: 15
-                                        ),
+
                                         child: Text(
                                           "Не нашли что искали? Найдем за вас! Заполните форму для уточнения деталей запроса.",
                                           style: TextStyle(
@@ -276,7 +274,7 @@ class SearchPage extends StatelessWidget{
                                     "Выберите категорию товара и заполните необходимую информацию",
                                     style: TextStyle(
                                         color: Color(0xff2E2E33),
-                                        fontSize: 12,
+                                        fontSize: 14,
                                         fontWeight: FontWeight.w400,
                                         fontFamily: "Roboto",
                                         height: 1.4
@@ -360,8 +358,8 @@ class SearchPage extends StatelessWidget{
                                   dashPattern: [5, 5],
                                   color: Color(0xffC00000),
                                   strokeWidth: 1,
-                                  padding: EdgeInsets.all(20),
                                   child: Container(
+                                    height: 50,
                                     child: Center(
                                       child: Text(
                                         "Выбрать категорию",
@@ -454,7 +452,7 @@ class SearchPage extends StatelessWidget{
                                   style: TextStyle(
                                     color: Color(0xff2E2E33),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: "Roboto"
                                   ),
                                 ),
@@ -568,7 +566,9 @@ class SearchPage extends StatelessWidget{
                               bottom: 20
                             ),
                             height: 140,
-                            padding: EdgeInsets.all(20),
+                            padding: EdgeInsets.only(
+                                left:20,
+                            right: 20),
                             decoration: BoxDecoration(
                               border: Border.all(
                                 color: Color(0xffD6D6D6),
