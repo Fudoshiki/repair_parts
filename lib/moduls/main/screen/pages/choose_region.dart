@@ -65,7 +65,7 @@ class ChooseRegion extends StatelessWidget{
       ):Container(
         height: 1,
       ),
-
+      backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -107,10 +107,12 @@ class ChooseRegion extends StatelessWidget{
                             width: 1
                         )
                     ),
+                    padding: EdgeInsets.only(
+                      left: 20,right: 7,
+                      top: 7,
+                      bottom: 7
+                    ),
                     child: TextField(
-                      enabled: false,
-                      onTap: (){
-                      },
                       decoration: InputDecoration(
                           hintText: "Поиск запчастей",
                           hintStyle: TextStyle(
@@ -126,16 +128,15 @@ class ChooseRegion extends StatelessWidget{
                           focusedBorder: InputBorder.none,
                           errorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
-                          prefixIcon: Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 14,
-                                vertical: 12
-                            ),
-                            width: 14,
+                          suffixIcon: SizedBox(
+                            width: 13,
                             height: 14,
-                            child: Image.asset(
-                              "assets/image/search_icon.png",
-                              fit: BoxFit.fill,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage("assets/image/search_icon.png",)
+                                  )
+                              ),
                             ),
                           )
                       ),

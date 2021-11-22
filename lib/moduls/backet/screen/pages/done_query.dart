@@ -134,7 +134,7 @@ class DoneQuery extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Запрос 1–6 отправлен",
+                              "Запрос 1–20 отправлен",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 14,
@@ -179,7 +179,7 @@ class DoneQuery extends StatelessWidget{
               width: Get.width-40,
               child: Center(
                 child: Text(
-                  "ОК",
+                  "Перейти в запросы",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,

@@ -1052,27 +1052,7 @@ class SearchPage extends StatelessWidget{
                             ),
                           ),
 
-                          Container(
-                            height: 50,
-                            margin: EdgeInsets.symmetric(
-                              vertical: 32
-                            ),
-                            decoration: BoxDecoration(
-                                color: Color(0xffE6332A),
-                                borderRadius: BorderRadius.circular(6)
-                            ),
-                            child:  Center(
-                              child: Text(
-                                "Отправить запрос",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: "Roboto"
-                                ),
-                              ),
-                            )
-                          ),
+
 
                         ],
                       ),
@@ -1107,7 +1087,31 @@ class SearchPage extends StatelessWidget{
                 )
               ],
             ),
-          )
+          ),
+          Obx(
+                  ()=>catalogController.searchText.value!=""
+                  ?Container(
+                  height: 50,
+                  margin: EdgeInsets.symmetric(
+                      vertical: 18,horizontal: 20
+                  ),
+                  decoration: BoxDecoration(
+                      color: Color(0xffE6332A),
+                      borderRadius: BorderRadius.circular(6)
+                  ),
+                  child:  Center(
+                    child: Text(
+                      "Отправить запрос",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: "Roboto"
+                      ),
+                    ),
+                  )
+              ):Container()
+          ),
         ],
       ),
     );
