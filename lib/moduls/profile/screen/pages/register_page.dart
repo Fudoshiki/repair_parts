@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:repair_parts/moduls/profile/controller/profile_controller.dart';
 
 import 'otp_code_page.dart';
@@ -9,9 +13,10 @@ class RegisterPage extends StatelessWidget{
   ProfileController _profileController =Get.put(ProfileController());
 
   RxBool seller=false.obs;
-
+  var maskFormatter = new MaskTextInputFormatter(mask: '+ # (###) ###-##-##', filter: { "#": RegExp(r'[0-9]') });
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -159,15 +164,8 @@ class RegisterPage extends StatelessWidget{
                   ),
                   child: TextField(
                     controller: _profileController.number,
-                    onChanged: (t){
-                      if(t.length>0){
-                        _profileController.numberValid.value=true;
-
-                      }else{
-                        _profileController.numberValid.value=false;
-
-                      }
-                    },
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [maskFormatter],
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       disabledBorder: InputBorder.none,
@@ -378,3 +376,4 @@ class RegisterPage extends StatelessWidget{
   }
 
 }
+

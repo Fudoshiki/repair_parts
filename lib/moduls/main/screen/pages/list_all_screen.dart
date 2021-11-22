@@ -43,6 +43,11 @@ import 'package:repair_parts/moduls/profile/screen/pages_information/information
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen_block.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen_block_query.dart';
+import 'package:repair_parts/moduls/profile/screen/seller_screen/card_ip_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/seller_screen/card_ooo_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/seller_screen/seller_feedback_sended.dart';
+import 'package:repair_parts/moduls/profile/screen/seller_screen/seller_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/seller_screen/seller_send_feedback.dart';
 import 'package:repair_parts/moduls/query/screen/add_address.dart';
 import 'package:repair_parts/moduls/query/screen/list_query_item_screen2.dart';
 import 'package:repair_parts/moduls/query/screen/query_item_delete.dart';
@@ -1859,7 +1864,196 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ProfileScreenBlockQuery());
             },
           ),
+          // 92 93 94 95
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens  92 93 94 95",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
 
+            ),
+            onTap:(){
+              Get.to(SellerScreen(bottom: true));
+            },
+          ),
+          // 96
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens 96",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(SellerSendFeedback(bottom: true,));
+            },
+          ),
+          // 96а
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens  96а",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(SellerFeedbackScreen(bottom: true));
+            },
+          ),
+          // 93б
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens  93б",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(CardIPScreen(bottom: true));
+            },
+          ),
+          // 93в
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens  93в",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(CardOOOScreen(bottom: true));
+            },
+          ),
 
         ],
       ),

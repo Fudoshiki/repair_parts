@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
+import 'package:repair_parts/moduls/profile/screen/pages/register_page.dart';
 
 class ProfileController extends GetxController{
   bool auth = true;
@@ -12,4 +14,16 @@ class ProfileController extends GetxController{
   var time=0.obs;
 
   var sorted = "Все".obs;
+
+  @override
+  void onInit() {
+    number.addListener(() {
+      var maskFormatter = new MaskTextInputFormatter(mask: '+## (###) ###-##-##');
+      if(maskFormatter.unmaskText(number.text).length==12){
+
+      }else{
+
+      }
+    });
+  }
 }
