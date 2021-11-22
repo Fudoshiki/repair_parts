@@ -9,7 +9,7 @@ import 'package:repair_parts/moduls/product/controller/product_controller.dart';
 class ProductScreen extends StatelessWidget{
 
 
-  ProductController _productController = Get.find();
+  ProductController _productController = Get.put(ProductController());
   CatalogController _catalogController = Get.find();
   MainController _mainController =Get.find();
   bool? bottom;
@@ -107,7 +107,7 @@ class ProductScreen extends StatelessWidget{
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(
-                            color: _productController.product['follow']?Color(0xffE6332A):Color(0xffD6D6D6)
+                            color: _productController.product!['follow']?Color(0xffE6332A):Color(0xffD6D6D6)
                         )
                     ),
                     child: Center(
@@ -219,7 +219,7 @@ class ProductScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      bottom: 9,
+                      bottom: 21,
                       top: 21
                   ),
                   width: Get.width-40,
@@ -444,7 +444,8 @@ class ProductScreen extends StatelessWidget{
                             Container(
                               width: 93,
                               height: 100,
-                              child: Image.asset("assets/image/${_catalogController.array[i]['image']}"),
+                              padding: EdgeInsets.all(20),
+                              child: Image.asset("assets/image/no_image.png"),
                             ),
                             SizedBox(
                               height: 8,

@@ -52,7 +52,7 @@ class ItemRow extends StatelessWidget{
               width: 80,
               height: 100,
               margin: EdgeInsets.only(
-                  right: 20
+                  right: 30
               ),
               child: Image.asset("assets/image/${el['image'][0]}"),
             ),
@@ -61,9 +61,9 @@ class ItemRow extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: Get.width-140,
+                  width: Get.width-150,
                   margin: EdgeInsets.only(
-                    bottom: 10
+                    bottom: 5
                   ),
                   child: Text(
                     "${el['title']}",
@@ -71,8 +71,9 @@ class ItemRow extends StatelessWidget{
                         fontWeight: FontWeight.w700,
                         fontSize: 14,
                         color: Color(0xff2E2E33),
-                        fontFamily: "Roboto"
+                        fontFamily: "Roboto",
                     ),
+                    maxLines: 2,
                   ),
                 ),
                 Container(
@@ -102,7 +103,7 @@ class ItemRow extends StatelessWidget{
                     top: 13,
                     bottom: 14
                   ),
-                  width: Get.width-160,
+                  width: Get.width-170,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween ,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +114,7 @@ class ItemRow extends StatelessWidget{
                          padding: EdgeInsets.all(0),
                          child: Container(
                            height: 30,
-                           width: Get.width-206,
+                           width: Get.width-216,
                            decoration: BoxDecoration(
                                color: el['added_backet']?Colors.white:Color(0xffE6332A),
                                border: Border.all(
@@ -126,8 +127,8 @@ class ItemRow extends StatelessWidget{
                              child: Text(
                                el['added_backet']?"Перейти в корзину":"Добавить в корзину",
                                style: TextStyle(
-                                   fontWeight: FontWeight.w400,
-                                   fontSize: 10,
+                                   fontWeight: FontWeight.w700,
+                                   fontSize: 12,
                                    color: el['added_backet']?Color(0xffE6332A):Colors.white,
                                    fontFamily: "Roboto"
                                ),
@@ -171,7 +172,6 @@ class ItemRow extends StatelessWidget{
         ),
       ),
       onTap: (){
-        _productController.product=el;
         Get.forceAppUpdate();
         _mainController.controllerMainPage.jumpToPage(2);
       },
