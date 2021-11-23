@@ -64,6 +64,7 @@ class QueryRegisterScreen extends StatelessWidget{
       ):Container(
         height: 1,
       ),
+
       backgroundColor: Colors.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,6 +124,9 @@ class QueryRegisterScreen extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
+                      SizedBox(
+                        height: 10,
+                      ),
                     ],
                   ),
                 ],
@@ -167,6 +171,7 @@ class QueryRegisterScreen extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            textCapitalization: TextCapitalization.sentences,
                             decoration: InputDecoration(
                                 hintText: "Фамилия",
                                 hintStyle: TextStyle(
@@ -204,6 +209,7 @@ class QueryRegisterScreen extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            textCapitalization: TextCapitalization.sentences,
                             decoration: InputDecoration(
                               hintText: "Имя",
                               hintStyle: TextStyle(
@@ -241,6 +247,7 @@ class QueryRegisterScreen extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            textCapitalization: TextCapitalization.sentences,
                             decoration: InputDecoration(
                               hintText: "Отчество",
                               hintStyle: TextStyle(
@@ -302,6 +309,7 @@ class QueryRegisterScreen extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            textCapitalization: TextCapitalization.sentences,
                             decoration: InputDecoration(
                               hintText: "E-mail",
                               hintStyle: TextStyle(
@@ -346,7 +354,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 20
+                            top: 12
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -419,7 +427,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 20
+                            top: 12
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -493,7 +501,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 20,
+                            top: 12,
                           bottom: 30
                         ),
                         child: Row(

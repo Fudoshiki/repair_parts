@@ -2223,469 +2223,481 @@ class BottomSheet extends StatelessWidget{
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            margin: EdgeInsets.only(
-                left: 20,
-                right: 20,
-                top: 40,
-                bottom: 20
-            ),
-            child:  Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  "Продолжить как",
-                  style: TextStyle(
-                      color: Color(0xff2e2e33),
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: "Roboto"
-                  ),
-                )
-              ],
-            ),
-          ),
-
-          Container(
-              margin: EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  top: 20
-              ),
-              decoration: BoxDecoration(
-                  color: Color(0xffF3F3F3),
-                  borderRadius: BorderRadius.circular(6)
-              ),
-              child: GestureDetector(
-                child: Row(
-                  children: [
-                    Container(
-                      width: (Get.width-40)/2,
-                      height: 30,
-                      decoration: BoxDecoration(
-                          color: open1?Color(0xffE6332A):Color(0xffF3F3F3),
-                          borderRadius: BorderRadius.circular(6)
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Физическое лицо",
-                          style: TextStyle(
-                              color:open1?Colors.white: Color(0xff767676),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "Roboto"
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: (Get.width-40)/2,
-                      height: 30,
-                      decoration: BoxDecoration(
-                          color: !open1?Color(0xffE6332A):Color(0xffF3F3F3),
-                          borderRadius: BorderRadius.circular(6)
-                      ),
-                      child: Center(
-                        child: Text(
-                          "Юридическое лицо",
-                          style: TextStyle(
-                              color:!open1?Colors.white: Color(0xff767676),
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: "Roboto"
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                onTap: (){
-                  open1=!open1;
-                  Get.forceAppUpdate();
-                },
-              )
-          ),
-
-          open1?Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 20
-                ),
-                child: Text(
-                    "Выберите способ оплаты"
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 20
-                ),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      child:open2? Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(
-                                color: Color(0xffE6332A),
-                                width: 1
-                            ),
-                            color: Color(0xffE6332A)
-                        ),
-                        padding: EdgeInsets.all(7),
-                        child: Image.asset("assets/image/done.png",color: Colors.white,),
-                      )
-                          :Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(
-                                color: Color(0xffE6332A),
-                                width: 1
-                            )
-                        ),
-                      ),
-                      onTap: (){
-                        open2=!open2;
-                        Get.forceAppUpdate();
-                      },
-                    ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    Text(
-                      "По карте",
-                      style: TextStyle(
-                          color: Color(0xff2e2e33),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: "Roboto"
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 20
-                ),
-                child: Row(
-                  children: [
-                    GestureDetector(
-                      child:open3? Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(
-                                color: Color(0xffE6332A),
-                                width: 1
-                            ),
-                            color: Color(0xffE6332A)
-                        ),
-                        padding: EdgeInsets.all(7),
-                        child: Image.asset("assets/image/done.png",color: Colors.white,),
-                      )
-                          :Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            border: Border.all(
-                                color: Color(0xffE6332A),
-                                width: 1
-                            )
-                        ),
-                      ),
-                      onTap: (){
-                        open3=!open3;
-                        Get.forceAppUpdate();
-                      },
-                    ),
-                    SizedBox(
-                      width: 30,
-                    ),
-                    Text(
-                      "По QR коду",
-                      style: TextStyle(
-                          color: Color(0xff2e2e33),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          fontFamily: "Roboto"
-                      ),
-                    )
-                  ],
-                ),
-              ),
-
-            ],
-
-          ):Expanded(
-            child: ListView(
-              children: [
-
                 Container(
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 20
+                      top: 20,
+                      bottom: 20
                   ),
-                  child: Text(
-                      "Выберите одно из ранее созданных"
+                  child:  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Продолжить как",
+                        style: TextStyle(
+                            color: Color(0xff2e2e33),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: "Roboto"
+                        ),
+                      )
+                    ],
                   ),
                 ),
                 Container(
-                  height: 50,
-                  width: Get.width-40,
-                  margin: EdgeInsets.only(
-                      top: 12,
+                    margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      bottom: 37
-                  ),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(6),
-                      border: Border.all(
-                          width: 1,
-                          color: Color(0xffD6D6D6)
-                      )
-                  ),
-                  child: GestureDetector(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: 20,
+                    ),
+                    decoration: BoxDecoration(
+                        color: Color(0xffF3F3F3),
+                        borderRadius: BorderRadius.circular(6)
+                    ),
+                    child: GestureDetector(
+                      child: Row(
+                        children: [
+                          Container(
+                            width: (Get.width-40)/2,
+                            height: 30,
+                            decoration: BoxDecoration(
+                                color: open1?Color(0xffE6332A):Color(0xffF3F3F3),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Физическое лицо",
+                                style: TextStyle(
+                                    color:open1?Colors.white: Color(0xff767676),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                            ),
                           ),
-                          child: Text(
-                            "Не выбрано",
+                          Container(
+                            width: (Get.width-40)/2,
+                            height: 30,
+                            decoration: BoxDecoration(
+                                color: !open1?Color(0xffE6332A):Color(0xffF3F3F3),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Center(
+                              child: Text(
+                                "Юридическое лицо",
+                                style: TextStyle(
+                                    color:!open1?Colors.white: Color(0xff767676),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      onTap: (){
+                        open1=!open1;
+                        Get.forceAppUpdate();
+                      },
+                    )
+                ),
+                open1?Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                          top: 20
+                      ),
+                      child: Text(
+                          "Выберите способ оплаты"
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                          top: 20
+                      ),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            child:open2? Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                      color: Color(0xffE6332A),
+                                      width: 1
+                                  ),
+                                  color: Color(0xffE6332A)
+                              ),
+                              padding: EdgeInsets.all(7),
+                              child: Image.asset("assets/image/done.png",color: Colors.white,),
+                            )
+                                :Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                      color: Color(0xffE6332A),
+                                      width: 1
+                                  )
+                              ),
+                            ),
+                            onTap: (){
+                              open2=!open2;
+                              open3=false;
+                              Get.forceAppUpdate();
+                            },
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text(
+                            "По карте",
                             style: TextStyle(
-                                color: Color(0xff959595),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
+                                color: Color(0xff2e2e33),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
                                 fontFamily: "Roboto"
                             ),
-                          ),
-                        ),
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                  bottomRight: Radius.circular(6),
-                                  topRight: Radius.circular(6)
-                              ),
-                              color: Color(0xffF3F3F3)
-
-                          ),
-                          child: Center(
-                            child: Icon(
-                              Icons.keyboard_arrow_down_sharp,
-                              color: Color(0xff959595),
-                            ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
-                    onTap: (){
-                      Get.bottomSheet(
-                          StatusScreen()
-                      );
-                    },
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                  ),
-                  child: Text(
-                      "Выберите способ оплаты"
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 20
-                  ),
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        child:open5? Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  color: Color(0xffE6332A),
-                                  width: 1
+                    Container(
+                      margin: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                          top: 20
+                      ),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            child:open3? Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                      color: Color(0xffE6332A),
+                                      width: 1
+                                  ),
+                                  color: Color(0xffE6332A)
                               ),
-                              color: Color(0xffE6332A)
-                          ),
-                          padding: EdgeInsets.all(7),
-                          child: Image.asset("assets/image/done.png",color: Colors.white,),
-                        )
-                            :Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  color: Color(0xffE6332A),
-                                  width: 1
-                              )
-                          ),
-                        ),
-                        onTap: (){
-                          open5=!open5;
-                          Get.forceAppUpdate();
-                        },
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Text(
-                        "По счету",
-                        style: TextStyle(
-                            color: Color(0xff2e2e33),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 20
-                  ),
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        child:open2? Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  color: Color(0xffE6332A),
-                                  width: 1
+                              padding: EdgeInsets.all(7),
+                              child: Image.asset("assets/image/done.png",color: Colors.white,),
+                            )
+                                :Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  border: Border.all(
+                                      color: Color(0xffE6332A),
+                                      width: 1
+                                  )
                               ),
-                              color: Color(0xffE6332A)
-                          ),
-                          padding: EdgeInsets.all(7),
-                          child: Image.asset("assets/image/done.png",color: Colors.white,),
-                        )
-                            :Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  color: Color(0xffE6332A),
-                                  width: 1
-                              )
-                          ),
-                        ),
-                        onTap: (){
-                          open2=!open2;
-                          Get.forceAppUpdate();
-                        },
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Text(
-                        "По карте",
-                        style: TextStyle(
-                            color: Color(0xff2e2e33),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 20
-                  ),
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        child:open3? Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  color: Color(0xffE6332A),
-                                  width: 1
-                              ),
-                              color: Color(0xffE6332A)
-                          ),
-                          padding: EdgeInsets.all(7),
-                          child: Image.asset("assets/image/done.png",color: Colors.white,),
-                        )
-                            :Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border: Border.all(
-                                  color: Color(0xffE6332A),
-                                  width: 1
-                              )
-                          ),
-                        ),
-                        onTap: (){
-                          open3=!open3;
-                          Get.forceAppUpdate();
-                        },
-                      ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Text(
-                        "По QR коду",
-                        style: TextStyle(
-                            color: Color(0xff2e2e33),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+                            ),
+                            onTap: (){
+                              open3=!open3;
+                              open2=false;
 
+                              Get.forceAppUpdate();
+                            },
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text(
+                            "По QR коду",
+                            style: TextStyle(
+                                color: Color(0xff2e2e33),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: "Roboto"
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+
+                  ],
+
+                ):Expanded(
+                  child: ListView(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 20
+                        ),
+                        child: Text(
+                            "Выберите одно из ранее созданных"
+                        ),
+                      ),
+                      Container(
+                        height: 50,
+                        width: Get.width-40,
+                        margin: EdgeInsets.only(
+                            top: 12,
+                            left: 20,
+                            right: 20,
+                            bottom: 37
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(
+                                width: 1,
+                                color: Color(0xffD6D6D6)
+                            )
+                        ),
+                        child: GestureDetector(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Container(
+                                padding: EdgeInsets.symmetric(
+                                  horizontal: 20,
+                                ),
+                                child: Text(
+                                  "Не выбрано",
+                                  style: TextStyle(
+                                      color: Color(0xff959595),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: "Roboto"
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                height: 50,
+                                width: 50,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.only(
+                                        bottomRight: Radius.circular(6),
+                                        topRight: Radius.circular(6)
+                                    ),
+                                    color: Color(0xffF3F3F3)
+
+                                ),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.keyboard_arrow_down_sharp,
+                                    color: Color(0xff959595),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                          onTap: (){
+                            Get.bottomSheet(
+                                StatusScreen()
+                            );
+                          },
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                        ),
+                        child: Text(
+                            "Выберите способ оплаты"
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 20
+                        ),
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                              child:open5? Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all(
+                                        color: Color(0xffE6332A),
+                                        width: 1
+                                    ),
+                                    color: Color(0xffE6332A)
+                                ),
+                                padding: EdgeInsets.all(7),
+                                child: Image.asset("assets/image/done.png",color: Colors.white,),
+                              )
+                                  :Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all(
+                                        color: Color(0xffE6332A),
+                                        width: 1
+                                    )
+                                ),
+                              ),
+                              onTap: (){
+                                open5=!open5;
+                                open3=false;
+                                open2=false;
+                                Get.forceAppUpdate();
+                              },
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Text(
+                              "По счету",
+                              style: TextStyle(
+                                  color: Color(0xff2e2e33),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Roboto"
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 20
+                        ),
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                              child:open2? Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all(
+                                        color: Color(0xffE6332A),
+                                        width: 1
+                                    ),
+                                    color: Color(0xffE6332A)
+                                ),
+                                padding: EdgeInsets.all(7),
+                                child: Image.asset("assets/image/done.png",color: Colors.white,),
+                              )
+                                  :Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all(
+                                        color: Color(0xffE6332A),
+                                        width: 1
+                                    )
+                                ),
+                              ),
+                              onTap: (){
+                                open3=false;
+                                open5=false;
+                                open2=!open2;
+                                Get.forceAppUpdate();
+                              },
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Text(
+                              "По карте",
+                              style: TextStyle(
+                                  color: Color(0xff2e2e33),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Roboto"
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            top: 20
+                        ),
+                        child: Row(
+                          children: [
+                            GestureDetector(
+                              child:open3? Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all(
+                                        color: Color(0xffE6332A),
+                                        width: 1
+                                    ),
+                                    color: Color(0xffE6332A)
+                                ),
+                                padding: EdgeInsets.all(7),
+                                child: Image.asset("assets/image/done.png",color: Colors.white,),
+                              )
+                                  :Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    border: Border.all(
+                                        color: Color(0xffE6332A),
+                                        width: 1
+                                    )
+                                ),
+                              ),
+                              onTap: (){
+                                open2=false;
+                                open5=false;
+                                open3=!open3;
+                                Get.forceAppUpdate();
+                              },
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Text(
+                              "По QR коду",
+                              style: TextStyle(
+                                  color: Color(0xff2e2e33),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: "Roboto"
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+
+                    ],
+
+                  ),
+                ),
               ],
-
             ),
           ),
           Container(
             margin: EdgeInsets.only(
               left: 20,
               right: 20,
-              top: 40,
+              top: 16,
               bottom: 20
             ),
             decoration: BoxDecoration(
