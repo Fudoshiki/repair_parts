@@ -104,6 +104,9 @@ class MessageScreen extends StatelessWidget{
               margin: EdgeInsets.only(
                   top: 10
               ),
+              padding: EdgeInsets.only(
+                left: 20
+              ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   border: Border.all(
@@ -112,6 +115,13 @@ class MessageScreen extends StatelessWidget{
                   )
               ),
               child: TextField(
+               style: TextStyle(
+                    color: Color(0xff2e2e33),
+                    fontSize: 14,
+                    fontFamily: "Roboto",
+                    fontWeight: FontWeight.w400,
+                    height: 1.5
+                ),
                 decoration: InputDecoration(
                     hintText: "Поиск",
                     hintStyle: TextStyle(
@@ -127,7 +137,7 @@ class MessageScreen extends StatelessWidget{
                     focusedBorder: InputBorder.none,
                     errorBorder: InputBorder.none,
                     disabledBorder: InputBorder.none,
-                    prefixIcon: Container(
+                    suffixIcon: Container(
                       padding: EdgeInsets.symmetric(
                           horizontal: 14,
                           vertical: 14
@@ -152,9 +162,9 @@ class MessageScreen extends StatelessWidget{
                         left: 20,
                         right: 20
                     ),
+                    height: 100,
                     padding: EdgeInsets.only(
                         top: 15,
-                        bottom: 12
                     ),
                     decoration: BoxDecoration(
                         border: Border(
@@ -205,7 +215,7 @@ class MessageScreen extends StatelessWidget{
                                   margin: EdgeInsets.only(
                                       right: 5
                                   ),
-                                  child: Image.asset("assets/image/done.png"),
+                                  child: Image.asset("assets/image/done1.png"),
                                 ),
                                 Text(
                                   "18:41",
@@ -236,13 +246,13 @@ class MessageScreen extends StatelessWidget{
                     )
                 ),
                 Container(
+                  height: 100,
                     margin: EdgeInsets.only(
                         left: 20,
                         right: 20
                     ),
                     padding: EdgeInsets.only(
                         top: 15,
-                        bottom: 12
                     ),
                     decoration: BoxDecoration(
                         border: Border(
@@ -341,13 +351,13 @@ class MessageScreen extends StatelessWidget{
                     )
                 ),
                 Container(
+                    height: 100,
                     margin: EdgeInsets.only(
                         left: 20,
                         right: 20
                     ),
                     padding: EdgeInsets.only(
                         top: 15,
-                        bottom: 12
                     ),
                     decoration: BoxDecoration(
                         border: Border(
@@ -457,6 +467,8 @@ class MessageScreen extends StatelessWidget{
                     )
                 ),
                 Container(
+                    height: 100,
+
                     margin: EdgeInsets.only(
                         left: 20,
                         right: 20
