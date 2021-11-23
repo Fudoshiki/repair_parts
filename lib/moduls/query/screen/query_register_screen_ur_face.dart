@@ -70,7 +70,7 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 20
+                  top: 30
               ),
               height: 40,
               child: Row(
@@ -78,7 +78,9 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                 children: [
                   GestureDetector(
                     child:  Container(
-                      child: Icon(Icons.arrow_back),
+                      width: 19,
+                      height: 16,
+                      child: Image.asset("assets/image/arrow_left.png"),
                     ),
                     onTap: (){
                       Get.back();
@@ -165,13 +167,21 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               labelText: "ИНН",
                                 labelStyle:TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 14,
                                     color: Color(0xff717171),
-                                    fontFamily: "Roboto"
+                                    fontFamily: "Roboto",
+                                  height: 0.5
 
                                 ),
                                 hintText: "1234567890",

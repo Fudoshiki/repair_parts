@@ -2756,7 +2756,7 @@ class StatusScreen extends StatelessWidget{
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Статус",
+                  "Организация",
                   style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 18,
@@ -2783,7 +2783,7 @@ class StatusScreen extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Все",
+                    "ООО СтройГаз",
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -2794,7 +2794,7 @@ class StatusScreen extends StatelessWidget{
                   Container(
                     width: 20,
                     height: 20,
-                    child: sorted.value=="Все"
+                    child: sorted.value=="ООО СтройГаз"
                         ? Image.asset("assets/image/radio_done.png")
                         : Image.asset("assets/image/radio_off.png"),
                   )
@@ -2802,7 +2802,7 @@ class StatusScreen extends StatelessWidget{
               ),
             ),
             onTap: (){
-              sorted.value="Все";
+              sorted.value="ООО СтройГаз";
               Get.forceAppUpdate();
 
             },
@@ -2823,7 +2823,7 @@ class StatusScreen extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Заказ оплачен",
+                    "ИП Синичка",
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -2834,7 +2834,7 @@ class StatusScreen extends StatelessWidget{
                   Container(
                     width: 20,
                     height: 20,
-                    child: sorted.value=="Заказ оплачен"
+                    child: sorted.value=="ИП Синичка"
                         ? Image.asset("assets/image/radio_done.png")
                         : Image.asset("assets/image/radio_off.png"),
                   )
@@ -2842,7 +2842,7 @@ class StatusScreen extends StatelessWidget{
               ),
             ),
             onTap: (){
-              sorted.value="Заказ оплачен";
+              sorted.value="ИП Синичка";
               Get.forceAppUpdate();
 
             },
@@ -2863,7 +2863,7 @@ class StatusScreen extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Заказ отгружен",
+                    "ООО Планета",
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -2874,7 +2874,7 @@ class StatusScreen extends StatelessWidget{
                   Container(
                     width: 20,
                     height: 20,
-                    child: sorted.value=="Заказ отгружен"
+                    child: sorted.value=="ООО Планета"
                         ? Image.asset("assets/image/radio_done.png")
                         : Image.asset("assets/image/radio_off.png"),
                   )
@@ -2882,7 +2882,7 @@ class StatusScreen extends StatelessWidget{
               ),
             ),
             onTap: (){
-              sorted.value="Заказ отгружен";
+              sorted.value="ООО Планета";
               Get.forceAppUpdate();
 
             },
@@ -2903,7 +2903,7 @@ class StatusScreen extends StatelessWidget{
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Заказ выдан",
+                    "Добавить организацию",
                     style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
@@ -2914,7 +2914,7 @@ class StatusScreen extends StatelessWidget{
                   Container(
                     width: 20,
                     height: 20,
-                    child: sorted.value=="Заказ выдан"
+                    child: sorted.value=="Добавить организацию"
                         ? Image.asset("assets/image/radio_done.png")
                         : Image.asset("assets/image/radio_off.png"),
                   )
@@ -2922,7 +2922,7 @@ class StatusScreen extends StatelessWidget{
               ),
             ),
             onTap: (){
-              sorted.value="Заказ выдан";
+              sorted.value="Добавить организацию";
               Get.forceAppUpdate();
             },
           ),

@@ -576,7 +576,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(QueryScreen(bottom: true,));
             },
           ),
-          //45 45а 46
+          //45 45а
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -597,7 +597,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 45 45а 46",
+                      "Screens 45 45а ",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -609,6 +609,41 @@ class ListAllScreen extends StatelessWidget{
             ),
             onTap:(){
               Get.to(OrderScreen(bottom: true,));
+            },
+          ),
+          //46
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  46",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(OrderScreen2(bottom: true,));
             },
           ),
           //49

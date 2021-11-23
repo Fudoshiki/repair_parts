@@ -72,7 +72,7 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 20
+                  top: 30
               ),
               height: 40,
               child: Row(
@@ -80,7 +80,9 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                 children: [
                   GestureDetector(
                     child:  Container(
-                      child: Icon(Icons.arrow_back),
+                      width: 19,
+                      height: 16,
+                      child: Image.asset("assets/image/arrow_left.png"),
                     ),
                     onTap: (){
                       Get.back();
@@ -177,8 +179,16 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            keyboardType: TextInputType.number,
+                            style: TextStyle(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto"
+
+                          ),
                             decoration: InputDecoration(
-                                hintText: "Фамилия",
+                                hintText: "1234567890",
                                 hintStyle: TextStyle(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 14,
@@ -214,6 +224,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "ИП Маликов Петр Сергеевич",
                               hintStyle: TextStyle(
@@ -272,6 +289,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "Россия",
                               hintStyle: TextStyle(
@@ -309,6 +333,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "Московская область",
                               hintStyle: TextStyle(
@@ -346,6 +377,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "Москва",
                               hintStyle: TextStyle(
@@ -383,6 +421,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "Ленина",
                               hintStyle: TextStyle(
@@ -420,6 +465,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "15",
                               hintStyle: TextStyle(
@@ -457,6 +509,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "701",
                               hintStyle: TextStyle(
@@ -526,6 +585,13 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
                             decoration: InputDecoration(
                               hintText: "121324343",
                               hintStyle: TextStyle(
@@ -568,7 +634,7 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 20
+                            top: 12
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -641,7 +707,7 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 20
+                            top: 12
                         ),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -715,7 +781,7 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 20,
+                            top: 12,
                           bottom: 30
                         ),
                         child: Row(

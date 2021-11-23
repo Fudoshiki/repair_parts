@@ -70,22 +70,28 @@ class OrderScreen extends StatelessWidget{
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GestureDetector(
-            child: Container(
-                margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 40
-                ),
-                child: Icon(Icons.arrow_back,color: Color(0xff2e2e33),)
-            ),
-            onTap: (){
-              try{
-                _mainController.controllerOrderPage.jumpToPage(1);
-              }catch(e){
-                Get.back();
-              }
-            },
+          Container(
+              margin: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 30
+              ),
+              height: 40,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    child:  Container(
+                      width: 19,
+                      height: 16,
+                      child: Image.asset("assets/image/arrow_left.png"),
+                    ),
+                    onTap: (){
+                      Get.back();
+                    },
+                  )
+                ],
+              )
           ),
           Container(
             margin: EdgeInsets.only(
@@ -222,8 +228,8 @@ class OrderScreen extends StatelessWidget{
                                 width: 20,
                                 height: 20,
                                 child: _orderController.sorted.value=="Все"
-                                    ? Image.asset("assets/image/radio_done.png")
-                                    : Image.asset("assets/image/radio_off.png"),
+                                    ? Image.asset("assets/image/radio_done.png", color: Color(0xffE6332A),)
+                                    : Image.asset("assets/image/radio_off.png", color: Color(0xffE6332A),),
                               )
                             ],
                           ),
@@ -263,8 +269,8 @@ class OrderScreen extends StatelessWidget{
                                 width: 20,
                                 height: 20,
                                 child: _orderController.sorted.value=="Заказ оплачен"
-                                    ? Image.asset("assets/image/radio_done.png")
-                                    : Image.asset("assets/image/radio_off.png"),
+                                    ? Image.asset("assets/image/radio_done.png", color: Color(0xffE6332A),)
+                                    : Image.asset("assets/image/radio_off.png", color: Color(0xffE6332A),),
                               )
                             ],
                           ),
@@ -304,8 +310,8 @@ class OrderScreen extends StatelessWidget{
                                 width: 20,
                                 height: 20,
                                 child: _orderController.sorted.value=="Заказ отгружен"
-                                    ? Image.asset("assets/image/radio_done.png")
-                                    : Image.asset("assets/image/radio_off.png"),
+                                    ? Image.asset("assets/image/radio_done.png", color: Color(0xffE6332A),)
+                                    : Image.asset("assets/image/radio_off.png", color: Color(0xffE6332A),),
                               )
                             ],
                           ),
@@ -345,8 +351,8 @@ class OrderScreen extends StatelessWidget{
                                 width: 20,
                                 height: 20,
                                 child: _orderController.sorted.value=="Заказ выдан"
-                                    ? Image.asset("assets/image/radio_done.png")
-                                    : Image.asset("assets/image/radio_off.png"),
+                                    ? Image.asset("assets/image/radio_done.png", color: Color(0xffE6332A),)
+                                    : Image.asset("assets/image/radio_off.png", color: Color(0xffE6332A),),
                               )
                             ],
                           ),
@@ -393,18 +399,18 @@ class OrderScreen extends StatelessWidget{
                             margin: EdgeInsets.only(
                               right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Color(0xffC00000)
+                              color: Color(0xffE6332A)
                             ),
                             child: Center(
                               child: Text(
                                 "1",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 8,
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 13,
                                     color: Colors.white,
                                     fontFamily: "Roboto"
                                 ),
@@ -460,8 +466,8 @@ class OrderScreen extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -516,8 +522,8 @@ class OrderScreen extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)

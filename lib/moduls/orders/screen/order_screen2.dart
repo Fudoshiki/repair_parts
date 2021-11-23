@@ -70,18 +70,28 @@ class OrderScreen2 extends StatelessWidget{
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            GestureDetector(
-              child: Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 40
-                  ),
-                  child: Icon(Icons.arrow_back,color: Color(0xff2e2e33),)
-              ),
-              onTap: (){
-                _mainController.controllerOrderPage.jumpToPage(0);
-              },
+            Container(
+                margin: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    top: 30
+                ),
+                height: 40,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      child:  Container(
+                        width: 19,
+                        height: 16,
+                        child: Image.asset("assets/image/arrow_left.png"),
+                      ),
+                      onTap: (){
+                        Get.back();
+                      },
+                    )
+                  ],
+                )
             ),
             Container(
               margin: EdgeInsets.only(

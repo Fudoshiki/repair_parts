@@ -73,7 +73,7 @@ class QueryRegisterScreen extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 20
+                  top: 30
               ),
               height: 40,
               child: Row(
@@ -81,7 +81,9 @@ class QueryRegisterScreen extends StatelessWidget{
                 children: [
                   GestureDetector(
                     child:  Container(
-                      child: Icon(Icons.arrow_back),
+                      width: 19,
+                      height: 16,
+                      child: Image.asset("assets/image/arrow_left.png"),
                     ),
                     onTap: (){
                       Get.back();
