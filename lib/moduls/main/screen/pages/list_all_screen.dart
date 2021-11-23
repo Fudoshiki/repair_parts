@@ -41,6 +41,7 @@ import 'package:repair_parts/moduls/profile/screen/pages_favorite/favorite_scree
 import 'package:repair_parts/moduls/profile/screen/pages_favorite/no_favorites_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages_information/information_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/profile_screen2.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen_block.dart';
 import 'package:repair_parts/moduls/profile/screen/profile_screen_block_query.dart';
 import 'package:repair_parts/moduls/profile/screen/seller_screen/card_ip_screen.dart';
@@ -435,7 +436,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(ChooseRegion(bottom: true,));
             },
           ),
-          //69 69а 70 71
+          //69а 70 71
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -456,7 +457,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 69 69а 70 71",
+                      "Screens 69а 70 71",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -468,6 +469,41 @@ class ListAllScreen extends StatelessWidget{
             ),
             onTap:(){
               Get.to(ProfileScreen(bottom: true,));
+            },
+          ),
+          //69
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 69",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(ProfileScreen2(bottom: true,));
             },
           ),
           //31

@@ -5,11 +5,14 @@ import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 import 'package:repair_parts/moduls/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/main/screen/pages/list_all_screen.dart';
+import 'package:repair_parts/moduls/profile/controller/profile_controller.dart';
+import 'package:repair_parts/moduls/profile/screen/pages/profile_page.dart';
+import 'package:repair_parts/moduls/profile/screen/pages/register_page.dart';
 
-class ProfilePage extends StatelessWidget{
+class ProfileScreen2 extends StatelessWidget{
   MainController _mainController =Get.find();
   bool? bottom;
-  ProfilePage({@required this.bottom});
+  ProfileScreen2({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
@@ -75,7 +78,7 @@ class ProfilePage extends StatelessWidget{
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(
-                    horizontal: 20
+                      horizontal: 20
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -246,72 +249,21 @@ class ProfilePage extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                          left: 16
+                            left: 16
                         ),
                         child: Text(
                           "Иванов Иван Иванович",
                           style: TextStyle(
-                            color: Color(0xff2e2e33),
-                            fontSize: 20,
-                            fontWeight: FontWeight.w900,
-                            fontFamily: "Roboto"
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 20
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6),
-                          color: Color(0xffFFE9E8)
-                        ),
-                        height: 30,
-                        width: (Get.width-54)/2,
-                        child: Center(
-                          child: Text(
-                            "Покупатель",
-                            style: TextStyle(
-                                color: Color(0xffE6332A),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            color: Color(0xffF3F3F3)
-                        ),
-                        height: 30,
-                        width: (Get.width-54)/2,
-                        child: Center(
-                          child: Text(
-                              "Продавец",
-                            style: TextStyle(
-                              color: Color(0xffE6332A),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                              color: Color(0xff2e2e33),
+                              fontSize: 20,
+                              fontWeight: FontWeight.w900,
                               fontFamily: "Roboto"
-                            ),
                           ),
                         ),
                       )
                     ],
                   ),
                 ),
-
                 GestureDetector(
                   child: Container(
                     margin: EdgeInsets.symmetric(
@@ -335,8 +287,8 @@ class ProfilePage extends StatelessWidget{
                         Row(
                           children: [
                             Container(
-                              width: 18,
-                              height: 18,
+                              width: 20,
+                              height: 20,
                               margin: EdgeInsets.only(
                                   right: 20
                               ),
@@ -389,8 +341,8 @@ class ProfilePage extends StatelessWidget{
                         Row(
                           children: [
                             Container(
-                              width: 18,
-                              height: 18,
+                              width: 20,
+                              height: 20,
                               margin: EdgeInsets.only(
                                   right: 20
                               ),
@@ -462,8 +414,8 @@ class ProfilePage extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -511,8 +463,8 @@ class ProfilePage extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -560,8 +512,8 @@ class ProfilePage extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -609,8 +561,8 @@ class ProfilePage extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -638,54 +590,52 @@ class ProfilePage extends StatelessWidget{
                 ),
 
                 Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 21,left: 14,
-                      top: 21
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: GestureDetector(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 18,
-                              height: 18,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/inf.png"),
-                            ),
-                            Text(
-                              "Информация",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                          ],
-                        ),
-
-
-                      ],
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
                     ),
-                    onTap: (){
-                      Get.to(ListAllScreen());
-                    },
-                  )
+                    padding: EdgeInsets.only(
+                        bottom: 21,left: 14,
+                        top: 21
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: GestureDetector(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Container(
+                                width: 20,
+                                height: 20,
+                                margin: EdgeInsets.only(
+                                    right: 20
+                                ),
+                                child: Image.asset("assets/image/inf.png"),
+                              ),
+                              Text(
+                                "Информация",
+                                style: TextStyle(
+                                    color: Color(0xff2E2E33),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      onTap: (){
+                        Get.to(ListAllScreen());
+                      },
+                    )
                 ),
                 GestureDetector(
                   child: Container(
@@ -710,8 +660,8 @@ class ProfilePage extends StatelessWidget{
                         Row(
                           children: [
                             Container(
-                              width: 18,
-                              height: 18,
+                              width: 20,
+                              height: 20,
                               margin: EdgeInsets.only(
                                   right: 20
                               ),
@@ -746,47 +696,47 @@ class ProfilePage extends StatelessWidget{
                           child:Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.only(left: 5,right: 5),
-                                height: 90,
-                                decoration: BoxDecoration(
-                                    border: Border(
-                                        bottom: BorderSide(
-                                            color: Color(0xffCBCBCB),
-                                            width: 1
-                                        )
-                                    )
-                                ),
-                                child: Scaffold(
-                                  body: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Text(
-                                              "Обратите внимание",
-                                            style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.w500,
-                                              fontFamily: "Roboto",
-                                              color: Color(0xff2e2e33)
-                                            ),
-                                          ),
-                                          SizedBox(height: 8,),
-                                          Text(
-                                              "Вы уверены, что хотите выйти?",
-                                            style: TextStyle(
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.w400,
-                                                fontFamily: "Roboto",
-                                                color: Color(0xff2e2e33)
-                                            ),
+                                  padding: EdgeInsets.only(left: 5,right: 5),
+                                  height: 90,
+                                  decoration: BoxDecoration(
+                                      border: Border(
+                                          bottom: BorderSide(
+                                              color: Color(0xffCBCBCB),
+                                              width: 1
                                           )
-                                        ],
                                       )
-                                    ],
                                   ),
-                                )
+                                  child: Scaffold(
+                                    body: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              "Обратите внимание",
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontFamily: "Roboto",
+                                                  color: Color(0xff2e2e33)
+                                              ),
+                                            ),
+                                            SizedBox(height: 8,),
+                                            Text(
+                                              "Вы уверены, что хотите выйти?",
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.w400,
+                                                  fontFamily: "Roboto",
+                                                  color: Color(0xff2e2e33)
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  )
                               ),
                               Container(
                                 height: 50,
@@ -862,6 +812,5 @@ class ProfilePage extends StatelessWidget{
       ),
     );
   }
-
 
 }
