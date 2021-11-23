@@ -7,46 +7,56 @@ class FullScreenImage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff2E2E33),
-      body: Stack(
-        children: [
-          Container(
-            margin: EdgeInsets.only(
-                top: 40,
-                left: 20,
-                right: 20
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                GestureDetector(
-                  child: Icon(
-                    Icons.arrow_back,
-                    color: Colors.white,
-                  ),
-                  onTap: (){
-                    Get.back();
-                  },
-                ),
-                GestureDetector(
-                    child: Container(
-                      height: 3,
-                      width: 17,
-                      child: Image.asset("assets/image/menu.png"),
-                    )
-                )
-              ],
-            ),
-          ),
-          Container(
-            width: Get.width,
-            child: Center(
+      body: Container(
+        width: Get.width,
+        height: Get.height,
+        child:Stack(
+          fit: StackFit.expand  ,
+          children: [
+            Positioned(
+              top: 40,
               child: Container(
-                width: Get.width,
-                child: Image.asset("assets/image/conector.png"),
-              )
+                margin: EdgeInsets.only(
+                    left: 20,
+                    right: 20
+                ),
+                width: Get.width-40,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
+                      onTap: (){
+                        Get.back();
+                      },
+                    ),
+                    GestureDetector(
+                        child: Container(
+                          height: 3,
+                          width: 17,
+                          child: Image.asset("assets/image/menu.png"),
+                        )
+                    )
+                  ],
+                ),
+              ),
             ),
-          )
-        ],
+            Container(
+              width: Get.width,
+              child: Center(
+                  child: Container(
+                    width: Get.width,
+                    child: Image.asset("assets/image/conector.png",
+                      fit: BoxFit.fill,
+                    ),
+                  )
+              ),
+            )
+          ],
+        )
       )
     );
   }

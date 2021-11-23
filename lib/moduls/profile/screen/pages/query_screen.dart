@@ -610,11 +610,9 @@ class QueryScreen extends StatelessWidget{
                     ],
                   ),
                 ),
-
               ],
             ),
           ),
-
         ],
       ),
     );

@@ -343,6 +343,7 @@ class QueryItemScreen extends StatelessWidget{
                 ),
 
                 Container(
+                  height: 147,
                   decoration: BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
@@ -354,14 +355,10 @@ class QueryItemScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      bottom: 13,
-                    top: 14
                   ),
-                  padding: EdgeInsets.only(
-                      bottom: 21
-                  ),
+
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: 80,
@@ -379,8 +376,11 @@ class QueryItemScreen extends StatelessWidget{
                           Container(
                             width: Get.width-140,
                             margin: EdgeInsets.only(
-                                bottom: 10
+                                bottom: 10,
+                              top: 20
                             ),
+                            height: 35,
+
                             child: Text(
                               "Амортизатор гидравлический МТЛБ",
                               style: TextStyle(
@@ -389,6 +389,7 @@ class QueryItemScreen extends StatelessWidget{
                                   color: Color(0xff2E2E33),
                                   fontFamily: "Roboto"
                               ),
+                              maxLines: 2,
                             ),
                           ),
                           Container(
@@ -415,7 +416,7 @@ class QueryItemScreen extends StatelessWidget{
                           ),
                           Container(
                             margin: EdgeInsets.only(
-                              top: 30
+                              top: 20
                             ),
                             child: Row(
                               children: [
@@ -446,6 +447,7 @@ class QueryItemScreen extends StatelessWidget{
                   ),
                 ),
                 Container(
+                  height: 147,
                   decoration: BoxDecoration(
                       border: Border(
                           bottom: BorderSide(
@@ -457,14 +459,10 @@ class QueryItemScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      bottom: 13,
-                      top: 14
                   ),
-                  padding: EdgeInsets.only(
-                      bottom: 21
-                  ),
+
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: 80,
@@ -481,8 +479,11 @@ class QueryItemScreen extends StatelessWidget{
                           Container(
                             width: Get.width-140,
                             margin: EdgeInsets.only(
-                                bottom: 10
+                                bottom: 10,
+                                top: 20
+
                             ),
+                            height: 35,
                             child: Text(
                               "Амортизатор гидравлический МТЛБ",
                               style: TextStyle(
@@ -491,6 +492,7 @@ class QueryItemScreen extends StatelessWidget{
                                   color: Color(0xff2E2E33),
                                   fontFamily: "Roboto"
                               ),
+                              maxLines: 2,
                             ),
                           ),
                           Container(
@@ -517,7 +519,7 @@ class QueryItemScreen extends StatelessWidget{
                           ),
                           Container(
                               margin: EdgeInsets.only(
-                                  top: 30
+                                  top: 20
                               ),
                               child: Row(
                                 children: [
