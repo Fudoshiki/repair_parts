@@ -42,7 +42,7 @@ class QueryItemScreen2 extends StatelessWidget{
             backgroundColor: Colors.white,
             items: [
               _bottomNavigationitem.showItem(
-                true,
+                false,
                 "home_icon.png",
                 18,
                 text: "Главная",
@@ -68,7 +68,7 @@ class QueryItemScreen2 extends StatelessWidget{
 
               ),
               _bottomNavigationitem.showItem(
-                false,
+                true,
                 "profile_icon.png",
                 18,
                 text: "Кабинет",
@@ -87,15 +87,17 @@ class QueryItemScreen2 extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 20
+                    top: 30
                 ),
                 height: 40,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      child:  Container(
-                        child: Icon(Icons.arrow_back),
+                      child: Container(
+                        width: 19,
+                        height: 16,
+                        child: Image.asset("assets/image/arrow_left.png"),
                       ),
                       onTap: (){
                         try{
@@ -948,7 +950,7 @@ class QueryItemScreen2 extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w700,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -1366,7 +1368,7 @@ class QueryItemScreen2 extends StatelessWidget{
                                         Text(
                                           "200",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w700,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -1604,7 +1606,7 @@ class QueryItemScreen2 extends StatelessWidget{
                                 ),
                                 child:Center(
                                   child: Text(
-                                    "Посмотреть",
+                                    "Купить",
                                     style: TextStyle(
                                         fontWeight: FontWeight.w700,
                                         fontSize: 12,

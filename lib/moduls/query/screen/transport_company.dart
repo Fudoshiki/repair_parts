@@ -34,7 +34,7 @@ class TransportCompany extends StatelessWidget{
             backgroundColor: Colors.white,
             items: [
               _bottomNavigationitem.showItem(
-                true,
+                false,
                 "home_icon.png",
                 18,
                 text: "Главная",
@@ -60,7 +60,7 @@ class TransportCompany extends StatelessWidget{
 
               ),
               _bottomNavigationitem.showItem(
-                false,
+                true,
                 "profile_icon.png",
                 18,
                 text: "Кабинет",
@@ -79,7 +79,7 @@ class TransportCompany extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 20
+                    top: 30
                 ),
                 height: 40,
                 child: Row(
@@ -87,7 +87,9 @@ class TransportCompany extends StatelessWidget{
                   children: [
                     GestureDetector(
                       child:  Container(
-                        child: Icon(Icons.arrow_back),
+                        width: 19,
+                        height: 16,
+                        child: Image.asset("assets/image/arrow_left.png"),
                       ),
                       onTap: (){
                         Get.back();
@@ -160,6 +162,7 @@ class TransportCompany extends StatelessWidget{
                             open5=false;
                             open6=false;
                             open7=false;
+                            open8=false;
 
                             Get.forceAppUpdate();
                           },
@@ -172,7 +175,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -218,6 +221,8 @@ class TransportCompany extends StatelessWidget{
                             open5=false;
                             open6=false;
                             open7=false;
+                            open8=false;
+
                             Get.forceAppUpdate();
                           },
                         ),
@@ -229,7 +234,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -275,6 +280,8 @@ class TransportCompany extends StatelessWidget{
                             open5=false;
                             open6=false;
                             open7=false;
+                            open8=false;
+
                             Get.forceAppUpdate();
                           },
                         ),
@@ -286,7 +293,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -332,6 +339,8 @@ class TransportCompany extends StatelessWidget{
                             open5=false;
                             open6=false;
                             open7=false;
+                            open8=false;
+
                             Get.forceAppUpdate();
                           },
                         ),
@@ -343,7 +352,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -389,6 +398,8 @@ class TransportCompany extends StatelessWidget{
                             open2=false;
                             open6=false;
                             open7=false;
+                            open8=false;
+
                             Get.forceAppUpdate();
                           },
                         ),
@@ -400,7 +411,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -446,6 +457,8 @@ class TransportCompany extends StatelessWidget{
                             open5=false;
                             open2=false;
                             open7=false;
+                            open8=false;
+
                             Get.forceAppUpdate();
                           },
                         ),
@@ -457,7 +470,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -503,6 +516,8 @@ class TransportCompany extends StatelessWidget{
                             open5=false;
                             open6=false;
                             open2=false;
+                            open8=false;
+
                             Get.forceAppUpdate();
                           },
                         ),
@@ -514,7 +529,7 @@ class TransportCompany extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -523,7 +538,66 @@ class TransportCompany extends StatelessWidget{
                     SizedBox(
                       height: 20,
                     ),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          child:open8? Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                border: Border.all(
+                                    color: Color(0xffE6332A),
+                                    width: 1
+                                ),
+                                color: Color(0xffE6332A)
+                            ),
+                            padding: EdgeInsets.all(7),
+                            child: Image.asset("assets/image/done.png",color: Colors.white,),
+                          )
+                              :Container(
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                border: Border.all(
+                                    color: Color(0xffE6332A),
+                                    width: 1
+                                )
+                            ),
+                          ),
+                          onTap: (){
+                            open8=!open8;
+                            open1=false;
+                            open=false;
+                            open3=false;
+                            open4=false;
+                            open5=false;
+                            open6=false;
+                            open2=false;
+                            open7=false;
 
+                            Get.forceAppUpdate();
+                          },
+                        ),
+                        SizedBox(
+                          width: 30,
+                        ),
+                        Text(
+                          "jde",
+                          style: TextStyle(
+                              color: Color(0xff2e2e33),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: "Roboto"
+                          ),
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    //jde
                   ],
                 )
             ),

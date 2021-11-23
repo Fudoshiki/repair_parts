@@ -86,7 +86,6 @@ class ListQueryItemScreen2 extends StatelessWidget{
         ):Container(
           height: 1,
         ),
-
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -94,7 +93,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 20
+                    top: 30
                 ),
                 height: 40,
                 child: Row(
@@ -102,7 +101,9 @@ class ListQueryItemScreen2 extends StatelessWidget{
                   children: [
                     GestureDetector(
                       child:  Container(
-                        child: Icon(Icons.arrow_back),
+                        width: 19,
+                        height: 16,
+                        child: Image.asset("assets/image/arrow_left.png"),
                       ),
                       onTap: (){
                         try{
@@ -434,7 +435,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w700,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -616,7 +617,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w700,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -798,7 +799,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w700,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -1289,7 +1290,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w700,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -1471,7 +1472,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w700,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -2034,7 +2035,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w700,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
