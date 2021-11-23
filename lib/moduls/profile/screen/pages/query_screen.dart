@@ -224,8 +224,8 @@ class QueryScreen extends StatelessWidget{
                                   width: 20,
                                   height: 20,
                                   child: _profileController.sorted.value=="Все"
-                                      ? Image.asset("assets/image/radio_done.png")
-                                      : Image.asset("assets/image/radio_off.png"),
+                                      ? Image.asset("assets/image/radio_done.png",color: Color(0xffE6332A),)
+                                      : Image.asset("assets/image/radio_off.png",color: Color(0xffE6332A)),
                                 )
                               ],
                             ),
@@ -265,8 +265,8 @@ class QueryScreen extends StatelessWidget{
                                   width: 20,
                                   height: 20,
                                   child: _profileController.sorted.value=="Запрос отправлен"
-                                      ? Image.asset("assets/image/radio_done.png")
-                                      : Image.asset("assets/image/radio_off.png"),
+                                      ? Image.asset("assets/image/radio_done.png",color: Color(0xffE6332A),)
+                                      : Image.asset("assets/image/radio_off.png",color: Color(0xffE6332A)),
                                 )
                               ],
                             ),
@@ -306,8 +306,8 @@ class QueryScreen extends StatelessWidget{
                                   width: 20,
                                   height: 20,
                                   child: _profileController.sorted.value=="Получено предложение"
-                                      ? Image.asset("assets/image/radio_done.png")
-                                      : Image.asset("assets/image/radio_off.png"),
+                                      ? Image.asset("assets/image/radio_done.png",color: Color(0xffE6332A),)
+                                      : Image.asset("assets/image/radio_off.png",color: Color(0xffE6332A)),
                                 )
                               ],
                             ),
@@ -347,8 +347,8 @@ class QueryScreen extends StatelessWidget{
                                   width: 20,
                                   height: 20,
                                   child: _profileController.sorted.value=="Предложение обновлено"
-                                      ? Image.asset("assets/image/radio_done.png")
-                                      : Image.asset("assets/image/radio_off.png"),
+                                      ? Image.asset("assets/image/radio_done.png",color: Color(0xffE6332A),)
+                                      : Image.asset("assets/image/radio_off.png",color: Color(0xffE6332A)),
                                 )
                               ],
                             ),
@@ -396,18 +396,19 @@ class QueryScreen extends StatelessWidget{
                               margin: EdgeInsets.only(
                                   right: 26
                               ),
-                              width: 15,
-                              height: 15,
+                              width: 24,
+                              height: 24,
                               decoration: BoxDecoration(
                                   shape: BoxShape.circle,
-                                  color: Color(0xffC00000)
+                                  color: Color(0xffE6332A)
+
                               ),
                               child: Center(
                                 child: Text(
                                   "1",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 8,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 13,
                                       color: Colors.white,
                                       fontFamily: "Roboto"
                                   ),
@@ -467,8 +468,8 @@ class QueryScreen extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -523,8 +524,8 @@ class QueryScreen extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -579,8 +580,8 @@ class QueryScreen extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
