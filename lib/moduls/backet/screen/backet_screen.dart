@@ -71,7 +71,7 @@ class BacketScreen extends StatelessWidget{
             margin: EdgeInsets.only(
               left: 20,
               right: 20,
-              top: 40
+              top: 80
             ),
             child: Text(
               "Корзина",

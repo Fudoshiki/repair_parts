@@ -77,7 +77,7 @@ class ChangeDelivery extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 20
+                    top: 30
                 ),
                 height: 40,
                 child: Row(
@@ -85,7 +85,9 @@ class ChangeDelivery extends StatelessWidget{
                   children: [
                     GestureDetector(
                       child:  Container(
-                        child: Icon(Icons.arrow_back),
+                        width: 19,
+                        height: 16,
+                        child: Image.asset("assets/image/arrow_left.png"),
                       ),
                       onTap: (){
                         Get.back();
@@ -879,6 +881,20 @@ class ChangeDelivery extends StatelessWidget{
                                                               fontFamily: "Roboto"
                                                           ),
                                                         ),
+                                                      ),Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Файлы",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
                                                       ),
                                                       GestureDetector(
                                                         child: Container(
@@ -905,6 +921,21 @@ class ChangeDelivery extends StatelessWidget{
                                                         ),
                                                         onTap: (){
                                                         },
+                                                      ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Акт приема передачи",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
                                                       ),
                                                       GestureDetector(
                                                         child: Container(
@@ -2158,6 +2189,20 @@ class ChangeDelivery extends StatelessWidget{
                                                               fontFamily: "Roboto"
                                                           ),
                                                         ),
+                                                      ),Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Файлы",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
                                                       ),
                                                       GestureDetector(
                                                         child: Container(
@@ -2184,6 +2229,21 @@ class ChangeDelivery extends StatelessWidget{
                                                         ),
                                                         onTap: (){
                                                         },
+                                                      ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Акт приема передачи",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
                                                       ),
                                                       GestureDetector(
                                                         child: Container(

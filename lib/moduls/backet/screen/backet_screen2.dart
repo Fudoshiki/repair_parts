@@ -12,8 +12,8 @@ import 'package:repair_parts/moduls/main/screen/pages/add_address.dart';
 
 class BacketScreen2 extends StatelessWidget{
   BacketController _backetController = Get.put(BacketController());
-  int a= 0;
-  int b= 0;
+  int a= 1;
+  int b= 1;
   bool? bottom;
   BacketScreen2({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
@@ -85,104 +85,33 @@ class BacketScreen2 extends StatelessWidget{
                         margin: EdgeInsets.only(
                             left: 20,
                             right: 20,
-                            top: 40
+                            top: 80
                         ),
-                        child: Text(
-                          "Корзина",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              fontSize: 28,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto"
-                          ),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                          bottom: 22
-                        ),
-                        padding: EdgeInsets.only(
-                          bottom: 14
-                        ),
+                        height: 60,
                         decoration: BoxDecoration(
                           border: Border(
-                            bottom: BorderSide(
+                            bottom:BorderSide(
                               color: Color(0xffE7E7E7),
                               width: 1
                             )
                           )
                         ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+
+                        child: Row(
                           children: [
-                            Container(
-                              margin: EdgeInsets.only(
-                                  bottom: 16,
-                                  top: 28
-                              ),
-                              child: Text(
-                                "Адрес доставки",
-                                style: TextStyle(
-                                    color: Color(0xff2E2E33),
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
-                                    fontFamily: "Roboto"
-                                ),
+                            Text(
+                              "Корзина",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w900,
+                                  fontSize: 28,
+                                  color: Color(0xff2e2e33),
+                                  fontFamily: "Roboto"
                               ),
                             ),
-                            GestureDetector(
-                              child: Container(
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Container(
-                                              width: 40,
-                                              height: 40,
-                                              margin: EdgeInsets.only(
-                                                  right: 20
-                                              ),
-                                              padding: EdgeInsets.all(11),
-                                              decoration: BoxDecoration(
-                                                  color: Color(0xffFFE9E8),
-                                                  borderRadius: BorderRadius.circular(6)
-                                              ),
-                                              child: Image.asset("assets/image/marcker.png",
-                                                width: 12,height: 18,)
-                                          ),
-                                          Container(
-                                            width: Get.width-108,
-                                            child: Text(
-                                              "${_backetController.address.value}",
-                                              style: TextStyle(
-                                                  color: Color(0xffE6332A),
-                                                  fontSize: 14,
-                                                  fontWeight: FontWeight.w500,
-                                                  fontFamily: "Roboto"
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Container(
-                                        width: 8,
-                                        height: 14,
-                                        child: Image.asset("assets/image/arrow_right.png"),
-                                      )
-                                    ],
-                                  )
-                              ),
-                              onTap: (){
-                                Get.to(AddAddress());
-                              },
-                            )
                           ],
-                        ),
+                        )
                       ),
+
                       Container(
                         decoration: BoxDecoration(
                             border: Border(
@@ -195,7 +124,8 @@ class BacketScreen2 extends StatelessWidget{
                         margin: EdgeInsets.only(
                             left: 20,
                             right: 20,
-                            bottom: 13
+                            bottom: 13,
+                          top: 20
                         ),
                         padding: EdgeInsets.only(
                           bottom: 21
@@ -563,6 +493,92 @@ class BacketScreen2 extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20,
+                            bottom: 22
+                        ),
+                        padding: EdgeInsets.only(
+                            bottom: 14
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
+                            )
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(
+                                  bottom: 16,
+                                  top: 28
+                              ),
+                              child: Text(
+                                "Адрес доставки",
+                                style: TextStyle(
+                                    color: Color(0xff2E2E33),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                              child: Container(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Container(
+                                              width: 40,
+                                              height: 40,
+                                              margin: EdgeInsets.only(
+                                                  right: 20
+                                              ),
+                                              padding: EdgeInsets.all(11),
+                                              decoration: BoxDecoration(
+                                                  color: Color(0xffFFE9E8),
+                                                  borderRadius: BorderRadius.circular(6)
+                                              ),
+                                              child: Image.asset("assets/image/marcker.png",
+                                                width: 12,height: 18,)
+                                          ),
+                                          Container(
+                                            width: Get.width-108,
+                                            child: Text(
+                                              "${_backetController.address.value}",
+                                              style: TextStyle(
+                                                  color: Color(0xffE6332A),
+                                                  fontSize: 14,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontFamily: "Roboto"
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      Container(
+                                        width: 8,
+                                        height: 14,
+                                        child: Image.asset("assets/image/arrow_right.png"),
+                                      )
+                                    ],
+                                  )
+                              ),
+                              onTap: (){
+                                Get.to(AddAddress());
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(
                           left: 20,
                           right: 20
                         ),
@@ -746,10 +762,14 @@ class BacketScreen2 extends StatelessWidget{
                             Container(
                               margin: EdgeInsets.only(
                                   top: 16,
-                                  bottom: 20
+                                  bottom: 17
                               ),
-                              height: 140,
-                              padding: EdgeInsets.all(20),
+                              height: 100,
+                              padding: EdgeInsets.only(
+                                  left:20,
+                                right: 20
+                              
+                              ),
                               decoration: BoxDecoration(
                                   border: Border.all(
                                       color: Color(0xffD6D6D6),
@@ -760,7 +780,7 @@ class BacketScreen2 extends StatelessWidget{
                               child: TextField(
                                 maxLines: 5,
                                 decoration: InputDecoration(
-                                  hintText: "Опишите словами, что необходимо найти",
+                                  hintText: "Добавьте текст",
                                   hintStyle: TextStyle(
                                       fontFamily: "Roboto",
                                       fontSize: 14,
@@ -781,7 +801,7 @@ class BacketScreen2 extends StatelessWidget{
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                            top: 10,left: 20,right: 20,
+                            left: 20,right: 20,
                           bottom: 22
                         ),
                         child: Column(

@@ -1133,7 +1133,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 48д 48а 48б 48г",
+                      "Screens 48д",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
