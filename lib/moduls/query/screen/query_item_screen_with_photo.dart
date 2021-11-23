@@ -70,7 +70,7 @@ class QueryItemScreenWithPhoto extends StatelessWidget{
         ):Container(
           height: 1,
         ),
-
+        backgroundColor: Colors.white,
         body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -78,7 +78,7 @@ class QueryItemScreenWithPhoto extends StatelessWidget{
             margin: EdgeInsets.only(
               left: 20,
               right: 20,
-              top: 20
+              top: 30
             ),
             height: 40,
             child: Row(
@@ -86,7 +86,9 @@ class QueryItemScreenWithPhoto extends StatelessWidget{
               children: [
                GestureDetector(
                  child:  Container(
-                   child: Icon(Icons.arrow_back),
+                   width: 19,
+                   height: 16,
+                   child: Image.asset("assets/image/arrow_left.png"),
                  ),
                  onTap: (){
                    try{
@@ -362,11 +364,12 @@ class QueryItemScreenWithPhoto extends StatelessWidget{
                           height: 40,
                           decoration: BoxDecoration(
                               color: Color(0xffF3F3F3),
-                              borderRadius: BorderRadius.circular(4)
+                              borderRadius: BorderRadius.circular(6)
                           ),
                           padding: EdgeInsets.all(10),
                           child: Image.asset("assets/image/done.png",color: Color(0xff717171),),
                         ),
+                        SizedBox(width: 20,),
                         Text(
                           "КАМАЗ",
                           style: TextStyle(
