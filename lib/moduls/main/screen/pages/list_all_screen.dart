@@ -33,6 +33,7 @@ import 'package:repair_parts/moduls/orders/screen/pages_reset/no_obmen.dart';
 import 'package:repair_parts/moduls/orders/screen/pages_reset/no_reset.dart';
 import 'package:repair_parts/moduls/orders/screen/reset_item_order_screen.dart';
 import 'package:repair_parts/moduls/product/screen/product_screen.dart';
+import 'package:repair_parts/moduls/profile/screen/main_data_profile/main_data_profile.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/profile_page.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/profile/screen/pages/query_screen2.dart';
@@ -2123,6 +2124,44 @@ class ListAllScreen extends StatelessWidget{
             ),
             onTap:(){
               Get.to(CardOOOScreen(bottom: true));
+            },
+          ),
+          //79 79а 79б 79в 86б 86в
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child:  Text(
+                        "Screens  79 79а 79б 79в 86б 86в 86а 86г",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(MainDataProfile(bottom: true));
             },
           ),
 

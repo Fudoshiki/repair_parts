@@ -29,11 +29,24 @@ class HomeScreen extends StatelessWidget{
           )
         ),
         child: Center(
-          child: Container(
-            height: 92,
-            child:
-            Image.asset("assets/image/Group 24.png"),
-          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 92,
+                child:
+                Image.asset("assets/image/Group 24.png"),
+              ),
+              Text("сервис уникальных скидок",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  fontFamily: "Roboto"
+                ),
+              )
+            ],
+          )
         ),
       ),
     );
