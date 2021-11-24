@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../call_screen.dart';
+
 class MessageItemScreenCall3 extends StatelessWidget{
   var focus =new FocusNode();
   bool sended=false;
@@ -26,36 +28,42 @@ class MessageItemScreenCall3 extends StatelessWidget{
       ),
       body: Column(
         children: [
-          Container(
-            height: 33,
-            padding: EdgeInsets.only(
-              left: 20,
-              right: 20,
-            ),
-            color: Color(0xffFFE9E8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Вернуться к звонку",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                      color: Color(0xff2e2e33),
-                      fontFamily: "Roboto"
+          GestureDetector(
+            child: Container(
+              height: 33,
+              padding: EdgeInsets.only(
+                left: 20,
+                right: 20,
+              ),
+              color: Color(0xffFFE9E8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Вернуться к звонку",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
                   ),
-                ),
-                Text(
-                  "03:34:21",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                      color: Color(0xff2e2e33),
-                      fontFamily: "Roboto"
-                  ),
-                )
-              ],
+                  Text(
+                    "03:34:21",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
+                  )
+                ],
+              ),
             ),
+            onTap: (){
+              Get.to(CallScreen());
+            },
+
           ),
 
           Container(

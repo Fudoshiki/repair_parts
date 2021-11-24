@@ -6,6 +6,7 @@ import 'package:repair_parts/moduls/home/controller/home_controller.dart';
 import 'package:repair_parts/moduls/main/component/bottom_item.dart';
 import 'package:repair_parts/moduls/message/controller/message_controller.dart';
 
+import 'call_screen.dart';
 import 'message_item_screen/message_item_screen_call1.dart';
 
 class MessageScreenCall extends StatelessWidget{
@@ -75,36 +76,42 @@ class MessageScreenCall extends StatelessWidget{
         body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 33,
-            padding: EdgeInsets.only(
-              left: 20,
-              right: 20,
-            ),
-            color: Color(0xffFFE9E8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Вернуться к звонку",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                      color: Color(0xff2e2e33),
-                      fontFamily: "Roboto"
+          GestureDetector(
+            child: Container(
+              height: 33,
+              padding: EdgeInsets.only(
+                left: 20,
+                right: 20,
+              ),
+              color: Color(0xffFFE9E8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Вернуться к звонку",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
                   ),
-                ),
-                Text(
-                  "03:34:21",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                      color: Color(0xff2e2e33),
-                      fontFamily: "Roboto"
-                  ),
-                )
-              ],
+                  Text(
+                    "03:34:21",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
+                  )
+                ],
+              ),
             ),
+            onTap: (){
+              Get.to(CallScreen());
+            },
+
           ),
           Container(
             margin: EdgeInsets.only(
