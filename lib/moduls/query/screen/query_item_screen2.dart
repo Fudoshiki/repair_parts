@@ -94,17 +94,13 @@ class QueryItemScreen2 extends StatelessWidget{
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      child: Container(
+                      child:  Container(
                         width: 19,
                         height: 16,
                         child: Image.asset("assets/image/arrow_left.png"),
                       ),
                       onTap: (){
-                        try{
-                          _mainController.controllerProfilePage.jumpToPage(1);
-                        }catch(e){
-                          Get.back();
-                        }
+                        Get.back();
                       },
                     )
                   ],
@@ -114,7 +110,6 @@ class QueryItemScreen2 extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 17
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,

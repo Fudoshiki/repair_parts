@@ -120,10 +120,9 @@ class ListQueryItemScreen2 extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 17
                 ),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
@@ -152,66 +151,54 @@ class ListQueryItemScreen2 extends StatelessWidget{
                         ),
                       ],
                     ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                        children:[
+                          Row(
+                              children:[
+                                GestureDetector(
+                                    child:Text(
+                                      "Список",
+                                      style: TextStyle(
+                                          color:open?Color(0xffE6332A): Color(0xff767676),
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w700,
+                                          fontFamily: "Roboto"
+                                      ),
+                                    ),
+                                  onTap: (){
+                                    open=!open;
+                                    Get.forceAppUpdate();
+                                  },
+                                ),
+                                SizedBox(width: 4,),
+                                Container(
+                                    width:19,
+                                    height: 10,
+                                    child:Image.asset("assets/image/change.png")
+                                ),
+                                SizedBox(width: 4,),
+
+                                GestureDetector(
+                                  child:Text(
+                                    "Расширенный",
+                                    style: TextStyle(
+                                        color:!open?Color(0xffE6332A): Color(0xff767676),
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: "Roboto"
+                                    ),
+                                  ),
+                                  onTap: (){
+                                    open=!open;
+                                    Get.forceAppUpdate();
+                                  },
+                                ),
+                              ]
+                          )
+                        ]
+                    )
                   ],
-                )
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                  left: 20,
-                  right: 20,
-                  top: 20
-              ),
-                decoration: BoxDecoration(
-                    color: Color(0xffF3F3F3),
-                    borderRadius: BorderRadius.circular(6)
-                ),
-                child: GestureDetector(
-                  child: Row(
-                    children: [
-                      Container(
-                        width: (Get.width-40)/2,
-                        height: 30,
-                        decoration: BoxDecoration(
-                            color: open?Color(0xffE6332A):Color(0xffF3F3F3),
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Список",
-                            style: TextStyle(
-                                color:open?Colors.white: Color(0xff767676),
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: (Get.width-40)/2,
-                        height: 30,
-                        decoration: BoxDecoration(
-                            color: !open?Color(0xffE6332A):Color(0xffF3F3F3),
-                            borderRadius: BorderRadius.circular(6)
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Расширенный",
-                            style: TextStyle(
-                                color:!open?Colors.white: Color(0xff767676),
-                                fontSize: 12,
-                                fontWeight: FontWeight.w700,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  onTap: (){
-                    open=!open;
-                    Get.forceAppUpdate();
-                  },
                 )
             ),
 
@@ -219,7 +206,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 32
+                  top: 13
               ),
               height: 40,
               decoration: BoxDecoration(
@@ -1624,10 +1611,16 @@ class ListQueryItemScreen2 extends StatelessWidget{
                               ),
                             ),
                             onTap:(){
-                              Get.bottomSheet(
-                                  BottomSheet(),
+                               showModalBottomSheet(
+                                  context: context,
+                                  isScrollControlled: true,
+                                  builder: (context) {
+                                return FractionallySizedBox(
+                                  heightFactor: 0.8,
+                                  child: BottomSheet(),
+                                );
+                              });
 
-                              );
                             }
                         )
 
@@ -2200,7 +2193,15 @@ class ListQueryItemScreen2 extends StatelessWidget{
   }
 
 }
-class BottomSheet extends StatelessWidget{
+class BottomSheet extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    return BottomSheetState();
+  }
+
+
+}
+class BottomSheetState extends State<BottomSheet>{
   bool open =false;
   bool open1=true;
   bool open2=false;
@@ -2695,24 +2696,24 @@ class BottomSheet extends StatelessWidget{
           ),
           Container(
             margin: EdgeInsets.only(
-              left: 20,
-              right: 20,
-              top: 16,
-              bottom: 20
+                left: 20,
+                right: 20,
+                top: 16,
+                bottom: 20
             ),
             decoration: BoxDecoration(
-              color: Color(0xffE6332A),
-              borderRadius: BorderRadius.circular(6)
+                color: Color(0xffE6332A),
+                borderRadius: BorderRadius.circular(6)
             ),
             height: 50,
             child: Center(
               child: Text(
                 "Продолжить",
                 style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.white,
-                  fontFamily: "Roboto"
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                    fontFamily: "Roboto"
                 ),
               ),
             ),
@@ -2721,7 +2722,6 @@ class BottomSheet extends StatelessWidget{
       ),
     );
   }
-
 }
 class StatusScreen extends StatelessWidget{
   var sorted ="".obs;

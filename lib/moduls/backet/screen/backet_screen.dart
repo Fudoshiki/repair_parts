@@ -26,7 +26,7 @@ class BacketScreen extends StatelessWidget{
             backgroundColor: Colors.white,
             items: [
               _bottomNavigationitem.showItem(
-                true,
+                false,
                 "home_icon.png",
                 18,
                 text: "Главная",
@@ -38,7 +38,7 @@ class BacketScreen extends StatelessWidget{
                 text: "Заказы",
               ),
               _bottomNavigationitem.showItem(
-                false,
+                true,
                 "bascket_icon.png",
                 18,
                 text: "Корзина",
@@ -69,9 +69,9 @@ class BacketScreen extends StatelessWidget{
         children: [
           Container(
             margin: EdgeInsets.only(
-              left: 20,
-              right: 20,
-              top: 80
+                left: 20,
+                right: 20,
+                top: 100
             ),
             child: Text(
               "Корзина",

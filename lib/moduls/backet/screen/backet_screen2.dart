@@ -34,7 +34,7 @@ class BacketScreen2 extends StatelessWidget{
             backgroundColor: Colors.white,
             items: [
               _bottomNavigationitem.showItem(
-                true,
+                false,
                 "home_icon.png",
                 18,
                 text: "Главная",
@@ -46,11 +46,11 @@ class BacketScreen2 extends StatelessWidget{
                 text: "Заказы",
               ),
               _bottomNavigationitem.showItem(
-                false,
+                true,
                 "bascket_icon.png",
                 18,
                 text: "Корзина",
-
+                  circle:true
               ),
               _bottomNavigationitem.showItem(
                 false,
@@ -196,13 +196,13 @@ class BacketScreen2 extends StatelessWidget{
                                                 height: 30,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(6),
-                                                    color: Color(0xffF3F3F3)
+                                                    color: Color(0xffE6332A)
                                                 ),
                                                 child: Center(
                                                   child: Container(
                                                     decoration: BoxDecoration(
                                                         borderRadius: BorderRadius.circular(1),
-                                                        color: Color(0xff717171)
+                                                        color: Color(0xffffffff)
                                                     ),
                                                     width: 12,
                                                     height: 2,
@@ -385,13 +385,13 @@ class BacketScreen2 extends StatelessWidget{
                                                 height: 30,
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(6),
-                                                    color: Color(0xffF3F3F3)
+                                                    color: Color(0xffE6332A)
                                                 ),
                                                 child: Center(
                                                   child: Container(
                                                     decoration: BoxDecoration(
                                                         borderRadius: BorderRadius.circular(1),
-                                                        color: Color(0xff717171)
+                                                        color: Color(0xffffffff)
                                                     ),
                                                     width: 12,
                                                     height: 2,
@@ -399,10 +399,10 @@ class BacketScreen2 extends StatelessWidget{
                                                 )
                                             ),
                                             onTap: (){
-                                              if(a==0){
+                                              if(b==0){
 
                                               }else{
-                                                a-=1;
+                                                b-=1;
                                                 Get.forceAppUpdate();
                                               }
                                             },
@@ -413,7 +413,7 @@ class BacketScreen2 extends StatelessWidget{
                                             ),
                                             child: Text(
                                                 "${
-                                                    a
+                                                    b
                                                 }"
                                             ),
                                           ),
@@ -460,10 +460,10 @@ class BacketScreen2 extends StatelessWidget{
                                                 )
                                             ),
                                             onTap: (){
-                                              if(a==12){
+                                              if(b==12){
 
                                               }else{
-                                                a+=1;
+                                                b+=1;
                                                 Get.forceAppUpdate();
 
                                               }

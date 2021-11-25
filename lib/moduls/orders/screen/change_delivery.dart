@@ -140,7 +140,7 @@ class ChangeDelivery extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 40,
                       right: 20,
-                      top: 15
+                      top: 5
                   ),
 
 
@@ -201,7 +201,7 @@ class ChangeDelivery extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 26
+                  top: 15
               ),
               height: 40,
               decoration: BoxDecoration(
@@ -1192,39 +1192,39 @@ class ChangeDelivery extends StatelessWidget{
                                   SizedBox(
                                       height:6
                                   ),
-                                  Row(
-                                      children:[
-                                        Text(
-                                          "Трек номер:",
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.w400,
-                                              fontSize: 14,
-                                              color: Color(0xff767676),
-                                              fontFamily: "Roboto"
-                                          ),
-                                        ),
-                                        SizedBox(width: 15,),
-                                        Column(
-                                            children:[
-                                              Text(
-                                                "                     ",
-                                                style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
-                                                    fontSize: 14,
-                                                    color: Color(0xff959595),
-                                                    fontFamily: "Roboto",
-                                                    decoration: TextDecoration.underline,
-                                                    decorationStyle: TextDecorationStyle.dashed
-                                                ),
-                                              ),
-
-                                            ]
-                                        ),
-                                      ]
-                                  ),
-                                  SizedBox(
-                                      height:6
-                                  ),
+                                  // Row(
+                                  //     children:[
+                                  //       Text(
+                                  //         "Трек номер:",
+                                  //         style: TextStyle(
+                                  //             fontWeight: FontWeight.w400,
+                                  //             fontSize: 14,
+                                  //             color: Color(0xff767676),
+                                  //             fontFamily: "Roboto"
+                                  //         ),
+                                  //       ),
+                                  //       SizedBox(width: 15,),
+                                  //       Column(
+                                  //           children:[
+                                  //             Text(
+                                  //               "                     ",
+                                  //               style: TextStyle(
+                                  //                   fontWeight: FontWeight.w500,
+                                  //                   fontSize: 14,
+                                  //                   color: Color(0xff959595),
+                                  //                   fontFamily: "Roboto",
+                                  //                   decoration: TextDecoration.underline,
+                                  //                   decorationStyle: TextDecorationStyle.dashed
+                                  //               ),
+                                  //             ),
+                                  //
+                                  //           ]
+                                  //       ),
+                                  //     ]
+                                  // ),
+                                  // SizedBox(
+                                  //     height:6
+                                  // ),
                                   //Трек номер: 6ва56а5ва65в
                                   Text(
                                     "Заказ получен:  __.__.__",
