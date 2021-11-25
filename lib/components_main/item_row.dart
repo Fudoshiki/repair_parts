@@ -40,13 +40,12 @@ class ItemRow extends StatelessWidget{
               width: 80,
               height: 100,
               margin: EdgeInsets.only(
-                  right: 30
+                  right: 20
               ),
               child: Center(
                 child: Container(
                   width: 47,
                   height: 47,
-
                   child: Image.asset("assets/image/no_image.png"),
                 ),
               ),
@@ -55,7 +54,7 @@ class ItemRow extends StatelessWidget{
               width: 80,
               height: 100,
               margin: EdgeInsets.only(
-                  right: 30
+                  right: 20
               ),
               child: Image.asset("assets/image/${el['image'][0]}"),
             ),

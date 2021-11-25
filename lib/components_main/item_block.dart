@@ -133,8 +133,8 @@ class ItemBlock extends StatelessWidget{
                       child: Text(
                         el['added_backet']?"Перейти в корзину":"Добавить в корзину",
                         style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 10,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 12,
                             color: el['added_backet']?Color(0xffE6332A):Colors.white,
                             fontFamily: "Roboto"
                         ),

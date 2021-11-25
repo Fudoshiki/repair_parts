@@ -488,7 +488,7 @@ class ProductScreen extends StatelessWidget{
             height: 50,
             width: Get.width-40,
             decoration: BoxDecoration(
-                color: _productController.product['added_backet']?Colors.white:Color(0xffE6332A),
+                color: !_productController.product['added_backet']?Colors.white:Color(0xffE6332A),
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: Color(0xffE6332A),
@@ -497,11 +497,11 @@ class ProductScreen extends StatelessWidget{
             ),
             child: Center(
               child: Text(
-                  "Добавить в корзину",
+                _productController.product['added_backet']?"Добавить в корзину":"Перейти в корзину",
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 16,
-                    color: _productController.product['added_backet']?Color(0xffE6332A):Colors.white,
+                    color: !_productController.product['added_backet']?Color(0xffE6332A):Colors.white,
                     fontFamily: "Roboto"
                 ),
               ),

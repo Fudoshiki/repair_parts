@@ -166,6 +166,14 @@ class RegisterPage extends StatelessWidget{
                     controller: _profileController.number,
                     keyboardType: TextInputType.number,
                     inputFormatters: [maskFormatter],
+                    onChanged: (t){
+                      print(maskFormatter.getUnmaskedText());
+                      if(maskFormatter.getUnmaskedText().length==11)
+                      _profileController.numberValid.value=true;
+                      else
+                        _profileController.numberValid.value=false;
+
+                    },
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       disabledBorder: InputBorder.none,

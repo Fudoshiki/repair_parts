@@ -465,13 +465,13 @@ class SearchPage extends StatelessWidget{
                                       height: 30,
                                       decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(6),
-                                          color: Color(0xffF3F3F3)
+                                          color: Color(0xffE6332A)
                                       ),
                                       child: Center(
                                         child: Container(
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(1),
-                                              color: Color(0xff717171)
+                                              color: Color(0xffffffff)
                                           ),
                                           width: 12,
                                           height: 2,
@@ -983,7 +983,7 @@ class SearchPage extends StatelessWidget{
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Выбрать продавца",
+                                  "Выбрать Продавца",
                                   style: TextStyle(
                                       color: Color(0xff2E2E33),
                                       fontSize: 14,

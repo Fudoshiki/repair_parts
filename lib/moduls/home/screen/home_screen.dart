@@ -37,14 +37,7 @@ class HomeScreen extends StatelessWidget{
                 child:
                 Image.asset("assets/image/Group 24.png"),
               ),
-              Text("сервис уникальных скидок",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: "Roboto"
-                ),
-              )
+             
             ],
           )
         ),

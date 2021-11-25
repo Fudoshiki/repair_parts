@@ -194,7 +194,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(RegisterPage());
             },
           ),
-          //21,22
+          //21,22 25в 25б 25
           GestureDetector(
             child: Container(
                 margin: EdgeInsets.only(
@@ -215,7 +215,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                        "Screens 21,22",
+                        "Screens 21,22 25в 25б 25",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
