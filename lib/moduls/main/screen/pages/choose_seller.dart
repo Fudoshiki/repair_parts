@@ -92,29 +92,34 @@ class ChooseSeller extends StatelessWidget{
             child: ListView(
               children: [
                 Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 20
-                  ),
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
+                    ),
                     height: 44,
                     width: Get.width-106,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
                         color: Colors.white,
-                      border: Border.all(
-                        color: Color(0xffC4C4C4),
-                        width: 1
-                      )
+                        border: Border.all(
+                            color: Color(0xffC4C4C4),
+                            width: 1
+                        )
+                    ),
+                    padding: EdgeInsets.only(
+                        left: 20,right: 7,
+                        top: 7,
+                        bottom: 7
                     ),
                     child: TextField(
                       enabled: false,
                       onTap: (){
                       },
                       decoration: InputDecoration(
-                          hintText: "Поиск запчастей",
+                          hintText: "Поиск ",
                           hintStyle: TextStyle(
                               fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: Color(0xff959595),
+                              fontSize: 14,
+                              color: Color(0xffC4C4C4),
                               fontFamily: "Roboto"
 
                           ),
@@ -124,16 +129,16 @@ class ChooseSeller extends StatelessWidget{
                           focusedBorder: InputBorder.none,
                           errorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
-                          prefixIcon: Container(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 14,
-                                vertical: 12
-                            ),
-                            width: 14,
+                          suffixIcon: SizedBox(
+                            width: 13,
                             height: 14,
-                            child: Image.asset(
-                              "assets/image/search_icon.png",
-                              fit: BoxFit.fill,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: AssetImage("assets/image/search_icon.png"),
+
+                                  )
+                              ),
                             ),
                           )
                       ),

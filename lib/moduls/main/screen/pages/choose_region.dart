@@ -114,11 +114,11 @@ class ChooseRegion extends StatelessWidget{
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                          hintText: "Поиск запчастей",
+                          hintText: "Поиск ",
                           hintStyle: TextStyle(
                               fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: Color(0xff959595),
+                              fontSize: 14,
+                              color: Color(0xffC4C4C4),
                               fontFamily: "Roboto"
 
                           ),
