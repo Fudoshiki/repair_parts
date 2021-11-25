@@ -2,7 +2,9 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   static const HOME = '/home';
-  static const MAIN = '/main';
+  static const MAINBUYER = '/main';
+  static const MAINSELLER = '/mainseller';
+
   static const CATALOG = '/catalog';
   static const PROFILE = '/profile';
   static const PRODUCT = '/product';

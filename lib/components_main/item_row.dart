@@ -1,15 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:repair_parts/moduls/main/controller/main_controller.dart';
-import 'package:repair_parts/moduls/product/controller/product_controller.dart';
-import 'package:repair_parts/routes/app_pages.dart';
+import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 
 class ItemRow extends StatelessWidget{
   dynamic el;
 
   MainController _mainController =Get.find();
-  ProductController _productController =Get.find();
   ItemRow(@required this.el);
 
   @override

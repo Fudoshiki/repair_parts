@@ -5,9 +5,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import 'moduls/catalog/controller/catalog_controller.dart';
-import 'moduls/main/controller/main_controller.dart';
-import 'moduls/product/controller/product_controller.dart';
+import 'moduls/buyer/catalog/controller/catalog_controller.dart';
+import 'moduls/buyer/main/controller/main_controller.dart';
+import 'moduls/buyer/product/controller/product_controller.dart';
+import 'moduls/seller/main/controller/main_controller.dart';
 import 'routes/app_pages.dart';
 
 
@@ -37,6 +38,11 @@ void main() async {
     MainController(),
     permanent: true,
   );
+  Get.put<MainControllerSeller>(
+    MainControllerSeller(),
+    permanent: true,
+  );
+
   Get.put<ProductController>(
     ProductController(),
     permanent: true,
