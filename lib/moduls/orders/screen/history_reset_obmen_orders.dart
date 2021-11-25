@@ -148,7 +148,7 @@ class HistoryResetObmenOrders extends StatelessWidget{
                             height: 15,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Color(0xffC00000)
+                                color: Color(0xffE6332A)
                             ),
                             child: Center(
                               child: Text(

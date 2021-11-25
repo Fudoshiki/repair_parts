@@ -326,7 +326,7 @@ class ResetItemScreen extends StatelessWidget{
                                         Container(
                                           width: 130,
                                           child: Text(
-                                            "количество к возврату/обмену, шт:",
+                                            "количество к возврату, шт:",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 12,

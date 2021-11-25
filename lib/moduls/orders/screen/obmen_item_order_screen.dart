@@ -235,7 +235,11 @@ class ObmenItemOrderScreen extends StatelessWidget{
                         children: [
                           Container(
                             margin: EdgeInsets.only(
-                                top: 20
+                                top: 10,right: 10
+                            ),
+                            height: 65,
+                            padding: EdgeInsets.only(
+                                top: 15
                             ),
                             decoration: BoxDecoration(
                                 border: Border(
@@ -266,7 +270,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                                     Container(
                                       width: Get.width-200,
                                       child: Text(
-                                        "количество к возврату/обмену, шт:",
+                                        "количество к возврату, шт:",
                                         style: TextStyle(
                                             fontWeight: FontWeight.w400,
                                             fontSize: 12,

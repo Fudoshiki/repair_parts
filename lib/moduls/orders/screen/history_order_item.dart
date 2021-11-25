@@ -139,7 +139,7 @@ class HistoryOrderItem extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 40,
                       right: 20,
-                      top: 15
+                      top: 5
                   ),
 
 
@@ -200,7 +200,7 @@ class HistoryOrderItem extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 26
+                  top: 13
               ),
               height: 40,
               decoration: BoxDecoration(

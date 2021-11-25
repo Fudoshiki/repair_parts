@@ -241,17 +241,29 @@ class BlockQueryScreen extends StatelessWidget{
                   color: Color(0xffE6332A),
                   borderRadius: BorderRadius.circular(6)
               ),
-              child: Center(
-                child: Text(
-                  "Чат с менеджером",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                      fontFamily: "Roboto",
-                      color: Colors.white
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Чат с менеджером",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: "Roboto",
+                        color: Colors.white
+                    ),
                   ),
-                ),
+                  Container(
+                    margin: EdgeInsets.only(
+                        left: 13
+                    ),
+                    width: 23,
+                    height: 20,
+                    child: Image.asset("assets/image/Mail Icon.png"),
+                  )
+                ],
               ),
+
             )
           ],
         )

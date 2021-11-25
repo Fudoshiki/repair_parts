@@ -85,7 +85,7 @@ class FavoriteScreen extends StatelessWidget{
                 right: 20,
               ),
               child: Text(
-                "История заказов",
+                "Избранное",
                 style: TextStyle(
                     fontWeight: FontWeight.w900,
                     fontSize: 28,

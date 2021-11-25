@@ -621,7 +621,7 @@ class SellerSendFeedback extends StatelessWidget{
             ),
             child: Center(
               child: Text(
-                "ОК",
+                "Отправить",
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 16,

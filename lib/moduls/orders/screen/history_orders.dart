@@ -83,7 +83,7 @@ class HistoryOrders extends StatelessWidget{
               right: 20,
             ),
             child: Text(
-              "Заказы",
+              "История заказов",
               style: TextStyle(
                   fontWeight: FontWeight.w900,
                   fontSize: 28,
@@ -584,7 +584,7 @@ class HistoryOrders extends StatelessWidget{
                             height: 15,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color: Color(0xffC00000)
+                                color: Color(0xffE6332A)
                             ),
                             child: Center(
                               child: Text(
