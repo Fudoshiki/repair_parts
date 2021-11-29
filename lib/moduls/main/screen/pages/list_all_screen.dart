@@ -24,7 +24,6 @@ import 'package:repair_parts/moduls/orders/screen/history_reset_obmen_orders.dar
 import 'package:repair_parts/moduls/orders/screen/no_history_order.dart';
 import 'package:repair_parts/moduls/orders/screen/order_item.dart';
 import 'package:repair_parts/moduls/orders/screen/order_item_treck.dart';
-import 'package:repair_parts/moduls/orders/screen/order_reset.dart';
 import 'package:repair_parts/moduls/orders/screen/order_screen.dart';
 import 'package:repair_parts/moduls/orders/screen/order_screen2.dart';
 import 'package:repair_parts/moduls/orders/screen/pages_reset/close_obmen.dart';
@@ -2204,7 +2203,6 @@ class ListAllScreen extends StatelessWidget{
               Get.to(MessageItemScreen3());
             },
           ),
-
           //63а 63б 63в
           GestureDetector(
             child: Container(
