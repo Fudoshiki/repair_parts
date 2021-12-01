@@ -24,6 +24,7 @@ import 'package:repair_parts/moduls/buyer/orders/screen/history_reset_obmen_orde
 import 'package:repair_parts/moduls/buyer/orders/screen/no_history_order.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_item.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_item_treck.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/order_reset.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_screen2.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/close_obmen.dart';
@@ -1287,6 +1288,42 @@ class ListAllScreen extends StatelessWidget{
             ),
             onTap:(){
               Get.to(NoHistoryOrder(bottom: true,));
+            },
+          ),
+
+          //Screens 73,76 76а 77
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 73,76 76а 77",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(OrderReset(bottom: true,));
             },
           ),
           //Screens 73, 73а

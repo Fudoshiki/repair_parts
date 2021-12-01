@@ -902,7 +902,7 @@ class OrderReset extends StatelessWidget{
 
                                     GestureDetector(
                                       onTap:(){
-                                        Get.to(ResetItemScreen());
+                                        Get.to(ResetItemScreen(bottom: true,));
                                       },
                                       child: Container(
                                           width: Get.width-40,
@@ -1234,7 +1234,7 @@ class OrderReset extends StatelessWidget{
                                             )
                                         ),
                                         onTap:(){
-                                          Get.to(ResetItemScreen());
+                                          Get.to(ResetItemScreen(bottom: true,));
                                         }
                                     ),
                                   ],

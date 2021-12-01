@@ -507,13 +507,13 @@ class ResetItemScreen extends StatelessWidget{
                                     decoration: BoxDecoration(
                                         color: open2? Color(0xffFFE9E8):Colors.white,
                                         border: Border.all(
-                                            color: open2? Color(0xffFFE9E8):Color(0xffD6D6D6),
+                                            color: open2? Color(0xffE6332A):Color(0xffD6D6D6),
                                             width: 1
                                         ),
                                         borderRadius: BorderRadius.circular(4)
                                     ),
                                     padding: EdgeInsets.all(6),
-                                    child: Image.asset("assets/image/done.png",color:open1? Color(0xffE6332A): Colors.white,),
+                                    child: Image.asset("assets/image/done.png",color:open2? Color(0xffE6332A): Colors.white,),
                                   ),
                                   onTap: (){
                                     open2=!open2;
@@ -552,7 +552,7 @@ class ResetItemScreen extends StatelessWidget{
                                         borderRadius: BorderRadius.circular(4)
                                     ),
                                     padding: EdgeInsets.all(6),
-                                    child: Image.asset("assets/image/done.png",color:open1? Color(0xffE6332A): Colors.white,),
+                                    child: Image.asset("assets/image/done.png",color:open3? Color(0xffE6332A): Colors.white,),
                                   ),
                                   onTap: (){
                                     open3=!open3;
@@ -591,7 +591,7 @@ class ResetItemScreen extends StatelessWidget{
                                         borderRadius: BorderRadius.circular(4)
                                     ),
                                     padding: EdgeInsets.all(6),
-                                    child: Image.asset("assets/image/done.png",color:open1? Color(0xffE6332A): Colors.white,),
+                                    child: Image.asset("assets/image/done.png",color:open4? Color(0xffE6332A): Colors.white,),
                                   ),
                                   onTap: (){
                                     open4=!open4;
@@ -630,7 +630,7 @@ class ResetItemScreen extends StatelessWidget{
                                         borderRadius: BorderRadius.circular(4)
                                     ),
                                     padding: EdgeInsets.all(6),
-                                    child: Image.asset("assets/image/done.png",color:open1? Color(0xffE6332A): Colors.white,),
+                                    child: Image.asset("assets/image/done.png",color:open5? Color(0xffE6332A): Colors.white,),
                                   ),
                                   onTap: (){
                                     open5=!open5;
@@ -669,7 +669,7 @@ class ResetItemScreen extends StatelessWidget{
                                         borderRadius: BorderRadius.circular(4)
                                     ),
                                     padding: EdgeInsets.all(6),
-                                    child: Image.asset("assets/image/done.png",color:open1? Color(0xffE6332A): Colors.white,),
+                                    child: Image.asset("assets/image/done.png",color:open6? Color(0xffE6332A): Colors.white,),
                                   ),
                                   onTap: (){
                                     open6=!open6;
@@ -708,7 +708,7 @@ class ResetItemScreen extends StatelessWidget{
                                         borderRadius: BorderRadius.circular(4)
                                     ),
                                     padding: EdgeInsets.all(6),
-                                    child: Image.asset("assets/image/done.png",color:open1? Color(0xffE6332A): Colors.white,),
+                                    child: Image.asset("assets/image/done.png",color:open7? Color(0xffE6332A): Colors.white,),
                                   ),
                                   onTap: (){
                                     open7=!open7;
@@ -984,7 +984,7 @@ class ResetItemScreen extends StatelessWidget{
                   ),
                 ),
                 onTap:(){
-                  Get.to(ResetItemQuerySuccess());
+                  Get.to(ResetItemQuerySuccess(bottom: true,));
                 }
               )
             ]
