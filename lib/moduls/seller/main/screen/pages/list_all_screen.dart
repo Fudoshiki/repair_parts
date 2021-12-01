@@ -1,17 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen_block.dart';
 import 'package:repair_parts/moduls/buyer/query/screen/query_item_screen_with_photo.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen_back.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/pages/list_items_seller.dart';
 import 'package:repair_parts/moduls/seller/main/screen/pages/search_page_seller.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/buyer_screen/buyer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/profile_page.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_with_photo_and_desc.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/register_page.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages_block/block_profile.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages_block/block_profile_query.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_information/information_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_sended.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_submit.dart';
@@ -511,7 +517,170 @@ class ListAllScreenSeller extends StatelessWidget{
 
             },
           ),
-          //SearchPageSeller
+          //34 27
+          GestureDetector(
+            child: Container(
+
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  34 27",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OfferSended());
+
+            },
+          ),
+          //33 33с 33а 33х 33ф 33ч 33в 33я 33х 33ф
+          GestureDetector(
+            child: Container(
+
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child: Text(
+                        "Screens 33 33с 33а 33х 33ф 33ч 33в 33я 33х 33ф",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OfferScreen());
+
+            },
+          ),
+          //82
+          GestureDetector(
+            child: Container(
+
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  82",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProfileScreenBlockSeller(bottom: true,));
+            },
+          ),
+          //82а 82б
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  82а 82б",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProfileScreenBlockQuerySeller(bottom: true,));
+            },
+          ),
+          // 85 85а 86 86а 86б 84
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  85 85а 86 86а 86б 84",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(BuyerScreen(bottom: true,));
+            },
+          ),
+          //BuyerScreen
         ],
       )
     );
