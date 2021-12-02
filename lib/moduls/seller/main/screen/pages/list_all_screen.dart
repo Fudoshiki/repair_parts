@@ -8,6 +8,13 @@ import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen_back.da
 import 'package:repair_parts/moduls/seller/catalog/screen/pages/list_items_seller.dart';
 import 'package:repair_parts/moduls/seller/main/screen/pages/search_page_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/buyer_screen/buyer_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen2.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen3.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen4.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/history_orders.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/no_history_order.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/order_page/order_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/profile_page.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_screen2.dart';
@@ -19,6 +26,8 @@ import 'package:repair_parts/moduls/seller/profile/screen/pages_information/info
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/create_offer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_sended.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/product_change.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/product_changed.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_submit.dart';
@@ -70,7 +79,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 2",
+                      "Screens 2 2а 2б 2в",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -80,7 +89,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CatalogScreenSeller());
+              Get.to(CatalogScreenSeller(bottom: true,));
 
             },
           ),
@@ -712,7 +721,286 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(CreateOfferScreen(bottom: true,));
             },
           ),
-          //BuyerScreen
+          //3 3a
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  3 3a",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenSeller(bottom: true,));
+            },
+          ),
+          //74
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  74",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryOrdersSeller(bottom: true,));
+            },
+          ),
+          //75
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  75",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(NoHistoryOrderSeller(bottom: true,));
+            },
+          ),
+          //75а
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  75а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryOrderItemScreenSeller(bottom: true,));
+            },
+          ),
+          //75в
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  75в",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryOrderItemScreenSeller2(bottom: true,));
+            },
+          ),
+          //75б
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  75б",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryOrderItemScreenSeller3(bottom: true,));
+            },
+          ),
+          //75г
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  75г",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryOrderItemScreenSeller4(bottom: true,));
+            },
+          ),
+          //14
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  14",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProductChange(bottom: true,));
+            },
+          ),
+          //14a
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  14a",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProductChanged(bottom: true,));
+            },
+          ),
+          //ProductChanged
         ],
       )
     );

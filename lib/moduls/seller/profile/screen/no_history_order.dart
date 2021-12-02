@@ -7,10 +7,9 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/orders/controller/order_controller.dart';
 
-class QueryScreen2 extends StatelessWidget{
-  MainController _mainController =Get.find();
+class NoHistoryOrderSeller extends StatelessWidget{
   bool? bottom;
-  QueryScreen2({@required this.bottom});
+  NoHistoryOrderSeller({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
@@ -50,7 +49,6 @@ class QueryScreen2 extends StatelessWidget{
                 "profile_icon.png",
                 18,
                 text: "Кабинет",
-
               ),
             ],
           ),
@@ -58,32 +56,37 @@ class QueryScreen2 extends StatelessWidget{
           height: 1,
         ),
 
-
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             GestureDetector(
-              child: Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 40
-                  ),
-                  child: Icon(Icons.arrow_back,color: Color(0xff2e2e33),)
+              child:  Container(
+                margin: EdgeInsets.only(
+                    right: 20,
+                    left: 20,
+                    top: 40
+                ),
+                height: 40,
+                child: Container(
+                  width: 19,
+                  height: 16,
+
+                  child: Image.asset("assets/image/arrow_left.png"),
+                ),
               ),
               onTap: (){
-                  Get.back();
+                Get.back();
               },
             ),
             Container(
               margin: EdgeInsets.only(
                 left: 20,
-                top: 20,
+                top: 10,
 
                 right: 20,
               ),
               child: Text(
-                "Запросы",
+                "История заказов",
                 style: TextStyle(
                     fontWeight: FontWeight.w900,
                     fontSize: 28,
@@ -103,7 +106,7 @@ class QueryScreen2 extends StatelessWidget{
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            "У вас пока нет запросов",
+                            "У вас пока нет заказов",
                             style: TextStyle(
                                 fontWeight: FontWeight.w700,
                                 fontSize: 18,
@@ -115,7 +118,7 @@ class QueryScreen2 extends StatelessWidget{
                           ),
                           SizedBox(height: 16,),
                           Text(
-                            "Здесь появится информация о запросах и предложениях",
+                            "Здесь появится информация о завершенных заказах",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
