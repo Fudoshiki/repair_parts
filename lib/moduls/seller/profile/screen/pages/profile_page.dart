@@ -331,8 +331,8 @@ class ProfilePageSeller extends StatelessWidget{
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6),
-                          color: Color(0xffFFE9E8)
+                            borderRadius: BorderRadius.circular(6),
+                            color: Color(0xffF3F3F3)
                         ),
                         height: 30,
                         width: (Get.width-54)/2,
@@ -348,30 +348,32 @@ class ProfilePageSeller extends StatelessWidget{
                           ),
                         ),
                       ),
+
                       GestureDetector(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Color(0xffF3F3F3)
-                          ),
-                          height: 30,
-                          width: (Get.width-54)/2,
-                          child: Center(
-                            child: Text(
-                              "Продавец",
-                              style: TextStyle(
-                                  color: Color(0xffE6332A),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w500,
-                                  fontFamily: "Roboto"
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: Color(0xffFFE9E8)
+                            ),
+                            height: 30,
+                            width: (Get.width-54)/2,
+                            child: Center(
+                              child: Text(
+                                "Продавец",
+                                style: TextStyle(
+                                    color: Color(0xffE6332A),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: "Roboto"
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        onTap: (){
-                          Get.toNamed(Routes.MAINSELLER);
-                        }
+                          onTap: (){
+                            Get.toNamed(Routes.MAINSELLER);
+                          }
                       )
+
                     ],
                   ),
                 ),

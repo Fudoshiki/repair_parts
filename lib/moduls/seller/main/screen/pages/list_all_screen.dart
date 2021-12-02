@@ -16,6 +16,7 @@ import 'package:repair_parts/moduls/seller/profile/screen/pages/register_page.da
 import 'package:repair_parts/moduls/seller/profile/screen/pages_block/block_profile.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_block/block_profile_query.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_information/information_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/create_offer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_sended.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org2.dart';
@@ -678,6 +679,37 @@ class ListAllScreenSeller extends StatelessWidget{
             ),
             onTap:(){
               Get.to(BuyerScreen(bottom: true,));
+            },
+          ),
+          //25 25а 25б 25в 25г
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  25 25а 25б 25в 25г",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(CreateOfferScreen(bottom: true,));
             },
           ),
           //BuyerScreen
