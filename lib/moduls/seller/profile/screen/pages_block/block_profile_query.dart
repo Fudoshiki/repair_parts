@@ -180,7 +180,7 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                       Container(
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6),
-                            color: Color(0xffFFE9E8)
+                            color: Color(0xffF3F3F3)
                         ),
                         height: 30,
                         width: (Get.width-54)/2,
@@ -196,36 +196,45 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                           ),
                         ),
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            color: Color(0xffF3F3F3)
-                        ),
-                        height: 30,
-                        width: (Get.width-54)/2,
-                        child: Center(
-                          child: Text(
-                            "Продавец",
-                            style: TextStyle(
-                                color: Color(0xffE6332A),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: "Roboto"
+
+                      GestureDetector(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: Color(0xffFFE9E8)
+                            ),
+                            height: 30,
+                            width: (Get.width-54)/2,
+                            child: Center(
+                              child: Text(
+                                "Продавец",
+                                style: TextStyle(
+                                    color: Color(0xffE6332A),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
                             ),
                           ),
-                        ),
+                          onTap: (){
+                          }
                       )
+
                     ],
                   ),
                 ),
 
+
                 GestureDetector(
                   child: Container(
+                    height: 60,
+
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
                     padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
+                        bottom: 16,left: 14,
                         top: 21
                     ),
                     decoration: BoxDecoration(
@@ -341,8 +350,11 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                     Get.to(BlockQueryScreen());
                   },
                 ),
+
                 GestureDetector(
                   child: Container(
+                    height: 60,
+
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
@@ -416,6 +428,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
 
                 ),
                 Container(
+                  height: 60,
+
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
@@ -465,6 +479,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                   ),
                 ),
                 Container(
+                  height: 60,
+
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
@@ -514,6 +530,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                   ),
                 ),
                 Container(
+                  height: 60,
+
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
@@ -563,6 +581,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                   ),
                 ),
                 Container(
+                  height: 60,
+
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
@@ -612,6 +632,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                   ),
                 ),
                 Container(
+                  height: 60,
+
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
@@ -661,6 +683,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                   ),
                 ),
                 Container(
+                  height: 60,
+
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
@@ -708,8 +732,9 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                     ],
                   ),
                 ),
-
                 Container(
+                    height: 60,
+
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
@@ -759,6 +784,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                 ),
                 GestureDetector(
                   child: Container(
+                    height: 60,
+
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),

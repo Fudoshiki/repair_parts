@@ -814,7 +814,6 @@ class ProfilePageSeller extends StatelessWidget{
                     ],
                   ),
                 ),
-
                 Container(
                     height: 60,
 
