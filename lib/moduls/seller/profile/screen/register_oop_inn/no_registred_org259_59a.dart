@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 
-class NORegistredOrgScreen2 extends StatelessWidget{
+class NORegistredOrgScreen259_59a extends StatelessWidget{
 
   bool? bottom;
   bool open2 =false;
@@ -254,7 +254,61 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
-                              labelText: "ОГРНИП",
+                              labelText: "ОГРН",
+                              labelStyle: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                  color: Color(0xff717171),
+                                  fontFamily: "Roboto",
+                                  height: 0.2
+                              ),
+                              enabledBorder: InputBorder.none,
+                              border: InputBorder.none,
+                              focusedErrorBorder: InputBorder.none,
+                              focusedBorder: InputBorder.none,
+                              errorBorder: InputBorder.none,
+                              disabledBorder: InputBorder.none,
+                            ),
+                          )
+                      ),
+                      Container(
+                          margin: EdgeInsets.only(top: 8),
+                          height: 48,
+                          width: Get.width-40,
+                          padding: EdgeInsets.only(
+                              left: 20,
+                              right: 20
+                          ),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(6),
+                              color: Colors.white,
+                              border: Border.all(
+                                  color: Color(0xffC4C4C4),
+                                  width: 1
+                              )
+                          ),
+                          child: TextField(
+                            onTap: (){
+                            },
+                            enabled: false,
+                            controller: new TextEditingController()..text="1234567890",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+
+                            ),
+                            decoration: InputDecoration(
+                              hintText: "КПП",
+                              hintStyle: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: Color(0xff959595),
+                                  fontFamily: "Roboto"
+
+                              ),
+                              labelText: "КПП",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -1479,7 +1533,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 ),
                                 SizedBox(width: 8,),
                                 Text(
-                                  "Паспорт (главная)",
+                                  "Устав",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 14,
@@ -1689,7 +1743,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 ),
                                 SizedBox(width: 8,),
                                 Text(
-                                  "Паспорт (прописка)",
+                                  "ИНН",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 14,
@@ -1898,7 +1952,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 ),
                                 SizedBox(width: 8,),
                                 Text(
-                                  "ИНН",
+                                  "ОГРН",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 14,
@@ -2040,215 +2094,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                           );
                         },
                       ),
-                      SizedBox(height: 10,),
-                      GestureDetector(
-                        child: str4!=""?DottedBorder(
-                          color: Color(0xffE6332A),
-                          radius: Radius.circular(20),
-                          child: Container(
 
-                            padding: EdgeInsets.only(
-                                left: 20,
-                                top: 15,
-                                bottom: 15,
-                                right: 9
-                            ),
-                            height: 50,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "passport.pdf",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                                Container(
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle
-                                  ),
-                                  width: 21,
-                                  height: 21,
-                                  padding: EdgeInsets.only(
-                                      left: 1,
-                                      bottom: 1
-                                  ),
-                                  child: Image.asset("assets/image/canseled.png"),
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                            :DottedBorder(
-                          color: Color(0xffD6D6D6),
-                          radius: Radius.circular(20),
-                          child: Container(
-
-                            padding: EdgeInsets.only(
-                                left: 20,
-                                top: 15,
-                                bottom: 15,
-                                right: 9
-                            ),
-                            height: 50,
-                            child: Row(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle
-                                  ),
-                                  width: 16,
-                                  height: 16,
-
-                                  child: Image.asset("assets/image/adede.png"),
-                                ),
-                                SizedBox(width: 8,),
-                                Text(
-                                  "СНИЛС",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-
-                              ],
-                            ),
-                          ),
-                        ),
-                        onTap: (){
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              double width = MediaQuery.of(context).size.width;
-                              double height = MediaQuery.of(context).size.height;
-                              return AlertDialog(
-                                  backgroundColor: Colors.transparent,
-                                  contentPadding: EdgeInsets.zero,
-                                  elevation: 0.0,
-                                  // title: Center(child: Text("Evaluation our APP")),
-                                  content: Container(
-                                    width: Get.width-26,
-                                    child: Column(
-                                      mainAxisAlignment: MainAxisAlignment.end,
-                                      children: [
-                                        Container(
-                                          width: Get.width-26,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius:
-                                              const BorderRadius.all(Radius.circular(10.0))),
-                                          child: Column(
-                                            children: [
-                                              GestureDetector(
-                                                child: Container(
-                                                  height: 50,
-                                                  child: Center(
-                                                    child: Text(
-                                                      "Сделать фото",
-                                                      style: TextStyle(
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight.w400,
-                                                          fontFamily: "Roboto",
-                                                          color: Color(0xff2E2E33)
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                onTap: ()async{
-                                                  final ImagePicker _picker = ImagePicker();
-                                                  final pickedFile= await _picker.pickImage(source: ImageSource.camera);
-                                                  if(
-                                                  pickedFile!=null
-                                                  ){
-                                                    str4=pickedFile.name;
-                                                    Get.forceAppUpdate();
-                                                  }
-                                                  Get.back();
-                                                },
-                                              ),
-                                              Container(
-                                                width: Get.width,
-                                                height: 1,
-                                                color: Color(0xffCBCBCB),
-                                              ),
-                                              GestureDetector(
-                                                child: Container(
-                                                  height: 50,
-                                                  child: Center(
-                                                    child: Text(
-                                                      "Выбрать из галереи",
-                                                      style: TextStyle(
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight.w400,
-                                                          fontFamily: "Roboto",
-                                                          color: Color(0xff2E2E33)
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                onTap: ()async{
-                                                  final ImagePicker _picker = ImagePicker();
-                                                  final pickedFile= await _picker.pickImage(source: ImageSource.gallery);
-                                                  if(
-                                                  pickedFile!=null
-                                                  ){
-                                                    str4=pickedFile.name;
-                                                    Get.forceAppUpdate();
-                                                  }
-                                                  Get.back();
-                                                },
-                                              ),
-
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Container(
-                                          width: Get.width-26,
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius:
-                                              const BorderRadius.all(Radius.circular(10.0))),
-                                          child: Column(
-                                            children: [
-                                              GestureDetector(
-                                                child: Container(
-                                                  height: 50,
-                                                  child: Center(
-                                                    child: Text(
-                                                      "Отмена",
-                                                      style: TextStyle(
-                                                          fontSize: 16,
-                                                          fontWeight: FontWeight.w400,
-                                                          fontFamily: "Roboto",
-                                                          color: Color(0xff2E2E33)
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                                onTap: (){
-                                                  Get.back();
-                                                },
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-
-                                      ],
-                                    ),
-                                  )
-                              );
-                            },
-                          );
-                        },
-                      ),
                     ],
                   ),
                 ),
@@ -2626,7 +2472,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                     height: 50,
                     child: Center(
                       child: Text(
-                        "Продолжить",
+                        "Отправить запрос",
                         style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,

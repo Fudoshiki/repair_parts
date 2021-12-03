@@ -84,7 +84,7 @@ class DoneSubmit extends StatelessWidget{
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
-                                    width: Get.width-106,
+                                    width: Get.width-40,
                                     height: 46,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(6),
@@ -126,12 +126,7 @@ class DoneSubmit extends StatelessWidget{
                               ],
                             ),
                           ),
-                          Container(
-                            margin:EdgeInsets.symmetric(horizontal: 20),
-                            height: 22,
-                            width: 26,
-                            child: Image.asset("assets/image/камера.png"),
-                          )
+
                         ],
                       ),
                     ),

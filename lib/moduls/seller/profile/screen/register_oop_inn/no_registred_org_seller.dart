@@ -83,6 +83,9 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
+                      SizedBox(
+                        height: 17,
+                      ),
                     ],
                   ),
                 ],
@@ -641,7 +644,6 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
 
                       Container(
                           margin: EdgeInsets.only(bottom: 10),
-                          height: 48,
                           width: Get.width-40,
                           padding: EdgeInsets.only(
                               left: 20,
@@ -658,7 +660,8 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
-
+                            maxLines: 3,
+                            minLines: 1,
                             decoration: InputDecoration(
                               hintText: "Населенный пункт",
                               hintStyle: TextStyle(
@@ -667,6 +670,13 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                                   color: Color(0xff959595),
                                   fontFamily: "Roboto"
 
+                              ),
+                              labelStyle: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: Color(0xff717171),
+                                  fontFamily: "Roboto",
+                                  height: 0.4
                               ),
                               enabledBorder: InputBorder.none,
                               border: InputBorder.none,

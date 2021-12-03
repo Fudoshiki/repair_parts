@@ -48,9 +48,11 @@ import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_send
 import 'package:repair_parts/moduls/seller/profile/screen/product_change.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/product_changed.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org2.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org259_59a.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_submit.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/registred_org.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/registred_org2.dart';
 
 class ListAllScreenSeller extends StatelessWidget{
 
@@ -447,7 +449,7 @@ class ListAllScreenSeller extends StatelessWidget{
 
             },
           ),
-          //56 57 61
+          //56  61
           GestureDetector(
             child: Container(
 
@@ -466,7 +468,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens  56 57 61",
+                      "Screens  56  61",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -480,7 +482,8 @@ class ListAllScreenSeller extends StatelessWidget{
 
             },
           ),
-          //58 58б 58а 59 59а
+
+          // 57
           GestureDetector(
             child: Container(
 
@@ -499,7 +502,40 @@ class ListAllScreenSeller extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens  58 58б 58а 59 59а",
+                      "Screens   57 ",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(RegistredOrgScreen2Seller());
+
+            },
+          ),
+          //58 58б 58а
+          GestureDetector(
+            child: Container(
+
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  58 58б 58а",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -510,6 +546,40 @@ class ListAllScreenSeller extends StatelessWidget{
             ),
             onTap:(){
               Get.to(NORegistredOrgScreen2());
+
+            },
+          ),
+
+          // 59 59а
+          GestureDetector(
+            child: Container(
+
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  59 59а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(NORegistredOrgScreen259_59a());
 
             },
           ),

@@ -76,6 +76,9 @@ class RegistredOrgScreen extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
+                      SizedBox(
+                        height: 17,
+                      ),
                     ],
                   ),
                 ],
@@ -342,7 +345,6 @@ class RegistredOrgScreen extends StatelessWidget{
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
                           width: Get.width-40,
                           padding: EdgeInsets.only(
                               left: 20,
@@ -368,6 +370,8 @@ class RegistredOrgScreen extends StatelessWidget{
                                 fontFamily: "Roboto"
 
                             ),
+                            maxLines: 3,
+                            minLines: 1,
                             decoration: InputDecoration(
                               hintText: "Фамилия",
                               hintStyle: TextStyle(
@@ -636,7 +640,6 @@ class RegistredOrgScreen extends StatelessWidget{
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
                           width: Get.width-40,
                           padding: EdgeInsets.only(
                               left: 20,
@@ -654,7 +657,7 @@ class RegistredOrgScreen extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
-                            controller: new TextEditingController()..text="Иркутская область, Ангарский район, город Ангарск",
+                            controller: new TextEditingController()..text="Еврейская автономная область, Биробиджанский район, с. Красный Восток",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -662,6 +665,8 @@ class RegistredOrgScreen extends StatelessWidget{
                                 fontFamily: "Roboto"
 
                             ),
+                            maxLines: 3,
+                            minLines: 1,
                             decoration: InputDecoration(
                               hintText: "Фамилия",
                               hintStyle: TextStyle(
@@ -671,6 +676,7 @@ class RegistredOrgScreen extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Населенный пункт",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,

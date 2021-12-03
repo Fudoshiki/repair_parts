@@ -74,6 +74,9 @@ class NORegistredOrgScreen extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
+                      SizedBox(
+                        height: 17,
+                      ),
                     ],
                   ),
                 ],
