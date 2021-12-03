@@ -7,6 +7,9 @@ import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen_back.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/pages/list_items_seller.dart';
 import 'package:repair_parts/moduls/seller/main/screen/pages/search_page_seller.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/block_19/history_obmen76.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76a.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76b.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/buyer_screen/buyer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen2.dart';
@@ -30,6 +33,7 @@ import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/o
 import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/order_2button_screen_tk31b.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/order_page/order_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/profile_page.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages/profile_page2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages/query_with_photo_and_desc.dart';
@@ -39,6 +43,7 @@ import 'package:repair_parts/moduls/seller/profile/screen/pages_block/block_prof
 import 'package:repair_parts/moduls/seller/profile/screen/pages_information/information_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/create_offer_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_screen2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_sended.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/product_change.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/product_changed.dart';
@@ -143,7 +148,7 @@ class ListAllScreenSeller extends StatelessWidget{
 
             },
           ),
-          //81 5 5а
+          //81  5а
           GestureDetector(
             child: Container(
 
@@ -162,7 +167,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 81 5 5а",
+                      "Screens 81  5а",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -173,6 +178,40 @@ class ListAllScreenSeller extends StatelessWidget{
             ),
             onTap:(){
               Get.to(ProfilePageSeller(bottom: true,));
+
+            },
+          ),
+
+          //5
+          GestureDetector(
+            child: Container(
+
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 5",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProfilePageSeller2(bottom: true,));
 
             },
           ),
@@ -570,11 +609,11 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OfferSended());
+              Get.to(OfferSended(bottom: true,));
 
             },
           ),
-          //33 33с 33а 33х 33ф 33ч 33в 33я 33х 33ф
+          //33 33а 33х 33ф 33ч 33в 33я 33х 33ф
           GestureDetector(
             child: Container(
 
@@ -595,7 +634,7 @@ class ListAllScreenSeller extends StatelessWidget{
                     Container(
                       width: Get.width-40,
                       child: Text(
-                        "Screens 33 33с 33а 33х 33ф 33ч 33в 33я 33х 33ф",
+                        "Screens 33  33а 33х 33ф 33ч 33в 33я 33х 33ф",
                         style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w700
@@ -606,8 +645,42 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OfferScreen());
+              Get.to(OfferScreen(bottom: true,));
+            },
+          ),
+          //33с
+          GestureDetector(
+            child: Container(
 
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Container(
+                      width: Get.width-40,
+                      child: Text(
+                        "Screens 33с",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    )
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OfferScreen2(bottom: true,));
             },
           ),
           //82
@@ -1448,6 +1521,132 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
             },
           ),
+          //76
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  76",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryResetObmenSeller76(bottom: true,));
+            },
+          ),
+          //76a
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  76a",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ResetObmenItem76a(bottom: true,));
+            },
+          ),
+          //76b
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  76b",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ResetObmenItem76b(bottom: true,));
+            },
+          ),
+          //33ю
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  33ю",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
+            },
+          ),
+
+          //HistoryResetObmenSeller76
         ],
       )
     );

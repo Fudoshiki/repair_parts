@@ -180,7 +180,7 @@ class ListItemsSeller extends StatelessWidget{
                         children: [
                           Container(
                               height: 44,
-                              width: Get.width-130,
+                              width: Get.width-84,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
                                   color: Colors.white
@@ -217,12 +217,7 @@ class ListItemsSeller extends StatelessWidget{
                         ],
                       ),
                     ),
-                    Container(
-                      margin:EdgeInsets.symmetric(horizontal: 20),
-                      height: 22,
-                      width: 26,
-                      child: Image.asset("assets/image/камера.png"),
-                    )
+
                   ],
                 ),
               ),
@@ -235,7 +230,6 @@ class ListItemsSeller extends StatelessWidget{
               left: 20,
               right: 20,
               top: 13,
-              bottom: 10
             ),
             padding: EdgeInsets.only(
               bottom: 10

@@ -6,7 +6,7 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/query/screen/fullscreen_image.dart';
 
 
-class OfferScreen extends StatelessWidget{
+class OfferScreen2 extends StatelessWidget{
   bool? bottom;
   bool open =false;
   bool open2=false;
@@ -19,7 +19,7 @@ class OfferScreen extends StatelessWidget{
   var sorted ="".obs;
 
   var controller =new PageController(initialPage: 1);
-  OfferScreen({@required this.bottom});
+  OfferScreen2({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
@@ -1586,155 +1586,155 @@ class OfferScreen extends StatelessWidget{
                     ),
                     child: Row(
                       children: [
+                        // GestureDetector(
+                        //     child: Container(
+                        //         width: (Get.width-50)/2,
+                        //         height: 31,
+                        //         decoration: BoxDecoration(
+                        //             borderRadius: BorderRadius.circular(6),
+                        //             color: Color(0xffFFE9E8)
+                        //         ),
+                        //         padding: EdgeInsets.all(
+                        //             6
+                        //         ),
+                        //         child:Center(
+                        //           child: Text(
+                        //             "Вложения",
+                        //             style: TextStyle(
+                        //                 fontWeight: FontWeight.w700,
+                        //                 fontSize: 12,
+                        //                 color: Color(0xff2e2e33),
+                        //                 fontFamily: "Roboto"
+                        //             ),
+                        //           ),
+                        //         )
+                        //     ),
+                        //     onTap:(){
+                        //       showDialog(
+                        //         context: context,
+                        //         builder: (BuildContext context) {
+                        //           double width = MediaQuery.of(context).size.width;
+                        //           double height = MediaQuery.of(context).size.height;
+                        //           return AlertDialog(
+                        //               backgroundColor: Colors.transparent,
+                        //               contentPadding: EdgeInsets.zero,
+                        //               elevation: 0.0,
+                        //               // title: Center(child: Text("Evaluation our APP")),
+                        //               content: Container(
+                        //                 child: Column(
+                        //                   mainAxisAlignment: MainAxisAlignment.center,
+                        //                   children: [
+                        //                     Container(
+                        //                       width: Get.width-26,
+                        //                       height: 260,
+                        //                       decoration: BoxDecoration(
+                        //                         color: Colors.white,
+                        //                       ),
+                        //                       child: Column(
+                        //                         crossAxisAlignment: CrossAxisAlignment.start,
+                        //                         children: [
+                        //                           Container(
+                        //                             margin: EdgeInsets.only(
+                        //                                 left: 37,
+                        //                                 top: 36
+                        //                             ),
+                        //                             child: Text(
+                        //                               "Вложения",
+                        //                               style: TextStyle(
+                        //                                   fontWeight: FontWeight.w700,
+                        //                                   fontSize: 24,
+                        //                                   color: Color(0xff2e2e33),
+                        //                                   fontFamily: "Roboto"
+                        //                               ),
+                        //                             ),
+                        //                           ),
+                        //                           Container(
+                        //                             margin: EdgeInsets.only(
+                        //                                 left: 37,
+                        //                                 top: 14
+                        //                             ),
+                        //                             child:Text(
+                        //                               "Файлы",
+                        //                               style: TextStyle(
+                        //                                   fontWeight: FontWeight.w400,
+                        //                                   fontSize: 18,
+                        //                                   color: Color(0xff2e2e33),
+                        //                                   fontFamily: "Roboto"
+                        //                               ),
+                        //                             ),
+                        //                           ),
+                        //
+                        //                           GestureDetector(
+                        //                             child: Container(
+                        //                               margin: EdgeInsets.only(
+                        //                                   left: 37,
+                        //                               ),
+                        //                               decoration: BoxDecoration(
+                        //                                   border: Border(
+                        //                                       bottom: BorderSide(
+                        //                                           color: Color(0xffE6332A)
+                        //                                       )
+                        //                                   )
+                        //                               ),
+                        //                               child: Text(
+                        //                                 "image22121",
+                        //                                 style: TextStyle(
+                        //                                     fontWeight: FontWeight.w400,
+                        //                                     fontSize: 18,
+                        //                                     color: Color(0xffE6332A),
+                        //                                     fontFamily: "Roboto"
+                        //                                 ),
+                        //                               ),
+                        //                             ),
+                        //                             onTap: (){
+                        //                               Get.to(FullScreenImage());
+                        //                             },
+                        //                           ),
+                        //                           GestureDetector(
+                        //                             child: Container(
+                        //                               margin: EdgeInsets.only(
+                        //                                   left: 37,
+                        //                                   top: 2
+                        //                               ),
+                        //                               decoration: BoxDecoration(
+                        //                                   border: Border(
+                        //                                       bottom: BorderSide(
+                        //                                           color: Color(0xffE6332A)
+                        //                                       )
+                        //                                   )
+                        //                               ),
+                        //                               child: Text(
+                        //                                 "image222",
+                        //                                 style: TextStyle(
+                        //                                   fontWeight: FontWeight.w400,
+                        //                                   fontSize: 18,
+                        //                                   color: Color(0xffE6332A),
+                        //                                   fontFamily: "Roboto",
+                        //
+                        //                                 ),
+                        //                               ),
+                        //                             ),
+                        //                             onTap: (){
+                        //                               Get.to(FullScreenImage());
+                        //                             },
+                        //                           )
+                        //                         ],
+                        //                       ),
+                        //                     ),
+                        //
+                        //
+                        //                   ],
+                        //                 ),
+                        //               )
+                        //           );
+                        //         },
+                        //       );
+                        //     }
+                        // ),
+                        // SizedBox(width: 10,),
                         GestureDetector(
                             child: Container(
-                                width: (Get.width-50)/2,
-                                height: 31,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Color(0xffFFE9E8)
-                                ),
-                                padding: EdgeInsets.all(
-                                    6
-                                ),
-                                child:Center(
-                                  child: Text(
-                                    "Вложения",
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: 12,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto"
-                                    ),
-                                  ),
-                                )
-                            ),
-                            onTap:(){
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  double width = MediaQuery.of(context).size.width;
-                                  double height = MediaQuery.of(context).size.height;
-                                  return AlertDialog(
-                                      backgroundColor: Colors.transparent,
-                                      contentPadding: EdgeInsets.zero,
-                                      elevation: 0.0,
-                                      // title: Center(child: Text("Evaluation our APP")),
-                                      content: Container(
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              width: Get.width-26,
-                                              height: 260,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
-                                              ),
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Container(
-                                                    margin: EdgeInsets.only(
-                                                        left: 37,
-                                                        top: 36
-                                                    ),
-                                                    child: Text(
-                                                      "Вложения",
-                                                      style: TextStyle(
-                                                          fontWeight: FontWeight.w700,
-                                                          fontSize: 24,
-                                                          color: Color(0xff2e2e33),
-                                                          fontFamily: "Roboto"
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    margin: EdgeInsets.only(
-                                                        left: 37,
-                                                        top: 14
-                                                    ),
-                                                    child:Text(
-                                                      "Файлы",
-                                                      style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 18,
-                                                          color: Color(0xff2e2e33),
-                                                          fontFamily: "Roboto"
-                                                      ),
-                                                    ),
-                                                  ),
-
-                                                  GestureDetector(
-                                                    child: Container(
-                                                      margin: EdgeInsets.only(
-                                                          left: 37,
-                                                      ),
-                                                      decoration: BoxDecoration(
-                                                          border: Border(
-                                                              bottom: BorderSide(
-                                                                  color: Color(0xffE6332A)
-                                                              )
-                                                          )
-                                                      ),
-                                                      child: Text(
-                                                        "image22121",
-                                                        style: TextStyle(
-                                                            fontWeight: FontWeight.w400,
-                                                            fontSize: 18,
-                                                            color: Color(0xffE6332A),
-                                                            fontFamily: "Roboto"
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    onTap: (){
-                                                      Get.to(FullScreenImage());
-                                                    },
-                                                  ),
-                                                  GestureDetector(
-                                                    child: Container(
-                                                      margin: EdgeInsets.only(
-                                                          left: 37,
-                                                          top: 2
-                                                      ),
-                                                      decoration: BoxDecoration(
-                                                          border: Border(
-                                                              bottom: BorderSide(
-                                                                  color: Color(0xffE6332A)
-                                                              )
-                                                          )
-                                                      ),
-                                                      child: Text(
-                                                        "image222",
-                                                        style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 18,
-                                                          color: Color(0xffE6332A),
-                                                          fontFamily: "Roboto",
-
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    onTap: (){
-                                                      Get.to(FullScreenImage());
-                                                    },
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-
-
-                                          ],
-                                        ),
-                                      )
-                                  );
-                                },
-                              );
-                            }
-                        ),
-                        SizedBox(width: 10,),
-                        GestureDetector(
-                            child: Container(
-                                width: (Get.width-50)/2,
+                                width: Get.width-40,
                                 height: 31,
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),

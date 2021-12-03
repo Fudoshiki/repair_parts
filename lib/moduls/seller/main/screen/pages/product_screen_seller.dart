@@ -42,13 +42,7 @@ class ProductScreenSeller extends StatelessWidget{
               18,
               text: "Заказы",
             ),
-            _bottomNavigationitem.showItem(
-              false,
-              "bascket_icon.png",
-              18,
-              text: "Корзина",
 
-            ),
             _bottomNavigationitem.showItem(
               false,
               "message_icon.png",

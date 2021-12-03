@@ -466,7 +466,7 @@ class CreateOfferScreen extends StatelessWidget{
                           onTap: (){
                             showModalBottomSheet(context: context, builder: (c){
                               return FractionallySizedBox(
-                                  heightFactor: 0.7,
+                                  heightFactor: 0.65,
                                   child: Container(
                                     padding: EdgeInsets.only(
                                         left: 20,

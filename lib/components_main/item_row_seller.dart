@@ -107,7 +107,7 @@ class ItemRowSeller extends StatelessWidget{
         ),
       ),
       onTap: (){
-        Get.to(ProductScreenSeller());
+        Get.to(ProductScreenSeller(bottom: true,));
       },
     );
   }

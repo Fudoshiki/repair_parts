@@ -7,10 +7,10 @@ import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
 import 'package:repair_parts/routes/app_pages.dart';
 
-class ProfilePageSeller extends StatelessWidget{
+class ProfilePageSeller2 extends StatelessWidget{
   MainController _mainController =Get.find();
   bool? bottom;
-  ProfilePageSeller({@required this.bottom});
+  ProfilePageSeller2({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
@@ -68,7 +68,7 @@ class ProfilePageSeller extends StatelessWidget{
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(
-                    horizontal: 20
+                      horizontal: 20
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -317,63 +317,6 @@ class ProfilePageSeller extends StatelessWidget{
 
                         ],
                       )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 20
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(6),
-                            color: Color(0xffF3F3F3)
-                        ),
-                        height: 30,
-                        width: (Get.width-54)/2,
-                        child: Center(
-                          child: Text(
-                            "Покупатель",
-                            style: TextStyle(
-                                color: Color(0xffE6332A),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      GestureDetector(
-                          child: Container(
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(6),
-                                color: Color(0xffFFE9E8)
-                            ),
-                            height: 30,
-                            width: (Get.width-54)/2,
-                            child: Center(
-                              child: Text(
-                                "Продавец",
-                                style: TextStyle(
-                                    color: Color(0xffE6332A),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: "Roboto"
-                                ),
-                              ),
-                            ),
-                          ),
-                          onTap: (){
-                            Get.toNamed(Routes.MAINSELLER);
-                          }
-                      )
-
                     ],
                   ),
                 ),
