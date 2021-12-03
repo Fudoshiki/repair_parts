@@ -739,7 +739,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens  3 3a",
+                      "Screens  3 3a 33п 33p",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
