@@ -160,7 +160,7 @@ class OrderScreenSeller extends StatelessWidget{
                         left: 20,
                         right: 20
                     ),
-                    height: 328,
+                    height: 263,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
