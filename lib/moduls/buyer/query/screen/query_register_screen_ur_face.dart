@@ -123,6 +123,7 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
+
                     ],
                   ),
                 ],
@@ -171,9 +172,11 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
+                                fontFamily: "Roboto",
+                              height: 0.5
 
                             ),
+                            controller: new TextEditingController()..text="1234567890",
                             decoration: InputDecoration(
                               labelText: "ИНН",
                                 labelStyle:TextStyle(
@@ -181,7 +184,7 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                                     fontSize: 14,
                                     color: Color(0xff717171),
                                     fontFamily: "Roboto",
-                                  height: 0.5
+                                  height: 0.4
 
                                 ),
                                 hintText: "1234567890",

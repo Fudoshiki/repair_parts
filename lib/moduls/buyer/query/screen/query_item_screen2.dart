@@ -105,7 +105,7 @@ class QueryItemScreen2 extends StatelessWidget{
                     right: 20,
                 ),
                 child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end ,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
@@ -134,6 +134,28 @@ class QueryItemScreen2 extends StatelessWidget{
                         ),
                       ],
                     ),
+                    Container(
+                      margin: EdgeInsets.only(
+                          left: 20,
+                          right: 20,
+                          top: 20
+                      ),
+                      child: Row(
+                        children: [
+                          Text(
+                            "Регион:  Все  ",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
+                            ),
+                          ),
+                          Image.asset("assets/image/arrow_down.png",width: 10,height: 5,color: Color(0xff2e2e33),)
+                        ],
+                      ),
+                    ),
+
                   ],
                 )
             ),
@@ -141,28 +163,7 @@ class QueryItemScreen2 extends StatelessWidget{
               margin: EdgeInsets.only(
                 left: 20,
                 right: 20,
-                top: 20
-              ),
-              child: Row(
-                children: [
-                  Text(
-                    "Регион:  Все  ",
-                    style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 14,
-                        color: Color(0xff2e2e33),
-                        fontFamily: "Roboto"
-                    ),
-                  ),
-                  Image.asset("assets/image/arrow_down.png",width: 10,height: 5,color: Color(0xff2e2e33),)
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(
-                left: 20,
-                right: 20,
-                top: 32
+                top: 12
               ),
               height: 40,
               decoration: BoxDecoration(

@@ -13,6 +13,8 @@ class ProductScreen extends StatelessWidget{
   CatalogController _catalogController = Get.find();
   MainController _mainController =Get.find();
   bool? bottom;
+
+  bool open=false;
   ProductScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
@@ -219,8 +221,8 @@ class ProductScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      bottom: 21,
-                      top: 21
+                      bottom: 9,
+                      top: 9
                   ),
                   width: Get.width-40,
                   height: 1,
@@ -483,29 +485,35 @@ class ProductScreen extends StatelessWidget{
               ],
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(20),
-            height: 50,
-            width: Get.width-40,
-            decoration: BoxDecoration(
-                color: !_productController.product['added_backet']?Colors.white:Color(0xffE6332A),
-              borderRadius: BorderRadius.circular(6),
-              border: Border.all(
-                color: Color(0xffE6332A),
-                width: 1
-              )
-            ),
-            child: Center(
-              child: Text(
-                _productController.product['added_backet']?"Добавить в корзину":"Перейти в корзину",
-                style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16,
-                    color: !_productController.product['added_backet']?Color(0xffE6332A):Colors.white,
-                    fontFamily: "Roboto"
+          GestureDetector(
+            child: Container(
+              margin: EdgeInsets.all(20),
+              height: 50,
+              width: Get.width-40,
+              decoration: BoxDecoration(
+                  color: !open?Colors.white:Color(0xffE6332A),
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(
+                      color: Color(0xffE6332A),
+                      width: 1
+                  )
+              ),
+              child: Center(
+                child: Text(
+                  open?"Добавить в корзину":"Перейти в корзину",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 16,
+                      color: !open?Color(0xffE6332A):Colors.white,
+                      fontFamily: "Roboto"
+                  ),
                 ),
               ),
             ),
+            onTap: (){
+              open=!open;
+              Get.forceAppUpdate();
+            },
           )
         ],
       ),

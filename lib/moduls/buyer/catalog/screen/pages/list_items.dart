@@ -50,7 +50,7 @@ class ListItems extends StatelessWidget{
       "image":[
         "off.png",
       ],
-      "title":"Выключатель датчиков уровня топлива",
+      "title":"Выключатель датчиков уровня топлива КАМАЗ 4310 312312 312312 3 212 213 ",
       "arcticul":"Артикул: 5320-1109359",
       "brend":"Бренд: ХТЗ",
       "added_backet":true,
@@ -239,7 +239,6 @@ class ListItems extends StatelessWidget{
               left: 20,
               right: 20,
               top: 13,
-              bottom: 10
             ),
             padding: EdgeInsets.only(
               bottom: 10
@@ -434,6 +433,9 @@ class ListItems extends StatelessWidget{
               ()=>catalogController.isBlock.value
                   ?Expanded(
                 child: ListView(
+                  padding: EdgeInsets.only(
+                    top: 0
+                  ),
                   children: [
                     ...array.map(
                             (el){

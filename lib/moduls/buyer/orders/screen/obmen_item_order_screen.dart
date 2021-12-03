@@ -90,7 +90,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 20
+                      top: 30
                   ),
                   height: 40,
                   child: Row(
@@ -98,7 +98,9 @@ class ObmenItemOrderScreen extends StatelessWidget{
                     children: [
                       GestureDetector(
                         child:  Container(
-                          child: Icon(Icons.arrow_back),
+                          width: 19,
+                          height: 16,
+                          child: Image.asset("assets/image/arrow_left.png"),
                         ),
                         onTap: (){
                           Get.back();
@@ -107,6 +109,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                     ],
                   )
               ),
+
               Expanded(
                 child: ListView(
                   padding: EdgeInsets.all(0),
@@ -235,11 +238,12 @@ class ObmenItemOrderScreen extends StatelessWidget{
                         children: [
                           Container(
                             margin: EdgeInsets.only(
-                                top: 10,right: 10
+                                top: 15,right: 10
                             ),
-                            height: 65,
+                            height: 60,
                             padding: EdgeInsets.only(
-                                top: 15
+                                top: 15,
+                                bottom: 5
                             ),
                             decoration: BoxDecoration(
                                 border: Border(
@@ -268,7 +272,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                                 Row(
                                   children: [
                                     Container(
-                                      width: Get.width-200,
+                                      width: 161,
                                       child: Text(
                                         "количество к возврату, шт:",
                                         style: TextStyle(
@@ -281,7 +285,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                                     ),
                                     Container(
                                       margin: EdgeInsets.symmetric(
-                                          horizontal: 13
+                                        horizontal: 13
                                       ),
                                       child: Text(
                                           "2"
@@ -309,7 +313,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                               ),
                               Column(
                                 children: [
-                                  SizedBox(height: 5,),
+                                  SizedBox(height: 15,),
                                   Text(
                                     "420",
                                     style: TextStyle(
@@ -319,7 +323,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                                         fontFamily: "Roboto"
                                     ),
                                   ),
-                                  SizedBox(height: 18,),
+                                  SizedBox(height: 10,),
                                   Text(
                                     "42",
                                     style: TextStyle(
@@ -337,6 +341,7 @@ class ObmenItemOrderScreen extends StatelessWidget{
                       ),
 
                     ),
+
                     Container(
                       margin: EdgeInsets.only(
                           left: 20,

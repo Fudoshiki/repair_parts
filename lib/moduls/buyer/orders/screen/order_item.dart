@@ -902,7 +902,6 @@ class OrderItem extends StatelessWidget{
                                                           child: Container(
                                                             margin: EdgeInsets.only(
                                                                 left: 37,
-                                                                top: 29
                                                             ),
                                                             decoration: BoxDecoration(
                                                                 border: Border(
@@ -943,7 +942,6 @@ class OrderItem extends StatelessWidget{
                                                           child: Container(
                                                             margin: EdgeInsets.only(
                                                                 left: 37,
-                                                                top: 14
                                                             ),
                                                             decoration: BoxDecoration(
                                                                 border: Border(
@@ -954,6 +952,160 @@ class OrderItem extends StatelessWidget{
                                                             ),
                                                             child: Text(
                                                               "image222",
+                                                              style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto",
+
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onTap: (){
+                                                          },
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+
+
+                                                ],
+                                              ),
+                                            )
+                                        );
+                                      },
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        double width = MediaQuery.of(context).size.width;
+                                        double height = MediaQuery.of(context).size.height;
+                                        return AlertDialog(
+                                            backgroundColor: Colors.transparent,
+                                            contentPadding: EdgeInsets.zero,
+                                            elevation: 0.0,
+                                            // title: Center(child: Text("Evaluation our APP")),
+                                            content: Container(
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    width: Get.width-26,
+                                                    height: 280,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.white,
+                                                    ),
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Container(
+                                                          margin: EdgeInsets.only(
+                                                              left: 37,
+                                                              top: 36
+                                                          ),
+                                                          child: Text(
+                                                            "Вложения",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w700,
+                                                                fontSize: 24,
+                                                                color: Color(0xff2e2e33),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),Container(
+                                                          margin: EdgeInsets.only(
+                                                              left: 37,
+                                                              top: 12
+                                                          ),
+                                                          child: Text(
+                                                            "Счет-договор",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xff2e2e33),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        GestureDetector(
+                                                          child: Container(
+                                                            margin: EdgeInsets.only(
+                                                                left: 37,
+                                                            ),
+                                                            decoration: BoxDecoration(
+                                                                border: Border(
+                                                                    bottom: BorderSide(
+                                                                        color: Color(0xffE6332A)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            child: Text(
+                                                              "image22121",
+                                                              style: TextStyle(
+                                                                  fontWeight: FontWeight.w400,
+                                                                  fontSize: 18,
+                                                                  color: Color(0xffE6332A),
+                                                                  fontFamily: "Roboto"
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onTap: (){
+                                                          },
+                                                        ),
+                                                        GestureDetector(
+                                                          child: Container(
+                                                            margin: EdgeInsets.only(
+                                                                left: 37,
+                                                            ),
+                                                            decoration: BoxDecoration(
+                                                                border: Border(
+                                                                    bottom: BorderSide(
+                                                                        color: Color(0xffE6332A)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            child: Text(
+                                                              "image22121",
+                                                              style: TextStyle(
+                                                                  fontWeight: FontWeight.w400,
+                                                                  fontSize: 18,
+                                                                  color: Color(0xffE6332A),
+                                                                  fontFamily: "Roboto"
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onTap: (){
+                                                          },
+                                                        ),
+                                                        Container(
+                                                          margin: EdgeInsets.only(
+                                                              left: 37,
+                                                              top: 12
+                                                          ),
+                                                          child: Text(
+                                                            "Бухгалтерский документ",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xff2e2e33),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        GestureDetector(
+                                                          child: Container(
+                                                            margin: EdgeInsets.only(
+                                                                left: 37,
+                                                            ),
+                                                            decoration: BoxDecoration(
+                                                                border: Border(
+                                                                    bottom: BorderSide(
+                                                                        color: Color(0xffE6332A)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            child: Text(
+                                                              "imadg33434",
                                                               style: TextStyle(
                                                                 fontWeight: FontWeight.w400,
                                                                 fontSize: 18,
@@ -1625,21 +1777,22 @@ class OrderItem extends StatelessWidget{
                                                                 ),
                                                               ),
                                                               Container(
-                                                        margin: EdgeInsets.only(
-                                                            left: 37,
-                                                            top: 17
-                                                        ),
+                                                                margin: EdgeInsets.only(
+                                                                    left: 37,
+                                                                    right: 15,
+                                                                    top: 17
+                                                                ),
 
-                                                        child: Text(
-                                                          "Напоминаем, после подтверждения получения груза начинается гарантированный срок возврата: 7 дней",
-                                                          style: TextStyle(
-                                                              fontWeight: FontWeight.w400,
-                                                              fontSize: 12,
-                                                              color: Color(0xff2e2e33),
-                                                              fontFamily: "Roboto"
-                                                          ),
-                                                        ),
-                                                      ),
+                                                                child: Text(
+                                                                  "Напоминаем, после подтверждения получения груза начинается гарантированный срок возврата: 7 дней",
+                                                                  style: TextStyle(
+                                                                      fontWeight: FontWeight.w400,
+                                                                      fontSize: 12,
+                                                                      color: Color(0xff2e2e33),
+                                                                      fontFamily: "Roboto"
+                                                                  ),
+                                                                ),
+                                                              ),
                                                               Container(
                                                                 margin: EdgeInsets.only(
                                                                   left: 14,
@@ -1666,7 +1819,7 @@ class OrderItem extends StatelessWidget{
                                                                           ),
                                                                         ),
                                                                       )),
-                                                                    SizedBox(width: 11,),
+                                                                      SizedBox(width: 11,),
                                                                       Expanded(child: Container(
                                                                         height: 32,
                                                                         decoration: BoxDecoration(
@@ -2168,8 +2321,7 @@ class OrderItem extends StatelessWidget{
                                                         GestureDetector(
                                                           child: Container(
                                                             margin: EdgeInsets.only(
-                                                                left: 37,
-                                                                top: 29
+                                                              left: 37,
                                                             ),
                                                             decoration: BoxDecoration(
                                                                 border: Border(
@@ -2209,8 +2361,7 @@ class OrderItem extends StatelessWidget{
                                                         GestureDetector(
                                                           child: Container(
                                                             margin: EdgeInsets.only(
-                                                                left: 37,
-                                                                top: 14
+                                                              left: 37,
                                                             ),
                                                             decoration: BoxDecoration(
                                                                 border: Border(
@@ -2221,6 +2372,160 @@ class OrderItem extends StatelessWidget{
                                                             ),
                                                             child: Text(
                                                               "image222",
+                                                              style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto",
+
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onTap: (){
+                                                          },
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
+
+
+                                                ],
+                                              ),
+                                            )
+                                        );
+                                      },
+                                    );
+                                    showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) {
+                                        double width = MediaQuery.of(context).size.width;
+                                        double height = MediaQuery.of(context).size.height;
+                                        return AlertDialog(
+                                            backgroundColor: Colors.transparent,
+                                            contentPadding: EdgeInsets.zero,
+                                            elevation: 0.0,
+                                            // title: Center(child: Text("Evaluation our APP")),
+                                            content: Container(
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Container(
+                                                    width: Get.width-26,
+                                                    height: 280,
+                                                    decoration: BoxDecoration(
+                                                      color: Colors.white,
+                                                    ),
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Container(
+                                                          margin: EdgeInsets.only(
+                                                              left: 37,
+                                                              top: 36
+                                                          ),
+                                                          child: Text(
+                                                            "Вложения",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w700,
+                                                                fontSize: 24,
+                                                                color: Color(0xff2e2e33),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),Container(
+                                                          margin: EdgeInsets.only(
+                                                              left: 37,
+                                                              top: 12
+                                                          ),
+                                                          child: Text(
+                                                            "Счет-договор",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xff2e2e33),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        GestureDetector(
+                                                          child: Container(
+                                                            margin: EdgeInsets.only(
+                                                              left: 37,
+                                                            ),
+                                                            decoration: BoxDecoration(
+                                                                border: Border(
+                                                                    bottom: BorderSide(
+                                                                        color: Color(0xffE6332A)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            child: Text(
+                                                              "image22121",
+                                                              style: TextStyle(
+                                                                  fontWeight: FontWeight.w400,
+                                                                  fontSize: 18,
+                                                                  color: Color(0xffE6332A),
+                                                                  fontFamily: "Roboto"
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onTap: (){
+                                                          },
+                                                        ),
+                                                        GestureDetector(
+                                                          child: Container(
+                                                            margin: EdgeInsets.only(
+                                                              left: 37,
+                                                            ),
+                                                            decoration: BoxDecoration(
+                                                                border: Border(
+                                                                    bottom: BorderSide(
+                                                                        color: Color(0xffE6332A)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            child: Text(
+                                                              "image22121",
+                                                              style: TextStyle(
+                                                                  fontWeight: FontWeight.w400,
+                                                                  fontSize: 18,
+                                                                  color: Color(0xffE6332A),
+                                                                  fontFamily: "Roboto"
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          onTap: (){
+                                                          },
+                                                        ),
+                                                        Container(
+                                                          margin: EdgeInsets.only(
+                                                              left: 37,
+                                                              top: 12
+                                                          ),
+                                                          child: Text(
+                                                            "Бухгалтерский документ",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xff2e2e33),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        GestureDetector(
+                                                          child: Container(
+                                                            margin: EdgeInsets.only(
+                                                              left: 37,
+                                                            ),
+                                                            decoration: BoxDecoration(
+                                                                border: Border(
+                                                                    bottom: BorderSide(
+                                                                        color: Color(0xffE6332A)
+                                                                    )
+                                                                )
+                                                            ),
+                                                            child: Text(
+                                                              "imadg33434",
                                                               style: TextStyle(
                                                                 fontWeight: FontWeight.w400,
                                                                 fontSize: 18,

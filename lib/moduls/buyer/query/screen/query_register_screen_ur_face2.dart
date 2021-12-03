@@ -125,6 +125,9 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
+                      SizedBox(
+                        height: 17,
+                      ),
                     ],
                   ),
                 ],

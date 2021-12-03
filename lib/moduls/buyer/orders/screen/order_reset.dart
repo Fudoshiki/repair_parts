@@ -81,7 +81,7 @@ class OrderReset extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 20
+                    top: 30
                 ),
                 height: 40,
                 child: Row(
@@ -89,7 +89,9 @@ class OrderReset extends StatelessWidget{
                   children: [
                     GestureDetector(
                       child:  Container(
-                        child: Icon(Icons.arrow_back),
+                        width: 19,
+                        height: 16,
+                        child: Image.asset("assets/image/arrow_left.png"),
                       ),
                       onTap: (){
                         Get.back();
@@ -102,7 +104,6 @@ class OrderReset extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 17
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,7 +204,7 @@ class OrderReset extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 26
+                  top: 15
               ),
               height: 40,
               decoration: BoxDecoration(

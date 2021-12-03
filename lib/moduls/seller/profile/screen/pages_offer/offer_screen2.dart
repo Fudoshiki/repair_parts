@@ -398,7 +398,9 @@ class OfferScreen2 extends StatelessWidget{
                       ),
                     ),
                     onTap: (){
-                      showModalBottomSheet(context: context, builder: (c){
+                      showModalBottomSheet(shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),context: context, builder: (c){
                         return FractionallySizedBox(
                           heightFactor: 0.5,
                           child: Container(

@@ -90,56 +90,122 @@ class CatalogController extends GetxController{
   List<FilterItem> filterItems=[
     new FilterItem(
       "Вид",[
-        "Ось передняя",
-      "Ось задняя",
-      "Гусеницы и катки",
-      "Рама",
-      "Колеса и ступицы"
+  {"title":"Ось передняя",
+    "val":false
+  },
+      {"title":"Ось задняя",
+        "val":false
+      },
+      {"title":"Гусеницы и катки",
+        "val":false
+      },
+      {"title":"Рама",
+        "val":false
+      },
+      {"title":"Колеса и ступицы",
+        "val":false
+      },
+
     ]
     ),
     new FilterItem(
         "Марка",[
-      "Ось передняя",
-      "Ось задняя",
-      "Гусеницы и катки",
-      "Рама",
-      "Колеса и ступицы"
+      {"title":"Ось передняя",
+        "val":false
+      },
+      {"title":"Ось задняя",
+        "val":false
+      },
+      {"title":"Гусеницы и катки",
+        "val":false
+      },
+      {"title":"Рама",
+        "val":false
+      },
+      {"title":"Колеса и ступицы",
+        "val":false
+      },
+
     ]
     ),
     new FilterItem(
         "Модель",[
-      "Ось передняя",
-      "Ось задняя",
-      "Гусеницы и катки",
-      "Рама",
-      "Колеса и ступицы"
+      {"title":"Ось передняя",
+        "val":false
+      },
+      {"title":"Ось задняя",
+        "val":false
+      },
+      {"title":"Гусеницы и катки",
+        "val":false
+      },
+      {"title":"Рама",
+        "val":false
+      },
+      {"title":"Колеса и ступицы",
+        "val":false
+      },
+
     ]
     ),
     new FilterItem(
         "Категория",[
-      "Ось передняя",
-      "Ось задняя",
-      "Гусеницы и катки",
-      "Рама",
-      "Колеса и ступицы"
+      {"title":"Ось передняя",
+        "val":false
+      },
+      {"title":"Ось задняя",
+        "val":false
+      },
+      {"title":"Гусеницы и катки",
+        "val":false
+      },
+      {"title":"Рама",
+        "val":false
+      },
+      {"title":"Колеса и ступицы",
+        "val":false
+      },
+
     ]
     ),
     new FilterItem(
         "Подкатегория",[
-      "Ось передняя",
-      "Ось задняя",
-      "Гусеницы и катки",
-      "Рама",
-      "Колеса и ступицы"
+      {"title":"Ось передняя",
+        "val":false
+      },
+      {"title":"Ось задняя",
+        "val":false
+      },
+      {"title":"Гусеницы и катки",
+        "val":false
+      },
+      {"title":"Рама",
+        "val":false
+      },
+      {"title":"Колеса и ступицы",
+        "val":false
+      },
+
     ]
     ),
     new FilterItem(
         "Сопутствующие товары",[
-      "Ось передняя",
-      "Ось задняя",
-      "Гусеницы и катки",
-      "Рама",
-      "Колеса и ступицы"
+      {"title":"Ось передняя",
+        "val":false
+      },
+      {"title":"Ось задняя",
+        "val":false
+      },
+      {"title":"Гусеницы и катки",
+        "val":false
+      },
+      {"title":"Рама",
+        "val":false
+      },
+      {"title":"Колеса и ступицы",
+        "val":false
+      },
+
     ]
     ),
 
@@ -222,40 +288,59 @@ class FilterItems extends StatelessWidget {
               ()=>opened.value?Column(
                 children: [
                   ...item.array.map((e) {
-                    return Container(
-                      decoration: BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(
-                                  color: Color(0xffE7E7E7),
-                                  width: 1
-                              )
-                          )
-                      ),
-                      height: 60,
-                      child: Row(
-                        children: [
-                          SizedBox(width: 20,),
-                          Container(
-                            width: 30,
-                            height: 30,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Color(0xffD6D6D6),
-                                width: 1
+                    return GestureDetector(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
+                            )
+                        ),
+                        height: 60,
+                        child: Row(
+                          children: [
+                            SizedBox(width: 20,),
+                            e['val']?Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color(0xffFFE9E8),
+                                      width: 1
+                                  ),
+                                  color: Color(0xffFFE9E8),
+                                  borderRadius: BorderRadius.circular(4)
                               ),
-                              borderRadius: BorderRadius.circular(4)
+                              padding: EdgeInsets.all(7),
+                              child: Image.asset("assets/image/done.png",color: Color(0xffE6332A),),
+                            ):Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  border: Border.all(
+                                      color: Color(0xffD6D6D6),
+                                      width: 1
+                                  ),
+                                  borderRadius: BorderRadius.circular(4)
+                              ),
                             ),
-                          ),
-                          SizedBox(width: 16,),
-                          Text("${e}",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w400,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                          ),)
-                        ],
+                            SizedBox(width: 16,),
+                            Text("${e['title']}",
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff2e2e33),
+                                  fontFamily: "Roboto"
+                              ),)
+                          ],
+                        ),
                       ),
+                      onTap: (){
+                        e['val']=!e['val'];
+                        Get.forceAppUpdate();
+                      },
                     );
                   }
                   )

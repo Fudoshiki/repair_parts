@@ -14,7 +14,7 @@ class OrderItemTreck extends StatelessWidget{
   var a =0;
   var b =0;
 
-  int currentIndex=0;
+  int currentIndex=1;
 
   var controller =new PageController(initialPage: 1);
 
@@ -114,7 +114,7 @@ class OrderItemTreck extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Запрос №1-6",
+                          "Заказ №1-12",
                           style: TextStyle(
                               fontWeight: FontWeight.w900,
                               fontSize: 22,
@@ -152,7 +152,7 @@ class OrderItemTreck extends StatelessWidget{
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Запрос №1-6",
+                        "Адрес доставки",
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: 16,

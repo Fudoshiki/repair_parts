@@ -140,6 +140,9 @@ class QueryScreenSeller extends StatelessWidget{
             ),
             onTap: (){
               showModalBottomSheet(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
                   context: context,
                   isScrollControlled: true,
                   builder: (context) {

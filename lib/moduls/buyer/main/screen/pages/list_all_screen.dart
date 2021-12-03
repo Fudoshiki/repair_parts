@@ -34,6 +34,7 @@ import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/done_reset.d
 import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/no_obmen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/no_reset.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/reset_item_order_screen.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/track_order_screen.dart';
 import 'package:repair_parts/moduls/buyer/product/screen/product_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/main_data_profile.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/profile_page.dart';
@@ -1150,7 +1151,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(OrderItem(bottom: true,));
             },
           ),
-          // "Screens 47 47а 47г 47в 47б",
+          // "Screens 47 47а 47г 47в ",
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -1171,7 +1172,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 47 47а 47г 47в 47б",
+                      "Screens 47 47а 47г 47в ",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -1185,7 +1186,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(OrderItemTreck(bottom: true,));
             },
           ),
-          //"Screens 48б 48е 47 47 48б",
+          // "Screens  47б",
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -1206,7 +1207,42 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 48б 48е 47 47 48б",
+                      "Screens 47б",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+
+            ),
+            onTap:(){
+              Get.to(TrackOrderScreen(bottom: true,));
+            },
+          ),
+          //"Screens 48б 48е  47 48б",
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    )    ,
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                margin: EdgeInsets.only(
+                    top: 5
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens 48б 48е  47 48б",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700

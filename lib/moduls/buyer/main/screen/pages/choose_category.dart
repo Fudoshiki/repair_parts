@@ -285,8 +285,33 @@ class ChooseCategory extends StatelessWidget{
                   ...accompanyings.map((el){
                     return AccompanyingItems(el);
                   }),
-                  SizedBox(height: 20,)
+                  SizedBox(height: 20,),
+
                 ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(
+                  left: 20,
+                  right: 20,
+                  top: 10,
+                  bottom: 21
+              ),
+              height: 50,
+              decoration: BoxDecoration(
+                  color: Color(0xffE6332A),
+                  borderRadius: BorderRadius.circular(6)
+              ),
+              child: Center(
+                child: Text(
+                  "Сохранить",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                      fontFamily: "Roboto"
+                  ),
+                ),
               ),
             )
           ],

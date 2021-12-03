@@ -599,6 +599,63 @@ class ChooseRegion extends StatelessWidget{
 
               ],
             ),
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 10
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  child: Container(
+                    height: 30,
+                    width: (Get.width-52)/2,
+                    decoration: BoxDecoration(
+                        color: Color(0xffE6332A),
+                        borderRadius: BorderRadius.circular(6)
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Сохранить",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: "Roboto",
+                            fontWeight: FontWeight.w700
+                        ),
+                      ),
+                    ),
+                  ),
+                  onTap: (){
+                    mainController.controllerMainPage.jumpToPage(1);
+                  },
+                ),
+                Container(
+                  decoration: BoxDecoration(
+
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(
+                        color: Color(0xffE6332A),
+                      )
+                  ),
+                  height: 30,
+                  width: (Get.width-52)/2,
+                  child: Center(
+                    child: Text(
+                      "Сбросить выбор",
+                      style: TextStyle(
+                          color: Color(0xffE6332A),
+                          fontSize: 12,
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w400
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           )
 
         ],

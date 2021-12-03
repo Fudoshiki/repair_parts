@@ -225,11 +225,12 @@ class DoneResetScreen extends StatelessWidget{
                         children: [
                           Container(
                             margin: EdgeInsets.only(
-                                top: 10,right: 10
+                                top: 15,right: 10
                             ),
-                            height: 65,
+                            height: 60,
                             padding: EdgeInsets.only(
-                                top: 15
+                                top: 15,
+                                bottom: 5
                             ),
                             decoration: BoxDecoration(
                                 border: Border(
@@ -258,7 +259,7 @@ class DoneResetScreen extends StatelessWidget{
                                 Row(
                                   children: [
                                     Container(
-                                      width: Get.width-200,
+                                      width: 161,
                                       child: Text(
                                         "количество к возврату, шт:",
                                         style: TextStyle(
@@ -299,7 +300,7 @@ class DoneResetScreen extends StatelessWidget{
                               ),
                               Column(
                                 children: [
-                                  SizedBox(height: 5,),
+                                  SizedBox(height: 15,),
                                   Text(
                                     "420",
                                     style: TextStyle(
@@ -309,7 +310,7 @@ class DoneResetScreen extends StatelessWidget{
                                         fontFamily: "Roboto"
                                     ),
                                   ),
-                                  SizedBox(height: 18,),
+                                  SizedBox(height: 10,),
                                   Text(
                                     "42",
                                     style: TextStyle(
@@ -327,6 +328,7 @@ class DoneResetScreen extends StatelessWidget{
                       ),
 
                     ),
+
                     Container(
                       margin: EdgeInsets.only(
                           left: 20,
