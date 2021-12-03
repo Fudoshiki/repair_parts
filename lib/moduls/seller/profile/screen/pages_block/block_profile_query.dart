@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/profile_page.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/register_page.dart';
@@ -363,8 +364,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                         Row(
                           children: [
                             Container(
-                              width: 18,
-                              height: 18,
+                              width: 20,
+                              height: 20,
                               margin: EdgeInsets.only(
                                   right: 20
                               ),
@@ -436,8 +437,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -485,8 +486,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -534,8 +535,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
@@ -583,15 +584,15 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                       Row(
                         children: [
                           Container(
-                            width: 18,
-                            height: 18,
+                            width: 20,
+                            height: 20,
                             margin: EdgeInsets.only(
                                 right: 20
                             ),
-                            child: Image.asset("assets/image/faw.png"),
+                            child: Image.asset("assets/image/menuse.png"),
                           ),
                           Text(
-                            "Избранное",
+                            "Выбор категории",
                             style: TextStyle(
                                 color: Color(0xff2E2E33),
                                 fontSize: 14,
@@ -607,6 +608,103 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                         child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
                       )
 
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(
+                      horizontal: 20
+                  ),
+                  padding: EdgeInsets.only(
+                      bottom: 21,left: 14,
+                      top: 21
+                  ),
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                              color: Color(0xffE7E7E7),
+                              width: 1
+                          )
+                      )
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 20,
+                            height: 20,
+                            margin: EdgeInsets.only(
+                                right: 20
+                            ),
+                            child: Image.asset("assets/image/instagrame.png"),
+                          ),
+                          Text(
+                            "Оцифровка",
+                            style: TextStyle(
+                                color: Color(0xff2E2E33),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Roboto"
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        width: 8,
+                        height: 14,
+                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                      )
+
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(
+                      horizontal: 20
+                  ),
+                  padding: EdgeInsets.only(
+                      bottom: 21,left: 14,
+                      top: 21
+                  ),
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                              color: Color(0xffE7E7E7),
+                              width: 1
+                          )
+                      )
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            width: 20,
+                            height: 20,
+                            margin: EdgeInsets.only(
+                                right: 20
+                            ),
+                            child: Image.asset("assets/image/money.png"),
+                          ),
+                          Text(
+                            "Вознаграждение",
+                            style: TextStyle(
+                                color: Color(0xff2E2E33),
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: "Roboto"
+                            ),
+                          ),
+                        ],
+                      ),
+                      Container(
+                        width: 8,
+                        height: 14,
+                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                      )
                     ],
                   ),
                 ),
@@ -634,8 +732,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                           Row(
                             children: [
                               Container(
-                                width: 18,
-                                height: 18,
+                                width: 20,
+                                height: 20,
                                 margin: EdgeInsets.only(
                                     right: 20
                                 ),
@@ -652,11 +750,10 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                               ),
                             ],
                           ),
-
-
                         ],
                       ),
                       onTap: (){
+                        Get.to(ListAllScreen());
                       },
                     )
                 ),
@@ -683,8 +780,8 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                         Row(
                           children: [
                             Container(
-                              width: 18,
-                              height: 18,
+                              width: 20,
+                              height: 20,
                               margin: EdgeInsets.only(
                                   right: 20
                               ),
