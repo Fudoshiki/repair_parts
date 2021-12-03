@@ -14,6 +14,11 @@ import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_scr
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen4.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_orders.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/no_history_order.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_1button_screen_tk29B.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_1button_screen_tk33г.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_1button_screen_tk33o.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_1button_screen_tk33p.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_2button_screen_tk28b.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/attach_tk.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/order_1button_screen_tk.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/order_1button_screen_tk31.dart';
@@ -1286,6 +1291,161 @@ class ListAllScreenSeller extends StatelessWidget{
             ),
             onTap:(){
               Get.to(OrderScreenItem1ButtonSeller33l2(bottom: true,));
+            },
+          ),
+          //28b
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  28b",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenItem2ButtonSeller28b(bottom: true,));
+            },
+          ),
+          //29б
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  29b",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenItem1ButtonSeller29B(bottom: true,));
+            },
+          ),
+          //33о
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  33о",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenItem1ButtonSeller33o(bottom: true,));
+            },
+          ),
+          //33п
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  33п",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenItem1ButtonSeller33p(bottom: true,));
+            },
+          ),
+          //33ю
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  33ю",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
             },
           ),
         ],
