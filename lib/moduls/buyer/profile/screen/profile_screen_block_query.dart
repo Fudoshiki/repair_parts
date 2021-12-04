@@ -167,11 +167,12 @@ class ProfileScreenBlockQuery extends StatelessWidget{
 
                 GestureDetector(
                   child: Container(
+                    height: 60,
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
                     padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
+                        bottom: 15,left: 14,
                         top: 21
                     ),
                     decoration: BoxDecoration(
@@ -289,6 +290,8 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                 ),
                 GestureDetector(
                   child: Container(
+                    height: 60,
+
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
@@ -365,6 +368,8 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
+                  height: 60,
+
                   padding: EdgeInsets.only(
                       bottom: 21,left: 14,
                       top: 21
@@ -414,6 +419,7 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
+                  height: 60,
                   padding: EdgeInsets.only(
                       bottom: 21,left: 14,
                       top: 21
@@ -463,6 +469,7 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
+                  height: 60,
                   padding: EdgeInsets.only(
                       bottom: 21,left: 14,
                       top: 21
@@ -512,6 +519,7 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
+                  height: 60,
                   padding: EdgeInsets.only(
                       bottom: 21,left: 14,
                       top: 21
@@ -566,6 +574,7 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                         bottom: 21,left: 14,
                         top: 21
                     ),
+                    height: 60,
                     decoration: BoxDecoration(
                         border: Border(
                             bottom: BorderSide(
@@ -612,6 +621,7 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
+                    height: 60,
                     padding: EdgeInsets.only(
                         bottom: 21,left: 14,
                         top: 21

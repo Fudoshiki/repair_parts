@@ -85,7 +85,7 @@ class CallScreen extends StatelessWidget{
                   right: 0,
                   bottom: 0,
                   child: Image.asset("assets/image/photo_call.png",
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(

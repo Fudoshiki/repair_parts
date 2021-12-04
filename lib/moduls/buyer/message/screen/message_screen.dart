@@ -86,26 +86,27 @@ class MessageScreen extends StatelessWidget{
           ),
           Container(
             margin: EdgeInsets.only(
-              left: 20,
-              right: 20
+                left: 20,
+                right: 20
             ),
             padding: EdgeInsets.only(
-              bottom: 35
+                bottom: 19
             ),
             decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: Color(0xffE7E7E7),
-                  width: 1
+                border: Border(
+                    bottom: BorderSide(
+                        color: Color(0xffE7E7E7),
+                        width: 1
+                    )
                 )
-              )
             ),
             child: Container(
+              height: 32,
               margin: EdgeInsets.only(
                   top: 10
               ),
               padding: EdgeInsets.only(
-                left: 20
+                  left: 20
               ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
@@ -115,7 +116,8 @@ class MessageScreen extends StatelessWidget{
                   )
               ),
               child: TextField(
-               style: TextStyle(
+                scrollPadding: EdgeInsets.all(0),
+                style: TextStyle(
                     color: Color(0xff2e2e33),
                     fontSize: 14,
                     fontFamily: "Roboto",
@@ -129,7 +131,7 @@ class MessageScreen extends StatelessWidget{
                         fontSize: 14,
                         fontFamily: "Roboto",
                         fontWeight: FontWeight.w400,
-                        height: 1.5
+                        height: 1
                     ),
                     enabledBorder: InputBorder.none,
                     border: InputBorder.none,
@@ -139,8 +141,8 @@ class MessageScreen extends StatelessWidget{
                     disabledBorder: InputBorder.none,
                     suffixIcon: Container(
                       padding: EdgeInsets.symmetric(
-                          horizontal: 14,
-                          vertical: 14
+                          horizontal: 17,
+                          vertical: 9
                       ),
                       width: 14,
                       height: 14,
@@ -154,412 +156,662 @@ class MessageScreen extends StatelessWidget{
             ),
           ),
           Expanded(
-            child: ListView(
-              padding: EdgeInsets.all(0),
-              children: [
-                Container(
-                    margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20
-                    ),
-                    height: 100,
-                    padding: EdgeInsets.only(
-                        top: 15,
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
+              child: ListView(
+                padding: EdgeInsets.all(0),
+                children: [
+                  GestureDetector(
+                    child: Container(
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20
+                        ),
+                        height: 100,
+                        padding: EdgeInsets.only(
+                          top: 15,
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
                             )
-                        )
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
+                        ),//photo_call.png
+                        child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Имя продавца",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 16,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Заказ 1-6",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  width: 13,
-                                  height: 10,
-                                  margin: EdgeInsets.only(
-                                      right: 5
-                                  ),
-                                  child: Image.asset("assets/image/done1.png"),
-                                ),
-                                Text(
-                                  "18:41",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff959595),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          "Добрый день, какая ТК для вас пред...",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0xff717171),
-                              fontFamily: "Roboto"
-                          ),
-                        )
-                      ],
-                    )
-                ),
-                Container(
-                  height: 100,
-                    margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        top: 15,
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Имя продавца",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 16,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Заказ 1-5",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Text(
-                                  "24.03.2021",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff959595),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              "УПД-файл.pdf",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
                             Container(
-                              width: 24,
-                              height: 24,
+                              width: 40,
+                              height: 40,
                               decoration: BoxDecoration(
-                                color: Color(0xffE6332A),
-                                shape: BoxShape.circle
+                                  borderRadius: BorderRadius.circular(6),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          "assets/image/photo_call.png"
+                                      ),fit: BoxFit.cover
+                                  )
                               ),
-                              child: Center(
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 13,
-                                      color: Colors.white,
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                            )
-
-                          ],
-                        )
-                      ],
-                    )
-                ),
-                Container(
-                    height: 100,
-                    margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        top: 15,
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Имя продавца",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 16,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Заказ 1-3",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
                             ),
-                            Row(
-                              children: [
-
-                                Text(
-                                  "15.03.2021",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff959595),
-                                      fontFamily: "Roboto"
+                            SizedBox(width: 10,),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            "Имя продавца",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w700,
+                                                fontSize: 16,
+                                                color: Color(0xff2e2e33),
+                                                fontFamily: "Roboto"
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Text(
+                                            "Заказ 1-6",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 14,
+                                                color: Color(0xff2e2e33),
+                                                fontFamily: "Roboto"
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            width: 13,
+                                            height: 10,
+                                            margin: EdgeInsets.only(
+                                                right: 5
+                                            ),
+                                            child: Image.asset("assets/image/done1.png"),
+                                          ),
+                                          Text(
+                                            "18:41",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 14,
+                                                color: Color(0xff959595),
+                                                fontFamily: "Roboto"
+                                            ),
+                                          )
+                                        ],
+                                      )
+                                    ],
                                   ),
-                                ),
-
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                           Row(
-                             children: [
-                               Container(
-                                 width: 27,
-                                 height: 27,
-                                 child:  Image.asset("assets/image/images.png"),
-                               ),
-                               Text(
-                                 "Фотография",
-                                 style: TextStyle(
-                                     fontWeight: FontWeight.w400,
-                                     fontSize: 14,
-                                     color: Color(0xff717171),
-                                     fontFamily: "Roboto"
-                                 ),
-                               ),
-                             ],
-                           ),
-                            Container(
-                              width: 34,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                  color: Color(0xffE6332A),
-                                borderRadius: BorderRadius.circular(50)
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    "Добрый день, какая ТК для вас пред...",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 14,
+                                        color: Color(0xff717171),
+                                        fontFamily: "Roboto"
+                                    ),
+                                  )
+                                ],
                               ),
-                              child: Center(
-                                child: Text(
-                                  "100",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 13,
-                                      color: Colors.white,
-                                      fontFamily: "Roboto"
-                                  ),
+                            )
+                          ],
+                        )
+                    ),
+                    onTap: (){
+                    },
+                  ),
+
+                  GestureDetector(
+                    child: Container(
+                        height: 100,
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20
+                        ),
+                        padding: EdgeInsets.only(
+                          top: 15,
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
+                            )
+                        ),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/image/photo_call.png"
+                                        ),fit: BoxFit.cover
+                                    )
                                 ),
                               ),
-                            )
+                              SizedBox(width: 10,),
+                              Expanded(
+                                  child:Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Имя продавца",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 16,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
+                                              Text(
+                                                "Заказ 1-5",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "24.03.2021",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff959595),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Container(
+                                                width: 15,
+                                                height: 17,
+                                                child: Image.asset("assets/image/pdf.png"),
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                "УПД-файл.pdf",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff717171),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Container(
+                                            width: 24,
+                                            height: 24,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xffE6332A),
+                                                shape: BoxShape.circle
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                "1",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: 13,
+                                                    color: Colors.white,
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                            ),
+                                          )
 
-                          ],
+                                        ],
+                                      )
+                                    ],
+                                  )
+                              )
+                            ]
                         )
-                      ],
-                    )
-                ),
-                Container(
-                    height: 100,
+                    ),
+                    onTap: (){
+                    },
+                  ),
 
-                    margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        top: 15,
-                        bottom: 12
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Имя продавца",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 16,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Заказ 1-3",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Container(
-                                  width: 16,
-                                  height: 10,
-                                  margin: EdgeInsets.only(
-                                      right: 5
-                                  ),
-                                  child: Image.asset("assets/image/done2.png"),
-                                ),
-                                Text(
-                                  "04.03.2021",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 14,
-                                      color: Color(0xff959595),
-                                      fontFamily: "Roboto"
-                                  ),
-                                )
-                              ],
-                            )
-                          ],
+                  GestureDetector(
+                    child: Container(
+                        height: 100,
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20
                         ),
-                        SizedBox(
-                          height: 10,
+                        padding: EdgeInsets.only(
+                          top: 15,
                         ),
-                        Text(
-                          "Голосовое сообщение",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0xff717171),
-                              fontFamily: "Roboto"
-                          ),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
+                            )
+                        ),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/image/photo_call.png"
+                                        ),fit: BoxFit.cover
+                                    )
+                                ),
+                              ),
+                              SizedBox(width: 10,),
+                              Expanded(
+                                  child:Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Имя продавца",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 16,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
+                                              Text(
+                                                "Заказ 1-3",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+
+                                              Text(
+                                                "15.03.2021",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff959595),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Container(
+                                                width: 15,
+                                                height: 17,
+                                                child: Image.asset("assets/image/photoe.png"),
+                                              ),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                "Фото",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff717171),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Container(
+                                            width: 34,
+                                            height: 24,
+                                            decoration: BoxDecoration(
+                                                color: Color(0xffE6332A),
+                                                borderRadius: BorderRadius.circular(50)
+                                            ),
+                                            child: Center(
+                                              child: Text(
+                                                "100",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w500,
+                                                    fontSize: 13,
+                                                    color: Colors.white,
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                            ),
+                                          )
+
+                                        ],
+                                      )
+                                    ],
+                                  )
+                              )
+                            ]
                         )
-                      ],
-                    )
-                )
+                    ),
+                    onTap: (){
+                    },
+                  ),
+
+                  GestureDetector(
+                    child: Container(
+                        height: 100,
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20
+                        ),
+                        padding: EdgeInsets.only(
+                            top: 15,
+                            bottom: 12
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
+                            )
+                        ),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/image/photo_call.png"
+                                        ),fit: BoxFit.cover
+                                    )
+                                ),
+                              ),
+                              SizedBox(width: 10,),
+                              Expanded(
+                                  child:Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Имя продавца",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 16,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
+                                              Text(
+                                                "Заказ 1-3",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Container(
+                                                width: 16,
+                                                height: 10,
+                                                margin: EdgeInsets.only(
+                                                    right: 5
+                                                ),
+                                                child: Image.asset("assets/image/done2.png"),
+                                              ),
+                                              Text(
+                                                "04.03.2021",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff959595),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            width: 15,
+                                            height: 17,
+                                            child: Image.asset("assets/image/mes_mic.png"),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Text(
+                                            "Голосовое сообщение",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 14,
+                                                color: Color(0xff717171),
+                                                fontFamily: "Roboto"
+                                            ),
+                                          )
+                                        ],
+                                      ),
 
 
-              ],
-            )
+                                    ],
+                                  ))])
+                    ),
+                    onTap: (){
+                    },
+                  ),
+
+                  GestureDetector(
+                    child: Container(
+                        height: 100,
+
+                        margin: EdgeInsets.only(
+                            left: 20,
+                            right: 20
+                        ),
+                        padding: EdgeInsets.only(
+                            top: 15,
+                            bottom: 12
+                        ),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                bottom: BorderSide(
+                                    color: Color(0xffE7E7E7),
+                                    width: 1
+                                )
+                            )
+                        ),
+                        child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                width: 40,
+                                height: 40,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(6),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/image/photo_call.png"
+                                        ),fit: BoxFit.cover
+                                    )
+                                ),
+                              ),
+                              SizedBox(width: 10,),
+                              Expanded(
+                                  child:Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Имя продавца",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w700,
+                                                    fontSize: 16,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                height: 5,
+                                              ),
+                                              Text(
+                                                "Заказ 1-3",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff2e2e33),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              Container(
+                                                width: 16,
+                                                height: 10,
+                                                margin: EdgeInsets.only(
+                                                    right: 5
+                                                ),
+                                                child: Image.asset("assets/image/done2.png"),
+                                              ),
+                                              Text(
+                                                "04.03.2021",
+                                                style: TextStyle(
+                                                    fontWeight: FontWeight.w400,
+                                                    fontSize: 14,
+                                                    color: Color(0xff959595),
+                                                    fontFamily: "Roboto"
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        children: [
+                                          Container(
+                                            width: 15,
+                                            height: 17,
+                                            child: Image.asset("assets/image/movie.png"),
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Text(
+                                            "Видео",
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.w400,
+                                                fontSize: 14,
+                                                color: Color(0xff717171),
+                                                fontFamily: "Roboto"
+                                            ),
+                                          )
+                                        ],
+                                      ),
+
+
+                                    ],
+                                  ))])
+                    ),
+                    onTap: (){
+                    },
+                  ),
+
+
+                ],
+              )
           )
         ],
       )

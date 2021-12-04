@@ -958,12 +958,12 @@ class MessageItemScreenCall3 extends StatelessWidget{
                     color: Color(0xffE6332A)
                   ),
                   padding: EdgeInsets.only(
-                    left: 14,
-                    right: 14,
+                    left: sended?12:14,
+                    right:sended?12: 14,
                     top: 10,
                     bottom: 10
                   ),
-                  child:sended?Image.asset("assets/image/send.png",color: Colors.blue,): Image.asset("assets/image/micro.png",color: Colors.white,),
+                  child:sended?Image.asset("assets/image/send.png",color: Colors.white,): Image.asset("assets/image/micro.png",color: Colors.white,),
                 )
               ],
             ),

@@ -919,7 +919,7 @@ class MessageItemScreen3 extends StatelessWidget{
                     top: 10,
                     bottom: 10
                   ),
-                  child:sended?Image.asset("assets/image/send.png",color: Colors.blue,): Image.asset("assets/image/micro.png",color: Colors.white,),
+                  child:sended?Image.asset("assets/image/send.png",color: Colors.white,): Image.asset("assets/image/micro.png",color: Colors.white,),
                 )
               ],
             ),
