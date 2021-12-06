@@ -130,8 +130,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -179,13 +179,13 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
-                            controller: new TextEditingController()..text="ИП Петров Петр Петрович",
+                            controller: new TextEditingController()..text="ООО Запчасти",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -202,7 +202,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                   fontSize: 12,
                                   color: Color(0xff717171),
                                   fontFamily: "Roboto",
-                                  height: 0.2
+                                  height: 0.1
                               ),
                               enabledBorder: InputBorder.none,
                               border: InputBorder.none,
@@ -238,8 +238,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -292,8 +292,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -368,8 +368,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -421,8 +421,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
                             ),
                             maxLines: 3,
                             minLines: 1,
@@ -476,8 +475,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -530,8 +529,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -584,8 +583,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -663,8 +662,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -716,8 +715,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
                             ),
                             maxLines: 3,
                             minLines: 1,
@@ -772,8 +770,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -826,8 +824,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -879,8 +877,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Квартира/офис",
@@ -933,8 +931,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1011,8 +1008,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1065,8 +1062,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1119,8 +1116,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1173,8 +1170,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1227,8 +1224,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1306,8 +1303,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1359,8 +1355,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -1436,8 +1431,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",

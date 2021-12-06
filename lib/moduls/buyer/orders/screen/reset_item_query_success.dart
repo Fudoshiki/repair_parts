@@ -89,6 +89,9 @@ class ResetItemQuerySuccess extends StatelessWidget{
           ),
           Expanded(
             child: ListView(
+              padding: EdgeInsets.only(
+                top: 10
+              ),
               children: [
 
                 Container(

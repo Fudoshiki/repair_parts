@@ -133,7 +133,7 @@ class ResetItemScreen extends StatelessWidget{
                                       fontFamily: "Roboto"
                                   ),
                                 ),
-
+                                SizedBox(height: 10,)
 
                               ],
                             ),

@@ -434,7 +434,8 @@ class ListItems extends StatelessWidget{
                   ?Expanded(
                 child: ListView(
                   padding: EdgeInsets.only(
-                    top: 0
+                    top: 0,
+                    bottom: 21
                   ),
                   children: [
                     ...array.map(
@@ -451,15 +452,17 @@ class ListItems extends StatelessWidget{
                   mainAxisSpacing: 5,
                   childAspectRatio: ((Get.width-40)/2)/329,
                   crossAxisCount: 2,
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 20
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                    bottom: 21
                   ),
                   children: List.generate(array.length, (index) {
                     return ItemBlock(array[index]);
                   }),
                 ),
               )
-          )
+          ),
         ],
       ),
     );

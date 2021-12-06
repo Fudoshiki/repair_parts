@@ -62,6 +62,7 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
       ),
       body: Column(
         children: [
+
           Expanded(
             child: ListView(
               children: [

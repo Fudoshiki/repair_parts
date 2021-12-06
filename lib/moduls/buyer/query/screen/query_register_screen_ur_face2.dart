@@ -231,8 +231,8 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "ИП Маликов Петр Сергеевич",
@@ -296,8 +296,8 @@ class QueryRegisterScreenUrFace2 extends StatelessWidget{
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                                fontFamily: "Roboto",
+                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Россия",

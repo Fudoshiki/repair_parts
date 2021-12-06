@@ -470,8 +470,8 @@ class CreateOfferScreen extends StatelessWidget{
                             showModalBottomSheet(shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),context: context, builder: (c){
-                              return FractionallySizedBox(
-                                  heightFactor: 0.65,
+                              return SizedBox(
+                                  height: 274,
                                   child: Container(
                                     padding: EdgeInsets.only(
                                         left: 20,

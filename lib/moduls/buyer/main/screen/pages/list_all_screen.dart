@@ -1432,7 +1432,7 @@ class ListAllScreen extends StatelessWidget{
               Get.to(HistoryOrderItem(bottom: true,));
             },
           ),
-          // "Screens 73г 76 76а 77",
+          // 73д,73е 73ж
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(

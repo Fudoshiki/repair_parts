@@ -607,7 +607,7 @@ class ResetItemOrderScreen extends StatelessWidget{
                               style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 12,
-                                  color: Color(0xff717171),
+                                  color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
                               ),
                             ),
@@ -653,7 +653,7 @@ class ResetItemOrderScreen extends StatelessWidget{
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 12,
-                                  color: Color(0xff717171),
+                                  color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
                               ),
                             ),
@@ -941,9 +941,8 @@ class ResetItemOrderScreen extends StatelessWidget{
                                           width: Get.width-40,
                                           height: 31,
                                           decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Color(0xffE6332A)
-                                            ),
+
+                                            color:Color(0xffFFE9E8),
                                             borderRadius: BorderRadius.circular(6),
                                           ),
                                           padding: EdgeInsets.all(
@@ -953,7 +952,7 @@ class ResetItemOrderScreen extends StatelessWidget{
                                             child: Text(
                                               "Ждет ответ",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w400,
+                                                  fontWeight: FontWeight.w700,
                                                   fontSize: 14,
                                                   color: Color(0xffE6332A),
                                                   fontFamily: "Roboto"
@@ -1247,9 +1246,8 @@ class ResetItemOrderScreen extends StatelessWidget{
                                             width: Get.width-40,
                                             height: 31,
                                             decoration: BoxDecoration(
-                                              border: Border.all(
-                                                  color: Color(0xffE6332A)
-                                              ),
+
+                                              color:Color(0xffFFE9E8),
                                               borderRadius: BorderRadius.circular(6),
                                             ),
                                             padding: EdgeInsets.all(
@@ -1259,7 +1257,7 @@ class ResetItemOrderScreen extends StatelessWidget{
                                               child: Text(
                                                 "Ждет ответ",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w400,
+                                                    fontWeight: FontWeight.w700,
                                                     fontSize: 14,
                                                     color: Color(0xffE6332A),
                                                     fontFamily: "Roboto"

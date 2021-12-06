@@ -112,7 +112,7 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                         ),
                       ),
                       SizedBox(
-                        height: 5,
+                        height: 10,
                       ),
                       Text(
                         "ИП/Юридическое лицо",

@@ -1612,7 +1612,7 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                   isScrollControlled: true,
                                   builder: (context) {
                                 return FractionallySizedBox(
-                                  heightFactor: 0.8,
+                                  heightFactor: 0.7,
                                   child: BottomSheet(),
                                 );
                               });
@@ -2208,7 +2208,7 @@ class BottomSheetState extends State<BottomSheet>{
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Get.height-100,
+      height: 344,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(

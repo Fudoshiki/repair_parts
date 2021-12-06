@@ -116,7 +116,7 @@ class OfferScreen extends StatelessWidget{
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Заказ №1-12",
+                                "Запрос №1-12",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w900,
                                     fontSize: 22,
