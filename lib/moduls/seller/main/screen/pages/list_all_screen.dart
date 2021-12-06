@@ -7,6 +7,8 @@ import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen_back.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/pages/list_items_seller.dart';
 import 'package:repair_parts/moduls/seller/main/screen/pages/search_page_seller.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/20_block/main_data_profile_changed.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/20_block/main_data_profile_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/history_obmen76.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76a.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76b.dart';
@@ -47,6 +49,7 @@ import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_scre
 import 'package:repair_parts/moduls/seller/profile/screen/pages_offer/offer_sended.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/product_change.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/product_changed.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/choose_category_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org259_59a.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org_seller.dart';
@@ -1715,8 +1718,99 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
             },
           ),
-
-          //HistoryResetObmenSeller76
+          //94 95
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  94 95",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ChooseCategorySeller(bottom: true,));
+            },
+          ),
+          //85в
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  85в",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(MainDataProfileChanged(bottom: true,));
+            },
+          ),
+          // 85 85а 91в 85б 86 86в 86а 86б 92 93 93а
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  85 85а 91в 85б 86 86в 86а 86б 92 93 93а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(MainDataProfileSeller(bottom: true,));
+            },
+          ),
         ],
       )
     );
