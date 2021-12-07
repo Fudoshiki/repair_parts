@@ -7,6 +7,13 @@ import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/catalog_screen_back.dart';
 import 'package:repair_parts/moduls/seller/catalog/screen/pages/list_items_seller.dart';
 import 'package:repair_parts/moduls/seller/main/screen/pages/search_page_seller.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/close_obmen_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/close_reset_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/disagree_obmen_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/done_obmen_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/done_reset_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/obmen_waiting_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/reset_waiting_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/20_block/main_data_profile_changed.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/20_block/main_data_profile_seller.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/26_block/reward_sreen.dart';
@@ -1595,99 +1602,6 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
             },
           ),
-          //76
-          GestureDetector(
-            child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Colors.black,
-                        width: 1
-                    ),
-                    color: Color(0xffE19999)
-                ),
-                padding: EdgeInsets.only(
-                    left: 20
-                ),
-                height: 60,
-                width: Get.width,
-                child: Row(
-                  children: [
-                    Text(
-                      "Screens  76",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700
-                      ),
-                    ),
-                  ],
-                )
-            ),
-            onTap:(){
-              Get.to(HistoryResetObmenSeller76(bottom: true,));
-            },
-          ),
-          //76a
-          GestureDetector(
-            child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Colors.black,
-                        width: 1
-                    ),
-                    color: Color(0xffE19999)
-                ),
-                padding: EdgeInsets.only(
-                    left: 20
-                ),
-                height: 60,
-                width: Get.width,
-                child: Row(
-                  children: [
-                    Text(
-                      "Screens  76a",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700
-                      ),
-                    ),
-                  ],
-                )
-            ),
-            onTap:(){
-              Get.to(ResetObmenItem76a(bottom: true,));
-            },
-          ),
-          //76b
-          GestureDetector(
-            child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Colors.black,
-                        width: 1
-                    ),
-                    color: Color(0xffE19999)
-                ),
-                padding: EdgeInsets.only(
-                    left: 20
-                ),
-                height: 60,
-                width: Get.width,
-                child: Row(
-                  children: [
-                    Text(
-                      "Screens  76b",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700
-                      ),
-                    ),
-                  ],
-                )
-            ),
-            onTap:(){
-              Get.to(ResetObmenItem76b(bottom: true,));
-            },
-          ),
           //33ю
           GestureDetector(
             child: Container(
@@ -1846,6 +1760,349 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(RewardScreen(bottom: true,));
             },
           ),
+          //76
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  76",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(HistoryResetObmenSeller76(bottom: true,));
+            },
+          ),
+          //76a
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  76a",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ResetObmenItem76a(bottom: true,));
+            },
+          ),
+          //76b
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  76b",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ResetObmenItem76b(bottom: true,));
+            },
+          ),
+          /////////
+          //77
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ResetWaitingScreen(bottom: true,));
+            },
+          ),
+          //77г
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77г",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(CloseResetScreen(bottom: true,));
+            },
+          ),
+          //77д
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77д",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(DoneResetScreen(bottom: true,));
+            },
+          ),
+          //77э
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77э",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(CloseResetScreen(bottom: true,));
+            },
+          ),
+          //77а
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77а",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ObmenWaitingScreen(bottom: true,));
+            },
+          ),
+          //77е
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77е",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(DisagreeObmenScreen(bottom: true,));
+            },
+          ),
+          //77ж
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77ж",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(DoneObmenScreen(bottom: true,));
+            },
+          ),
+          //77ю
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  77ю",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(CloseObmenScreen(bottom: true,));
+            },
+          ),
+
         ],
       )
     );
