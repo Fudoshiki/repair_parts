@@ -136,7 +136,7 @@ class CloseResetScreen extends StatelessWidget{
                       margin: EdgeInsets.only(
                         left: 20,
                         right: 20,
-                        top: 14,
+                        top: 21,
                       ),
                       padding: EdgeInsets.only(
                           bottom: 11

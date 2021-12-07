@@ -141,9 +141,24 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
 
                 Container(
                   margin: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                  child:Text(
+                    "Покупатель",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 18
+                      top: 9
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1271,13 +1286,14 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                         fontFamily: "Roboto"
                                                     ),
                                                   ),
-                                                ),Container(
+                                                ),
+                                                Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
                                                       top: 12
                                                   ),
                                                   child: Text(
-                                                    "Файлы",
+                                                    "Счет-договор",
                                                     style: TextStyle(
                                                         fontWeight: FontWeight.w400,
                                                         fontSize: 18,
@@ -1289,7 +1305,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                 GestureDetector(
                                                   child: Container(
                                                     margin: EdgeInsets.only(
-                                                        left: 37,
+                                                      left: 37,
                                                     ),
                                                     decoration: BoxDecoration(
                                                         border: Border(
@@ -1299,7 +1315,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                         )
                                                     ),
                                                     child: Text(
-                                                      "image22121",
+                                                      "Счет-договор.1-1",
                                                       style: TextStyle(
                                                           fontWeight: FontWeight.w400,
                                                           fontSize: 18,
@@ -1310,6 +1326,187 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                   ),
                                                   onTap: (){
                                                   },
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 12
+                                                  ),
+                                                  child: Text(
+                                                    "Бухгалтерский документ",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 6
+                                                  ),
+                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 12
+                                                  ),
+                                                  child: Text(
+                                                    "Транспортная накладная",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 6
+                                                  ),
+                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+
+
+                                        ],
+                                      ),
+                                    )
+                                );
+                              },
+                            );
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                double width = MediaQuery.of(context).size.width;
+                                double height = MediaQuery.of(context).size.height;
+                                return AlertDialog(
+                                    backgroundColor: Colors.transparent,
+                                    contentPadding: EdgeInsets.zero,
+                                    elevation: 0.0,
+                                    // title: Center(child: Text("Evaluation our APP")),
+                                    content: Container(
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: Get.width-26,
+                                            height: 280,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 36
+                                                  ),
+                                                  child: Text(
+                                                    "Вложения",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w700,
+                                                        fontSize: 24,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 12
+                                                  ),
+                                                  child: Text(
+                                                    "Счет-договор",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                GestureDetector(
+                                                  child: Container(
+                                                    margin: EdgeInsets.only(
+                                                      left: 37,
+                                                    ),
+                                                    decoration: BoxDecoration(
+                                                        border: Border(
+                                                            bottom: BorderSide(
+                                                                color: Color(0xffE6332A)
+                                                            )
+                                                        )
+                                                    ),
+                                                    child: Text(
+                                                      "Счет-договор.1-1",
+                                                      style: TextStyle(
+                                                          fontWeight: FontWeight.w400,
+                                                          fontSize: 18,
+                                                          color: Color(0xffE6332A),
+                                                          fontFamily: "Roboto"
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  onTap: (){
+                                                  },
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 12
+                                                  ),
+                                                  child: Text(
+                                                    "Бухгалтерский документ",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                GestureDetector(
+                                                  child: Container(
+                                                    margin: EdgeInsets.only(
+                                                      left: 37,
+                                                    ),
+                                                    decoration: BoxDecoration(
+                                                        border: Border(
+                                                            bottom: BorderSide(
+                                                                color: Color(0xffE6332A)
+                                                            )
+                                                        )
+                                                    ),
+                                                    child: Text(
+                                                      "imadg33434",
+                                                      style: TextStyle(
+                                                          fontWeight: FontWeight.w400,
+                                                          fontSize: 18,
+                                                          color: Color(0xffE6332A),
+                                                          fontFamily: "Roboto"
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  onTap: (){
+                                                  },
+                                                ),
+
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 6
+                                                  ),
+                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
                                                 ),
                                                 Container(
                                                   margin: EdgeInsets.only(
@@ -1329,8 +1526,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                 GestureDetector(
                                                   child: Container(
                                                     margin: EdgeInsets.only(
-                                                        left: 37,
-                                                        top: 14
+                                                      left: 37,
                                                     ),
                                                     decoration: BoxDecoration(
                                                         border: Border(
@@ -1340,23 +1536,23 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                         )
                                                     ),
                                                     child: Text(
-                                                      "image222",
+                                                      "imadg33434",
                                                       style: TextStyle(
-                                                        fontWeight: FontWeight.w400,
-                                                        fontSize: 18,
-                                                        color: Color(0xffE6332A),
-                                                        fontFamily: "Roboto",
-
+                                                          fontWeight: FontWeight.w400,
+                                                          fontSize: 18,
+                                                          color: Color(0xffE6332A),
+                                                          fontFamily: "Roboto"
                                                       ),
                                                     ),
                                                   ),
                                                   onTap: (){
                                                   },
                                                 ),
+
                                                 Container(
                                                   margin: EdgeInsets.only(
-                                                    left: 37,
-                                                    top: 6
+                                                      left: 37,
+                                                      top: 6
                                                   ),
                                                   child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
                                                 )

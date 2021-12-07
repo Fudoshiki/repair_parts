@@ -111,7 +111,7 @@ class ResetWaitingScreen extends StatelessWidget{
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Отказ в возврате",
+                                  "Возврат. Ждет ответ",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w900,
                                       fontSize: 28,
@@ -140,7 +140,7 @@ class ResetWaitingScreen extends StatelessWidget{
                       margin: EdgeInsets.only(
                         left: 20,
                         right: 20,
-                        top: 14,
+                        top: 21,
                       ),
                       padding: EdgeInsets.only(
                           bottom: 11

@@ -138,12 +138,26 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                       ],
                     )
                 ),
-
+                Container(
+                  margin: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                  child:Text(
+                    "Покупатель",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
+                  ),
+                ),
                 Container(
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 18
+                      top: 9
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -433,7 +447,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                             ),
                           color: Color(0xffE6332A)
                         ),
-                        padding: EdgeInsets.all(7),
+                        padding: EdgeInsets.all(8),
                         child: Image.asset("assets/image/done.png",color:Colors.white),
                       )
                     ],

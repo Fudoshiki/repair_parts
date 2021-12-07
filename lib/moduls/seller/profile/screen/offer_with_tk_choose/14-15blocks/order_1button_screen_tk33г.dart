@@ -141,9 +141,24 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33u>{
 
                 Container(
                   margin: EdgeInsets.only(
+                    left: 20,
+                    right: 20,
+                  ),
+                  child:Text(
+                    "Покупатель",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        color: Color(0xff2e2e33),
+                        fontFamily: "Roboto"
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 18
+                      top: 9
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

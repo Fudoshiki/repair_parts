@@ -10,6 +10,7 @@ import 'package:repair_parts/moduls/seller/main/screen/pages/search_page_seller.
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/close_obmen_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/close_reset_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/disagree_obmen_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/19_block/disagree_reset_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/done_obmen_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/done_reset_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/obmen_waiting_screen.dart';
@@ -1447,7 +1448,7 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(OrderScreenItem1ButtonSeller33l2(bottom: true,));
             },
           ),
-          //28b
+          //28b 29в
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -1465,7 +1466,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens  28b",
+                      "Screens  28b 29в",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700
@@ -1913,7 +1914,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CloseResetScreen(bottom: true,));
+              Get.to(DisagreeResetScreen(bottom: true,));
             },
           ),
           //77д

@@ -62,113 +62,113 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
       ),
       body: Column(
         children: [
-
-          Expanded(
-            child: ListView(
+          SizedBox(
+            height: 100,
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(
+                horizontal: 20
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 60,
+                GestureDetector(
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          color: Color(0xffFFB800),
+                          borderRadius: BorderRadius.circular(
+                              5
+                          )
+                      ),
+                      child: Image.asset("assets/image/profile.png"),
+                    ),
+                    onTap:(){
+
+                    }
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
+                  margin: EdgeInsets.only(
+                      left: 15
                   ),
-                  child: Row(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      GestureDetector(
-                          child: Container(
-                            width: 40,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                color: Color(0xffFFB800),
-                                borderRadius: BorderRadius.circular(
-                                    5
-                                )
-                            ),
-                            child: Image.asset("assets/image/profile.png"),
-                          ),
-                          onTap:(){
-
-                          }
+                      Text(
+                        "Иванов Иван Иванович",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w900,
+                            fontFamily: "Roboto",
+                            color: Color(0xff2e2e33)
+                        ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(
-                          left: 15
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Иванов Иван Иванович",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w900,
-                                  fontFamily: "Roboto",
-                                  color: Color(0xff2e2e33)
-                              ),
+                      SizedBox(height: 3,),
+                      Row(
+                        children: [
+                          Text(
+                            "3,2",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 14,
+                                color: Color(0xff2e2e33),
+                                fontFamily: "Roboto"
                             ),
-                            SizedBox(height: 3,),
-                            Row(
-                              children: [
-                                Text(
-                                  "3,2",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 14,
-                                      color: Color(0xff2e2e33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                                SizedBox(width: 9,),
-                                Container(
-                                  height: 11,
-                                  width: 11,
-                                  child: Image.asset(
-                                    "assets/image/Star 1.png",
-                                    color: Color(0xffFFB800),
-                                  ),
-                                ),
-                                Container(
-                                  height: 11,
-                                  width: 11,
-                                  child: Image.asset(
-                                    "assets/image/Star 1.png",
-                                    color: Color(0xffFFB800),
-                                  ),
-                                ),
-                                Container(
-                                  height: 11,
-                                  width: 11,
-                                  child: Image.asset(
-                                    "assets/image/Star 1.png",
-                                    color: Color(0xffFFB800),
-                                  ),
-                                ),
-                                Container(
-                                  height: 11,
-                                  width: 11,
-                                  child: Image.asset(
-                                    "assets/image/Star 1.png",
-                                    color: Color(0xffC4C4C4),
-                                  ),
-                                ),
-                                Container(
-                                  height: 11,
-                                  width: 11,
-                                  child: Image.asset(
-                                    "assets/image/Star 1.png",
-                                    color: Color(0xffC4C4C4),
-                                  ),
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
+                          ),
+                          SizedBox(width: 9,),
+                          Container(
+                            height: 11,
+                            width: 11,
+                            child: Image.asset(
+                              "assets/image/Star 1.png",
+                              color: Color(0xffFFB800),
+                            ),
+                          ),
+                          Container(
+                            height: 11,
+                            width: 11,
+                            child: Image.asset(
+                              "assets/image/Star 1.png",
+                              color: Color(0xffFFB800),
+                            ),
+                          ),
+                          Container(
+                            height: 11,
+                            width: 11,
+                            child: Image.asset(
+                              "assets/image/Star 1.png",
+                              color: Color(0xffFFB800),
+                            ),
+                          ),
+                          Container(
+                            height: 11,
+                            width: 11,
+                            child: Image.asset(
+                              "assets/image/Star 1.png",
+                              color: Color(0xffC4C4C4),
+                            ),
+                          ),
+                          Container(
+                            height: 11,
+                            width: 11,
+                            child: Image.asset(
+                              "assets/image/Star 1.png",
+                              color: Color(0xffC4C4C4),
+                            ),
+                          ),
+                        ],
                       )
                     ],
                   ),
-                ),
+                )
+              ],
+            ),
+          ),
+          Expanded(
+            child: ListView(
+              children: [
+
                 Container(
                   margin: EdgeInsets.only(
                       left: 20,

@@ -2769,6 +2769,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                 )
                             ),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
                                   height: 31,
@@ -2843,6 +2844,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                   ),
                                 ),
                                 Container(
+                                  width:Get.width-100,
                                   child: Text(
                                     "Ужасное качество доставки! Привезли разбитые детали!",
                                     style: TextStyle(
@@ -2874,6 +2876,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                 )
                             ),
                             child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+
                               children: [
                                 Container(
                                   height: 31,
@@ -2948,6 +2952,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                   ),
                                 ),
                                 Container(
+                                    width:Get.width-100,
+
                                   child: Text(
                                     "Ужасное качество доставки! Привезли разбитые детали!",
                                     style: TextStyle(
@@ -2979,6 +2985,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                 )
                             ),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+
                               children: [
                                 Container(
                                   height: 31,
@@ -3053,6 +3061,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                   ),
                                 ),
                                 Container(
+                                  width:Get.width-100,
+
                                   child: Text(
                                     "Ужасное качество доставки! Привезли разбитые детали!",
                                     style: TextStyle(

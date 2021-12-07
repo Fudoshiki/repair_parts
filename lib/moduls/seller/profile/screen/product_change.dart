@@ -1178,7 +1178,7 @@ class ProductChange extends StatelessWidget{
                     width: Get.width-40,
                     child: Center(
                       child: Text(
-                        "ОК",
+                        "Отправить на модерацию",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 16,

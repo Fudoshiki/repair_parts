@@ -1608,14 +1608,21 @@ class ListQueryItemScreen2 extends StatelessWidget{
                                    shape: RoundedRectangleBorder(
                                      borderRadius: BorderRadius.circular(10.0),
                                    ),
-                                  context: context,
-                                  isScrollControlled: true,
-                                  builder: (context) {
-                                return FractionallySizedBox(
-                                  heightFactor: 0.7,
-                                  child: BottomSheet(),
-                                );
-                              });
+                                   context: context,
+                                   isScrollControlled: true,
+                                   backgroundColor: Colors.transparent,
+                                   builder: (context) => Container(
+                                     height: 490,
+                                     decoration: new BoxDecoration(
+                                       color: Colors.white,
+                                       borderRadius: new BorderRadius.only(
+                                         topLeft: const Radius.circular(25.0),
+                                         topRight: const Radius.circular(25.0),
+                                       ),
+                                     ),
+                                     child: BottomSheet(),
+                                   ),
+                               );
 
                             }
                         )
