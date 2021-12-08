@@ -60,7 +60,7 @@ class ItemRow extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: Get.width-150,
+                  width: Get.width-175,
                   margin: EdgeInsets.only(
                     bottom: 5
                   ),
