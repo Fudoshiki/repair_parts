@@ -17,6 +17,15 @@ import 'package:repair_parts/moduls/seller/profile/screen/19_block/obmen_waiting
 import 'package:repair_parts/moduls/seller/profile/screen/19_block/reset_waiting_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/20_block/main_data_profile_changed.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/20_block/main_data_profile_seller.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/do_ozifrovka_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/do_ozifrovka_screen_2.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/no_ozifrovka_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/ozifrovka_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/ozifrovka_status_101.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/ozifrovka_status_102.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/ozifrovka_status_103.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/ozifrovka_status_103a.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/25_block/product_send_on_accept.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/26_block/reward_sreen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/history_obmen76.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76a.dart';
@@ -2103,6 +2112,288 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(CloseObmenScreen(bottom: true,));
             },
           ),
+          //96
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  96",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(NoOzifrovkaScreen(bottom: true,));
+            },
+          ),
+          //97
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  97",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OzifrovkaScreen(bottom: true,));
+            },
+          ),
+          // 99
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   99",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(DoOzifrovkaScreen(bottom: true,));
+            },
+          ),
+          //98
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   98",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(DoOzifrovkaScreen2(bottom: true,));
+            },
+          ),
+          //100
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   100",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProductSendOnAccept(bottom: true,));
+            },
+          ),
+          // 101
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   101",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OzifrovkaStatusScreen101(bottom: true,));
+            },
+          ),
+          // 102
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   102",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OzifrovkaStatusScreen102(bottom: true,));
+            },
+          ),
+          // 103
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   103",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OzifrovkaStatusScreen103(bottom: true,));
+            },
+          ),
+          // 103a
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   103a",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(OzifrovkaStatusScreen103a(bottom: true,));
+            },
+          ),
+          //ProductSendOnAccept
+
+
 
         ],
       )
