@@ -64,7 +64,7 @@ class ProfilePageSeller extends StatelessWidget{
             child: ListView(
               children: [
                 SizedBox(
-                  height: 60,
+                  height: 40,
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(
@@ -402,8 +402,8 @@ class ProfilePageSeller extends StatelessWidget{
                         Row(
                           children: [
                             Container(
-                              width: 18,
-                              height: 18,
+                              width: 20,
+                              height: 20,
                               margin: EdgeInsets.only(
                                   right: 20
                               ),

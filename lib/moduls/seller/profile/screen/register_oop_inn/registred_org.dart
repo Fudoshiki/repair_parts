@@ -381,6 +381,7 @@ class RegistredOrgScreen extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Населенный пункт",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -820,6 +821,8 @@ class RegistredOrgScreen extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            controller: new TextEditingController()..text="21",
+
                             enabled: false,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
@@ -837,6 +840,8 @@ class RegistredOrgScreen extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+
+                              labelText: "Квартира/офис",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,

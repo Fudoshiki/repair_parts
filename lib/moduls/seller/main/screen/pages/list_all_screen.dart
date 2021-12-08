@@ -633,7 +633,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NORegistredOrgScreenSeller());
+              Get.to(NORegistredOrgScreenSeller(bottom: true,));
 
             },
           ),
@@ -667,7 +667,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NoSubmit());
+              Get.to(NoSubmit(bottom: true,));
 
             },
           ),

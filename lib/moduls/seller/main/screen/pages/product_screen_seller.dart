@@ -195,8 +195,8 @@ class ProductScreenSeller extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      bottom: 21,
-                      top: 21
+                      bottom: 9,
+                      top: 9
                   ),
                   width: Get.width-40,
                   height: 1,

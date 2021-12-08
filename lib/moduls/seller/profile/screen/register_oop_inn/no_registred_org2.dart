@@ -385,6 +385,8 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Населенный пункт",
+
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -581,7 +583,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Фактический адрес",
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -614,7 +616,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -644,7 +646,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
                           width: Get.width-40,
                           padding: EdgeInsets.only(
                               left: 20,
@@ -662,15 +663,17 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="Еврейская автономная область, Биробиджанский район, с. Красный Восток",
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto",
                             ),
+                            maxLines: 3,
+                            minLines: 1,
                             decoration: InputDecoration(
-                              hintText: "Населенный пункт",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -678,6 +681,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Населенный пункт",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -714,15 +718,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="Олега Кошевого",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "Улица",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -730,6 +735,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Улица",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -766,15 +772,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="21",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "Дом/строение",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -782,6 +789,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Дом/строение",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -817,13 +825,15 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            controller: new TextEditingController()..text="21",
+
                             enabled: false,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Квартира/офис",
@@ -834,6 +844,8 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+
+                              labelText: "Квартира/офис",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -873,11 +885,10 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             enabled: false,
                             controller: new TextEditingController()..text="АвтоМир",
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
                               hintText: "Фамилия",
@@ -922,7 +933,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Банковские реквизиты",
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -949,15 +960,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="Сбер",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "Наименование банка",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -965,6 +977,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Наименование банка",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -1001,15 +1014,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="2323233545",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "ИНН",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -1017,6 +1031,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "ИНН",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -1053,15 +1068,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="2323233545",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "БИК",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -1069,6 +1085,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "БИК",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -1105,15 +1122,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="2323233545",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "К/с",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -1121,6 +1139,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "К/с",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -1157,15 +1176,16 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="2323233545",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
-                              hintText: "Р/с",
+                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -1173,6 +1193,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Р/с",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -1234,12 +1255,13 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="89056756756",
+
                             style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
                               hintText: "Телефон организации",
@@ -1286,12 +1308,13 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="dfsdhg@mail.ru",
+
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "E-mail организации",
@@ -1369,6 +1392,8 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 fontFamily: "Roboto"
 
                             ),
+                            controller: new TextEditingController()..text="10%",
+
                             decoration: InputDecoration(
 
                               labelStyle: TextStyle(

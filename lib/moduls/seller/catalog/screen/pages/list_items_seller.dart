@@ -424,6 +424,9 @@ class ListItemsSeller extends StatelessWidget{
               ()=>catalogController.isBlock.value
                   ?Expanded(
                 child: ListView(
+                  padding: EdgeInsets.only(
+                    top: 0
+                  ),
                   children: [
                     ...array.map(
                             (el){

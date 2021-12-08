@@ -434,6 +434,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              labelText: "Населенный пункт",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -872,13 +873,15 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                           child: TextField(
                             onTap: (){
                             },
+                            controller: new TextEditingController()..text="21",
+
                             enabled: false,
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
-                              height: 100
+                                height: 100
                             ),
                             decoration: InputDecoration(
                               hintText: "Квартира/офис",
@@ -889,6 +892,8 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+
+                              labelText: "Квартира/офис",
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,

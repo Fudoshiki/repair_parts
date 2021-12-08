@@ -140,7 +140,7 @@ class NoSubmit extends StatelessWidget{
                       top: 33
                   ),
                   child: Text(
-                    "Запрос отправлен",
+                    "Отказ в регистрации",
                     style: TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 28,

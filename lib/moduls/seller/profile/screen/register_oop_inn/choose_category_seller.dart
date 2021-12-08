@@ -141,7 +141,7 @@ class ChooseCategorySeller extends StatelessWidget{
             backgroundColor: Colors.white,
             items: [
               _bottomNavigationitem.showItem(
-                true,
+                false,
                 "home_icon.png",
                 18,
                 text: "Главная",
@@ -152,13 +152,7 @@ class ChooseCategorySeller extends StatelessWidget{
                 18,
                 text: "Заказы",
               ),
-              _bottomNavigationitem.showItem(
-                false,
-                "bascket_icon.png",
-                18,
-                text: "Корзина",
 
-              ),
               _bottomNavigationitem.showItem(
                 false,
                 "message_icon.png",
@@ -167,7 +161,7 @@ class ChooseCategorySeller extends StatelessWidget{
 
               ),
               _bottomNavigationitem.showItem(
-                false,
+                true,
                 "profile_icon.png",
                 18,
                 text: "Кабинет",

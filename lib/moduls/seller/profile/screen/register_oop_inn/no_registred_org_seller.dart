@@ -11,7 +11,6 @@ import 'done_submit.dart';
 
 class NORegistredOrgScreenSeller extends StatelessWidget{
 
-  bool? bottom;
   bool open2 =false;
   bool open3=false;
   bool open4=false;
@@ -19,12 +18,57 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
   String str2="";
   String str3="";
   String str4="";
+  bool? bottom;
+  NORegistredOrgScreenSeller({@required this.bottom});
+  BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.white,
+      bottomNavigationBar: bottom!=null? SizedBox(
+        height: 50,
+        child: CupertinoTabBar(
+          border: Border(
+            top: BorderSide(
+              width: 1,
+              color: Color(0xffE7E7E7),
+            ),
+          ),
+          backgroundColor: Colors.white,
+          items: [
+            _bottomNavigationitem.showItem(
+              false,
+              "home_icon.png",
+              18,
+              text: "Главная",
+            ),
+            _bottomNavigationitem.showItem(
+              false,
+              "orders_icon.png",
+              18,
+              text: "Заказы",
+            ),
+
+            _bottomNavigationitem.showItem(
+              false,
+              "message_icon.png",
+              18,
+              text: "Диалоги",
+
+            ),
+            _bottomNavigationitem.showItem(
+              true,
+              "profile_icon.png",
+              18,
+              text: "Кабинет",
+
+            ),
+          ],
+        ),
+      ):Container(
+        height: 1,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -2222,7 +2266,7 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(ChooseCategorySeller());
+                    Get.to(ChooseCategorySeller(bottom: true,));
                   },
                 ),
                 GestureDetector(
@@ -2250,7 +2294,7 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(DoneSubmit());
+                    Get.to(DoneSubmit(bottom: true,));
                   },
                 ),
 

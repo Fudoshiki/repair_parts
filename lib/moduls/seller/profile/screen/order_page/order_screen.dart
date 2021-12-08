@@ -154,8 +154,23 @@ class OrderScreenSeller extends StatelessWidget{
                 )
             ),
             onTap: (){
-              Get.bottomSheet(
-                  Container(
+              showModalBottomSheet(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: Colors.transparent,
+                builder: (context) => Container(
+                  height: 270,
+                  decoration: new BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: new BorderRadius.only(
+                      topLeft: const Radius.circular(25.0),
+                      topRight: const Radius.circular(25.0),
+                    ),
+                  ),
+                  child: Container(
                     padding: EdgeInsets.only(
                         left: 20,
                         right: 20
@@ -321,7 +336,9 @@ class OrderScreenSeller extends StatelessWidget{
                       ],
                     ),
                   )
+                ),
               );
+
             },
           ),
           Expanded(
