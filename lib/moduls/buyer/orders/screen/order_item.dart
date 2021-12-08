@@ -87,7 +87,6 @@ class OrderItem extends StatelessWidget{
                   children: [
                     GestureDetector(
                       child:  Container(
-                        width: 19,
                         height: 16,
                         child: Image.asset("assets/image/arrow_left.png"),
                       ),
@@ -102,7 +101,6 @@ class OrderItem extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 17
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
