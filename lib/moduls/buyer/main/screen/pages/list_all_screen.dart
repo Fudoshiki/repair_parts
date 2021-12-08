@@ -1327,7 +1327,7 @@ class ListAllScreen extends StatelessWidget{
             },
           ),
 
-          //Screens 73,76 76а 77
+          //Screens 73г,76 76а 77
           GestureDetector(
             child: Container(
                 decoration: BoxDecoration(
@@ -1348,7 +1348,7 @@ class ListAllScreen extends StatelessWidget{
                 child: Row(
                   children: [
                     Text(
-                      "Screens 73,76 76а 77",
+                      "Screens 73г,76 76а, 77",
                       style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w700

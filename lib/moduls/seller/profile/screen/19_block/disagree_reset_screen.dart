@@ -233,45 +233,33 @@ class DisagreeResetScreen extends StatelessWidget{
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "количество в заказе, шт:    20",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 12,
-                                      color: Color(0xff525252),
-                                      fontFamily: "Roboto"
+                                Container(
+                                  width: 200,
+                                  child: Text(
+                                    "количество в заказе, шт:        20",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        color: Color(0xff525252),
+                                        fontFamily: "Roboto"
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
                                   height: 9,
                                 ),
-                                Row(
-                                  children: [
-                                    Container(
-                                      width:161,
-                                      child: Text(
-                                        "количество к возврату, шт:",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w400,
-                                            fontSize: 12,
-                                            color: Color(0xff525252),
-                                            fontFamily: "Roboto"
-                                        ),
-                                      ),
+                                Container(
+                                  width: 200,
+                                  child: Text(
+                                    "количество к возврату, шт:     2",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 12,
+                                        color: Color(0xff525252),
+                                        fontFamily: "Roboto"
                                     ),
-                                    Container(
-                                      margin: EdgeInsets.symmetric(
-                                          horizontal: 13
-                                      ),
-                                      child: Text(
-                                          "2"
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 14,
-                                    )
-                                  ],
-                                )
+                                  ),
+                                ),
                               ],
                             ),
                           ),

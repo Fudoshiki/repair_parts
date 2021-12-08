@@ -26,7 +26,7 @@ class ResetItemScreen extends StatelessWidget{
 
   ResetItemScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-  var currentIndex =0.obs;
+  var currentIndex =1.obs;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -296,6 +296,7 @@ class ResetItemScreen extends StatelessWidget{
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
+                            width: Get.width-160,
                             margin: EdgeInsets.only(
                                 top: 20
                             ),
@@ -310,125 +311,151 @@ class ResetItemScreen extends StatelessWidget{
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  "количество в заказе, шт:    20",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 12,
-                                      color: Color(0xff525252),
-                                      fontFamily: "Roboto"
+                                Container(
+                                  width: 183,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "количество в заказе, шт:",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 12,
+                                            color: Color(0xff525252),
+                                            fontFamily: "Roboto"
+                                        ),
+                                      ),
+                                      Text(
+                                        "20",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 12,
+                                            color: Color(0xff525252),
+                                            fontFamily: "Roboto"
+                                        ),
+                                      ),
+                                    ],
                                   ),
                                 ),
                                 SizedBox(
                                   height: 9,
                                 ),
-                                Obx(
-                                        ()=>Row(
-                                      children: [
-                                        Container(
-                                          width: 130,
-                                          child: Text(
-                                            "количество к возврату, шт:",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: 12,
-                                                color: Color(0xff525252),
-                                                fontFamily: "Roboto"
+                                Container(
+                                  width: 240,
+                                  child: Obx(
+                                          ()=>Row(
+                                        children: [
+                                          Container(
+                                            width: 130,
+                                            child: Text(
+                                              "количество к возврату, шт:",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w400,
+                                                  fontSize: 12,
+                                                  color: Color(0xff525252),
+                                                  fontFamily: "Roboto"
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        GestureDetector(
-                                          child: Container(
-                                              width: 30,
-                                              height: 30,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(6),
-                                                  color: Color(0xffF3F3F3)
-                                              ),
-                                              child: Center(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                      borderRadius: BorderRadius.circular(1),
-                                                      color: Color(0xff717171)
-                                                  ),
-                                                  width: 12,
-                                                  height: 2,
+                                          GestureDetector(
+                                            child: Container(
+                                                width: 30,
+                                                height: 30,
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(6),
+                                                    color: Color(0xffE6332A)
                                                 ),
-                                              )
-                                          ),
-                                          onTap: (){
-                                            if(currentIndex.value==0){
+                                                child: Center(
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(1),
+                                                        color: Colors.white
+                                                    ),
+                                                    width: 12,
+                                                    height: 2,
+                                                  ),
+                                                )
+                                            ),
+                                            onTap: (){
+                                              if(currentIndex.value==0){
 
-                                            }else{
-                                              currentIndex.value-=1;
-                                            }
-                                          },
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.symmetric(
-                                              horizontal: 13
+                                              }else{
+                                                currentIndex.value-=1;
+                                              }
+                                            },
                                           ),
-                                          child: Text(
+                                          Container(
+                                            margin: EdgeInsets.symmetric(
+                                                horizontal: 13
+                                            ),
+                                            child: Text(
                                               "${
                                                   currentIndex.value
-                                              }"
-                                          ),
-                                        ),
-                                        GestureDetector(
-                                          child: Container(
-                                              width: 30,
-                                              height: 30,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(6),
-                                                  color: Color(0xffE6332A)
+                                              }",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.w400,
+                                                  fontSize: 12,
+                                                  color: Color(0xff525252),
+                                                  fontFamily: "Roboto"
                                               ),
-                                              child: Center(
-                                                child: Container(
-                                                  height: 12,
-                                                  width: 12,
-                                                  child: Stack(
-                                                    children: [
-                                                      Positioned(
-                                                        top:5,
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius: BorderRadius.circular(1),
-                                                              color: Colors.white
-                                                          ),
-                                                          width: 12,
-                                                          height: 2,
-                                                        ),
-                                                      ),
-                                                      Positioned(
-                                                        left: 5,
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius: BorderRadius.circular(1),
-                                                              color: Colors.white
-                                                          ),
-                                                          width: 2,
-                                                          height: 12,
-                                                        ),
-                                                      ),
-
-                                                    ],
-                                                  ),
-                                                ),
-                                              )
+                                            ),
                                           ),
-                                          onTap: (){
-                                            if(currentIndex.value==12){
+                                          GestureDetector(
+                                            child: Container(
+                                                width: 30,
+                                                height: 30,
+                                                decoration: BoxDecoration(
+                                                    borderRadius: BorderRadius.circular(6),
+                                                    color: Color(0xffE6332A)
+                                                ),
+                                                child: Center(
+                                                  child: Container(
+                                                    height: 12,
+                                                    width: 12,
+                                                    child: Stack(
+                                                      children: [
+                                                        Positioned(
+                                                          top:5,
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                                borderRadius: BorderRadius.circular(1),
+                                                                color: Colors.white
+                                                            ),
+                                                            width: 12,
+                                                            height: 2,
+                                                          ),
+                                                        ),
+                                                        Positioned(
+                                                          left: 5,
+                                                          child: Container(
+                                                            decoration: BoxDecoration(
+                                                                borderRadius: BorderRadius.circular(1),
+                                                                color: Colors.white
+                                                            ),
+                                                            width: 2,
+                                                            height: 12,
+                                                          ),
+                                                        ),
 
-                                            }else{
-                                              currentIndex.value+=1;
-                                            }
-                                          },
-                                        ),
-                                        SizedBox(
-                                          width: 14,
-                                        )
-                                      ],
-                                    )
+                                                      ],
+                                                    ),
+                                                  ),
+                                                )
+                                            ),
+                                            onTap: (){
+                                              if(currentIndex.value==12){
+
+                                              }else{
+                                                currentIndex.value+=1;
+                                              }
+                                            },
+                                          ),
+                                          SizedBox(
+                                            width: 14,
+                                          )
+                                        ],
+                                      )
+                                  ),
                                 )
                               ],
                             ),
@@ -509,7 +536,7 @@ class ResetItemScreen extends StatelessWidget{
                                     decoration: BoxDecoration(
                                         color: open2? Color(0xffFFE9E8):Colors.white,
                                         border: Border.all(
-                                            color: open2? Color(0xffE6332A):Color(0xffD6D6D6),
+                                            color: open2? Color(0xffFFE9E8):Color(0xffD6D6D6),
                                             width: 1
                                         ),
                                         borderRadius: BorderRadius.circular(4)
