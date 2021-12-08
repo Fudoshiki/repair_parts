@@ -147,7 +147,7 @@ class AddAddress extends StatelessWidget{
                           SizedBox(
                             height: 8,
                           ),
-                          _catalogController.chooseAddress.value!="Введите адрес"?GestureDetector(
+                          GestureDetector(
                             child: Container(
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),
@@ -191,7 +191,7 @@ class AddAddress extends StatelessWidget{
                               Get.back();
 
                             },
-                          ):Container(),
+                          )
 
                         ],
                       )
