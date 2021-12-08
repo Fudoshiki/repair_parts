@@ -104,7 +104,6 @@ class OrderItemTreck extends StatelessWidget{
                 margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    top: 17
                 ),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -123,7 +122,7 @@ class OrderItemTreck extends StatelessWidget{
                           ),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 7,
                         ),
                         Text(
                           "23.03.2021 07:45",
@@ -161,7 +160,7 @@ class OrderItemTreck extends StatelessWidget{
                         ),
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 7,
                       ),
                       Row(
                         children: [
@@ -205,7 +204,7 @@ class OrderItemTreck extends StatelessWidget{
               margin: EdgeInsets.only(
                   left: 20,
                   right: 20,
-                  top: 26
+                  top: 15
               ),
               height: 40,
               decoration: BoxDecoration(
@@ -1140,7 +1139,7 @@ class OrderItemTreck extends StatelessWidget{
                                     Row(
                                         children:[
                                           Text(
-                                            "Самовывоз",
+                                            "Деловые линии",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 14,
@@ -2180,11 +2179,25 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                       ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Файлы",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
+                                                      ),
                                                       GestureDetector(
                                                         child: Container(
                                                           margin: EdgeInsets.only(
                                                               left: 37,
-                                                              top: 29
                                                           ),
                                                           decoration: BoxDecoration(
                                                               border: Border(
@@ -2207,11 +2220,25 @@ class OrderItemTreck extends StatelessWidget{
                                                           Get.to(FullScreenImage());
                                                         },
                                                       ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Транспортная накладная",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
+                                                      ),
                                                       GestureDetector(
                                                         child: Container(
                                                           margin: EdgeInsets.only(
-                                                              left: 37,
-                                                              top: 14
+                                                            left: 37,
                                                           ),
                                                           decoration: BoxDecoration(
                                                               border: Border(
@@ -2221,20 +2248,218 @@ class OrderItemTreck extends StatelessWidget{
                                                               )
                                                           ),
                                                           child: Text(
-                                                            "image222",
+                                                            "imadg33434",
                                                             style: TextStyle(
-                                                              fontWeight: FontWeight.w400,
-                                                              fontSize: 18,
-                                                              color: Color(0xffE6332A),
-                                                              fontFamily: "Roboto",
-
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto"
                                                             ),
                                                           ),
                                                         ),
                                                         onTap: (){
                                                           Get.to(FullScreenImage());
                                                         },
-                                                      )
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+
+
+                                              ],
+                                            ),
+                                          )
+                                      );
+                                    },
+                                  );
+                                  showDialog(
+                                    context: context,
+                                    builder: (BuildContext context) {
+                                      double width = MediaQuery.of(context).size.width;
+                                      double height = MediaQuery.of(context).size.height;
+                                      return AlertDialog(
+                                          backgroundColor: Colors.transparent,
+                                          contentPadding: EdgeInsets.zero,
+                                          elevation: 0.0,
+                                          // title: Center(child: Text("Evaluation our APP")),
+                                          content: Container(
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Container(
+                                                  width: Get.width-26,
+                                                  height: 296,
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.white,
+                                                  ),
+                                                  child: Column(
+                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    children: [
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 36
+                                                        ),
+                                                        child: Text(
+                                                          "Вложения",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w700,
+                                                              fontSize: 24,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Счет-договор",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      GestureDetector(
+                                                        child: Container(
+                                                          margin: EdgeInsets.only(
+                                                            left: 37,
+                                                          ),
+                                                          decoration: BoxDecoration(
+                                                              border: Border(
+                                                                  bottom: BorderSide(
+                                                                      color: Color(0xffE6332A)
+                                                                  )
+                                                              )
+                                                          ),
+                                                          child: Text(
+                                                            "Счет-договор.1-1",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        onTap: (){
+                                                          Get.to(FullScreenImage());
+                                                        },
+                                                      ),
+                                                      GestureDetector(
+                                                        child: Container(
+                                                          margin: EdgeInsets.only(
+                                                            left: 37,
+                                                          ),
+                                                          decoration: BoxDecoration(
+                                                              border: Border(
+                                                                  bottom: BorderSide(
+                                                                      color: Color(0xffE6332A)
+                                                                  )
+                                                              )
+                                                          ),
+                                                          child: Text(
+                                                            "Счет-договор.1-2",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        onTap: (){
+                                                          Get.to(FullScreenImage());
+                                                        },
+                                                      ),
+
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Бухгалтерский документ",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      GestureDetector(
+                                                        child: Container(
+                                                          margin: EdgeInsets.only(
+                                                            left: 37,
+                                                          ),
+                                                          decoration: BoxDecoration(
+                                                              border: Border(
+                                                                  bottom: BorderSide(
+                                                                      color: Color(0xffE6332A)
+                                                                  )
+                                                              )
+                                                          ),
+                                                          child: Text(
+                                                            "imadg33434",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        onTap: (){
+                                                          Get.to(FullScreenImage());
+                                                        },
+                                                      ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            left: 37,
+                                                            top: 12
+                                                        ),
+                                                        child: Text(
+                                                          "Транспортная накладная",
+                                                          style: TextStyle(
+                                                              fontWeight: FontWeight.w400,
+                                                              fontSize: 18,
+                                                              color: Color(0xff2e2e33),
+                                                              fontFamily: "Roboto"
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      GestureDetector(
+                                                        child: Container(
+                                                          margin: EdgeInsets.only(
+                                                            left: 37,
+                                                          ),
+                                                          decoration: BoxDecoration(
+                                                              border: Border(
+                                                                  bottom: BorderSide(
+                                                                      color: Color(0xffE6332A)
+                                                                  )
+                                                              )
+                                                          ),
+                                                          child: Text(
+                                                            "imadg33434",
+                                                            style: TextStyle(
+                                                                fontWeight: FontWeight.w400,
+                                                                fontSize: 18,
+                                                                color: Color(0xffE6332A),
+                                                                fontFamily: "Roboto"
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        onTap: (){
+                                                          Get.to(FullScreenImage());
+                                                        },
+                                                      ),
                                                     ],
                                                   ),
                                                 ),
