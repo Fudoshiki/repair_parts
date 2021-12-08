@@ -92,12 +92,15 @@ class ChooseRegion extends StatelessWidget{
           ),
           Expanded(
             child: ListView(
+              padding: EdgeInsets.all(0),
               children: [
                 Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
+                    margin: EdgeInsets.only(
+                        left: 20,
+                      right: 20,
+                      top: 12
                     ),
-                    height: 44,
+                    height: 31,
                     width: Get.width-106,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
@@ -108,19 +111,26 @@ class ChooseRegion extends StatelessWidget{
                         )
                     ),
                     padding: EdgeInsets.only(
-                      left: 20,right: 7,
-                      top: 7,
-                      bottom: 7
+                     right: 7,
+                      bottom: 7,
+                      top: 7
                     ),
                     child: TextField(
                       decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(
+                            left: 3,
+                          right: 3,
+                          top: 3,
+                          bottom: 3
+
+                        ),
+                          isDense: true,
                           hintText: "Поиск ",
                           hintStyle: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 14,
                               color: Color(0xffC4C4C4),
-                              fontFamily: "Roboto"
-
+                              fontFamily: "Roboto",
                           ),
                           enabledBorder: InputBorder.none,
                           border: InputBorder.none,
@@ -128,17 +138,14 @@ class ChooseRegion extends StatelessWidget{
                           focusedBorder: InputBorder.none,
                           errorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
-                          suffixIcon: SizedBox(
-                            width: 13,
-                            height: 14,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage("assets/image/search_icon.png",)
-                                  )
-                              ),
+                          prefixIcon: Container(
+                            width: 8,
+                            padding: EdgeInsets.only(
+                              right: 10,
+                              left: 10
                             ),
-                          )
+                            child: Image.asset("assets/image/search_icon.png"),
+                          ),
                       ),
                     )
                 ),
