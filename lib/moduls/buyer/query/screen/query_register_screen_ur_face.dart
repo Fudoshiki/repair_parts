@@ -117,7 +117,7 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                       Text(
                         "ИП/Юридическое лицо",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 18,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -143,7 +143,7 @@ class QueryRegisterScreenUrFace extends StatelessWidget{
                       Text(
                         "Данные о компании",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"

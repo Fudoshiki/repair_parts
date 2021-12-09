@@ -87,7 +87,7 @@ class BottomNavigationItem {
                       style: TextStyle(
                         color:  pageActive? Color(0xffE6332A):Color(0xff959595),
                         fontSize: 11,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                           fontFamily: "Roboto"
 
                       ),

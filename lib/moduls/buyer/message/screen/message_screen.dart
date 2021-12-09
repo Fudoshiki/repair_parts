@@ -393,7 +393,7 @@ class MessageScreen extends StatelessWidget{
                                               child: Text(
                                                 "1",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.w600,
                                                     fontSize: 13,
                                                     color: Colors.white,
                                                     fontFamily: "Roboto"
@@ -537,7 +537,7 @@ class MessageScreen extends StatelessWidget{
                                               child: Text(
                                                 "100",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.w600,
                                                     fontSize: 13,
                                                     color: Colors.white,
                                                     fontFamily: "Roboto"

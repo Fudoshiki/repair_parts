@@ -284,7 +284,7 @@ class ProfilePage extends StatelessWidget{
                             style: TextStyle(
                                 color: Color(0xffE6332A),
                                 fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontFamily: "Roboto"
                             ),
                           ),
@@ -304,7 +304,7 @@ class ProfilePage extends StatelessWidget{
                               style: TextStyle(
                                   color: Color(0xffE6332A),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontFamily: "Roboto"
                               ),
                             ),
@@ -427,7 +427,7 @@ class ProfilePage extends StatelessWidget{
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 13,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto"
                                     ),
                                   ),
@@ -771,7 +771,7 @@ class ProfilePage extends StatelessWidget{
                                               "Обратите внимание",
                                               style: TextStyle(
                                                   fontSize: 16,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto",
                                                   color: Color(0xff2e2e33)
                                               ),

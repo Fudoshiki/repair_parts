@@ -91,11 +91,13 @@ class NORegistredOrgScreen2 extends StatelessWidget{
           ),
           Expanded(
             child: ListView(
+              padding: EdgeInsets.all(0),
               children: [
                 Container(
                   margin: EdgeInsets.only(
                       left: 20,
-                      right: 20
+                      right: 20,
+                    top:18
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,7 +105,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Данные о компании",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -123,7 +125,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                         height: 50,
                         width: Get.width-40,
                         child: TextFieldCustom(
-                            "Наименование","ООО Запчасти"
+                            "Наименование","ИП Петров Петр Петрович"
                         ),
                       ),
                       Container(
@@ -134,7 +136,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                               "ОГРНИП","1234567890"
                           )
                       ),
-
 
                     ],
                   ),
@@ -151,7 +152,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Юридический адрес",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -213,7 +214,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Фактический адрес",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -283,7 +284,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Банковские реквизиты",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -374,7 +375,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             },
                             enabled: false,
                             controller: new TextEditingController()..text="",
-
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 14,
@@ -427,12 +427,12 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             },
                             enabled: false,
                             controller: new TextEditingController()..text="",
-
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
+                                fontFamily: "Roboto"
+
                             ),
                             decoration: InputDecoration(
                               hintText: "E-mail организации",
@@ -502,6 +502,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
+                            controller: new TextEditingController()..text="",
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -509,10 +510,15 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 fontFamily: "Roboto"
 
                             ),
-                            controller: new TextEditingController()..text="",
-
                             decoration: InputDecoration(
+                              hintText: "Фамилия",
+                              hintStyle: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                  color: Color(0xff959595),
+                                  fontFamily: "Roboto"
 
+                              ),
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -547,7 +553,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Прикрепите документы",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -574,7 +580,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "passport.pdf",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -623,7 +629,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "Паспорт (главная)",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -784,7 +790,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "passport.pdf",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -833,7 +839,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "Паспорт (прописка)",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -993,7 +999,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "passport.pdf",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -1042,7 +1048,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "ИНН",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -1202,7 +1208,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "passport.pdf",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -1251,7 +1257,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 Text(
                                   "СНИЛС",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -1408,7 +1414,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Пожалуйста, внимательно знакомьтесь со следующими документами",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -1461,7 +1467,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -1470,7 +1476,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                       style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -1534,7 +1540,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -1543,7 +1549,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                       style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -1607,7 +1613,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -1616,7 +1622,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                       style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -1650,7 +1656,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                         Text(
                           "Компания работает",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 14,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"

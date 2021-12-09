@@ -113,7 +113,7 @@ class HistoryOrderItemScreenSeller2 extends StatelessWidget{
                             Text(
                               "23.03.2021 07:45",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 12,
                                   color: Color(0xff717171),
                                   fontFamily: "Roboto"
@@ -296,7 +296,7 @@ class HistoryOrderItemScreenSeller2 extends StatelessWidget{
                                 style: TextStyle(
                                     color: Color(0xffE6332A),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: "Roboto"
                                 ),
                               ),
@@ -395,7 +395,7 @@ class HistoryOrderItemScreenSeller2 extends StatelessWidget{
                             //             Text(
                             //               " 6ва56а5ва65в",
                             //               style: TextStyle(
-                            //                   fontWeight: FontWeight.w500,
+                            //                   fontWeight: FontWeight.w600,
                             //                   fontSize: 14,
                             //                   color: Color(0xffE6332A),
                             //                   fontFamily: "Roboto",
@@ -414,7 +414,7 @@ class HistoryOrderItemScreenSeller2 extends StatelessWidget{
                             Text(
                               "Заказ получен: 03.03.21",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"

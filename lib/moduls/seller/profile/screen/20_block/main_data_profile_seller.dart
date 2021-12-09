@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/components_main/text_field_component.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/company_ip_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/company_oop_screen.dart';
 
@@ -539,7 +540,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 27
+                              top: 38
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -553,268 +554,48 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                     fontFamily: "Roboto"
                                 ),
                               ),
-                              SizedBox(height: 7,),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="2515",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Серия",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Серия","2515",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="123 456",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Номер",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Номер","123 456",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="УВД",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Кем выдан",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Кем выдан","УВД",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="23.12.21",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Дата выдачи",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Дата выдачи","23.12.21",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="346-568",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Код подразделения",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Код подразделения","346-568",values: open5,
                                   )
                               ),
-                            ],
+
+                            ]
                           ),
                         ),
                         //3
@@ -822,7 +603,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 27
+                              top: 38
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -836,49 +617,12 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                     fontFamily: "Roboto"
                                 ),
                               ),
-                              SizedBox(height: 7,),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="4334545454",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff525252),
-                                        fontFamily: "Roboto",
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "ИНН",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "ИНН","",values: open5,
                                   )
                               ),
                             ],
@@ -889,7 +633,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 27
+                              top: 38
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -903,49 +647,12 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                     fontFamily: "Roboto"
                                 ),
                               ),
-                              SizedBox(height: 7,),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="СНИЛС",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff525252),
-                                        fontFamily: "Roboto",
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "СНИЛС",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "СНИЛС","",values: open5,
                                   )
                               ),
                             ],
@@ -956,7 +663,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 27
+                              top: 38
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -970,297 +677,51 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                     fontFamily: "Roboto"
                                 ),
                               ),
-                              SizedBox(height: 7,),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="346-568",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Код подразделения",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
-                                  )
-                              ),
-
-                              Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    maxLines: 3,
-                                    minLines: 1,
-                                    decoration: InputDecoration(
-                                      hintText: "Населенный пункт",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.4
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Страна","Россия",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="346-568",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Код подразделения",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Населенный пункт","Иркутская область, Усольский район, город Усолье-Сибирское",maxLines:3,values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="346-568",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Код подразделения",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
-                                  )
-                              ),
-                              Container (
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
-                                  width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-
-                                    decoration: InputDecoration(
-                                      hintText: "Квартира/офис",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Улица","Анны Кошеловой",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-                                    controller: new TextEditingController()..text="346-568",
-                                    style:TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff2e2e33),
-                                        fontFamily: "Roboto",
-                                        height: 100
-                                    ),
-                                    decoration: InputDecoration(
-                                      hintText: "Серия",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-                                      ),
-                                      labelText: "Код подразделения",
-                                      labelStyle: TextStyle(
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: 12,
-                                          color: Color(0xff717171),
-                                          fontFamily: "Roboto",
-                                          height: 0.2
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Дом/строение","2",values: open5,
+                                  )
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
+                                  width: Get.width-40,
+                                  child: TextFieldCustom(
+                                      "Квартира/офис","",values: open5,
+                                  )
+                              ),
+                              Container(
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
+                                  width: Get.width-40,
+                                  child: TextFieldCustom(
+                                      "Индекс","445666",values: open5,
                                   )
                               ),
 
@@ -1272,7 +733,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 27
+                              top: 38
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1286,197 +747,47 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                     fontFamily: "Roboto"
                                 ),
                               ),
-                              SizedBox(height: 7,),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-
-                                    decoration: InputDecoration(
-                                      hintText: "Наименование банка",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Наименование банка","Сбер",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-
-                                    decoration: InputDecoration(
-                                      hintText: "ИНН",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "ИНН","2323233545",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-
-                                    decoration: InputDecoration(
-                                      hintText: "БИК",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "БИК","2323233545",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 10),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-
-                                    decoration: InputDecoration(
-                                      hintText: "К/с",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "К/с","2323233545",values: open5,
                                   )
                               ),
                               Container(
-                                  margin: EdgeInsets.only(bottom: 10),
-                                  height: 48,
+                                  margin: EdgeInsets.only(top: 8),
+                                  height: 50,
                                   width: Get.width-40,
-                                  padding: EdgeInsets.only(
-                                      left: 20,
-                                      right: 20
-                                  ),
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6),
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: open5?Color(0xffE6332A):Color(0xffC4C4C4),
-                                          width: 1
-                                      )
-                                  ),
-                                  child: TextField(
-                                    onTap: (){
-                                    },
-
-                                    decoration: InputDecoration(
-                                      hintText: "Р/с",
-                                      hintStyle: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff959595),
-                                          fontFamily: "Roboto"
-
-                                      ),
-                                      enabledBorder: InputBorder.none,
-                                      border: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      disabledBorder: InputBorder.none,
-                                    ),
+                                  child: TextFieldCustom(
+                                      "Р/с","2323233545",values: open5,
                                   )
                               ),
+
 
                             ],
                           ),
@@ -1486,7 +797,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 27
+                              top: 38
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1603,7 +914,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                               Text(
                                 "Прикрепите документы",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontSize: 14,
                                     color: Color(0xff2e2e33),
                                     fontFamily: "Roboto"
@@ -1630,7 +941,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "passport.pdf",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -1679,7 +990,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "Паспорт (главная)",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -1843,7 +1154,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "passport.pdf",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -1892,7 +1203,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "Паспорт (прописка)",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -2055,7 +1366,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "passport.pdf",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -2104,7 +1415,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "ИНН",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -2267,7 +1578,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "passport.pdf",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -2316,7 +1627,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                         Text(
                                           "СНИЛС",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -2476,7 +1787,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                               Text(
                                 "Пожалуйста, внимательно знакомьтесь со следующими документами",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontSize: 14,
                                     color: Color(0xff2e2e33),
                                     fontFamily: "Roboto"
@@ -2521,7 +1832,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 14,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             ),
@@ -2530,7 +1841,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                 color: Color(0xffE6332A),
                                                 fontSize: 14,
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontFamily: "Roboto",
                                                 decoration: TextDecoration.underline,
 
@@ -2586,7 +1897,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 14,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             ),
@@ -2595,7 +1906,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                 color: Color(0xffE6332A),
                                                 fontSize: 14,
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontFamily: "Roboto",
                                                 decoration: TextDecoration.underline,
 
@@ -2890,7 +2201,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           Text(
                                             "20.02.2021",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontSize: 10,
                                                 color: Color(0xff717171),
                                                 fontFamily: "Roboto"
@@ -2998,7 +2309,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           Text(
                                             "20.02.2021",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontSize: 10,
                                                 color: Color(0xff717171),
                                                 fontFamily: "Roboto"
@@ -3107,7 +2418,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           Text(
                                             "20.02.2021",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontSize: 10,
                                                 color: Color(0xff717171),
                                                 fontFamily: "Roboto"
@@ -3199,7 +2510,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )
@@ -3250,7 +2561,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )
@@ -3301,7 +2612,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )
@@ -3352,7 +2663,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )
@@ -3403,7 +2714,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )
@@ -3454,7 +2765,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )
@@ -3505,7 +2816,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                               style: TextStyle(
                                                   color: Color(0xff2e2e33),
                                                   fontSize: 18,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto"
                                               ),
                                             )

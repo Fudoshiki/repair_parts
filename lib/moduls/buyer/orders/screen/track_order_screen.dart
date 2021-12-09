@@ -141,7 +141,7 @@ class TrackOrderScreen extends StatelessWidget{
                                   Text(
                                     "6ва56а5ва65в",
                                     style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xffE6332A),
                                       fontFamily: "Roboto",
@@ -183,7 +183,7 @@ class TrackOrderScreen extends StatelessWidget{
                           Text(
                             "Деловые линии",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -331,7 +331,7 @@ class TrackOrderScreen extends StatelessWidget{
                                   children: [
                                     Text("Принят на терминале отправки",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -340,7 +340,7 @@ class TrackOrderScreen extends StatelessWidget{
                                     SizedBox(height: 5,),
                                     Text("25.10.2021 00:00",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 12,
                                           color: Color(0xff717171),
                                           fontFamily: "Roboto"
@@ -358,7 +358,7 @@ class TrackOrderScreen extends StatelessWidget{
                                   children: [
                                     Text("Принят на терминале отправки",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -367,7 +367,7 @@ class TrackOrderScreen extends StatelessWidget{
                                     SizedBox(height: 5,),
                                     Text("25.10.2021 00:00",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 12,
                                           color: Color(0xff717171),
                                           fontFamily: "Roboto"
@@ -385,7 +385,7 @@ class TrackOrderScreen extends StatelessWidget{
                                   children: [
                                     Text("Принят на терминале отправки",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -394,7 +394,7 @@ class TrackOrderScreen extends StatelessWidget{
                                     SizedBox(height: 5,),
                                     Text("25.10.2021 00:00",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 12,
                                           color: Color(0xff717171),
                                           fontFamily: "Roboto"
@@ -409,7 +409,7 @@ class TrackOrderScreen extends StatelessWidget{
                                   children: [
                                     Text("Принят на терминале отправки",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -418,7 +418,7 @@ class TrackOrderScreen extends StatelessWidget{
                                     SizedBox(height: 5,),
                                     Text("25.10.2021 00:00",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 12,
                                           color: Color(0xff717171),
                                           fontFamily: "Roboto"

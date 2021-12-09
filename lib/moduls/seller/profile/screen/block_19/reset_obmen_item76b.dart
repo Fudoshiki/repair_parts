@@ -145,7 +145,7 @@ class ResetObmenItem76b extends StatelessWidget{
                         Text(
                           "23.03.2021 07:45",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff717171),
                               fontFamily: "Roboto"
@@ -210,7 +210,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                     style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto"
                                     ),
                                   ),
@@ -329,10 +329,10 @@ class ResetObmenItem76b extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Организация: ",
+                          "Плательщик:     ",
                           style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
                           ),
@@ -341,10 +341,10 @@ class ResetObmenItem76b extends StatelessWidget{
                           height: 5,
                         ),
                         Text(
-                          "ООО Галина Семеновна",
+                          "ПАО Газпром",
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
-                              fontSize: 12,
+                              fontSize: 14,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
                           ),
@@ -352,53 +352,7 @@ class ResetObmenItem76b extends StatelessWidget{
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                        bottom: 10
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 18
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Цена указана: с НДС",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto"
-                          ),
-                        ),
-                        SizedBox(
-                          width: 15,
-                        ),
-                        Text(
-                          "Комиссия: 10%",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 12,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto"
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+
                   Container(
                     margin: EdgeInsets.only(
                       left: 20,
@@ -474,7 +428,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                           Text(
                                             " 6ва56а5ва65в",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontSize: 14,
                                                 color: Color(0xffE6332A),
                                                 fontFamily: "Roboto",
@@ -494,7 +448,7 @@ class ResetObmenItem76b extends StatelessWidget{
                               Text(
                                 "Заказ получен: 21.11.21",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontSize: 14,
                                     color: Color(0xff2e2e33),
                                     fontFamily: "Roboto"
@@ -535,7 +489,7 @@ class ResetObmenItem76b extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Поставщик: ",
+                          "Организация: ",
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
@@ -551,7 +505,7 @@ class ResetObmenItem76b extends StatelessWidget{
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
-                              color: Color(0xff717171),
+                              color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
                           ),
                         ),
@@ -564,7 +518,8 @@ class ResetObmenItem76b extends StatelessWidget{
                   Container(
                     margin: EdgeInsets.only(
                         left: 20,
-                        right: 20
+                        right: 20,
+                        bottom: 10
                     ),
                     padding: EdgeInsets.only(
                         bottom: 18
@@ -581,7 +536,7 @@ class ResetObmenItem76b extends StatelessWidget{
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Цена указана: ",
+                          "Цена указана:",
                           style: TextStyle(
                               fontWeight: FontWeight.w400,
                               fontSize: 12,
@@ -589,21 +544,40 @@ class ResetObmenItem76b extends StatelessWidget{
                               fontFamily: "Roboto"
                           ),
                         ),
+                        Text(
+                          " с НДС",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto"
+                          ),
+                        ),
                         SizedBox(
-                          height: 5,
+                          width: 15,
                         ),
                         Text(
-                          "с НДС",
+                          "Комиссия: ",
                           style: TextStyle(
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w400,
                               fontSize: 12,
-                              color: Color(0xff717171),
+                              color: Color(0xff2e2e33),
+                              fontFamily: "Roboto"
+                          ),
+                        ),
+                        Text(
+                          "10%",
+                          style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                              color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
                           ),
                         ),
                       ],
                     ),
                   ),
+
 
                   Container(
 
@@ -704,7 +678,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                               child: Text(
                                                 "1",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.w600,
                                                     fontSize: 14,
                                                     color: Color(0xff2e2e33),
                                                     fontFamily: "Roboto"
@@ -756,7 +730,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -784,7 +758,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "0",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -812,7 +786,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "3",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -840,7 +814,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "3",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -868,7 +842,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -982,7 +956,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                               child: Text(
                                                 "1",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.w600,
                                                     fontSize: 14,
                                                     color: Color(0xff2e2e33),
                                                     fontFamily: "Roboto"
@@ -1024,7 +998,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -1052,7 +1026,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "0",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -1080,7 +1054,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "3",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -1108,7 +1082,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "3",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -1134,7 +1108,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                       Text(
                                         "200",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"

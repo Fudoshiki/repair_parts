@@ -45,7 +45,7 @@ class FilterPage extends StatelessWidget{
                    "Отменить",
                  style: TextStyle(
                      fontSize: 16,
-                     fontWeight: FontWeight.w500,
+                     fontWeight: FontWeight.w600,
                      fontFamily: "Roboto",
                      color: Color(0xff2E2E33)
                  ),
@@ -83,7 +83,7 @@ class FilterPage extends StatelessWidget{
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontFamily: "Roboto"
                         ),
                       ),
@@ -116,7 +116,7 @@ class FilterPage extends StatelessWidget{
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontFamily: "Roboto"
                         ),
                       ),
@@ -149,7 +149,7 @@ class FilterPage extends StatelessWidget{
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontFamily: "Roboto"
                         ),
                       ),

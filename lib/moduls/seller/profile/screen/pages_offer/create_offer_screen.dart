@@ -269,7 +269,7 @@ class CreateOfferScreen extends StatelessWidget{
                                           Text(
                                             "ООО Запчасти",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontSize: 14,
                                                 color: Color(0xff2e2e33),
                                                 fontFamily: "Roboto"
@@ -310,7 +310,7 @@ class CreateOfferScreen extends StatelessWidget{
                                           Text(
                                             "Добавить организацию",
                                             style: TextStyle(
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontSize: 14,
                                                 color: Color(0xff2e2e33),
                                                 fontFamily: "Roboto"

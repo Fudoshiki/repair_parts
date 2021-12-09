@@ -124,7 +124,7 @@ class QueryScreenSeller extends StatelessWidget{
                     Text(
                       "${_profileController.sorted.value}  ",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontSize: 14,
                           color: Color(0xff2e2e33),
                           fontFamily: "Roboto"
@@ -206,7 +206,7 @@ class QueryScreenSeller extends StatelessWidget{
                                     Text(
                                       "Все",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -247,7 +247,7 @@ class QueryScreenSeller extends StatelessWidget{
                                     Text(
                                       "Запрос",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -288,7 +288,7 @@ class QueryScreenSeller extends StatelessWidget{
                                     Text(
                                       "Запрос на обновление",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -329,7 +329,7 @@ class QueryScreenSeller extends StatelessWidget{
                                     Text(
                                       "Предложение отправлено",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -369,7 +369,7 @@ class QueryScreenSeller extends StatelessWidget{
                                     Text(
                                       "Запрос по фото/описанию",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -409,7 +409,7 @@ class QueryScreenSeller extends StatelessWidget{
                                     Text(
                                       "Истек срок предложения",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -481,7 +481,7 @@ class QueryScreenSeller extends StatelessWidget{
                                 child: Text(
                                   "1",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 13,
                                       color: Colors.white,
                                       fontFamily: "Roboto"
@@ -492,7 +492,7 @@ class QueryScreenSeller extends StatelessWidget{
                             Text(
                               "1-6",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
@@ -503,7 +503,7 @@ class QueryScreenSeller extends StatelessWidget{
                         Text(
                           "Запрос на обновление",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
@@ -551,7 +551,7 @@ class QueryScreenSeller extends StatelessWidget{
                           Text(
                             "1-3",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -562,7 +562,7 @@ class QueryScreenSeller extends StatelessWidget{
                       Text(
                         "Запрос",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -607,7 +607,7 @@ class QueryScreenSeller extends StatelessWidget{
                           Text(
                             "1-1",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -618,7 +618,7 @@ class QueryScreenSeller extends StatelessWidget{
                       Text(
                         "Предложение обновлено",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -663,7 +663,7 @@ class QueryScreenSeller extends StatelessWidget{
                           Text(
                             "1-17",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -674,7 +674,7 @@ class QueryScreenSeller extends StatelessWidget{
                       Text(
                         "Запрос по фото/описанию",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -719,7 +719,7 @@ class QueryScreenSeller extends StatelessWidget{
                           Text(
                             "1-17",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -730,7 +730,7 @@ class QueryScreenSeller extends StatelessWidget{
                       Text(
                         "Истек срок предложения",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"

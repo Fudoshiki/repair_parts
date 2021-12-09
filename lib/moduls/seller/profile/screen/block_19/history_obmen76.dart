@@ -138,8 +138,8 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                             width: 20,
-                            height: 20,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffE6332A)
@@ -159,7 +159,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                           Text(
                             "1-6",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -175,7 +175,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "Ждет ответ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -184,7 +184,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "01.06.2021",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -219,8 +219,8 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 20,
-                            height: 20,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -229,7 +229,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                           Text(
                             "1-5",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -245,7 +245,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "Ждет ответ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -254,7 +254,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "01.06.2021",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -289,8 +289,8 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                             width: 20,
-                            height: 20,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -299,7 +299,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                           Text(
                             "1-4",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -315,7 +315,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "Ждет ответ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -324,7 +324,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "01.06.2021",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -359,8 +359,8 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                             width: 20,
-                            height: 20,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -369,7 +369,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                           Text(
                             "1-3",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -385,7 +385,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "Ждет ответ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -394,7 +394,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "01.06.2021",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -429,8 +429,8 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                             width: 20,
-                            height: 20,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -439,7 +439,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                           Text(
                             "1-2",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -455,7 +455,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "Ждет ответ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -464,7 +464,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "01.06.2021",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -499,8 +499,8 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                             width: 20,
-                            height: 20,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -509,7 +509,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                           Text(
                             "1-1",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -525,7 +525,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "Ждет ответ",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -534,7 +534,7 @@ class HistoryResetObmenSeller76 extends StatelessWidget{
                       Text(
                         "01.06.2021",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"

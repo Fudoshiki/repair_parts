@@ -183,7 +183,7 @@ class ChangeDeliveryType extends StatelessWidget{
                             style: TextStyle(
                                 color: Color(0xff2e2e33),
                                 fontSize: 18,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontFamily: "Roboto"
                             ),
                           )
@@ -242,7 +242,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -299,7 +299,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -356,7 +356,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -413,7 +413,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -470,7 +470,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -527,7 +527,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )
@@ -584,7 +584,7 @@ class ChangeDeliveryType extends StatelessWidget{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 18,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )

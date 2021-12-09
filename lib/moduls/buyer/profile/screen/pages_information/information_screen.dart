@@ -180,7 +180,7 @@ class InformationScreen extends StatelessWidget{
                 "$text",
               style: TextStyle(
                 fontSize: 14,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
                 color: Color(0xff2e2e33),
                 fontFamily: "Roboto"
               ),

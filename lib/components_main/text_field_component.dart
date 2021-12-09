@@ -8,10 +8,17 @@ class TextFieldCustom extends StatefulWidget{
   String label;
   String text;
   int? maxLines;
+  bool values =false;
 
   TextFieldCustom(this.label, this.text,{
-    @required this.maxLines
-  });
+    @required this.maxLines,  values
+  }){
+    if(values==null){
+      this.values=false;
+    }
+    else
+      this.values=values;
+  }
 
   @override
   State<StatefulWidget> createState() {
@@ -48,7 +55,7 @@ class TextFieldCustomState extends State<TextFieldCustom>{
     return Container(
       decoration: BoxDecoration(
         border: Border.all(
-          color: Color(0xffD6D6D6),
+          color:widget.values?Color(0xffE6332A) :Color(0xffD6D6D6),
           width: 1
         ),
         borderRadius: BorderRadius.circular(6)
@@ -80,7 +87,7 @@ class TextFieldCustomState extends State<TextFieldCustom>{
             top: 0,
           ),
           isDense: true,
-          labelText: widget.label,
+          labelText: widget.label==""?null:widget.label,
           labelStyle: TextStyle(
               fontWeight: _focusNode.hasFocus? FontWeight.w600:controller.text!=""?FontWeight.w600:FontWeight.w400,
               fontSize:_focusNode.hasFocus? 12:controller.text!=""?12:14,

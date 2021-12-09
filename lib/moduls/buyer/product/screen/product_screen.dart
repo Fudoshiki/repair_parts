@@ -549,7 +549,7 @@ class ProductScreen extends StatelessWidget{
             "$title",
             style: TextStyle(
               fontSize: 14,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
               color: Color(0xff2E2E33),
               fontFamily: "Roboto"
             ),

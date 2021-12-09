@@ -124,7 +124,7 @@ class OrderItem extends StatelessWidget{
                         Text(
                           "23.03.2021 07:45",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff717171),
                               fontFamily: "Roboto"
@@ -183,7 +183,7 @@ class OrderItem extends StatelessWidget{
                               style: TextStyle(
                                   color: Color(0xffE6332A),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontFamily: "Roboto"
                               ),
                             ),
@@ -222,7 +222,7 @@ class OrderItem extends StatelessWidget{
                         child: Text(
                           "Весь",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 11,
                               color: currentIndex==0 ?Color(0xffffffff):Color(0xff2e2e33),
                               fontFamily: "Roboto"
@@ -246,7 +246,7 @@ class OrderItem extends StatelessWidget{
                         child: Text(
                           "1",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 14,
                               color: currentIndex==1 ?Color(0xffffffff):Color(0xff2e2e33),
                               fontFamily: "Roboto"
@@ -265,7 +265,7 @@ class OrderItem extends StatelessWidget{
                       child: Text(
                         "2",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -380,7 +380,7 @@ class OrderItem extends StatelessWidget{
                                                 Text(
                                                   " 1",
                                                   style: TextStyle(
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight: FontWeight.w600,
                                                       fontSize: 14,
                                                       color: Color(0xff2e2e33),
                                                       fontFamily: "Roboto"
@@ -539,7 +539,7 @@ class OrderItem extends StatelessWidget{
                                                 Text(
                                                   " 1",
                                                   style: TextStyle(
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight: FontWeight.w600,
                                                       fontSize: 14,
                                                       color: Color(0xff2e2e33),
                                                       fontFamily: "Roboto"
@@ -698,7 +698,7 @@ class OrderItem extends StatelessWidget{
                                                 Text(
                                                   " 1",
                                                   style: TextStyle(
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight: FontWeight.w600,
                                                       fontSize: 14,
                                                       color: Color(0xff2e2e33),
                                                       fontFamily: "Roboto"
@@ -1339,7 +1339,7 @@ class OrderItem extends StatelessWidget{
                                     Text(
                                       "Заказ получен: ",
                                       style: TextStyle(
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontSize: 14,
                                           color: Color(0xff2e2e33),
                                           fontFamily: "Roboto"
@@ -1560,7 +1560,7 @@ class OrderItem extends StatelessWidget{
                                                     child: Text(
                                                       "1",
                                                       style: TextStyle(
-                                                          fontWeight: FontWeight.w500,
+                                                          fontWeight: FontWeight.w600,
                                                           fontSize: 14,
                                                           color: Color(0xff2e2e33),
                                                           fontFamily: "Roboto"
@@ -1612,7 +1612,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -1640,7 +1640,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "0",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -1668,7 +1668,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "3",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -1696,7 +1696,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "3",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -1724,7 +1724,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -1986,7 +1986,7 @@ class OrderItem extends StatelessWidget{
                                                     child: Text(
                                                       "1",
                                                       style: TextStyle(
-                                                          fontWeight: FontWeight.w500,
+                                                          fontWeight: FontWeight.w600,
                                                           fontSize: 14,
                                                           color: Color(0xff2e2e33),
                                                           fontFamily: "Roboto"
@@ -2038,7 +2038,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -2066,7 +2066,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "0",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -2094,7 +2094,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "3",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -2122,7 +2122,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "3",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"
@@ -2150,7 +2150,7 @@ class OrderItem extends StatelessWidget{
                                             Text(
                                               "200",
                                               style: TextStyle(
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontSize: 14,
                                                   color: Color(0xff2e2e33),
                                                   fontFamily: "Roboto"

@@ -142,7 +142,7 @@ class RegisterPageSeller extends StatelessWidget{
                         fontSize: 14,
                         color: Color(0xff2E2E33),
                         fontFamily: "Roboto",
-                        fontWeight: FontWeight.w500
+                        fontWeight: FontWeight.w600
                     ),
                   ),
                 ),
@@ -237,7 +237,7 @@ class RegisterPageSeller extends StatelessWidget{
                     child: Text(
                       "Код из СМС",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontFamily: "Roboto",
                           fontSize: 14,
                           color: Color(0xff2E2E33)
@@ -362,7 +362,7 @@ class RegisterPageSeller extends StatelessWidget{
                               "Новый код можно запросить через 00:30",
                             style: TextStyle(
                               color: Color(0xff959595),
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 14,
                               fontFamily: "Roboto"
                             ),

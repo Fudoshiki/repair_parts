@@ -140,7 +140,7 @@ class QueryScreen extends StatelessWidget{
                     Text(
                       "${_profileController.sorted.value}  ",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontSize: 14,
                           color: Color(0xff2e2e33),
                           fontFamily: "Roboto"
@@ -214,7 +214,7 @@ class QueryScreen extends StatelessWidget{
                                 Text(
                                   "Все",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -255,7 +255,7 @@ class QueryScreen extends StatelessWidget{
                                 Text(
                                   "Запрос отправлен",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -296,7 +296,7 @@ class QueryScreen extends StatelessWidget{
                                 Text(
                                   "Получено предложение",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -337,7 +337,7 @@ class QueryScreen extends StatelessWidget{
                                 Text(
                                   "Предложение обновлено",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -407,7 +407,7 @@ class QueryScreen extends StatelessWidget{
                                 child: Text(
                                   "1",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 13,
                                       color: Colors.white,
                                       fontFamily: "Roboto"
@@ -418,7 +418,7 @@ class QueryScreen extends StatelessWidget{
                             Text(
                               "1-6",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
@@ -429,7 +429,7 @@ class QueryScreen extends StatelessWidget{
                         Text(
                           "Запрос отправлен",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
@@ -478,7 +478,7 @@ class QueryScreen extends StatelessWidget{
                           Text(
                             "1-3",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -489,7 +489,7 @@ class QueryScreen extends StatelessWidget{
                       Text(
                         "Получено предложение",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -534,7 +534,7 @@ class QueryScreen extends StatelessWidget{
                           Text(
                             "1-1",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -545,7 +545,7 @@ class QueryScreen extends StatelessWidget{
                       Text(
                         "Предложение обновлено",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -590,7 +590,7 @@ class QueryScreen extends StatelessWidget{
                           Text(
                             "1-17",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -601,7 +601,7 @@ class QueryScreen extends StatelessWidget{
                       Text(
                         "Запрос отправлен",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"

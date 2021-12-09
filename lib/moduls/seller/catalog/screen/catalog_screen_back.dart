@@ -293,7 +293,7 @@ class CatalogScreenSellerBack extends StatelessWidget{
                                     style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         height: 1.3,
                                         fontFamily: "Roboto"
                                     ),
@@ -335,7 +335,7 @@ class CatalogScreenSellerBack extends StatelessWidget{
                                     style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         height: 1.3,
                                         fontFamily: "Roboto"
 
@@ -363,7 +363,7 @@ class CatalogScreenSellerBack extends StatelessWidget{
                       "Вид",
                       style: TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           color: Color(0xff2E2E33),
                           fontFamily: "Roboto"
                       ),

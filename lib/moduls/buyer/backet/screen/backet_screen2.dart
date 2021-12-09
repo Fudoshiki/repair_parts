@@ -553,7 +553,7 @@ class BacketScreen2 extends StatelessWidget{
                                             style: TextStyle(
                                                 color: Color(0xffE6332A),
                                                 fontSize: 14,
-                                                fontWeight: FontWeight.w500,
+                                                fontWeight: FontWeight.w600,
                                                 fontFamily: "Roboto"
                                             ),
                                           ),
@@ -595,7 +595,7 @@ class BacketScreen2 extends StatelessWidget{
                                   style: TextStyle(
                                       color: Color(0xff2E2E33),
                                       fontSize: 14,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "Roboto"
                                   ),
                                 ),
@@ -671,7 +671,7 @@ class BacketScreen2 extends StatelessWidget{
                                   style: TextStyle(
                                       color: Color(0xff2E2E33),
                                       fontSize: 14,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "Roboto"
                                   ),
                                 ),
@@ -753,7 +753,7 @@ class BacketScreen2 extends StatelessWidget{
                               style: TextStyle(
                                   color: Color(0xff2E2E33),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontFamily: "Roboto"
                               ),
                             ),

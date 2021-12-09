@@ -256,7 +256,7 @@ class ChooseCategory extends StatelessWidget{
                       "Вид",
                       style: TextStyle(
                           fontSize: 22,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           color: Color(0xff2E2E33),
                           fontFamily: "Roboto"
                       ),

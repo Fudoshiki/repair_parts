@@ -163,7 +163,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                           Text(
                             "1-6",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -174,7 +174,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                       Text(
                         "Сделка завершена",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff717171),
                             fontFamily: "Roboto"
@@ -219,7 +219,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                           Text(
                             "1-5",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -230,7 +230,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                       Text(
                         "Сделка завершена",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff717171),
                             fontFamily: "Roboto"
@@ -275,7 +275,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                           Text(
                             "1-4",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -286,7 +286,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                       Text(
                         "Сделка завершена",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff717171),
                             fontFamily: "Roboto"
@@ -331,7 +331,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                           Text(
                             "1-3",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -342,7 +342,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                       Text(
                         "Сделка завершена",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff717171),
                             fontFamily: "Roboto"
@@ -387,7 +387,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                           Text(
                             "1-2",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -398,7 +398,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                       Text(
                         "Сделка завершена",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff717171),
                             fontFamily: "Roboto"
@@ -443,7 +443,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                           Text(
                             "1-1",
                             style: TextStyle(
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 14,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
@@ -454,7 +454,7 @@ class HistoryOrdersSeller extends StatelessWidget{
                       Text(
                         "Сделка завершена",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: Color(0xff717171),
                             fontFamily: "Roboto"

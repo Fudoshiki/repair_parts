@@ -130,7 +130,7 @@ class OfferScreen2 extends StatelessWidget{
                               Text(
                                 "23.03.2021 07:45",
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontSize: 12,
                                     color: Color(0xff717171),
                                     fontFamily: "Roboto"
@@ -282,7 +282,7 @@ class OfferScreen2 extends StatelessWidget{
                                     style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto"
                                     ),
                                   ),
@@ -461,7 +461,7 @@ class OfferScreen2 extends StatelessWidget{
                                         Text(
                                           "ООО Запчасти",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -502,7 +502,7 @@ class OfferScreen2 extends StatelessWidget{
                                         Text(
                                           "Добавить организацию",
                                           style: TextStyle(
-                                              fontWeight: FontWeight.w500,
+                                              fontWeight: FontWeight.w600,
                                               fontSize: 14,
                                               color: Color(0xff2e2e33),
                                               fontFamily: "Roboto"
@@ -677,7 +677,7 @@ class OfferScreen2 extends StatelessWidget{
                                               child: Text(
                                                 "1",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.w600,
                                                     fontSize: 14,
                                                     color: Color(0xff2e2e33),
                                                     fontFamily: "Roboto"
@@ -1115,7 +1115,7 @@ class OfferScreen2 extends StatelessWidget{
                                               child: Text(
                                                 "1",
                                                 style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
+                                                    fontWeight: FontWeight.w600,
                                                     fontSize: 14,
                                                     color: Color(0xff2e2e33),
                                                     fontFamily: "Roboto"

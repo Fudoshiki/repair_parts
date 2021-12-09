@@ -268,7 +268,7 @@ class ListItemsSeller extends StatelessWidget{
                                 "${typeSort}",
                                 style: TextStyle(
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     color: Color(0xff2e2e33),
                                     fontFamily: "Roboto"
                                 ),
@@ -317,7 +317,7 @@ class ListItemsSeller extends StatelessWidget{
                                                   "Сортировать:",
                                                   style: TextStyle(
                                                       fontSize: 16,
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight: FontWeight.w600,
                                                       fontFamily: "Roboto",
                                                       color: Color(0xff2E2E33)
                                                   ),
@@ -404,7 +404,7 @@ class ListItemsSeller extends StatelessWidget{
                             "Фильтры",
                             style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w500,
+                                fontWeight: FontWeight.w600,
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto"
                             ),

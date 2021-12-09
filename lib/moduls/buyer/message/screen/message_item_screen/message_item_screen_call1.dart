@@ -183,7 +183,7 @@ class MessageItemScreenCall3 extends StatelessWidget{
                         style: TextStyle(
                             color: Color(0xff959595),
                             fontSize: 12,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontFamily: "Roboto"
                         ),
                       )
@@ -484,7 +484,7 @@ class MessageItemScreenCall3 extends StatelessWidget{
                         style: TextStyle(
                             color: Color(0xff959595),
                             fontSize: 12,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontFamily: "Roboto"
                         ),
                       )

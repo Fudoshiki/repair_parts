@@ -120,7 +120,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       Text(
                         "Физическое лицо",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 18,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -148,7 +148,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       Text(
                         "ФИО",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -286,7 +286,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       Text(
                         "Электронная почта",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -348,7 +348,7 @@ class QueryRegisterScreen extends StatelessWidget{
                       Text(
                         "Пожалуйста, внимательно ознакомьтесь со следующими документами",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -401,7 +401,7 @@ class QueryRegisterScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -410,7 +410,7 @@ class QueryRegisterScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xffE6332A),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -475,7 +475,7 @@ class QueryRegisterScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -484,7 +484,7 @@ class QueryRegisterScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xffE6332A),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -550,7 +550,7 @@ class QueryRegisterScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -559,7 +559,7 @@ class QueryRegisterScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xffE6332A),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 

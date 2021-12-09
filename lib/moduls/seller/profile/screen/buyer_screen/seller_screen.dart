@@ -220,7 +220,7 @@ class SellerScreen extends StatelessWidget{
                     child:Text(
                       "Личные данные",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontSize: 12,
                           color: currentIndex==0?Color(0xff2e2e33): Color(0xff959595),
                           fontFamily: "Roboto"
@@ -241,7 +241,7 @@ class SellerScreen extends StatelessWidget{
                     child:Text(
                       "Организации",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontSize: 12,
                           color: currentIndex==1?Color(0xff2e2e33): Color(0xff959595),
                           fontFamily: "Roboto"
@@ -262,7 +262,7 @@ class SellerScreen extends StatelessWidget{
                       child:Text(
                         "Отзывы",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: currentIndex==2?Color(0xff2e2e33): Color(0xff959595),
                             fontFamily: "Roboto"
@@ -284,7 +284,7 @@ class SellerScreen extends StatelessWidget{
                       child:Text(
                         "Транспортные компании",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 12,
                             color: currentIndex==3?Color(0xff2e2e33): Color(0xff959595),
                             fontFamily: "Roboto"
@@ -617,7 +617,7 @@ class SellerScreen extends StatelessWidget{
                                   Text(
                                     "Сергей",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontSize: 14,
                                         color: Color(0xff2e2e33),
                                         fontFamily: "Roboto"
@@ -670,7 +670,7 @@ class SellerScreen extends StatelessWidget{
                                       Text(
                                         "20.02.2021",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 10,
                                             color: Color(0xff717171),
                                             fontFamily: "Roboto"
@@ -722,7 +722,7 @@ class SellerScreen extends StatelessWidget{
                                   Text(
                                     "Иван",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontSize: 14,
                                         color: Color(0xff2e2e33),
                                         fontFamily: "Roboto"
@@ -775,7 +775,7 @@ class SellerScreen extends StatelessWidget{
                                       Text(
                                         "20.02.2021",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 10,
                                             color: Color(0xff717171),
                                             fontFamily: "Roboto"
@@ -827,7 +827,7 @@ class SellerScreen extends StatelessWidget{
                                   Text(
                                     "Максим",
                                     style: TextStyle(
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontSize: 14,
                                         color: Color(0xff2e2e33),
                                         fontFamily: "Roboto"
@@ -880,7 +880,7 @@ class SellerScreen extends StatelessWidget{
                                       Text(
                                         "20.02.2021",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 10,
                                             color: Color(0xff717171),
                                             fontFamily: "Roboto"

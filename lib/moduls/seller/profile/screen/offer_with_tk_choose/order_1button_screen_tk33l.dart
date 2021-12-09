@@ -127,7 +127,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                             Text(
                               "23.03.2021 07:45",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 12,
                                   color: Color(0xff717171),
                                   fontFamily: "Roboto"
@@ -309,7 +309,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                                 style: TextStyle(
                                     color: Color(0xffE6332A),
                                     fontSize: 14,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: "Roboto"
                                 ),
                               ),
@@ -408,7 +408,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                             //             Text(
                             //               " 6ва56а5ва65в",
                             //               style: TextStyle(
-                            //                   fontWeight: FontWeight.w500,
+                            //                   fontWeight: FontWeight.w600,
                             //                   fontSize: 14,
                             //                   color: Color(0xffE6332A),
                             //                   fontFamily: "Roboto",
@@ -427,7 +427,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                             Text(
                               "Заказ получен: 21.11.21",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
@@ -1560,7 +1560,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller33l>{
                                       children: [
                                         Container(
                                           width: Get.width-26,
-                                          height: 300,
+                                          height: 320,
                                           decoration: BoxDecoration(
                                             color: Colors.white,
                                           ),

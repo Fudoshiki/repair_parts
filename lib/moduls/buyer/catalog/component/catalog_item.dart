@@ -65,7 +65,7 @@ class CatalogItemState extends State<CatalogItems>{
                         "$title",
                         style: TextStyle(
                             fontSize: 14,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             color: Color(0xff2E2E33),
                             fontFamily: "Roboto"
                         ),
@@ -162,7 +162,7 @@ class CatalogItemState extends State<CatalogItems>{
                       style: TextStyle(
                           color: Color(0xff2e2e33),
                           fontSize: 14,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontFamily: "Roboto"
                       ),
                     )
@@ -195,7 +195,7 @@ class CatalogItemState extends State<CatalogItems>{
                           style: TextStyle(
                               color: Color(0xff2e2e33),
                               fontSize: 14,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontFamily: "Roboto"
                           ),
                         )

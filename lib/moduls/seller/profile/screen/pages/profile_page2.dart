@@ -433,7 +433,7 @@ class ProfilePageSeller2 extends StatelessWidget{
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 13,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto"
                                     ),
                                   ),
@@ -890,7 +890,7 @@ class ProfilePageSeller2 extends StatelessWidget{
                                               "Обратите внимание",
                                               style: TextStyle(
                                                   fontSize: 16,
-                                                  fontWeight: FontWeight.w500,
+                                                  fontWeight: FontWeight.w600,
                                                   fontFamily: "Roboto",
                                                   color: Color(0xff2e2e33)
                                               ),

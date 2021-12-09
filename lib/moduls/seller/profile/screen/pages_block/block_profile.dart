@@ -235,7 +235,7 @@ class ProfileScreenBlockSeller extends StatelessWidget{
                                   style: TextStyle(
                                       color: Color(0xff2e2e33),
                                       fontSize: 20,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "Roboto"
                                   ),
                                 ),
@@ -244,7 +244,7 @@ class ProfileScreenBlockSeller extends StatelessWidget{
                                   style: TextStyle(
                                     color: Color(0xff2e2e33),
                                     fontSize: 12,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: "Roboto",
 
                                   ),
@@ -254,7 +254,7 @@ class ProfileScreenBlockSeller extends StatelessWidget{
                                   style: TextStyle(
                                       color: Color(0xff2e2e33),
                                       fontSize: 20,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "Roboto"
                                   ),
                                 ),
@@ -263,7 +263,7 @@ class ProfileScreenBlockSeller extends StatelessWidget{
                                   style: TextStyle(
                                     color: Color(0xff2e2e33),
                                     fontSize: 12,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: "Roboto",
 
                                   ),
@@ -273,7 +273,7 @@ class ProfileScreenBlockSeller extends StatelessWidget{
                                   style: TextStyle(
                                       color: Color(0xff2e2e33),
                                       fontSize: 20,
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontFamily: "Roboto"
                                   ),
                                 ),
@@ -282,7 +282,7 @@ class ProfileScreenBlockSeller extends StatelessWidget{
                                   style: TextStyle(
                                     color: Color(0xff2e2e33),
                                     fontSize: 12,
-                                    fontWeight: FontWeight.w500,
+                                    fontWeight: FontWeight.w600,
                                     fontFamily: "Roboto",
 
                                   ),

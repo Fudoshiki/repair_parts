@@ -157,7 +157,7 @@ class CompanyOOPScreen extends StatelessWidget{
                       Text(
                         "ИНН",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -515,7 +515,7 @@ class CompanyOOPScreen extends StatelessWidget{
                       Text(
                         "КПП",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -562,7 +562,7 @@ class CompanyOOPScreen extends StatelessWidget{
                       Text(
                         "ОГРН",
                         style: TextStyle(
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -663,7 +663,7 @@ class CompanyOOPScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -672,7 +672,7 @@ class CompanyOOPScreen extends StatelessWidget{
                                       style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -721,7 +721,7 @@ class CompanyOOPScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -730,7 +730,7 @@ class CompanyOOPScreen extends StatelessWidget{
                                       style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 
@@ -779,7 +779,7 @@ class CompanyOOPScreen extends StatelessWidget{
                                       style: TextStyle(
                                           color: Color(0xff2e2e33),
                                           fontSize: 14,
-                                          fontWeight: FontWeight.w500,
+                                          fontWeight: FontWeight.w600,
                                           fontFamily: "Roboto"
                                       ),
                                     ),
@@ -788,7 +788,7 @@ class CompanyOOPScreen extends StatelessWidget{
                                       style: TextStyle(
                                         color: Color(0xffE6332A),
                                         fontSize: 14,
-                                        fontWeight: FontWeight.w500,
+                                        fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto",
                                         decoration: TextDecoration.underline,
 

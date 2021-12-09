@@ -139,7 +139,7 @@ class OrderScreenSeller extends StatelessWidget{
                     Text(
                       "${_orderController.sorted.value}  ",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           fontSize: 14,
                           color: Color(0xff2e2e33),
                           fontFamily: "Roboto"
@@ -228,7 +228,7 @@ class OrderScreenSeller extends StatelessWidget{
                                 Text(
                                   "Все",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -269,7 +269,7 @@ class OrderScreenSeller extends StatelessWidget{
                                 Text(
                                   "Заказ оплачен",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -310,7 +310,7 @@ class OrderScreenSeller extends StatelessWidget{
                                 Text(
                                   "Заказ отгружен",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 14,
                                       color: Color(0xff2e2e33),
                                       fontFamily: "Roboto"
@@ -382,7 +382,7 @@ class OrderScreenSeller extends StatelessWidget{
                                 child: Text(
                                   "1",
                                   style: TextStyle(
-                                      fontWeight: FontWeight.w500,
+                                      fontWeight: FontWeight.w600,
                                       fontSize: 13,
                                       color: Colors.white,
                                       fontFamily: "Roboto"
@@ -393,7 +393,7 @@ class OrderScreenSeller extends StatelessWidget{
                             Text(
                               "1-6",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
@@ -404,7 +404,7 @@ class OrderScreenSeller extends StatelessWidget{
                         Text(
                           "Заказ оплачен",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
@@ -454,7 +454,7 @@ class OrderScreenSeller extends StatelessWidget{
                             Text(
                               "1-3",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
@@ -465,7 +465,7 @@ class OrderScreenSeller extends StatelessWidget{
                         Text(
                           "Заказ отгружен",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
@@ -516,7 +516,7 @@ class OrderScreenSeller extends StatelessWidget{
                             Text(
                               "1-3",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w500,
+                                  fontWeight: FontWeight.w600,
                                   fontSize: 14,
                                   color: Color(0xff2e2e33),
                                   fontFamily: "Roboto"
@@ -527,7 +527,7 @@ class OrderScreenSeller extends StatelessWidget{
                         Text(
                           "Заказ оплачен",
                           style: TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               fontSize: 12,
                               color: Color(0xff2e2e33),
                               fontFamily: "Roboto"
