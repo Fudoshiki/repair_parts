@@ -78,6 +78,8 @@ import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_re
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_submit.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/registred_org.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/registred_org2.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/rewards_calculator.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/search_track_number.dart';
 
 class ListAllScreenSeller extends StatelessWidget{
 
@@ -2443,13 +2445,16 @@ class ListAllScreenSeller extends StatelessWidget{
                 width: Get.width,
                 child: Row(
                   children: [
-                    Text(
-                      "Screens   43 44 45 47 48  49 44 60",
-                      style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w700
+                    Container(
+                      width: Get.width-40,
+                      child: Text(
+                        "Screens   43 44 45 47 48  49 44 60",
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w700
+                        ),
                       ),
-                    ),
+                    )
                   ],
                 )
             ),
@@ -2519,7 +2524,69 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(WaitingData(bottom: true));
             },
           ),
-          //NoSubmitSeller
+          // 30a
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   30a",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(SearchTrackNumber(bottom: true));
+            },
+          ),
+          // 104б
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   104б",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(RewardsCalculator(bottom: true));
+            },
+          ),
+          //SearchTrackNumber
 
         ],
       )

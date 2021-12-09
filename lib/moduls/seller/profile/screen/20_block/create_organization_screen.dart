@@ -4,6 +4,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/components_main/text_field_component.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/no_registred_org2.dart';
 
 class CreateOrganizationScreen extends StatelessWidget{
 
@@ -98,80 +100,47 @@ class CreateOrganizationScreen extends StatelessWidget{
                             ),
                             SizedBox(height: 7,),
                             Container(
-                                margin: EdgeInsets.only(bottom: 10),
-                                height: 48,
+                                margin: EdgeInsets.only(top: 10),
+                                height: 50,
                                 width: Get.width-40,
-                                padding: EdgeInsets.only(
-                                    left: 20,
-                                    right: 20
-                                ),
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(6),
-                                    color: Colors.white,
-                                    border: Border.all(
-                                        color: Color(0xffC4C4C4),
-                                        width: 1
-                                    )
-                                ),
-                                child: TextField(
-                                  onTap: (){
-                                  },
-                                  enabled: false,
-                                  decoration: InputDecoration(
-                                    hintText: "Фамилия",
-                                    hintStyle: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        color: Color(0xff959595),
-                                        fontFamily: "Roboto"
-
-                                    ),
-                                    labelText: "ИНН",
-                                    labelStyle: TextStyle(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 12,
-                                        color: Color(0xff717171),
-                                        fontFamily: "Roboto",
-                                      height: 0.1
-                                    ),
-                                    enabledBorder: InputBorder.none,
-                                    border: InputBorder.none,
-                                    focusedErrorBorder: InputBorder.none,
-                                    focusedBorder: InputBorder.none,
-                                    errorBorder: InputBorder.none,
-                                    disabledBorder: InputBorder.none,
-                                  ),
+                                child: TextFieldCustom(
+                                  "ИНН","",
                                 )
                             ),
-
                           ]))
 
 
 
               ),
-              Container(
-                margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    bottom: 20
-                ),
-                decoration: BoxDecoration(
-                    color: Color(0xffE6332A),
-                    borderRadius: BorderRadius.circular(6)
-                ),
-                height: 50,
-                child: Center(
-                  child: Text(
-                    "Продолжить",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                        fontFamily: "Roboto"
+              GestureDetector(
+                child: Container(
+                  margin: EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                      bottom: 20
+                  ),
+                  decoration: BoxDecoration(
+                      color: Color(0xffE6332A),
+                      borderRadius: BorderRadius.circular(6)
+                  ),
+                  height: 50,
+                  child: Center(
+                    child: Text(
+                      "Продолжить",
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                          fontFamily: "Roboto"
+                      ),
                     ),
                   ),
                 ),
+                onTap: (){
+                  Get.to(NORegistredOrgScreen2());
+                },
               )
+              //
             ]
         )
 
