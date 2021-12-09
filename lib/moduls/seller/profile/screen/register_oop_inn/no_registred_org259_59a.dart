@@ -1512,7 +1512,7 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                                   padding: EdgeInsets.all(4),
                                 ),
                                 Text(
-                                  'с НДС',
+                                  'без НДС',
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w400,
