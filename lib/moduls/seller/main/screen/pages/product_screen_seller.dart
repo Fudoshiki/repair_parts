@@ -473,7 +473,7 @@ class ProductScreenSeller extends StatelessWidget{
             ),
             child: Center(
               child: Text(
-                "Редактировать",
+                "Добавить",
                 style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 16,

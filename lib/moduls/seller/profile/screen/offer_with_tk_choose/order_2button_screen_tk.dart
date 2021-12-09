@@ -1344,7 +1344,6 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller>{
                                                   child: Container(
                                                     margin: EdgeInsets.only(
                                                         left: 37,
-                                                        top: 14
                                                     ),
                                                     decoration: BoxDecoration(
                                                         border: Border(
