@@ -4,12 +4,10 @@ import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 
-class AttachTK extends StatelessWidget{
+class NoSubmitSeller extends StatelessWidget{
   MainController _mainController =Get.find();
   bool? bottom;
-
-  var open =false;
-  AttachTK({@required this.bottom});
+  NoSubmitSeller({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
@@ -28,7 +26,7 @@ class AttachTK extends StatelessWidget{
           backgroundColor: Colors.white,
           items: [
             _bottomNavigationitem.showItem(
-              true,
+              false,
               "home_icon.png",
               18,
               text: "Главная",
@@ -48,7 +46,7 @@ class AttachTK extends StatelessWidget{
 
             ),
             _bottomNavigationitem.showItem(
-              false,
+              true,
               "profile_icon.png",
               18,
               text: "Кабинет",
@@ -88,15 +86,15 @@ class AttachTK extends StatelessWidget{
           ),
           Expanded(
             child: ListView(
-              children: [
 
+              children: [
                 Container(
                   margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
+                      left: 20,
+                      right: 20,
                   ),
                   child: Text(
-                    "Прикрепить трек номер",
+                    "Добавить организацию",
                     style: TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 28,
@@ -111,65 +109,57 @@ class AttachTK extends StatelessWidget{
                         right: 20,
                         top: 29
                     ),
-
-                    child: Column(
+                    decoration: BoxDecoration(
+                        color: Color(0xffF3F3F3),
+                        borderRadius: BorderRadius.circular(6)
+                    ),
+                    padding: EdgeInsets.only(
+                        left: 23,
+                        right: 23,
+                        top: 28,
+                        bottom: 24
+                    ),
+                    child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "Трек номер для отслеживания",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto"
-                          ),
-                        ),
-                        SizedBox(height: 7,),
                         Container(
-                            margin: EdgeInsets.only(bottom: 10),
-                            height: 48,
-                            width: Get.width-40,
-                            padding: EdgeInsets.only(
-                                left: 20,
-                                right: 20
-                            ),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(6),
-                                color: Colors.white,
-                                border: Border.all(
-                                    color: Color(0xffD6D6D6),
-                                    width: 1
-                                )
-                            ),
-                            child: TextField(
-                              onTap: (){
-                              },
-                              decoration: InputDecoration(
-                                hintText: "Трек номер",
-                                hintStyle: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 14,
-                                    color: Color(0xff959595),
-                                    fontFamily: "Roboto",
-                                  height: 0.1
-
-                                ),
-                                labelStyle: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 12,
-                                    color: Color(0xff717171),
-                                    fontFamily: "Roboto",
-                                    height: 0.1
-                                ),
-                                enabledBorder: InputBorder.none,
-                                border: InputBorder.none,
-                                focusedErrorBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                errorBorder: InputBorder.none,
-                                disabledBorder: InputBorder.none,
-                              ),
-                            )
+                          width: 30,
+                          height: 30,
+                          child:  Image.asset("assets/image/warn.png"),
                         ),
+                        Container(
+                          margin: EdgeInsets.only(
+                              left: 20
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Организация не прошла проверку",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 14,
+                                    color: Color(0xff2e2e33),
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                              SizedBox(height: 10,),
+                              Container(
+                                width: Get.width-136,
+                                child: Text(
+                                  "Причина отказа.",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 12,
+                                      color: Color(0xff2e2e33),
+                                      fontFamily: "Roboto",
+                                      height: 1.5
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                       ],
                     )
                 ),
@@ -184,14 +174,14 @@ class AttachTK extends StatelessWidget{
                   bottom: 41
               ),
               decoration: BoxDecoration(
-                  color: open? Color(0xffE6332A):Color(0xff959595),
+                  color: Color(0xffE6332A),
                   borderRadius: BorderRadius.circular(6)
               ),
               height: 50,
               width: Get.width-40,
               child: Center(
                 child: Text(
-                  "Сохранить",
+                  "Редактировать данные",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 16,
@@ -202,8 +192,7 @@ class AttachTK extends StatelessWidget{
               ),
             ),
             onTap: (){
-              open=!open;
-              Get.forceAppUpdate();
+              Get.back();
             },
           )
         ],

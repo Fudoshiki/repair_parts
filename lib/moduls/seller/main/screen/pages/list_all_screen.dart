@@ -31,11 +31,15 @@ import 'package:repair_parts/moduls/seller/profile/screen/block_19/history_obmen
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76a.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/block_19/reset_obmen_item76b.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/buyer_screen/buyer_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/buyer_screen/no_submit.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/buyer_screen/waiting_data.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen2.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen3.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_order_item_screen4.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/history_orders.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/message_32_block/message_item_screen.dart';
+import 'package:repair_parts/moduls/seller/profile/screen/message_32_block/messages_screen.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/no_history_order.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_1button_screen_tk29B.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/offer_with_tk_choose/14-15blocks/order_1button_screen_tk33г.dart';
@@ -2391,9 +2395,131 @@ class ListAllScreenSeller extends StatelessWidget{
               Get.to(OzifrovkaStatusScreen103a(bottom: true,));
             },
           ),
-          //ProductSendOnAccept
-
-
+          // 42
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   42",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(MessagesScreen(bottom: true,));
+            },
+          ),
+          // 43 44 45 47 48  49 44 60
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   43 44 45 47 48  49 44 60",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(MessageItemScreenSeller());
+            },
+          ),
+          // 90
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   90",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(NoSubmitSeller(bottom: true));
+            },
+          ),
+          // 89
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens   89",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(WaitingData(bottom: true));
+            },
+          ),
+          //NoSubmitSeller
 
         ],
       )

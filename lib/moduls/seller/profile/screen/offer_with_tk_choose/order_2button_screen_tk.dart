@@ -423,7 +423,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller>{
                                 height:6
                             ),
                             Text(
-                              "Заказ получен: 03.03.21",
+                              "Заказ получен: ",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,

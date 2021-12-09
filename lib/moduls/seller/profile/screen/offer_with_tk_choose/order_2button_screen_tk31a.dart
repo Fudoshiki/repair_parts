@@ -1286,7 +1286,8 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller31a>{
                                                         fontFamily: "Roboto"
                                                     ),
                                                   ),
-                                                ),Container(
+                                                ),
+                                                Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
                                                       top: 12
@@ -1329,7 +1330,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller31a>{
                                                 Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
-                                                      top: 12
+                                                      top: 14
                                                   ),
                                                   child: Text(
                                                     "Транспортная накладная",
@@ -1345,7 +1346,6 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller31a>{
                                                   child: Container(
                                                     margin: EdgeInsets.only(
                                                         left: 37,
-                                                        top: 14
                                                     ),
                                                     decoration: BoxDecoration(
                                                         border: Border(
@@ -1423,7 +1423,8 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller31a>{
                                                         fontFamily: "Roboto"
                                                     ),
                                                   ),
-                                                ),Container(
+                                                ),
+                                                Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
                                                       top: 12

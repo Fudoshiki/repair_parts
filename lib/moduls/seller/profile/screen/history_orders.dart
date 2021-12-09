@@ -142,8 +142,8 @@ class HistoryOrdersSeller extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                            width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffE6332A)
@@ -209,8 +209,8 @@ class HistoryOrdersSeller extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -265,8 +265,8 @@ class HistoryOrdersSeller extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -321,8 +321,8 @@ class HistoryOrdersSeller extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -377,8 +377,8 @@ class HistoryOrdersSeller extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)
@@ -433,8 +433,8 @@ class HistoryOrdersSeller extends StatelessWidget{
                             margin: EdgeInsets.only(
                                 right: 26
                             ),
-                            width: 15,
-                            height: 15,
+                             width: 24,
+                            height: 24,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffD6D6D6)

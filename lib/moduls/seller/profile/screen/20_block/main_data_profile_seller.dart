@@ -213,17 +213,75 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           ),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 3.2,
                         ),
                         Text(
-                          "+ 7 (000) 000-00-00",
+                          "Продавец",
                           style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 10,
                               fontWeight: FontWeight.w400,
                               fontFamily: "Roboto",
                               color: Color(0xff2e2e33)
                           ),
                         ),
+
+                        Container(
+
+                          child: Row(
+                            children: [
+                              Text(
+                                "3,2",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 10,
+                                    color: Color(0xff2e2e33),
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                              Container(
+                                height: 11,
+                                width: 11,
+                                child: Image.asset(
+                                  "assets/image/Star 1.png",
+                                  color: Color(0xffFFB800),
+                                ),
+                              ),
+                              Container(
+                                height: 11,
+                                width: 11,
+                                child: Image.asset(
+                                  "assets/image/Star 1.png",
+                                  color: Color(0xffFFB800),
+                                ),
+                              ),
+                              Container(
+                                height: 11,
+                                width: 11,
+                                child: Image.asset(
+                                  "assets/image/Star 1.png",
+                                  color: Color(0xffFFB800),
+                                ),
+                              ),
+                              Container(
+                                height: 11,
+                                width: 11,
+                                child: Image.asset(
+                                  "assets/image/Star 1.png",
+                                  color: Color(0xffC4C4C4),
+                                ),
+                              ),
+                              Container(
+                                height: 11,
+                                width: 11,
+                                child: Image.asset(
+                                  "assets/image/Star 1.png",
+                                  color: Color(0xffC4C4C4),
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+
                       ],
                     ),
                   ],
@@ -2779,7 +2837,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                       Text(
                                         "Сергей",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -2887,7 +2945,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                       Text(
                                         "Иван",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"
@@ -2996,7 +3054,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                       Text(
                                         "Максим",
                                         style: TextStyle(
-                                            fontWeight: FontWeight.w500,
+                                            fontWeight: FontWeight.w600,
                                             fontSize: 14,
                                             color: Color(0xff2e2e33),
                                             fontFamily: "Roboto"

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/components_main/text_field_component.dart';
 
 class NORegistredOrgScreen2 extends StatelessWidget{
 
@@ -102,7 +103,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Данные о компании",
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -111,166 +112,29 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="1234567890",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "ИНН",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "ИНН","1234567890"
                           )
                       ),
                       Container(
-                          margin: EdgeInsets.only(top: 8),
-                          height: 48,
-                          width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="ИП Петров Петр Петрович",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Наименование",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
-                          )
+                        margin: EdgeInsets.only(top: 8),
+                        height: 50,
+                        width: Get.width-40,
+                        child: TextFieldCustom(
+                            "Наименование","ООО Запчасти"
+                        ),
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="1234567890",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "ОГРНИП",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "ОГРНИП","1234567890"
                           )
                       ),
+
 
                     ],
                   ),
@@ -287,7 +151,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       Text(
                         "Юридический адрес",
                         style: TextStyle(
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w500,
                             fontSize: 14,
                             color: Color(0xff2e2e33),
                             fontFamily: "Roboto"
@@ -295,277 +159,43 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Россия",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Страна",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Страна","1234567890"
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Иркутская область, Ангарский район, город Ангарск",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-
-                            ),
-                            maxLines: 3,
-                            minLines: 1,
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Населенный пункт",
-
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Населенный пункт","Иркутская область, Ангарский район,  qwhehqw bjhqwb ehqbw jb wгород Ангарск",maxLines:2
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Ленина",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Улица",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Улица","Ленина"
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="13",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Дом/строение",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Дом/строение","13"
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="3",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                              height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Квартира/офис",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Квартира/офис","3"
                           )
                       ),
-
 
                     ],
                   ),
@@ -589,331 +219,51 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Россия",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Страна",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Страна","Россия"
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Еврейская автономная область, Биробиджанский район, с. Красный Восток",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto",
-                            ),
-                            maxLines: 3,
-                            minLines: 1,
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Населенный пункт",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                            "Населенный пункт","",maxLines: 3,
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Олега Кошевого",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Улица",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Улица",""
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="21",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Дом/строение",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Дом/строение",""
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            controller: new TextEditingController()..text="21",
-
-                            enabled: false,
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Квартира/офис",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-
-                              labelText: "Квартира/офис",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Квартира/офис",""
                           )
                       ),
-
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="АвтоМир",
-                            style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto",
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Наименование магазина/производства",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Наименование магазина/производства","АвтоМир"
                           )
                       ),
 
@@ -939,275 +289,44 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="Сбер",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Наименование банка",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Наименование банка",""
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="2323233545",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "ИНН",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "ИНН",""
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="2323233545",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "БИК",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "БИК",""
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="2323233545",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "К/с",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "К/с",""
                           )
                       ),
                       Container(
                           margin: EdgeInsets.only(top: 8),
-                          height: 48,
+                          height: 50,
                           width: Get.width-40,
-                          padding: EdgeInsets.only(
-                              left: 20,
-                              right: 20
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white,
-                              border: Border.all(
-                                  color: Color(0xffC4C4C4),
-                                  width: 1
-                              )
-                          ),
-                          child: TextField(
-                            onTap: (){
-                            },
-                            enabled: false,
-                            controller: new TextEditingController()..text="2323233545",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto",
-                                height: 100
-                            ),
-                            decoration: InputDecoration(
-                              hintText: "Фамилия",
-                              hintStyle: TextStyle(
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14,
-                                  color: Color(0xff959595),
-                                  fontFamily: "Roboto"
-
-                              ),
-                              labelText: "Р/с",
-                              labelStyle: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                  color: Color(0xff717171),
-                                  fontFamily: "Roboto",
-                                  height: 0.2
-                              ),
-                              enabledBorder: InputBorder.none,
-                              border: InputBorder.none,
-                              focusedErrorBorder: InputBorder.none,
-                              focusedBorder: InputBorder.none,
-                              errorBorder: InputBorder.none,
-                              disabledBorder: InputBorder.none,
-                            ),
+                          child: TextFieldCustom(
+                              "Р/с",""
                           )
                       ),
 
@@ -1234,7 +353,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 48,
@@ -1255,7 +373,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
-                            controller: new TextEditingController()..text="89056756756",
+                            controller: new TextEditingController()..text="",
 
                             style: TextStyle(
                               fontWeight: FontWeight.w400,
@@ -1308,7 +426,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             onTap: (){
                             },
                             enabled: false,
-                            controller: new TextEditingController()..text="dfsdhg@mail.ru",
+                            controller: new TextEditingController()..text="",
 
                             style: TextStyle(
                                 fontWeight: FontWeight.w400,
@@ -1364,7 +482,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 48,
@@ -1392,7 +509,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                 fontFamily: "Roboto"
 
                             ),
-                            controller: new TextEditingController()..text="10%",
+                            controller: new TextEditingController()..text="",
 
                             decoration: InputDecoration(
 
@@ -2590,7 +1707,7 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   padding: EdgeInsets.all(4),
                                 ),
                                 Text(
-                                  'с НДС',
+                                  'без НДС',
                                   style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w400,

@@ -73,7 +73,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItemSeller>{
                       backgroundColor: Colors.white,
                       body: Center(
                           child: Text(
-                            "Покупатель, изменил условия доставки с “Деловые линии” на “Самовывоз”",
+                            "Покупатель, изменил условия доставки с «Деловые линии» на «Самовывоз»",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Color(0xff2e2e33),

@@ -424,7 +424,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                 height:6
                             ),
                             Text(
-                              "Заказ получен: 03.03.21",
+                              "Заказ получен: ",
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 14,
@@ -1265,139 +1265,6 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                         children: [
                                           Container(
                                             width: Get.width-26,
-                                            height: 260,
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                            ),
-                                            child: Column(
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 36
-                                                  ),
-                                                  child: Text(
-                                                    "Вложения",
-                                                    style: TextStyle(
-                                                        fontWeight: FontWeight.w700,
-                                                        fontSize: 24,
-                                                        color: Color(0xff2e2e33),
-                                                        fontFamily: "Roboto"
-                                                    ),
-                                                  ),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 12
-                                                  ),
-                                                  child: Text(
-                                                    "Счет-договор",
-                                                    style: TextStyle(
-                                                        fontWeight: FontWeight.w400,
-                                                        fontSize: 18,
-                                                        color: Color(0xff2e2e33),
-                                                        fontFamily: "Roboto"
-                                                    ),
-                                                  ),
-                                                ),
-                                                GestureDetector(
-                                                  child: Container(
-                                                    margin: EdgeInsets.only(
-                                                      left: 37,
-                                                    ),
-                                                    decoration: BoxDecoration(
-                                                        border: Border(
-                                                            bottom: BorderSide(
-                                                                color: Color(0xffE6332A)
-                                                            )
-                                                        )
-                                                    ),
-                                                    child: Text(
-                                                      "Счет-договор.1-1",
-                                                      style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 18,
-                                                          color: Color(0xffE6332A),
-                                                          fontFamily: "Roboto"
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  onTap: (){
-                                                  },
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 12
-                                                  ),
-                                                  child: Text(
-                                                    "Бухгалтерский документ",
-                                                    style: TextStyle(
-                                                        fontWeight: FontWeight.w400,
-                                                        fontSize: 18,
-                                                        color: Color(0xff2e2e33),
-                                                        fontFamily: "Roboto"
-                                                    ),
-                                                  ),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 6
-                                                  ),
-                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 12
-                                                  ),
-                                                  child: Text(
-                                                    "Транспортная накладная",
-                                                    style: TextStyle(
-                                                        fontWeight: FontWeight.w400,
-                                                        fontSize: 18,
-                                                        color: Color(0xff2e2e33),
-                                                        fontFamily: "Roboto"
-                                                    ),
-                                                  ),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 6
-                                                  ),
-                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-
-
-                                        ],
-                                      ),
-                                    )
-                                );
-                              },
-                            );
-                            showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                double width = MediaQuery.of(context).size.width;
-                                double height = MediaQuery.of(context).size.height;
-                                return AlertDialog(
-                                    backgroundColor: Colors.transparent,
-                                    contentPadding: EdgeInsets.zero,
-                                    elevation: 0.0,
-                                    // title: Center(child: Text("Evaluation our APP")),
-                                    content: Container(
-                                      child: Column(
-                                        mainAxisAlignment: MainAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            width: Get.width-26,
                                             height: 280,
                                             decoration: BoxDecoration(
                                               color: Colors.white,
@@ -1463,7 +1330,140 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                 Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
+                                                      top: 15
+                                                  ),
+                                                  child: Text(
+                                                    "Бухгалтерский документ",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 6
+                                                  ),
+                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 16
+                                                  ),
+                                                  child: Text(
+                                                    "Транспортная накладная",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 6
+                                                  ),
+                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
+                                                )
+                                              ],
+                                            ),
+                                          ),
+
+
+                                        ],
+                                      ),
+                                    )
+                                );
+                              },
+                            );
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                double width = MediaQuery.of(context).size.width;
+                                double height = MediaQuery.of(context).size.height;
+                                return AlertDialog(
+                                    backgroundColor: Colors.transparent,
+                                    contentPadding: EdgeInsets.zero,
+                                    elevation: 0.0,
+                                    // title: Center(child: Text("Evaluation our APP")),
+                                    content: Container(
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            width: Get.width-26,
+                                            height: 300,
+                                            decoration: BoxDecoration(
+                                              color: Colors.white,
+                                            ),
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 36
+                                                  ),
+                                                  child: Text(
+                                                    "Вложения",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w700,
+                                                        fontSize: 24,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
                                                       top: 12
+                                                  ),
+                                                  child: Text(
+                                                    "Счет-договор",
+                                                    style: TextStyle(
+                                                        fontWeight: FontWeight.w400,
+                                                        fontSize: 18,
+                                                        color: Color(0xff2e2e33),
+                                                        fontFamily: "Roboto"
+                                                    ),
+                                                  ),
+                                                ),
+                                                GestureDetector(
+                                                  child: Container(
+                                                    margin: EdgeInsets.only(
+                                                      left: 37,
+                                                    ),
+                                                    decoration: BoxDecoration(
+                                                        border: Border(
+                                                            bottom: BorderSide(
+                                                                color: Color(0xffE6332A)
+                                                            )
+                                                        )
+                                                    ),
+                                                    child: Text(
+                                                      "Счет-договор.1-1",
+                                                      style: TextStyle(
+                                                          fontWeight: FontWeight.w400,
+                                                          fontSize: 18,
+                                                          color: Color(0xffE6332A),
+                                                          fontFamily: "Roboto"
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  onTap: (){
+                                                  },
+                                                ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 15
                                                   ),
                                                   child: Text(
                                                     "Бухгалтерский документ",
@@ -1500,18 +1500,18 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                   onTap: (){
                                                   },
                                                 ),
+                                                Container(
+                                                  margin: EdgeInsets.only(
+                                                      left: 37,
+                                                      top: 4
+                                                  ),
+                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
+                                                ),
 
                                                 Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
-                                                      top: 6
-                                                  ),
-                                                  child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
-                                                ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      left: 37,
-                                                      top: 12
+                                                      top: 18
                                                   ),
                                                   child: Text(
                                                     "Транспортная накладная",
@@ -1552,7 +1552,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem2ButtonSeller28b>{
                                                 Container(
                                                   margin: EdgeInsets.only(
                                                       left: 37,
-                                                      top: 6
+                                                      top: 4
                                                   ),
                                                   child: Image.asset("assets/image/adede.png",color: Color(0xffC00000),),
                                                 )
