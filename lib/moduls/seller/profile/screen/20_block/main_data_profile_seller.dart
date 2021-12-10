@@ -633,7 +633,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 38
+                              top: 11
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -663,7 +663,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           margin: EdgeInsets.only(
                               left: 20,
                               right: 20,
-                              top: 38
+                              top: 24
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
