@@ -231,7 +231,7 @@ class NORegistredOrgScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 35
+                      top: 19
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -261,7 +261,7 @@ class NORegistredOrgScreen extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 35
+                      top: 27
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -410,7 +410,7 @@ class NORegistredOrgScreen extends StatelessWidget{
                         ),
                       ),
                       Container(
-                          margin: EdgeInsets.only(bottom: 10),
+                          margin: EdgeInsets.only(top: 10),
                           height: 48,
                           width: Get.width-40,
                           padding: EdgeInsets.only(
@@ -436,6 +436,11 @@ class NORegistredOrgScreen extends StatelessWidget{
                                 fontFamily: "Roboto"
                             ),
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "Телефон организации",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
@@ -455,7 +460,7 @@ class NORegistredOrgScreen extends StatelessWidget{
                           )
                       ),
                       Container(
-                          margin: EdgeInsets.only(bottom: 10),
+                          margin: EdgeInsets.only(top: 10),
                           height: 48,
                           width: Get.width-40,
                           padding: EdgeInsets.only(
@@ -474,6 +479,11 @@ class NORegistredOrgScreen extends StatelessWidget{
                             onTap: (){
                             },
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "E-mail продавца",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,

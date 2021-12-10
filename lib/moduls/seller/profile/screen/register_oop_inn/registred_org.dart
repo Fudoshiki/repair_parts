@@ -105,7 +105,6 @@ class RegistredOrgScreen extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 50,
@@ -348,7 +347,6 @@ class RegistredOrgScreen extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 48,
@@ -376,7 +374,13 @@ class RegistredOrgScreen extends StatelessWidget{
                                 color: Color(0xff2e2e33),
                                 fontFamily: "Roboto",
                             ),
+
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
@@ -430,6 +434,11 @@ class RegistredOrgScreen extends StatelessWidget{
 
                             ),
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
@@ -477,7 +486,6 @@ class RegistredOrgScreen extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 48,
@@ -507,6 +515,11 @@ class RegistredOrgScreen extends StatelessWidget{
 
                             ),
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                top: 15,
+                                bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
