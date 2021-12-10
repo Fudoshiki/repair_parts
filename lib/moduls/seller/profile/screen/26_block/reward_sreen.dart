@@ -193,7 +193,6 @@ class RewardScreen extends StatelessWidget {
                   margin: EdgeInsets.only(
                     left: 20,
                     right: 20,
-                    bottom: 11
                   ),
                   child: Table(
                     children: [
