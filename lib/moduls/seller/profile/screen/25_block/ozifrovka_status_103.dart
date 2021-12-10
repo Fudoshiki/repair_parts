@@ -114,7 +114,7 @@ class OzifrovkaStatusScreen103 extends StatelessWidget{
                       right: 20,
                   ),
                   child: Text(
-                    "Статус: Принято",
+                    "Статус: Отказ",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 12,
@@ -360,24 +360,6 @@ class OzifrovkaStatusScreen103 extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(6),
-                                      topRight: Radius.circular(6)
-                                  ),
-                                  color: Color(0xffF3F3F3)
-
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.keyboard_arrow_down_sharp,
-                                  color: Color(0xff959595),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),
@@ -431,24 +413,6 @@ class OzifrovkaStatusScreen103 extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(6),
-                                      topRight: Radius.circular(6)
-                                  ),
-                                  color: Color(0xffF3F3F3)
-
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.keyboard_arrow_down_sharp,
-                                  color: Color(0xff959595),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),
@@ -501,24 +465,6 @@ class OzifrovkaStatusScreen103 extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(6),
-                                      topRight: Radius.circular(6)
-                                  ),
-                                  color: Color(0xffF3F3F3)
-
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.keyboard_arrow_down_sharp,
-                                  color: Color(0xff959595),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),
@@ -571,24 +517,6 @@ class OzifrovkaStatusScreen103 extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(6),
-                                      topRight: Radius.circular(6)
-                                  ),
-                                  color: Color(0xffF3F3F3)
-
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.keyboard_arrow_down_sharp,
-                                  color: Color(0xff959595),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),
@@ -641,24 +569,6 @@ class OzifrovkaStatusScreen103 extends StatelessWidget{
                                 ),
                               ),
                             ),
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(6),
-                                      topRight: Radius.circular(6)
-                                  ),
-                                  color: Color(0xffF3F3F3)
-
-                              ),
-                              child: Center(
-                                child: Icon(
-                                  Icons.keyboard_arrow_down_sharp,
-                                  color: Color(0xff959595),
-                                ),
-                              ),
-                            )
                           ],
                         ),
                       ),

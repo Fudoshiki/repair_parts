@@ -446,7 +446,7 @@ class ResetObmenItem76b extends StatelessWidget{
                               ),
                               //Трек номер: 6ва56а5ва65в
                               Text(
-                                "Заказ получен: 21.11.21",
+                                "Заказ получен:",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 14,
@@ -1245,137 +1245,7 @@ class ResetObmenItem76b extends StatelessWidget{
                                 )
                             ),
                             onTap:(){
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) {
-                                  double width = MediaQuery.of(context).size.width;
-                                  double height = MediaQuery.of(context).size.height;
-                                  return AlertDialog(
-                                      backgroundColor: Colors.transparent,
-                                      contentPadding: EdgeInsets.zero,
-                                      elevation: 0.0,
-                                      // title: Center(child: Text("Evaluation our APP")),
-                                      content: Container(
-                                        child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              width: Get.width-26,
-                                              height: 260,
-                                              decoration: BoxDecoration(
-                                                color: Colors.white,
-                                              ),
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Container(
-                                                    margin: EdgeInsets.only(
-                                                        left: 37,
-                                                        top: 36
-                                                    ),
-                                                    child: Text(
-                                                      "Вложения",
-                                                      style: TextStyle(
-                                                          fontWeight: FontWeight.w700,
-                                                          fontSize: 24,
-                                                          color: Color(0xff2e2e33),
-                                                          fontFamily: "Roboto"
-                                                      ),
-                                                    ),
-                                                  ),Container(
-                                                    margin: EdgeInsets.only(
-                                                        left: 37,
-                                                        top: 12
-                                                    ),
-                                                    child: Text(
-                                                      "Файлы",
-                                                      style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 18,
-                                                          color: Color(0xff2e2e33),
-                                                          fontFamily: "Roboto"
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  GestureDetector(
-                                                    child: Container(
-                                                      margin: EdgeInsets.only(
-                                                          left: 37,
-                                                          top: 29
-                                                      ),
-                                                      decoration: BoxDecoration(
-                                                          border: Border(
-                                                              bottom: BorderSide(
-                                                                  color: Color(0xffE6332A)
-                                                              )
-                                                          )
-                                                      ),
-                                                      child: Text(
-                                                        "image22121",
-                                                        style: TextStyle(
-                                                            fontWeight: FontWeight.w400,
-                                                            fontSize: 18,
-                                                            color: Color(0xffE6332A),
-                                                            fontFamily: "Roboto"
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    onTap: (){
-                                                    },
-                                                  ),
-                                                  Container(
-                                                    margin: EdgeInsets.only(
-                                                        left: 37,
-                                                        top: 12
-                                                    ),
-                                                    child: Text(
-                                                      "Акт приема передачи",
-                                                      style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 18,
-                                                          color: Color(0xff2e2e33),
-                                                          fontFamily: "Roboto"
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  GestureDetector(
-                                                    child: Container(
-                                                      margin: EdgeInsets.only(
-                                                          left: 37,
-                                                          top: 14
-                                                      ),
-                                                      decoration: BoxDecoration(
-                                                          border: Border(
-                                                              bottom: BorderSide(
-                                                                  color: Color(0xffE6332A)
-                                                              )
-                                                          )
-                                                      ),
-                                                      child: Text(
-                                                        "image222",
-                                                        style: TextStyle(
-                                                          fontWeight: FontWeight.w400,
-                                                          fontSize: 18,
-                                                          color: Color(0xffE6332A),
-                                                          fontFamily: "Roboto",
 
-                                                        ),
-                                                      ),
-                                                    ),
-                                                    onTap: (){
-                                                    },
-                                                  )
-                                                ],
-                                              ),
-                                            ),
-
-
-                                          ],
-                                        ),
-                                      )
-                                  );
-                                },
-                              );
                             }
                         ),
                         SizedBox(width: 10,),

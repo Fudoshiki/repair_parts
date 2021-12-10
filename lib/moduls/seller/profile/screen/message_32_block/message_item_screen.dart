@@ -58,43 +58,53 @@ class MessageItemScreenSeller extends StatelessWidget{
                         Get.back();
                       },
                     ),
-                    Container(
-                      width: 34,
-                      height: 34,
-                      margin: EdgeInsets.only(
-                          right: 10
-                      ),
-                      decoration: BoxDecoration(
-                          color: Color(0xffDA6468),
-                          borderRadius: BorderRadius.circular(
-                              5
-                          )
-                      ),
-                      child: Image.asset("assets/image/profile.png"),
-                    ),
-                    Text(
-                      "Имя продавца",
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xff2e2e33),
-                          fontFamily: "Roboto"
-                      ),
-                    )
-
+                    Opacity(opacity: 0,
+                    child: Container(
+                      height: 18,
+                      width: 18,
+                      child: Image.asset("assets/image/phone.png"),
+                    ),)
                   ],
                 ),
-                Container(
-                  height: 18,
-                  width: 18,
-                  child: Image.asset("assets/image/phone.png"),
+                Text(
+                  "Покупатель",
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
+                      color: Color(0xff2e2e33),
+                      fontFamily: "Roboto"
+                  ),
+                ),
+                Row(
+                  children: [
+                    Opacity(opacity: 0,
+                      child: GestureDetector(
+                        child:  Container(
+                          width: 19,
+                          height: 16,
+                          margin: EdgeInsets.only(
+                              right: 20
+                          ),
+                          child: Image.asset("assets/image/arrow_left.png"),
+                        ),
+                        onTap: (){
+                          Get.back();
+                        },
+                      ),),
+                    Container(
+                      height: 18,
+                      width: 18,
+                      child: Image.asset("assets/image/phone.png"),
+                    )
+                  ],
                 )
+
               ],
             ),
           ),
           Container(
             padding: EdgeInsets.only(
-                left: 60,
+                left: 20,
                 right: 20,
                 top:10,
                 bottom: 11
@@ -109,6 +119,7 @@ class MessageItemScreenSeller extends StatelessWidget{
                 )
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   "Заказ 1-6",

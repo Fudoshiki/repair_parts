@@ -196,91 +196,66 @@ class SearchTrackNumber extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                              width: 14,
+                              height: 155,
+                              child: Stack(
                                 children: [
-                                  Container(
-                                    width: 14,
-                                    height: 14,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Color(0xffD6D6D6)
+                                  Positioned(
+                                    left: 5,
+                                    child:  RotatedBox(
+                                      quarterTurns: 1,
+                                      child: Text(
+                                        "                                                  ",style: TextStyle(
+                                        decoration: TextDecoration.underline,
+                                        decorationStyle: TextDecorationStyle.dashed,
+                                      ),
+                                      ),
                                     ),
                                   ),
-                                  Container(
-                                      height: 56,
-                                      width: 27,
-                                      padding: EdgeInsets.all(0),
-                                      child:Stack(
-                                        children: [
-                                          Positioned(
-                                            left: 0,right: 0,
-                                            bottom: 0,
-                                            top: 0,
-                                            child: RotatedBox(
-                                              quarterTurns: 1,
-                                              child: Text(
-                                                "                     ",style: TextStyle(
-                                                decoration: TextDecoration.underline,
-                                                decorationStyle: TextDecorationStyle.dashed,
-                                              ),
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                  ),
-                                  Container(
-                                    width: 14,
-                                    height: 14,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Color(0xffD6D6D6)
+                                  Positioned(
+                                    child: Container(
+                                      width: 14,
+                                      height: 14,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xffD6D6D6)
+                                      ),
                                     ),
                                   ),
-                                  Container(
-                                      height: 56,
-                                      width: 27,
-                                      padding: EdgeInsets.all(0),
-                                      child:Stack(
-                                        children: [
-                                          Positioned(
-                                            left: 0,right: 0,
-                                            bottom: 0,
-                                            top: 0,
-                                            child: RotatedBox(
-                                              quarterTurns: 1,
-                                              child: Text(
-                                                "                     ",style: TextStyle(
-                                                decoration: TextDecoration.underline,
-                                                decorationStyle: TextDecorationStyle.dashed,
-                                              ),
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      )
-                                  ),
-                                  Container(
-                                    width: 14,
-                                    height: 14,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Color(0xffE6332A)
+                                  Positioned(
+                                    top: 70,
+                                    child: Container(
+                                      width: 14,
+                                      height: 14,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xffD6D6D6)
+                                      ),
                                     ),
                                   ),
+                                  Positioned(
+                                    bottom: 0,
+                                    child: Container(
+                                      width: 14,
+                                      height: 14,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Color(0xffE6332A)
+                                      ),
+                                    ),
+                                  ),
+
                                 ],
                               ),
                             ),
+                            SizedBox(width: 19,),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
+                                  height: 42,
                                   margin: EdgeInsets.only(
-                                      bottom: 35
+                                      bottom: 28
                                   ),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -306,8 +281,9 @@ class SearchTrackNumber extends StatelessWidget{
                                   ),
                                 ),
                                 Container(
+                                  height: 42,
                                   margin: EdgeInsets.only(
-                                      bottom: 35
+                                      bottom: 28
                                   ),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -334,7 +310,7 @@ class SearchTrackNumber extends StatelessWidget{
                                 ),
                                 Container(
                                   margin: EdgeInsets.only(
-                                      bottom: 35
+                                      bottom: 28
                                   ),
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,

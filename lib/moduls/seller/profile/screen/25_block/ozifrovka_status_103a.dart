@@ -9,7 +9,7 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 class OzifrovkaStatusScreen103a extends StatelessWidget{
   bool? bottom;
 
-  var images=[];
+  var images=["DSC_0840 2.png"];
   OzifrovkaStatusScreen103a({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
@@ -114,7 +114,7 @@ class OzifrovkaStatusScreen103a extends StatelessWidget{
                     right: 20,
                   ),
                   child: Text(
-                    "Статус: Принято",
+                    "Статус: Отказ",
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 12,
@@ -310,6 +310,77 @@ class OzifrovkaStatusScreen103a extends StatelessWidget{
                               disabledBorder: InputBorder.none,
                             ),
                           )
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                      top: 21,
+                      left: 20,
+                      right: 20
+                  ),
+                  child:Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Вид",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                            color: Color(0xff2e2e33),
+                            fontFamily: "Roboto"
+                        ),
+                      ),
+                      SizedBox(height: 7,),
+                      Container(
+                        height: 50,
+                        width: Get.width-40,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(
+                                width: 1,
+                                color: Color(0xffD6D6D6)
+                            )
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20,
+                              ),
+                              child: Text(
+                                "Грузовые",
+                                style: TextStyle(
+                                    color: Color(0xff2e2e33),
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w400,
+                                    fontFamily: "Roboto"
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.only(
+                                      bottomRight: Radius.circular(6),
+                                      topRight: Radius.circular(6)
+                                  ),
+                                  color: Color(0xffF3F3F3)
+
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.keyboard_arrow_down_sharp,
+                                  color: Color(0xff959595),
+                                ),
+                              ),
+                            )
+
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -977,8 +1048,8 @@ class OzifrovkaStatusScreen103a extends StatelessWidget{
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(6),
                                                     image: DecorationImage(
-                                                        image: FileImage(
-                                                            new File(el)
+                                                        image: AssetImage(
+                                                            "assets/image/${el}"
                                                         ),fit: BoxFit.fill
                                                     )
                                                 ),

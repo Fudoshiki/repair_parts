@@ -2502,9 +2502,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "Деловые линии",
                                               style: TextStyle(
@@ -2553,9 +2552,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "Энергия",
                                               style: TextStyle(
@@ -2604,9 +2602,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "Байкал-Сервис",
                                               style: TextStyle(
@@ -2655,9 +2652,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "GTD",
                                               style: TextStyle(
@@ -2706,9 +2702,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "Почта России",
                                               style: TextStyle(
@@ -2757,9 +2752,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "CDEK",
                                               style: TextStyle(
@@ -2808,9 +2802,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                                 Get.forceAppUpdate();
                                               },
                                             ),
-                                            SizedBox(
-                                              width: 30,
-                                            ),
+                                            SizedBox(width: 22,),
+
                                             Text(
                                               "ПЭК",
                                               style: TextStyle(
@@ -2826,7 +2819,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           height: 20,
                                         ),
                                       ]
-                                  ):Column(
+                                  )
+                                      :Column(
                                       children:[
                                         Container(
                                           margin: EdgeInsets.only(
@@ -2835,13 +2829,13 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           child: Row(
                                             children: [
                                               Container(
-                                                width: 40,
-                                                height: 40,
+                                                width: 30,
+                                                height: 30,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xffF3F3F3),
                                                   borderRadius: BorderRadius.circular(4),
                                                 ),
-                                                padding: EdgeInsets.all(12),
+                                                padding: EdgeInsets.all(10),
                                                 child: Image.asset("assets/image/done.png",color: Color(0xff959595),),
                                               ),
                                               SizedBox(width: 22,),
@@ -2865,13 +2859,13 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           child: Row(
                                             children: [
                                               Container(
-                                                width: 40,
-                                                height: 40,
+                                                width: 30,
+                                                height: 30,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xffF3F3F3),
                                                   borderRadius: BorderRadius.circular(4),
                                                 ),
-                                                padding: EdgeInsets.all(12),
+                                                padding: EdgeInsets.all(10),
                                                 child: Image.asset("assets/image/done.png",color: Color(0xff959595),),
                                               ),
                                               SizedBox(width: 22,),
@@ -2894,13 +2888,13 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           child: Row(
                                             children: [
                                               Container(
-                                                width: 40,
-                                                height: 40,
+                                                width: 30,
+                                                height: 30,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xffF3F3F3),
                                                   borderRadius: BorderRadius.circular(4),
                                                 ),
-                                                padding: EdgeInsets.all(12),
+                                                padding: EdgeInsets.all(10),
                                                 child: Image.asset("assets/image/done.png",color: Color(0xff959595),),
                                               ),
                                               SizedBox(width: 22,),
@@ -2923,13 +2917,13 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                           child: Row(
                                             children: [
                                               Container(
-                                                width: 40,
-                                                height: 40,
+                                                width: 30,
+                                                height: 30,
                                                 decoration: BoxDecoration(
                                                   color: Color(0xffF3F3F3),
                                                   borderRadius: BorderRadius.circular(4),
                                                 ),
-                                                padding: EdgeInsets.all(12),
+                                                padding: EdgeInsets.all(10),
                                                 child: Image.asset("assets/image/done.png",color: Color(0xff959595),),
                                               ),
                                               SizedBox(width: 22,),

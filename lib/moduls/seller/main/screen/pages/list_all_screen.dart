@@ -81,6 +81,8 @@ import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/regis
 import 'package:repair_parts/moduls/seller/profile/screen/rewards_calculator.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/search_track_number.dart';
 
+import '../../../product_seller_screen.dart';
+
 class ListAllScreenSeller extends StatelessWidget{
 
   @override
@@ -1151,6 +1153,37 @@ class ListAllScreenSeller extends StatelessWidget{
             ),
             onTap:(){
               Get.to(ProductChange(bottom: true,));
+            },
+          ),
+          //13
+          GestureDetector(
+            child: Container(
+                decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Colors.black,
+                        width: 1
+                    ),
+                    color: Color(0xffE19999)
+                ),
+                padding: EdgeInsets.only(
+                    left: 20
+                ),
+                height: 60,
+                width: Get.width,
+                child: Row(
+                  children: [
+                    Text(
+                      "Screens  13",
+                      style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w700
+                      ),
+                    ),
+                  ],
+                )
+            ),
+            onTap:(){
+              Get.to(ProductScreenSeller2(bottom: true,));
             },
           ),
           //14a

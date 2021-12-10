@@ -168,12 +168,10 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
           Expanded(
             child: ListView(
               children: [
-
                 Container(
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 20
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -408,7 +406,7 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                                     "3",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 13,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.w600,
                                         fontFamily: "Roboto"
                                     ),
