@@ -284,7 +284,7 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 35
+                      top: 19
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -314,7 +314,7 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                   margin: EdgeInsets.only(
                       left: 20,
                       right: 20,
-                      top: 35
+                      top: 25
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -489,6 +489,11 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                                 fontFamily: "Roboto"
                             ),
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "Телефон организации",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
@@ -527,6 +532,11 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                             onTap: (){
                             },
                             decoration: InputDecoration(
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               hintText: "E-mail продавца",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
