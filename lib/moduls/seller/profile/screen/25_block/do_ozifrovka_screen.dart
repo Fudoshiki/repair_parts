@@ -9,7 +9,7 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 class DoOzifrovkaScreen extends StatelessWidget{
   bool? bottom;
 
-  var images=[];
+  var images=["DSC_0840 2.png"];
   DoOzifrovkaScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
@@ -968,8 +968,8 @@ class DoOzifrovkaScreen extends StatelessWidget{
                                                 decoration: BoxDecoration(
                                                     borderRadius: BorderRadius.circular(6),
                                                     image: DecorationImage(
-                                                        image: FileImage(
-                                                            new File(el)
+                                                        image: AssetImage(
+                                                            "assets/image/${el}"
                                                         ),fit: BoxFit.fill
                                                     )
                                                 ),
