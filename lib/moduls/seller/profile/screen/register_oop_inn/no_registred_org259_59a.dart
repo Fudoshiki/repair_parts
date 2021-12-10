@@ -110,7 +110,6 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 50,
@@ -361,7 +360,6 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 48,
@@ -390,7 +388,7 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                               fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
-                              hintText: "Фамилия",
+                              hintText: "Телефон организации",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -398,6 +396,11 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -442,7 +445,7 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                               fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
-                              hintText: "Фамилия",
+                              hintText: "E-mail организации",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -450,6 +453,11 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -489,7 +497,6 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 48,
@@ -518,7 +525,12 @@ class NORegistredOrgScreen259_59a extends StatelessWidget{
                               fontFamily: "Roboto",
                             ),
                             decoration: InputDecoration(
-                              hintText: "Фамилия",
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
+                              hintText: "",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,

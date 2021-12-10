@@ -111,7 +111,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                             fontFamily: "Roboto"
                         ),
                       ),
-                      SizedBox(height: 7,),
                       Container(
                           margin: EdgeInsets.only(top: 8),
                           height: 50,
@@ -390,6 +389,11 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -443,6 +447,11 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
@@ -511,7 +520,6 @@ class NORegistredOrgScreen2 extends StatelessWidget{
 
                             ),
                             decoration: InputDecoration(
-                              hintText: "Фамилия",
                               hintStyle: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -519,6 +527,11 @@ class NORegistredOrgScreen2 extends StatelessWidget{
                                   fontFamily: "Roboto"
 
                               ),
+                              contentPadding:EdgeInsets.only(
+                                  top: 15,
+                                  bottom: 15
+                              ),
+                              isDense: true,
                               labelStyle: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 12,
