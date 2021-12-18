@@ -8,6 +8,8 @@ import 'package:google_maps_webservice/places.dart';
 
 class AddAddress extends StatelessWidget{
   CatalogController _catalogController =Get.find();
+
+  var controller =new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +62,7 @@ class AddAddress extends StatelessWidget{
                   zoomControlsEnabled: false,
                 ),
                 Positioned(
-                  bottom: 45,
+                  bottom: 14,
                   left: 20,
                   right: 20,
                   child: Obx(
@@ -76,25 +78,74 @@ class AddAddress extends StatelessWidget{
                                     ),
                                     color: Colors.white
                                 ),
-                                padding: EdgeInsets.only(
-                                  right: 20,
-                                  left: 20,
-                                  top: 10,
-                                  bottom: 10
-                                ),
+
                                 width: Get.width-40,
-                                child:_catalogController.chooseAddress.value=="Введите адрес"?
-                                Text("Введите адрес",style:TextStyle(
-                                    color: Color(0xff959595),
+                                height: 40,
+                                child:TextField(
+                                    onTap: ()async{
+
+                                      // var p = await PlacesAutocomplete.show(
+                                      //   context: context,
+                                      //   apiKey: "AIzaSyAdrvzWxI1LE3OjiN1uv7J2b7I_1DEavLA",
+                                      //   mode: Mode.fullscreen,
+                                      //   types: [''],
+                                      //   language: "fr",
+                                      //   strictbounds: false,
+                                      //   components: [
+                                      //     Component(Component.country, "ua"),
+                                      //     Component(Component.country, "ru")
+                                      //   ],
+                                      // );
+                                      // if (p != null) {
+                                      //   // get detail (lat/lng)
+                                      //   GoogleMapsPlaces _places = GoogleMapsPlaces(
+                                      //     apiKey: "AIzaSyAdrvzWxI1LE3OjiN1uv7J2b7I_1DEavLA",
+                                      //   );
+                                      //   PlacesDetailsResponse detail = await _places.getDetailsByPlaceId(p.placeId.toString());
+                                      //   final lat = detail.result.geometry;
+                                      //   if(lat !=null){
+                                      //     final location = lat.location;
+                                      //     print(location);
+                                      //   }
+                                      //   _catalogController.chooseAddress.value=p.description.toString();
+                                      //   print(p.description);
+                                      // }
+
+                                    },
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w400,
                                     fontSize: 14,
+                                    color: Color(0xff2e2e33),
                                     fontFamily: "Roboto",
-                                    fontWeight: FontWeight.w400
-                                ),):Text("${_catalogController.address.value}",style:TextStyle(
-                                    color: Color(0xff2E2E33),
-                                    fontSize: 14,
-                                    fontFamily: "Roboto",
-                                    fontWeight: FontWeight.w400
-                                ),)
+
+                                  ),
+                                  controller: controller,
+                                  onChanged: (t){
+                                      Get.forceAppUpdate();
+                                  },
+                                  decoration: InputDecoration(
+                                    contentPadding: EdgeInsets.only(
+                                      left: 20,
+                                      top: 12,
+                                      bottom: 7
+                                    ),
+                                    isDense: true,
+                                    hintText: "Введите адрес",
+                                    hintStyle: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 14,
+                                      color: Color(0xff959595),
+                                      fontFamily: "Roboto",
+
+                                    ),
+                                    enabledBorder: InputBorder.none,
+                                    border: InputBorder.none,
+                                    focusedErrorBorder: InputBorder.none,
+                                    focusedBorder: InputBorder.none,
+                                    errorBorder: InputBorder.none,
+                                    disabledBorder: InputBorder.none,
+                                  ),
+                                )
                               // TextField(
                               //                   decoration: InputDecoration(
                               //                     hintText: "Введите адрес",
@@ -113,41 +164,12 @@ class AddAddress extends StatelessWidget{
                               //                   ),
                               //                 ),
                             ),
-                            onTap: ()async{
 
-                              var p = await PlacesAutocomplete.show(
-                                context: context,
-                                apiKey: "AIzaSyAdrvzWxI1LE3OjiN1uv7J2b7I_1DEavLA",
-                                mode: Mode.fullscreen,
-                                types: [''],
-                                language: "fr",
-                                strictbounds: false,
-                                components: [
-                                  Component(Component.country, "ua"),
-                                  Component(Component.country, "ru")
-                                ],
-                              );
-                              if (p != null) {
-                                // get detail (lat/lng)
-                                GoogleMapsPlaces _places = GoogleMapsPlaces(
-                                  apiKey: "AIzaSyAdrvzWxI1LE3OjiN1uv7J2b7I_1DEavLA",
-                                );
-                                PlacesDetailsResponse detail = await _places.getDetailsByPlaceId(p.placeId.toString());
-                                final lat = detail.result.geometry;
-                                if(lat !=null){
-                                  final location = lat.location;
-                                  print(location);
-                                }
-                                _catalogController.chooseAddress.value=p.description.toString();
-                                print(p.description);
-                              }
-
-                            },
                           ),
                           SizedBox(
                             height: 8,
                           ),
-                          GestureDetector(
+                          controller.text!=""?GestureDetector(
                             child: Container(
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(6),
@@ -191,7 +213,7 @@ class AddAddress extends StatelessWidget{
                               Get.back();
 
                             },
-                          )
+                          ):Container()
 
                         ],
                       )

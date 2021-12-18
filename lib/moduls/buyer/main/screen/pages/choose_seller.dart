@@ -95,7 +95,7 @@ class ChooseSeller extends StatelessWidget{
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
                     ),
-                    height: 44,
+                    height: 31,
                     width: Get.width-106,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
@@ -106,9 +106,8 @@ class ChooseSeller extends StatelessWidget{
                         )
                     ),
                     padding: EdgeInsets.only(
-                        left: 20,right: 7,
-                        top: 7,
-                        bottom: 7
+                        bottom: 7,
+                        top: 7
                     ),
                     child: TextField(
                       enabled: false,
@@ -123,24 +122,28 @@ class ChooseSeller extends StatelessWidget{
                               fontFamily: "Roboto"
 
                           ),
+                        contentPadding: EdgeInsets.only(
+                            left: 20,
+                            right: 3,
+                            top: 3,
+                            bottom: 3
+
+                        ),
+                          isDense: true,
                           enabledBorder: InputBorder.none,
                           border: InputBorder.none,
                           focusedErrorBorder: InputBorder.none,
                           focusedBorder: InputBorder.none,
                           errorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
-                          suffixIcon: SizedBox(
-                            width: 13,
-                            height: 14,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                      image: AssetImage("assets/image/search_icon.png"),
-
-                                  )
-                              ),
+                          suffixIcon:  Container(
+                            width: 8,
+                            padding: EdgeInsets.only(
+                                right: 10,
+                                left: 10
                             ),
-                          )
+                            child: Image.asset("assets/image/search_icon.png"),
+                          ),
                       ),
                     )
                 ),

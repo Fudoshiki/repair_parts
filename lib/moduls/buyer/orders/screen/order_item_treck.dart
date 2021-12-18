@@ -1139,7 +1139,7 @@ class OrderItemTreck extends StatelessWidget{
                                     Row(
                                         children:[
                                           Text(
-                                            !openTrack? "Самовывоз":"Деловые линии",
+                                            "Деловые линии",
                                             style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 14,
