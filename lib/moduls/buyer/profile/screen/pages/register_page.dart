@@ -220,10 +220,9 @@ class RegisterPage extends StatelessWidget{
                               ),
                             )
                         ),
-                        onPressed: _profileController.numberValid.value?(){
-                          _profileController.opacity.value=1;
-                        }:(){
-
+                        onPressed: (){
+                        print(maskFormatter.getUnmaskedText());
+                          _profileController.getCode(maskFormatter.getUnmaskedText(),"customer",null);
                         }
                     ),
                 ),
@@ -262,7 +261,8 @@ class RegisterPage extends StatelessWidget{
                                       color: Color(0xffD6D6D6),
                                       width: 1
                                   )
-                              )
+                              ),
+                              color: Colors.white
                           ),
                           height: 15,
                           width:36 ,
@@ -277,7 +277,8 @@ class RegisterPage extends StatelessWidget{
                                       color: Color(0xffD6D6D6),
                                       width: 1
                                   )
-                              )
+                              ),
+                              color: Colors.white
                           ),
                           height: 15,
                           width:36 ,
@@ -292,7 +293,8 @@ class RegisterPage extends StatelessWidget{
                                       color: Color(0xffD6D6D6),
                                       width: 1
                                   )
-                              )
+                              ),
+                              color: Colors.white
                           ),
                           height: 15,
                           width:36 ,
@@ -307,7 +309,8 @@ class RegisterPage extends StatelessWidget{
                                       color: Color(0xffD6D6D6),
                                       width: 1
                                   )
-                              )
+                              ),
+                              color: Colors.white
                           ),
                           height: 15,
                           width:36 ,
@@ -322,7 +325,8 @@ class RegisterPage extends StatelessWidget{
                                       color: Color(0xffD6D6D6),
                                       width: 1
                                   )
-                              )
+                              ),
+                              color: Colors.white
                           ),
                           height: 15,
                           width:36 ,
@@ -337,7 +341,8 @@ class RegisterPage extends StatelessWidget{
                                       color: Color(0xffD6D6D6),
                                       width: 1
                                   )
-                              )
+                              ),
+                            color: Colors.white
                           ),
                           height: 15,
                           width:36 ,
@@ -355,12 +360,12 @@ class RegisterPage extends StatelessWidget{
                   height: 28,
                 ),
                 Obx(
-                    ()=>_profileController.opacity.value==1?Container(
+                    ()=>_profileController.start.value>0?Container(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                              "Новый код можно запросить через 00:30",
+                              "Новый код можно запросить через 00:${_profileController.start.value}",
                             style: TextStyle(
                               color: Color(0xff959595),
                               fontWeight: FontWeight.w600,

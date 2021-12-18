@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 import 'package:repair_parts/routes/app_pages.dart';
 
 class ProfilePage extends StatelessWidget{
@@ -12,7 +13,7 @@ class ProfilePage extends StatelessWidget{
   bool? bottom;
   ProfilePage({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-
+  ProfileController _profileController =Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -824,7 +825,7 @@ class ProfilePage extends StatelessWidget{
                                           ),
                                         ),
                                         onTap: (){
-                                          Get.back();
+                                          _profileController.exit();
                                         },
                                       ),
                                       GestureDetector(

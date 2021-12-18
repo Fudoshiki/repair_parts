@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 import 'moduls/buyer/catalog/controller/catalog_controller.dart';
 import 'moduls/buyer/main/controller/main_controller.dart';
@@ -14,15 +15,14 @@ import 'routes/app_pages.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   await GetStorage.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
-  // Get.put<LocaleController>(
-  //   LocaleController(),
-  //   permanent: true,
-  // );
+  Get.put<BackendController>(
+    BackendController(),
+    permanent: true,
+  );
   // Get.put<BackendController>(
   //   BackendController(),
   //   permanent: true,

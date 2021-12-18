@@ -87,7 +87,11 @@ class OtpCodePage extends StatelessWidget{
                               fontWeight: FontWeight.w700,
                               color: Color(0xff2E2E33)
                           ),
+
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(
+                                left: 13,right: 13
+                            ),
                             hintText: "D",
                             hintStyle: TextStyle(
                                 fontSize: 20,
@@ -127,6 +131,9 @@ class OtpCodePage extends StatelessWidget{
                               color: Color(0xff2E2E33)
                           ),
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(
+                                left: 13,right: 13
+                            ),
                             hintText: "D",
                             hintStyle: TextStyle(
                                 fontSize: 20,
@@ -186,6 +193,9 @@ class OtpCodePage extends StatelessWidget{
                               color: Color(0xff2E2E33)
                           ),
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(
+                                left: 13,right: 13
+                            ),
                             hintText: "M",
                             hintStyle: TextStyle(
                                 fontSize: 20,
@@ -231,6 +241,9 @@ class OtpCodePage extends StatelessWidget{
                               color: Color(0xff2E2E33)
                           ),
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(
+                                left: 13,right: 13
+                            ),
                             hintText: "M",
                             hintStyle: TextStyle(
                                 fontSize: 18,
@@ -276,6 +289,9 @@ class OtpCodePage extends StatelessWidget{
                               color: Color(0xff2E2E33)
                           ),
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(
+                                left: 13,right: 13
+                            ),
                             hintText: "Y",
                             hintStyle: TextStyle(
                                 fontSize: 20,
@@ -313,6 +329,12 @@ class OtpCodePage extends StatelessWidget{
                               }
                             }
                             year2=controllerYear2.text;
+                            _profileController.getCode(
+                                _profileController.phones,
+                                "customer",
+                                controllerDay1.text+controllerDay2.text+controllerMonth1.text +
+                                controllerMonth2.text+controllerYear1.text+controllerYear2.text
+                            );
 
                           },
                           style: TextStyle(
@@ -321,6 +343,9 @@ class OtpCodePage extends StatelessWidget{
                               color: Color(0xff2E2E33)
                           ),
                           decoration: InputDecoration(
+                            contentPadding: EdgeInsets.only(
+                                left: 13,right: 13
+                            ),
                             hintText: "Y",
                             hintStyle: TextStyle(
                                 fontSize: 20,
@@ -346,22 +371,24 @@ class OtpCodePage extends StatelessWidget{
                 SizedBox(
                   height: 28,
                 ),
-                Container(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Новый код можно запросить через 00:30",
-                          style: TextStyle(
-                              color: Color(0xff959595),
-                              fontWeight: FontWeight.w600,
-                              fontSize: 14,
-                              fontFamily: "Roboto"
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
+                Obx(
+                    ()=>Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Новый код можно запросить через 00:${_profileController.start.value}",
+                            style: TextStyle(
+                                color: Color(0xff959595),
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14,
+                                fontFamily: "Roboto"
+                            ),
+                          )
+                        ],
+                      ),
+                    )
+                ),
                 SizedBox(
                   height: 25,
                 ),
