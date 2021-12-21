@@ -206,7 +206,7 @@ class CatalogItemState extends State<CatalogItems>{
                     if(
                     widget.onTap
                     ){
-                      Get.to(ListItems(el));
+                      Get.to(()=>ListItems(el));
                     }else{
                       _catalogController.chooseCategory.value=el;
                       _mainController.controllerMainPage.jumpToPage(1);

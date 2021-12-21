@@ -15,8 +15,9 @@ class EditCompanyScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -770,7 +771,7 @@ class EditCompanyScreen extends StatelessWidget{
                         width: (Get.width-50)/2,
                         child: Center(
                           child: Text(
-                            "Редактировать",
+                            "Сохранить",
                             style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,

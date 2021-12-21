@@ -10,9 +10,12 @@ import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/choose_region.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/choose_seller.dart';
 import 'package:repair_parts/moduls/buyer/message/screen/message_screen.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/history_orders.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/no_history_order.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_screen2.dart';
 import 'package:repair_parts/moduls/buyer/product/screen/product_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen2.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen.dart';
@@ -32,7 +35,7 @@ class MainScreen extends StatefulWidget{
 class MainScreenState extends State<MainScreen>{
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
   MainController _mainController =Get.find();
-
+  ProfileController profileController =Get.put(ProfileController());
 
   @override
   void initState() {
@@ -49,25 +52,9 @@ class MainScreenState extends State<MainScreen>{
           ChooseSeller(),
         ],
       ),
-      PageView(
-        physics :NeverScrollableScrollPhysics(),
-        controller: _mainController.controllerOrderPage,
-        children: [
-          OrderScreen(),
-          OrderScreen2()
-        ],
-      ),
-      PageView(
-        physics :NeverScrollableScrollPhysics(),
-        controller: _mainController.controllerBacketPage,
-        children: [
-          BacketScreen2(),
-          ChooseRegion(),
-          ChooseSeller(),
-          DoneQuery(),
-          BacketScreen(),
-        ],
-      ),
+      profileController.dataOrders.count==0?NoHistoryOrderScreen():HistoryOrdersScreen(),
+      profileController.dataProfile!.user!.cartProducts!.length==0?NoProductInBacketScreen():BacketScreen(),
+
       MessageScreen(),
       PageView(
         physics :NeverScrollableScrollPhysics(),
@@ -91,7 +78,7 @@ class MainScreenState extends State<MainScreen>{
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: SizedBox(
-        height: 50,
+        height: 70,
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(

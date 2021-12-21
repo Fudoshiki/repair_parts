@@ -11,8 +11,8 @@ class NoFavoriteScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -23,7 +23,7 @@ class NoFavoriteScreen extends StatelessWidget{
             backgroundColor: Colors.white,
             items: [
               _bottomNavigationitem.showItem(
-                true,
+                false,
                 "home_icon.png",
                 18,
                 text: "Главная",
@@ -49,7 +49,7 @@ class NoFavoriteScreen extends StatelessWidget{
 
               ),
               _bottomNavigationitem.showItem(
-                false,
+                true,
                 "profile_icon.png",
                 18,
                 text: "Кабинет",

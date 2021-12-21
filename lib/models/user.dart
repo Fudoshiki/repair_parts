@@ -1,3 +1,5 @@
+import 'cart_products.dart';
+import 'favorite_product.dart';
 import 'roles.dart';
 
 class User {
@@ -8,18 +10,23 @@ class User {
   String? firstname;
   String? lastname;
   String? middlename;
-  String? bannedUntil;
-  String? avatar;
+  dynamic bannedUntil;
+  dynamic avatar;
   String? phoneVerificationDate;
-  String? emailVerificationDate;
-  double? ratingValue;
-  String? addressId;
-  String? sellerConfirmationDate;
-  double? salesNumber;
+  dynamic emailVerificationDate;
+  dynamic ratingValue;
+  dynamic addressId;
+  dynamic sellerConfirmationDate;
+  dynamic salesNumber;
   String? createdAt;
   String? updatedAt;
-  String? deletedAt;
+  dynamic deletedAt;
   List<Roles>? roles;
+  List<FavoriteProducts>? favoriteProducts;
+  List<CartProducts>? cartProducts;
+  List<dynamic>? sellers;
+  List<dynamic>? sellerRegisterFiles;
+  List<dynamic>? createdOrganizations;
 
   User({
     this.id,
@@ -41,6 +48,11 @@ class User {
     this.updatedAt,
     this.deletedAt,
     this.roles,
+    this.favoriteProducts,
+    this.cartProducts,
+    this.sellers,
+    this.sellerRegisterFiles,
+    this.createdOrganizations,
   });
 
   User.fromJson(Map<String, dynamic> json) {
@@ -51,18 +63,23 @@ class User {
     firstname = json['firstname'] as String?;
     lastname = json['lastname'] as String?;
     middlename = json['middlename'] as String?;
-    bannedUntil = json['bannedUntil'] as String?;
-    avatar = json['avatar'] as String?;
+    bannedUntil = json['bannedUntil'];
+    avatar = json['avatar'];
     phoneVerificationDate = json['phoneVerificationDate'] as String?;
-    emailVerificationDate = json['emailVerificationDate'] as String?;
-    ratingValue = json['ratingValue'] as double?;
-    addressId = json['addressId'] as String?;
-    sellerConfirmationDate = json['sellerConfirmationDate'] as String?;
-    salesNumber = json['salesNumber'] as double?;
+    emailVerificationDate = json['emailVerificationDate'];
+    ratingValue = json['ratingValue'];
+    addressId = json['addressId'];
+    sellerConfirmationDate = json['sellerConfirmationDate'];
+    salesNumber = json['salesNumber'];
     createdAt = json['createdAt'] as String?;
     updatedAt = json['updatedAt'] as String?;
-    deletedAt = json['deletedAt'] as String?;
+    deletedAt = json['deletedAt'];
     roles = (json['roles'] as List?)?.map((dynamic e) => Roles.fromJson(e as Map<String,dynamic>)).toList();
+    favoriteProducts = (json['favoriteProducts'] as List?)?.map((dynamic e) => FavoriteProducts.fromJson(e as Map<String,dynamic>)).toList();
+    cartProducts = (json['cartProducts'] as List?)?.map((dynamic e) => CartProducts.fromJson(e as Map<String,dynamic>)).toList();
+    sellers = json['sellers'] as List?;
+    sellerRegisterFiles = json['sellerRegisterFiles'] as List?;
+    createdOrganizations = json['createdOrganizations'] as List?;
   }
 
   Map<String, dynamic> toJson() {
@@ -86,6 +103,14 @@ class User {
     json['updatedAt'] = updatedAt;
     json['deletedAt'] = deletedAt;
     json['roles'] = roles?.map((e) => e.toJson()).toList();
+    json['favoriteProducts'] = favoriteProducts?.map((e) => e.toJson()).toList();
+    json['cartProducts'] = cartProducts?.map((e) => e.toJson()).toList();
+    json['sellers'] = sellers;
+    json['sellerRegisterFiles'] = sellerRegisterFiles;
+    json['createdOrganizations'] = createdOrganizations;
     return json;
   }
 }
+
+
+

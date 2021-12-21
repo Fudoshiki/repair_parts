@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_google_places/flutter_google_places.dart';
 import 'package:get/get.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:repair_parts/moduls/buyer/catalog/controller/catalog_controller.dart';
 import 'package:google_maps_webservice/places.dart';
 
@@ -54,13 +53,13 @@ class AddAddress extends StatelessWidget{
           Expanded(
             child: Stack(
               children: [
-                GoogleMap(
-                  initialCameraPosition: CameraPosition(
-                      target: LatLng(0.0,0.0),
-                      zoom: 14
-                  ),
-                  zoomControlsEnabled: false,
-                ),
+                // GoogleMap(
+                //   initialCameraPosition: CameraPosition(
+                //       target: LatLng(0.0,0.0),
+                //       zoom: 14
+                //   ),
+                //   zoomControlsEnabled: false,
+                // ),
                 Positioned(
                   bottom: 14,
                   left: 20,

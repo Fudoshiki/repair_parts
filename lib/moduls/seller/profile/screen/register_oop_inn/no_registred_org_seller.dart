@@ -27,8 +27,9 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -1615,7 +1616,7 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(ChooseCategorySeller(bottom: true,));
+                    Get.to(()=>ChooseCategorySeller(bottom: true,));
                   },
                 ),
                 GestureDetector(
@@ -1643,7 +1644,7 @@ class NORegistredOrgScreenSeller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(DoneSubmit(bottom: true,));
+                    Get.to(()=>DoneSubmit(bottom: true,));
                   },
                 ),
 

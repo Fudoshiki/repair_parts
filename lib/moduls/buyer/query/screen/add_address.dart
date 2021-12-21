@@ -2,17 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_google_places/flutter_google_places.dart';
 import 'package:get/get.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/places.dart';
 
 class Address extends StatelessWidget{
 
-  Set<Marker> _markes = {
-    new Marker(
-      markerId: MarkerId("123"),
-    position: LatLng(59.837462, 30.510724)
-    )
-  };
+  // Set<Marker> _markes = {
+  //   new Marker(
+  //     markerId: MarkerId("123"),
+  //   position: LatLng(59.837462, 30.510724)
+  //   )
+  // };
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,14 +56,14 @@ class Address extends StatelessWidget{
           Expanded(
             child: Stack(
               children: [
-                GoogleMap(
-                  markers: _markes,
-                  initialCameraPosition: CameraPosition(
-                      target: LatLng(59.837462, 30.510724),
-                      zoom: 14
-                  ),
-                  zoomControlsEnabled: false,
-                ),
+                // GoogleMap(
+                //   markers: _markes,
+                //   initialCameraPosition: CameraPosition(
+                //       target: LatLng(59.837462, 30.510724),
+                //       zoom: 14
+                //   ),
+                //   zoomControlsEnabled: false,
+                // ),
                 Positioned(
                   bottom: 45,
                   left: 20,

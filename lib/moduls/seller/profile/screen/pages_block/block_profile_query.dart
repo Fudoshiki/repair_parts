@@ -18,8 +18,9 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -346,7 +347,7 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(BlockQueryScreen());
+                    Get.to(()=>BlockQueryScreen());
                   },
                 ),
 
@@ -777,7 +778,7 @@ class ProfileScreenBlockQuerySeller extends StatelessWidget{
                         ],
                       ),
                       onTap: (){
-                        Get.to(ListAllScreen());
+                        Get.to(()=>ListAllScreen());
                       },
                     )
                 ),

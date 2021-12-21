@@ -347,7 +347,7 @@ class RegisterPageSeller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(OtpCodePage());
+                    Get.to(()=>OtpCodePage());
                   },
                 ),
                 SizedBox(

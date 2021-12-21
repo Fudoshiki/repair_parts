@@ -1,0 +1,11 @@
+{
+    "user": "User",
+    "sellerRefundNumber?": 3,
+    "counters?": {
+      "orderRequestsCount": 3,
+      "ordersCount": 3,
+      "refundsCount": 2,
+      "receivedComplaintsCount": 2,
+      "sentComplaintsCount": 2,
+    }
+}

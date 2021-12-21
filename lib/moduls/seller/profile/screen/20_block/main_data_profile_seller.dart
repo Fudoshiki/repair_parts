@@ -87,8 +87,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: widget.bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: widget.bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -1987,7 +1987,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                           onTap: (){
                             open5=!open5;
                             Get.forceAppUpdate();
-                            // Get.to(ChooseCategorySeller());
+                            // Get.to(()=>ChooseCategorySeller());
                           },
                         ),
                       ],
@@ -2034,7 +2034,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                       )
                                   ),
                                   onTap: (){
-                                    Get.to(CardIPSellerScreen());
+                                    Get.to(()=>CardIPSellerScreen());
                                   },
                                 ),
                                 GestureDetector(
@@ -2070,7 +2070,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                                       )
                                   ),
                                   onTap: (){
-                                    Get.to(CardIPSellerScreen());
+                                    Get.to(()=>CardIPSellerScreen());
                                   },
                                 ),
 
@@ -2101,8 +2101,8 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                               ),
                             ),
                             onTap: (){
-                              Get.to(CreateOrganizationScreen());
-                              // Get.to(ChooseCategorySeller());
+                              Get.to(()=>CreateOrganizationScreen());
+                              // Get.to(()=>ChooseCategorySeller());
                             },
                           ),
 
@@ -2970,7 +2970,7 @@ class MainDataProfileState extends State<MainDataProfileSeller>{
                             onTap: (){
                               open6=!open6;
                               Get.forceAppUpdate();
-                              // Get.to(ChooseCategorySeller());
+                              // Get.to(()=>ChooseCategorySeller());
                             },
                           ),
 

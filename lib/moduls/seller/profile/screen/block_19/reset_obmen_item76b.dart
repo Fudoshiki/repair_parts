@@ -40,8 +40,8 @@ class ResetObmenItem76b extends StatelessWidget{
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-        bottomNavigationBar: bottom!=null?SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null?SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(

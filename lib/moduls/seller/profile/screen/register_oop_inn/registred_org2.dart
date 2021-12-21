@@ -1056,7 +1056,7 @@ class RegistredOrgScreen2Seller extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(NORegistredOrgScreen());
+                    Get.to(()=>NORegistredOrgScreen());
                   },
                 )
               //  NORegistredOrgScreen

@@ -41,8 +41,9 @@ class MainScreenSellerState extends State<MainScreenSeller>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: SizedBox(
-        height: 50,
+      bottomNavigationBar:         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(

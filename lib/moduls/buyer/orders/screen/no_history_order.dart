@@ -7,16 +7,16 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/orders/controller/order_controller.dart';
 
-class NoHistoryOrder extends StatelessWidget{
+class NoHistoryOrderScreen extends StatelessWidget{
   bool? bottom;
-  NoHistoryOrder({@required this.bottom});
+  NoHistoryOrderScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(

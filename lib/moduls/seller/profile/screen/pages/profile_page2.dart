@@ -17,8 +17,9 @@ class ProfilePageSeller2 extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -804,7 +805,7 @@ class ProfilePageSeller2 extends StatelessWidget{
                         ],
                       ),
                       onTap: (){
-                        Get.to(ListAllScreen());
+                        Get.to(()=>ListAllScreen());
                       },
                     )
                 ),

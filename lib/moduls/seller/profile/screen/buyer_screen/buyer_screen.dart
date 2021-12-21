@@ -18,8 +18,9 @@ class BuyerScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -560,7 +561,7 @@ class BuyerScreen extends StatelessWidget{
                           ),
                         ),
                         onTap: (){
-                          Get.to(CardIPScreenBuyer(bottom: true));
+                          Get.to(()=>CardIPScreenBuyer(bottom: true));
 
                         },
                       ),
@@ -601,7 +602,7 @@ class BuyerScreen extends StatelessWidget{
                           ),
                         ),
                         onTap: (){
-                          Get.to(CardOOOScreenBuyer(bottom: true));
+                          Get.to(()=>CardOOOScreenBuyer(bottom: true));
 
                         },
                       ),
@@ -640,7 +641,7 @@ class BuyerScreen extends StatelessWidget{
               ),
             ),
             onTap: (){
-              Get.to(BuyerSendFeedback(bottom: true));
+              Get.to(()=>BuyerSendFeedback(bottom: true));
             },
           )
 

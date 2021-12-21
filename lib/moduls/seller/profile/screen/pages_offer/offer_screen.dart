@@ -26,8 +26,8 @@ class OfferScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return  Scaffold(
 
-        bottomNavigationBar: bottom!=null?SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null?SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -612,7 +612,7 @@ class OfferScreen extends StatelessWidget{
                                     child: Image.asset("assets/image/DSC_0211 2.png"),
                                   ),
                                   onTap: (){
-                                    Get.to(FullScreenImage());
+                                    Get.to(()=>FullScreenImage());
                                   },
                                 ),
                                 Column(
@@ -1050,7 +1050,7 @@ class OfferScreen extends StatelessWidget{
                                     child: Image.asset("assets/image/DSC_0211 2.png"),
                                   ),
                                   onTap: (){
-                                    Get.to(FullScreenImage());
+                                    Get.to(()=>FullScreenImage());
                                   },
                                 ),
                                 Column(
@@ -1689,7 +1689,7 @@ class OfferScreen extends StatelessWidget{
                                                       ),
                                                     ),
                                                     onTap: (){
-                                                      Get.to(FullScreenImage());
+                                                      Get.to(()=>FullScreenImage());
                                                     },
                                                   ),
                                                   GestureDetector(
@@ -1717,7 +1717,7 @@ class OfferScreen extends StatelessWidget{
                                                       ),
                                                     ),
                                                     onTap: (){
-                                                      Get.to(FullScreenImage());
+                                                      Get.to(()=>FullScreenImage());
                                                     },
                                                   )
                                                 ],

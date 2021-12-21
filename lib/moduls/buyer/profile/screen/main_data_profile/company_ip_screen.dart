@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/models/rows_companies.dart';
 
 import 'edit_company_screen.dart';
 
@@ -12,13 +13,15 @@ class CompanyIPScreen extends StatelessWidget{
   bool open2 =false;
   bool open3=false;
   bool open4=false;
-  CompanyIPScreen({@required this.bottom});
+  RowsCompanies companies;
+  CompanyIPScreen(this.companies,{@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -792,7 +795,7 @@ class CompanyIPScreen extends StatelessWidget{
                           ),
                         ),
                         onTap: (){
-                          Get.to(EditCompanyScreen());
+                          Get.to(()=>EditCompanyScreen());
                         },
                       ),
                       SizedBox(

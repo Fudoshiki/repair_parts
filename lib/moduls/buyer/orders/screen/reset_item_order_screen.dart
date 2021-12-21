@@ -34,8 +34,8 @@ class ResetItemOrderScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return  Scaffold(
 
-        bottomNavigationBar: bottom!=null?SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null?SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -935,7 +935,7 @@ class ResetItemOrderScreen extends StatelessWidget{
 
                                     GestureDetector(
                                       onTap:(){
-                                        Get.to(ObmenItemOrderScreen());
+                                        Get.to(()=>()=>ObmenItemOrderScreen());
                                       },
                                       child: Container(
                                           width: Get.width-40,
@@ -1266,7 +1266,7 @@ class ResetItemOrderScreen extends StatelessWidget{
                                             )
                                         ),
                                         onTap:(){
-                                          Get.to(ObmenItemOrderScreen(bottom: true));
+                                          Get.to(()=>ObmenItemOrderScreen(bottom: true));
                                         }
                                     ),
                                   ],

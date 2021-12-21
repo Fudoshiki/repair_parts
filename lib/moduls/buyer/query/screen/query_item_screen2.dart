@@ -23,8 +23,8 @@ class QueryItemScreen2 extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -455,7 +455,7 @@ class QueryItemScreen2 extends StatelessWidget{
                           )
                       ),
                       onTap: (){
-                        Get.to(Address());
+                        Get.to(()=>Address());
                       },
                     ),
                     Container(

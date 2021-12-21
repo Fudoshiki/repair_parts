@@ -12,7 +12,6 @@ import 'otp_code_page.dart';
 class RegisterPage extends StatelessWidget{
   ProfileController _profileController =Get.put(ProfileController());
 
-  RxBool seller=false.obs;
   var maskFormatter = new MaskTextInputFormatter(mask: '+ # (###) ###-##-##', filter: { "#": RegExp(r'[0-9]') });
   @override
   Widget build(BuildContext context) {
@@ -83,7 +82,7 @@ class RegisterPage extends StatelessWidget{
                               width: (Get.width-40)/2,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
-                                  color:seller.value?Color(0xffF3F3F3): Color(0xffE6332A)
+                                  color:_profileController.seller.value?Color(0xffF3F3F3): Color(0xffE6332A)
                               ),
                               padding: EdgeInsets.symmetric(
                                   horizontal: 20
@@ -95,7 +94,7 @@ class RegisterPage extends StatelessWidget{
                                       fontWeight: FontWeight.w700,
                                       fontFamily: "Roboto",
                                       fontSize: 12,
-                                      color:seller.value?Color(0xff717171):Colors.white
+                                      color:_profileController.seller.value?Color(0xff717171):Colors.white
                                   ),
                                 ),
                               )
@@ -105,7 +104,7 @@ class RegisterPage extends StatelessWidget{
                               width: (Get.width-40)/2,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(6),
-                                  color:!seller.value?Color(0xffF3F3F3): Color(0xffE6332A)
+                                  color:!_profileController.seller.value?Color(0xffF3F3F3): Color(0xffE6332A)
                               ),
                               padding: EdgeInsets.symmetric(
                                   horizontal: 20
@@ -117,7 +116,7 @@ class RegisterPage extends StatelessWidget{
                                       fontWeight: FontWeight.w700,
                                       fontFamily: "Roboto",
                                       fontSize: 12,
-                                      color:!seller.value?Color(0xff717171):Colors.white
+                                      color:!_profileController.seller.value?Color(0xff717171):Colors.white
                                   ),
                                 ),
                               )
@@ -126,7 +125,7 @@ class RegisterPage extends StatelessWidget{
                       ),
                     ),
                     onTap: (){
-                      seller.value=!seller.value;
+                      _profileController.seller.value=!_profileController.seller.value;
                     },
                   )
                 ),
@@ -222,7 +221,10 @@ class RegisterPage extends StatelessWidget{
                         ),
                         onPressed: (){
                         print(maskFormatter.getUnmaskedText());
-                          _profileController.getCode(maskFormatter.getUnmaskedText(),"customer",null);
+                          _profileController.getCode(
+                              maskFormatter.getUnmaskedText(),
+                              _profileController.seller.value?"seller":"customer",
+                              null);
                         }
                     ),
                 ),
@@ -353,7 +355,7 @@ class RegisterPage extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(OtpCodePage());
+                    Get.to(()=>OtpCodePage());
                   },
                 ),
                 SizedBox(

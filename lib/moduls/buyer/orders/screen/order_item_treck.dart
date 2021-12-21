@@ -26,8 +26,8 @@ class OrderItemTreck extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -909,7 +909,7 @@ class OrderItemTreck extends StatelessWidget{
                                                             ),
                                                           ),
                                                           onTap: (){
-                                                            Get.to(FullScreenImage());
+                                                            Get.to(()=>FullScreenImage());
                                                           },
                                                         ),
                                                         GestureDetector(
@@ -937,7 +937,7 @@ class OrderItemTreck extends StatelessWidget{
                                                             ),
                                                           ),
                                                           onTap: (){
-                                                            Get.to(FullScreenImage());
+                                                            Get.to(()=>FullScreenImage());
                                                           },
                                                         )
                                                       ],
@@ -1206,7 +1206,7 @@ class OrderItemTreck extends StatelessWidget{
                                                   ]
                                               ),
                                               onTap:(){
-                                                Get.to(TrackOrderScreen(bottom: true,));
+                                                Get.to(()=>TrackOrderScreen(bottom: true,));
                                               }
                                           ):Container()
                                         ]
@@ -2217,7 +2217,7 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                         onTap: (){
-                                                          Get.to(FullScreenImage());
+                                                          Get.to(()=>FullScreenImage());
                                                         },
                                                       ),
                                                       Container(
@@ -2258,7 +2258,7 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                         onTap: (){
-                                                          Get.to(FullScreenImage());
+                                                          Get.to(()=>FullScreenImage());
                                                         },
                                                       ),
                                                     ],
@@ -2348,7 +2348,7 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                         onTap: (){
-                                                          Get.to(FullScreenImage());
+                                                          Get.to(()=>FullScreenImage());
                                                         },
                                                       ),
                                                       GestureDetector(
@@ -2374,7 +2374,7 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                         onTap: (){
-                                                          Get.to(FullScreenImage());
+                                                          Get.to(()=>FullScreenImage());
                                                         },
                                                       ),
 
@@ -2416,7 +2416,7 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                         onTap: (){
-                                                          Get.to(FullScreenImage());
+                                                          Get.to(()=>FullScreenImage());
                                                         },
                                                       ),
                                                       Container(
@@ -2457,7 +2457,7 @@ class OrderItemTreck extends StatelessWidget{
                                                           ),
                                                         ),
                                                         onTap: (){
-                                                          Get.to(FullScreenImage());
+                                                          Get.to(()=>FullScreenImage());
                                                         },
                                                       ),
                                                     ],

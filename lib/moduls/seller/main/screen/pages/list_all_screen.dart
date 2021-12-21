@@ -139,7 +139,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CatalogScreenSeller(bottom: true,));
+              Get.to(()=>CatalogScreenSeller(bottom: true,));
 
             },
           ),
@@ -175,7 +175,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(InformationScreenSeller(bottom: true));
+              Get.to(()=>InformationScreenSeller(bottom: true));
 
             },
           ),
@@ -208,7 +208,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProfilePageSeller(bottom: true,));
+              Get.to(()=>ProfilePageSeller(bottom: true,));
 
             },
           ),
@@ -242,7 +242,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProfilePageSeller2(bottom: true,));
+              Get.to(()=>ProfilePageSeller2(bottom: true,));
 
             },
           ),
@@ -275,7 +275,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(RegisterPageSeller());
+              Get.to(()=>RegisterPageSeller());
 
             },
           ),
@@ -308,7 +308,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(QueryScreenSeller(bottom: true,));
+              Get.to(()=>QueryScreenSeller(bottom: true,));
 
             },
           ),
@@ -341,7 +341,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(QueryScreen2(bottom: true,));
+              Get.to(()=>QueryScreen2(bottom: true,));
 
             },
           ),
@@ -374,7 +374,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(QueryWithPhotoAndDesc(bottom: true,));
+              Get.to(()=>QueryWithPhotoAndDesc(bottom: true,));
 
             },
           ),
@@ -407,7 +407,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CatalogScreenSellerBack(bottom: true,));
+              Get.to(()=>CatalogScreenSellerBack(bottom: true,));
 
             },
           ),
@@ -440,7 +440,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ListItemsSeller("КАМАЗ",bottom: true,));
+              Get.to(()=>ListItemsSeller("КАМАЗ",bottom: true,));
 
             },
           ),
@@ -474,7 +474,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(SearchPageSeller(bottom: true,));
+              Get.to(()=>SearchPageSeller(bottom: true,));
 
             },
           ),
@@ -507,7 +507,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(RegistredOrgScreen());
+              Get.to(()=>RegistredOrgScreen());
 
             },
           ),
@@ -541,7 +541,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(RegistredOrgScreen2Seller());
+              Get.to(()=>RegistredOrgScreen2Seller());
 
             },
           ),
@@ -574,7 +574,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NORegistredOrgScreen2());
+              Get.to(()=>NORegistredOrgScreen2());
 
             },
           ),
@@ -608,7 +608,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NORegistredOrgScreen259_59a());
+              Get.to(()=>NORegistredOrgScreen259_59a());
 
             },
           ),
@@ -641,7 +641,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NORegistredOrgScreenSeller(bottom: true,));
+              Get.to(()=>NORegistredOrgScreenSeller(bottom: true,));
 
             },
           ),
@@ -675,7 +675,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NoSubmit(bottom: true,));
+              Get.to(()=>NoSubmit(bottom: true,));
 
             },
           ),
@@ -708,7 +708,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OfferSended(bottom: true,));
+              Get.to(()=>OfferSended(bottom: true,));
 
             },
           ),
@@ -744,7 +744,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OfferScreen(bottom: true,));
+              Get.to(()=>OfferScreen(bottom: true,));
             },
           ),
           //33с
@@ -779,7 +779,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OfferScreen2(bottom: true,));
+              Get.to(()=>OfferScreen2(bottom: true,));
             },
           ),
           //82
@@ -811,7 +811,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProfileScreenBlockSeller(bottom: true,));
+              Get.to(()=>ProfileScreenBlockSeller(bottom: true,));
             },
           ),
           //82а 82б
@@ -842,7 +842,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProfileScreenBlockQuerySeller(bottom: true,));
+              Get.to(()=>ProfileScreenBlockQuerySeller(bottom: true,));
             },
           ),
           // 85 85а 86 86а 86б 84
@@ -873,7 +873,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(BuyerScreen(bottom: true,));
+              Get.to(()=>BuyerScreen(bottom: true,));
             },
           ),
           //25 25а 25б 25в 25г
@@ -904,7 +904,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CreateOfferScreen(bottom: true,));
+              Get.to(()=>CreateOfferScreen(bottom: true,));
             },
           ),
           //3 3a
@@ -935,7 +935,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenSeller(bottom: true,));
+              Get.to(()=>OrderScreenSeller(bottom: true,));
             },
           ),
           //74
@@ -966,7 +966,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HistoryOrdersSeller(bottom: true,));
+              Get.to(()=>HistoryOrdersSeller(bottom: true,));
             },
           ),
           //75
@@ -997,7 +997,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NoHistoryOrderSeller(bottom: true,));
+              Get.to(()=>NoHistoryOrderSeller(bottom: true,));
             },
           ),
           //75а
@@ -1028,7 +1028,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HistoryOrderItemScreenSeller(bottom: true,));
+              Get.to(()=>HistoryOrderItemScreenSeller(bottom: true,));
             },
           ),
           //75в
@@ -1059,7 +1059,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HistoryOrderItemScreenSeller2(bottom: true,));
+              Get.to(()=>HistoryOrderItemScreenSeller2(bottom: true,));
             },
           ),
           //75б
@@ -1090,7 +1090,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HistoryOrderItemScreenSeller3(bottom: true,));
+              Get.to(()=>HistoryOrderItemScreenSeller3(bottom: true,));
             },
           ),
           //75г
@@ -1121,7 +1121,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HistoryOrderItemScreenSeller4(bottom: true,));
+              Get.to(()=>HistoryOrderItemScreenSeller4(bottom: true,));
             },
           ),
           //14
@@ -1152,7 +1152,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProductChange(bottom: true,));
+              Get.to(()=>ProductChange(bottom: true,));
             },
           ),
           //13
@@ -1183,7 +1183,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProductScreenSeller2(bottom: true,));
+              Get.to(()=>ProductScreenSeller2(bottom: true,));
             },
           ),
           //14a
@@ -1214,7 +1214,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProductChanged(bottom: true,));
+              Get.to(()=>ProductChanged(bottom: true,));
             },
           ),
           //40 41
@@ -1245,7 +1245,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(AttachTK(bottom: true,));
+              Get.to(()=>AttachTK(bottom: true,));
             },
           ),
           //28
@@ -1276,7 +1276,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem2ButtonSeller(bottom: true,));
+              Get.to(()=>OrderScreenItem2ButtonSeller(bottom: true,));
             },
           ),
           //29
@@ -1307,7 +1307,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller(bottom: true,));
             },
           ),
           //31
@@ -1338,7 +1338,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller31(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller31(bottom: true,));
             },
           ),
           // 31а
@@ -1369,7 +1369,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem2ButtonSeller31a(bottom: true,));
+              Get.to(()=>OrderScreenItem2ButtonSeller31a(bottom: true,));
             },
           ),
           // 31б
@@ -1400,7 +1400,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem2ButtonSeller31b(bottom: true,));
+              Get.to(()=>OrderScreenItem2ButtonSeller31b(bottom: true,));
             },
           ),
           // 33k
@@ -1431,7 +1431,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33k(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33k(bottom: true,));
             },
           ),
           // 33l
@@ -1462,7 +1462,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33l(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33l(bottom: true,));
             },
           ),
           // 33l2
@@ -1493,7 +1493,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33l2(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33l2(bottom: true,));
             },
           ),
           //28b 29в
@@ -1524,7 +1524,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem2ButtonSeller28b(bottom: true,));
+              Get.to(()=>OrderScreenItem2ButtonSeller28b(bottom: true,));
             },
           ),
           //29б
@@ -1555,7 +1555,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller29B(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller29B(bottom: true,));
             },
           ),
           //33о
@@ -1586,7 +1586,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33o(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33o(bottom: true,));
             },
           ),
           //33п
@@ -1617,7 +1617,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33p(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33p(bottom: true,));
             },
           ),
           //33ю
@@ -1648,7 +1648,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33u(bottom: true,));
             },
           ),
           //33ю
@@ -1679,7 +1679,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OrderScreenItem1ButtonSeller33u(bottom: true,));
+              Get.to(()=>OrderScreenItem1ButtonSeller33u(bottom: true,));
             },
           ),
           //94 95
@@ -1710,7 +1710,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ChooseCategorySeller(bottom: true,));
+              Get.to(()=>ChooseCategorySeller(bottom: true,));
             },
           ),
           //85в
@@ -1741,7 +1741,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(MainDataProfileChanged(bottom: true,));
+              Get.to(()=>MainDataProfileChanged(bottom: true,));
             },
           ),
           // 85 85а 91в 85б 86 86в 86а 86б 92 93 93а
@@ -1775,7 +1775,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(MainDataProfileSeller(bottom: true,));
+              Get.to(()=>MainDataProfileSeller(bottom: true,));
             },
           ),
           //104 104а
@@ -1806,7 +1806,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(RewardScreen(bottom: true,));
+              Get.to(()=>RewardScreen(bottom: true,));
             },
           ),
           //76
@@ -1837,7 +1837,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HistoryResetObmenSeller76(bottom: true,));
+              Get.to(()=>HistoryResetObmenSeller76(bottom: true,));
             },
           ),
           //76a
@@ -1868,7 +1868,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ResetObmenItem76a(bottom: true,));
+              Get.to(()=>ResetObmenItem76a(bottom: true,));
             },
           ),
           //76b
@@ -1899,7 +1899,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ResetObmenItem76b(bottom: true,));
+              Get.to(()=>ResetObmenItem76b(bottom: true,));
             },
           ),
           /////////
@@ -1931,7 +1931,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ResetWaitingScreen(bottom: true,));
+              Get.to(()=>ResetWaitingScreen(bottom: true,));
             },
           ),
           //77г
@@ -1962,7 +1962,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(DisagreeResetScreen(bottom: true,));
+              Get.to(()=>DisagreeResetScreen(bottom: true,));
             },
           ),
           //77д
@@ -1993,7 +1993,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(DoneResetScreen(bottom: true,));
+              Get.to(()=>DoneResetScreen(bottom: true,));
             },
           ),
           //77э
@@ -2024,7 +2024,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CloseResetScreen(bottom: true,));
+              Get.to(()=>CloseResetScreen(bottom: true,));
             },
           ),
           //77а
@@ -2055,7 +2055,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ObmenWaitingScreen(bottom: true,));
+              Get.to(()=>ObmenWaitingScreen(bottom: true,));
             },
           ),
           //77е
@@ -2086,7 +2086,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(DisagreeObmenScreen(bottom: true,));
+              Get.to(()=>DisagreeObmenScreen(bottom: true,));
             },
           ),
           //77ж
@@ -2117,7 +2117,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(DoneObmenScreen(bottom: true,));
+              Get.to(()=>DoneObmenScreen(bottom: true,));
             },
           ),
           //77ю
@@ -2148,7 +2148,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(CloseObmenScreen(bottom: true,));
+              Get.to(()=>CloseObmenScreen(bottom: true,));
             },
           ),
           //96
@@ -2179,7 +2179,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NoOzifrovkaScreen(bottom: true,));
+              Get.to(()=>NoOzifrovkaScreen(bottom: true,));
             },
           ),
           //97
@@ -2210,7 +2210,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OzifrovkaScreen(bottom: true,));
+              Get.to(()=>OzifrovkaScreen(bottom: true,));
             },
           ),
           // 99
@@ -2241,7 +2241,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(DoOzifrovkaScreen(bottom: true,));
+              Get.to(()=>DoOzifrovkaScreen(bottom: true,));
             },
           ),
           //98
@@ -2272,7 +2272,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(DoOzifrovkaScreen2(bottom: true,));
+              Get.to(()=>DoOzifrovkaScreen2(bottom: true,));
             },
           ),
           //100
@@ -2303,7 +2303,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(ProductSendOnAccept(bottom: true,));
+              Get.to(()=>ProductSendOnAccept(bottom: true,));
             },
           ),
           // 101
@@ -2334,7 +2334,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OzifrovkaStatusScreen101(bottom: true,));
+              Get.to(()=>OzifrovkaStatusScreen101(bottom: true,));
             },
           ),
           // 102
@@ -2365,7 +2365,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OzifrovkaStatusScreen102(bottom: true,));
+              Get.to(()=>OzifrovkaStatusScreen102(bottom: true,));
             },
           ),
           // 103
@@ -2396,7 +2396,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OzifrovkaStatusScreen103(bottom: true,));
+              Get.to(()=>OzifrovkaStatusScreen103(bottom: true,));
             },
           ),
           // 103a
@@ -2427,7 +2427,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(OzifrovkaStatusScreen103a(bottom: true,));
+              Get.to(()=>OzifrovkaStatusScreen103a(bottom: true,));
             },
           ),
           // 42
@@ -2458,7 +2458,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(MessagesScreen(bottom: true,));
+              Get.to(()=>MessagesScreen(bottom: true,));
             },
           ),
           // 43 44 45 47 48  49 44 60
@@ -2492,7 +2492,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(MessageItemScreenSeller());
+              Get.to(()=>MessageItemScreenSeller());
             },
           ),
           // 90
@@ -2523,7 +2523,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(NoSubmitSeller(bottom: true));
+              Get.to(()=>NoSubmitSeller(bottom: true));
             },
           ),
           // 89
@@ -2554,7 +2554,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(WaitingData(bottom: true));
+              Get.to(()=>WaitingData(bottom: true));
             },
           ),
           // 30a
@@ -2585,7 +2585,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(SearchTrackNumber(bottom: true));
+              Get.to(()=>SearchTrackNumber(bottom: true));
             },
           ),
           // 104б
@@ -2616,7 +2616,7 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(RewardsCalculator(bottom: true));
+              Get.to(()=>RewardsCalculator(bottom: true));
             },
           ),
           //SearchTrackNumber

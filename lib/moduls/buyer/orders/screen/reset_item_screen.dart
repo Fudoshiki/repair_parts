@@ -30,8 +30,8 @@ class ResetItemScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null?SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null?SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -1013,7 +1013,7 @@ class ResetItemScreen extends StatelessWidget{
                   ),
                 ),
                 onTap:(){
-                  Get.to(ResetItemQuerySuccess(bottom: true,));
+                  Get.to(()=>ResetItemQuerySuccess(bottom: true,));
                 }
               )
             ]

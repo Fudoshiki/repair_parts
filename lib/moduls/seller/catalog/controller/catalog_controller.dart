@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:repair_parts/routes/app_pages.dart';
 
 class CatalogController extends GetxController{
@@ -150,7 +149,7 @@ class CatalogController extends GetxController{
 
   var address= "Добавить адрес".obs;
   var chooseAddress = "Введите адрес".obs;
-  var latLong =new LatLng(0.0, 0.0).obs;
+  // var latLong =new LatLng(0.0, 0.0).obs;
   var chooseCategory = "".obs;
 
   var images=[];

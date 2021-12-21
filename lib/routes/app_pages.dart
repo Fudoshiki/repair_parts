@@ -60,7 +60,7 @@ class AppPages {
       ),
       GetPage(
         name: Routes.BACKET,
-        page: () => BacketScreen(),
+        page: () => NoProductInBacketScreen(),
         binding: BacketBinding(),
       ),
       GetPage(

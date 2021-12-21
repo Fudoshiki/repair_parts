@@ -18,8 +18,9 @@ class InformationScreenSeller extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -104,41 +105,41 @@ class InformationScreenSeller extends StatelessWidget{
                 getRow(
                   text: "Как оформить заказ",
                   onPress: (){
-                    Get.to(InformationCreateOrderScreen(bottom: true));
+                    Get.to(()=>InformationCreateOrderScreen(bottom: true));
                   }
                 ),
                 getRow(
                     text: "Оплата",
                     onPress: (){
-                      Get.to(InformationPaymentScreen(bottom: true));
+                      Get.to(()=>InformationPaymentScreen(bottom: true));
 
                     }
                 ),
                 getRow(
                     text: "Доставка",
                     onPress: (){
-                      Get.to(InformationDeliveryScreen(bottom: true));
+                      Get.to(()=>InformationDeliveryScreen(bottom: true));
 
                     }
                 ),
                 getRow(
                     text: "Возврат/обмен",
                     onPress: (){
-                      Get.to(InformationResetObmenScreen(bottom: true));
+                      Get.to(()=>InformationResetObmenScreen(bottom: true));
 
                     }
                 ),
                 getRow(
                     text: "Документы",
                     onPress: (){
-                      Get.to(InformationDocumentScreen(bottom: true));
+                      Get.to(()=>InformationDocumentScreen(bottom: true));
 
                     }
                 ),
                 getRow(
                     text: "Контакты",
                     onPress: (){
-                      Get.to(InformationContactsScreen(bottom: true));
+                      Get.to(()=>InformationContactsScreen(bottom: true));
 
                     }
                 ),

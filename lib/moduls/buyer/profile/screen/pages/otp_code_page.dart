@@ -331,7 +331,7 @@ class OtpCodePage extends StatelessWidget{
                             year2=controllerYear2.text;
                             _profileController.getCode(
                                 _profileController.phones,
-                                "customer",
+                                _profileController.seller.value?"seller":"customer",
                                 controllerDay1.text+controllerDay2.text+controllerMonth1.text +
                                 controllerMonth2.text+controllerYear1.text+controllerYear2.text
                             );

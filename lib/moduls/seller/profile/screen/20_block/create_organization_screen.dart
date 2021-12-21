@@ -137,7 +137,7 @@ class CreateOrganizationScreen extends StatelessWidget{
                   ),
                 ),
                 onTap: (){
-                  Get.to(NORegistredOrgScreen2());
+                  Get.to(()=>NORegistredOrgScreen2());
                 },
               )
               //

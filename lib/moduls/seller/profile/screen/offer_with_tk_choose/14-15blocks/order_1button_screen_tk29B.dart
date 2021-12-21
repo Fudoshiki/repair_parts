@@ -26,8 +26,9 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller29B>{
 
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: widget.bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: widget.bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -384,7 +385,7 @@ class OrderScreenItemSellerState extends State<OrderScreenItem1ButtonSeller29B>{
                                   //       ),
                                   //     ),
                                   //     onTap:(){
-                                  //       // Get.to(ChangeDeliveryType());
+                                  //       // Get.to(()=>ChangeDeliveryType());
                                   //     }
                                   // ),
                                 ]

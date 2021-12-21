@@ -3,18 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/backet/controller/backet_controller.dart';
+import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 
-class BacketScreen extends StatelessWidget{
+class NoProductInBacketScreen extends StatelessWidget{
   BacketController _backetController = Get.put(BacketController());
   bool? bottom;
-  BacketScreen({@required this.bottom});
+  NoProductInBacketScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-
+  ProfileController profileController =Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(

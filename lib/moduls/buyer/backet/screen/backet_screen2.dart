@@ -8,21 +8,23 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/backet/controller/backet_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/add_address.dart';
+import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 
-class BacketScreen2 extends StatelessWidget{
+class BacketScreen extends StatelessWidget{
   BacketController _backetController = Get.put(BacketController());
+  ProfileController profileController =Get.find();
   int a= 1;
   int b= 1;
   bool? bottom;
-  BacketScreen2({@required this.bottom});
+  BacketScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   MainController _mainController =Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -109,386 +111,9 @@ class BacketScreen2 extends StatelessWidget{
                     top: 0
                   ),
                   children: [
-                    
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(
-                                  width: 1,
-                                  color: Color(0xffE7E7E7)
-                              )
-                          )
-                      ),
-                      margin: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                          bottom: 13,
-                          top: 20
-                      ),
-                      padding: EdgeInsets.only(
-                          bottom: 21
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 80,
-                            height: 100,
-                            margin: EdgeInsets.only(
-                                right: 20
-                            ),
-                            child: Image.asset("assets/image/DSC_0211 2.png"),
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: Get.width-140,
-                                margin: EdgeInsets.only(
-                                    bottom: 10
-                                ),
-                                child: Text(
-                                  "Амортизатор гидравлический МТЛБ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 14,
-                                      color: Color(0xff2E2E33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  "Артикул: 5320-1109359",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10,
-                                      color: Color(0xff767676),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  "Бренд: ХТЗ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10,
-                                      color: Color(0xff767676),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: Get.width-140,
-                                margin: EdgeInsets.only(top: 18),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        GestureDetector(
-                                          child: Container(
-                                              width: 30,
-                                              height: 30,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(6),
-                                                  color: Color(0xffE6332A)
-                                              ),
-                                              child: Center(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                      borderRadius: BorderRadius.circular(1),
-                                                      color: Color(0xffffffff)
-                                                  ),
-                                                  width: 12,
-                                                  height: 2,
-                                                ),
-                                              )
-                                          ),
-                                          onTap: (){
-                                            if(a==0){
+                    ...profileController.dataCartProducts!.rows!.map((e) => getProductFromCart(e.product)),
 
-                                            }else{
-                                              a-=1;
-                                              Get.forceAppUpdate();
-                                            }
-                                          },
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.symmetric(
-                                              horizontal: 13
-                                          ),
-                                          child: Text(
-                                              "${
-                                                  a
-                                              }"
-                                          ),
-                                        ),
-                                        GestureDetector(
-                                          child: Container(
-                                              width: 30,
-                                              height: 30,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(6),
-                                                  color: Color(0xffE6332A)
-                                              ),
-                                              child: Center(
-                                                child: Container(
-                                                  height: 12,
-                                                  width: 12,
-                                                  child: Stack(
-                                                    children: [
-                                                      Positioned(
-                                                        top:5,
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius: BorderRadius.circular(1),
-                                                              color: Colors.white
-                                                          ),
-                                                          width: 12,
-                                                          height: 2,
-                                                        ),
-                                                      ),
-                                                      Positioned(
-                                                        left: 5,
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius: BorderRadius.circular(1),
-                                                              color: Colors.white
-                                                          ),
-                                                          width: 2,
-                                                          height: 12,
-                                                        ),
-                                                      ),
 
-                                                    ],
-                                                  ),
-                                                ),
-                                              )
-                                          ),
-                                          onTap: (){
-                                            if(a==12){
-
-                                            }else{
-                                              a+=1;
-                                              Get.forceAppUpdate();
-
-                                            }
-                                          },
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      width: 30,
-                                      height: 30,
-                                      padding: EdgeInsets.all(7),
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(4),
-                                          border: Border.all(
-                                              color: Color(0xffD6D6D6)
-                                          )
-                                      ),
-                                      child: Image.asset("assets/image/cansel_back.png"),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border(
-                              bottom: BorderSide(
-                                  width: 1,
-                                  color: Color(0xffE7E7E7)
-                              )
-                          )
-                      ),
-                      margin: EdgeInsets.only(
-                          left: 20,
-                          right: 20,
-                          bottom: 13
-                      ),
-                      padding: EdgeInsets.only(
-                          bottom: 21
-                      ),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 80,
-                            height: 100,
-                            margin: EdgeInsets.only(
-                                right: 20
-                            ),
-                            child: Image.asset("assets/image/conector.png"),
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: Get.width-140,
-                                margin: EdgeInsets.only(
-                                    bottom: 10
-                                ),
-                                child: Text(
-                                  "Патрубок радиатора нижний евро-силикон",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 14,
-                                      color: Color(0xff2E2E33),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  "Артикул: 5320-1109359",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10,
-                                      color: Color(0xff767676),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                child: Text(
-                                  "Бренд: ХТЗ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 10,
-                                      color: Color(0xff767676),
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: Get.width-140,
-                                margin: EdgeInsets.only(top: 18),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        GestureDetector(
-                                          child: Container(
-                                              width: 30,
-                                              height: 30,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(6),
-                                                  color: Color(0xffE6332A)
-                                              ),
-                                              child: Center(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                      borderRadius: BorderRadius.circular(1),
-                                                      color: Color(0xffffffff)
-                                                  ),
-                                                  width: 12,
-                                                  height: 2,
-                                                ),
-                                              )
-                                          ),
-                                          onTap: (){
-                                            if(b==0){
-
-                                            }else{
-                                              b-=1;
-                                              Get.forceAppUpdate();
-                                            }
-                                          },
-                                        ),
-                                        Container(
-                                          margin: EdgeInsets.symmetric(
-                                              horizontal: 13
-                                          ),
-                                          child: Text(
-                                              "${
-                                                  b
-                                              }"
-                                          ),
-                                        ),
-                                        GestureDetector(
-                                          child: Container(
-                                              width: 30,
-                                              height: 30,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(6),
-                                                  color: Color(0xffE6332A)
-                                              ),
-                                              child: Center(
-                                                child: Container(
-                                                  height: 12,
-                                                  width: 12,
-                                                  child: Stack(
-                                                    children: [
-                                                      Positioned(
-                                                        top:5,
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius: BorderRadius.circular(1),
-                                                              color: Colors.white
-                                                          ),
-                                                          width: 12,
-                                                          height: 2,
-                                                        ),
-                                                      ),
-                                                      Positioned(
-                                                        left: 5,
-                                                        child: Container(
-                                                          decoration: BoxDecoration(
-                                                              borderRadius: BorderRadius.circular(1),
-                                                              color: Colors.white
-                                                          ),
-                                                          width: 2,
-                                                          height: 12,
-                                                        ),
-                                                      ),
-
-                                                    ],
-                                                  ),
-                                                ),
-                                              )
-                                          ),
-                                          onTap: (){
-                                            if(b==12){
-
-                                            }else{
-                                              b+=1;
-                                              Get.forceAppUpdate();
-
-                                            }
-                                          },
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      width: 30,
-                                      height: 30,
-                                      padding: EdgeInsets.all(7),
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(4),
-                                          border: Border.all(
-                                              color: Color(0xffD6D6D6)
-                                          )
-                                      ),
-                                      child: Image.asset("assets/image/cansel_back.png"),
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
                     Container(
                       margin: EdgeInsets.only(
                           left: 20,
@@ -569,7 +194,7 @@ class BacketScreen2 extends StatelessWidget{
                                 )
                             ),
                             onTap: (){
-                              Get.to(AddAddress());
+                              Get.to(()=>AddAddress());
                             },
                           )
                         ],
@@ -1085,5 +710,197 @@ class BacketScreen2 extends StatelessWidget{
         )
     );
   }
+  Widget getProductFromCart(product){
+    return Container(
+      decoration: BoxDecoration(
+          border: Border(
+              bottom: BorderSide(
+                  width: 1,
+                  color: Color(0xffE7E7E7)
+              )
+          )
+      ),
+      margin: EdgeInsets.only(
+          left: 20,
+          right: 20,
+          bottom: 13,
+          top: 20
+      ),
+      padding: EdgeInsets.only(
+          bottom: 21
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 80,
+            height: 100,
+            margin: EdgeInsets.only(
+                right: 20
+            ),
+            child: Image.asset("assets/image/DSC_0211 2.png"),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: Get.width-140,
+                margin: EdgeInsets.only(
+                    bottom: 10
+                ),
+                child: Text(
+                  "${product.name}",
+                  maxLines: 2,
+                  style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14,
+                      color: Color(0xff2E2E33),
+                      fontFamily: "Roboto"
+                  ),
+                ),
+              ),
+              Container(
+                child: Text(
+                  "Артикул: ${product.vendorCode}",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
+                      color: Color(0xff767676),
+                      fontFamily: "Roboto"
+                  ),
+                ),
+              ),
+              Container(
+                child: Text(
+                  "Бренд: ХТЗ",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
+                      color: Color(0xff767676),
+                      fontFamily: "Roboto"
+                  ),
+                ),
+              ),
+              Container(
+                width: Get.width-140,
+                margin: EdgeInsets.only(top: 18),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        GestureDetector(
+                          child: Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(6),
+                                  color: Color(0xffE6332A)
+                              ),
+                              child: Center(
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(1),
+                                      color: Color(0xffffffff)
+                                  ),
+                                  width: 12,
+                                  height: 2,
+                                ),
+                              )
+                          ),
+                          onTap: (){
+                            if(a==0){
 
+                            }else{
+                              a-=1;
+                              Get.forceAppUpdate();
+                            }
+                          },
+                        ),
+                        Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 13
+                          ),
+                          child: Text(
+                              "${
+                                  a
+                              }"
+                          ),
+                        ),
+                        GestureDetector(
+                          child: Container(
+                              width: 30,
+                              height: 30,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(6),
+                                  color: Color(0xffE6332A)
+                              ),
+                              child: Center(
+                                child: Container(
+                                  height: 12,
+                                  width: 12,
+                                  child: Stack(
+                                    children: [
+                                      Positioned(
+                                        top:5,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(1),
+                                              color: Colors.white
+                                          ),
+                                          width: 12,
+                                          height: 2,
+                                        ),
+                                      ),
+                                      Positioned(
+                                        left: 5,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(1),
+                                              color: Colors.white
+                                          ),
+                                          width: 2,
+                                          height: 12,
+                                        ),
+                                      ),
+
+                                    ],
+                                  ),
+                                ),
+                              )
+                          ),
+                          onTap: (){
+                            if(a==12){
+
+                            }else{
+                              a+=1;
+                              Get.forceAppUpdate();
+
+                            }
+                          },
+                        )
+                      ],
+                    ),
+                    Container(
+                      width: 30,
+                      height: 30,
+                      padding: EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          border: Border.all(
+                              color: Color(0xffD6D6D6)
+                          )
+                      ),
+                      child: Image.asset("assets/image/cansel_back.png"),
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
 }

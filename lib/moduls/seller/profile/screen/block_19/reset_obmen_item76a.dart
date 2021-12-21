@@ -33,8 +33,8 @@ class ResetObmenItem76a extends StatelessWidget{
     return  Scaffold(
         backgroundColor: Colors.white,
 
-        bottomNavigationBar: bottom!=null?SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null?SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -1148,7 +1148,7 @@ class ResetObmenItem76a extends StatelessWidget{
                             )
                         ),
                         onTap:() {
-                          // Get.to(ObmenItemOrderScreen(bottom: true));
+                          // Get.to(()=>ObmenItemOrderScreen(bottom: true));
                         }
                     ),
                   ),

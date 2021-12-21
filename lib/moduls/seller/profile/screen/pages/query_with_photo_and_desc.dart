@@ -13,8 +13,8 @@ class QueryWithPhotoAndDesc extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: bottom!=null? SizedBox(
-          height: 50,
+        bottomNavigationBar: bottom!=null? SizedBox(height: 70,
+
           child: CupertinoTabBar(
             border: Border(
               top: BorderSide(
@@ -286,7 +286,7 @@ class QueryWithPhotoAndDesc extends StatelessWidget{
                           )
                       ),
                       onTap: (){
-                        Get.to(Address());
+                        Get.to(()=>Address());
                       },
                     ),
 
@@ -498,7 +498,7 @@ class QueryWithPhotoAndDesc extends StatelessWidget{
                               ),
                             ),
                             onTap:(){
-                              Get.to(FullScreenImage());
+                              Get.to(()=>FullScreenImage());
                             }
                           ),
                           GestureDetector(
@@ -517,7 +517,7 @@ class QueryWithPhotoAndDesc extends StatelessWidget{
                                 ),
                               ),
                               onTap:(){
-                                Get.to(FullScreenImage());
+                                Get.to(()=>FullScreenImage());
                               }
                           )
                         ],

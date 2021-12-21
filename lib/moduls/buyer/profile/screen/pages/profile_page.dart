@@ -6,6 +6,9 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/main_data_profile.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/pages_favorite/favorite_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/pages_favorite/no_favorites_screen.dart';
 import 'package:repair_parts/routes/app_pages.dart';
 
 class ProfilePage extends StatelessWidget{
@@ -18,8 +21,9 @@ class ProfilePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -545,105 +549,116 @@ class ProfilePage extends StatelessWidget{
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 21,left: 14,
-                      top: 21
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 20,
-                            height: 20,
-                            margin: EdgeInsets.only(
-                                right: 20
-                            ),
-                            child: Image.asset("assets/image/pencil.png"),
-                          ),
-                          Text(
-                            "Основные данные",
-                            style: TextStyle(
-                                color: Color(0xff2E2E33),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 8,
-                        height: 14,
-                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                      )
 
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 21,left: 14,
-                      top: 21
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 20,
-                            height: 20,
-                            margin: EdgeInsets.only(
-                                right: 20
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 21,left: 14,
+                        top: 21
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 20,
+                              height: 20,
+                              margin: EdgeInsets.only(
+                                  right: 20
+                              ),
+                              child: Image.asset("assets/image/pencil.png"),
                             ),
-                            child: Image.asset("assets/image/faw.png"),
-                          ),
-                          Text(
-                            "Избранное",
-                            style: TextStyle(
-                                color: Color(0xff2E2E33),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: "Roboto"
+                            Text(
+                              "Основные данные",
+                              style: TextStyle(
+                                  color: Color(0xff2E2E33),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: "Roboto"
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 8,
-                        height: 14,
-                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                      )
+                          ],
+                        ),
+                        Container(
+                          width: 8,
+                          height: 14,
+                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                        )
 
-                    ],
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    Get.to(()=>MainDataProfile(bottom: true,));
+                  },
                 ),
 
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 21,left: 14,
+                        top: 21
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 20,
+                              height: 20,
+                              margin: EdgeInsets.only(
+                                  right: 20
+                              ),
+                              child: Image.asset("assets/image/faw.png"),
+                            ),
+                            Text(
+                              "Избранное",
+                              style: TextStyle(
+                                  color: Color(0xff2E2E33),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: "Roboto"
+                              ),
+                            ),
+                          ],
+                        ),
+                        Container(
+                          width: 8,
+                          height: 14,
+                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                        )
+
+                      ],
+                    ),
+                  ),
+                  onTap: (){
+                    Get.to(()=>_profileController.dataFovorite.rows!.length==0?NoFavoriteScreen(bottom: true,):FavoriteScreen(bottom: true,));
+                  },
+                ),
                 Container(
                     margin: EdgeInsets.symmetric(
                         horizontal: 20
@@ -688,7 +703,7 @@ class ProfilePage extends StatelessWidget{
                         ],
                       ),
                       onTap: (){
-                        Get.to(ListAllScreen());
+                        Get.to(()=>ListAllScreen());
                       },
                     )
                 ),

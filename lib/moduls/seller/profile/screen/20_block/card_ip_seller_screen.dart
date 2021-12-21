@@ -13,8 +13,9 @@ class CardIPSellerScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -167,7 +168,7 @@ class CardIPSellerScreen extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    // Get.to(ChooseCategorySeller());
+                    // Get.to(()=>ChooseCategorySeller());
                   },
                 ),
                 SizedBox(width: 10,),
@@ -249,7 +250,7 @@ class CardIPSellerScreen extends StatelessWidget{
                                             ),
                                           ),
                                         ),
-                                        onTap: (){Get.back(); // Get.to(ChooseCategorySeller());
+                                        onTap: (){Get.back(); // Get.to(()=>ChooseCategorySeller());
                                         },
                                       ),
                                       SizedBox(width: 10,),
@@ -276,7 +277,7 @@ class CardIPSellerScreen extends StatelessWidget{
                                             ),
                                           ),
                                         ),
-                                        onTap: (){Get.back(); // Get.to(ChooseCategorySeller());
+                                        onTap: (){Get.back(); // Get.to(()=>ChooseCategorySeller());
 
                                         },
                                       ),

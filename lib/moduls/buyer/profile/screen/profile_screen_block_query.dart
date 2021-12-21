@@ -17,8 +17,9 @@ class ProfileScreenBlockQuery extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null? SizedBox(
-        height: 50,
+      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+
+
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -285,7 +286,7 @@ class ProfileScreenBlockQuery extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    Get.to(BlockQueryScreen());
+                    Get.to(()=>BlockQueryScreen());
                   },
                 ),
                 GestureDetector(

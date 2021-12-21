@@ -123,7 +123,7 @@ class ListAllScreen extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(HomeScreen());
+              Get.to(()=>HomeScreen());
             },
           ),
           //2,7,10,10a,10b
@@ -157,7 +157,7 @@ class ListAllScreen extends StatelessWidget{
                 )
             ),
             onTap:(){
-             Get.to(CatalogScreen(bottom: true,));
+             Get.to(()=>CatalogScreen(bottom: true,));
             },
           ),
           //66,67,68
@@ -192,7 +192,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(RegisterPage());
+              Get.to(()=>RegisterPage());
             },
           ),
           //21,22 25в 25б 25
@@ -227,7 +227,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(SearchPage(bottom: true,));
+              Get.to(()=>SearchPage(bottom: true,));
             },
           ),
           //18,19
@@ -262,7 +262,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProductScreen(bottom: true,));
+              Get.to(()=>ProductScreen(bottom: true,));
             },
           ),
           //16,16a,17a,17,16b
@@ -297,7 +297,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ListItems("КАМАЗ",bottom: true,));
+              Get.to(()=>ListItems("КАМАЗ",bottom: true,));
             },
           ),
           //22а 22б 23
@@ -332,7 +332,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(AddAddress());
+              Get.to(()=>AddAddress());
             },
           ),
           //24 24а
@@ -367,7 +367,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChooseCategory(bottom: true,));
+              Get.to(()=>ChooseCategory(bottom: true,));
             },
           ),
           //53
@@ -402,7 +402,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChooseSeller(bottom: true,));
+              Get.to(()=>ChooseSeller(bottom: true,));
             },
           ),
           //82 83
@@ -437,7 +437,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChooseRegion(bottom: true,));
+              Get.to(()=>ChooseRegion(bottom: true,));
             },
           ),
           //69а 70 71
@@ -472,7 +472,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProfileScreen(bottom: true,));
+              Get.to(()=>ProfileScreen(bottom: true,));
             },
           ),
           //69
@@ -507,7 +507,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProfileScreen2(bottom: true,));
+              Get.to(()=>ProfileScreen2(bottom: true,));
             },
           ),
           //31
@@ -542,7 +542,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryScreen2(bottom: true,));
+              Get.to(()=>QueryScreen2(bottom: true,));
             },
           ),
           //30 33
@@ -577,7 +577,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryScreen(bottom: true,));
+              Get.to(()=>QueryScreen(bottom: true,));
             },
           ),
           //45 45а
@@ -612,7 +612,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(OrderScreen(bottom: true,));
+              Get.to(()=>OrderScreen(bottom: true,));
             },
           ),
           //46
@@ -647,7 +647,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(OrderScreen2(bottom: true,));
+              Get.to(()=>OrderScreen2(bottom: true,));
             },
           ),
           //49
@@ -682,7 +682,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(BacketScreen(bottom: true,));
+              Get.to(()=>NoProductInBacketScreen(bottom: true,));
             },
           ),
           //50 51 54 55
@@ -717,7 +717,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(BacketScreen2(bottom: true,));
+              Get.to(()=>BacketScreen(bottom: true,));
             },
           ),
           //56
@@ -752,7 +752,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MessageScreen(bottom: true,));
+              Get.to(()=>MessageScreen(bottom: true,));
             },
           ),
           //30в 30г 30а 30б 30д
@@ -791,7 +791,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryItemScreen(bottom: true,));
+              Get.to(()=>QueryItemScreen(bottom: true,));
             },
           ),
           //30е
@@ -826,7 +826,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(Address());
+              Get.to(()=>Address());
             },
           ),
           //30л
@@ -861,7 +861,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryItemDelete(bottom: true,));
+              Get.to(()=>QueryItemDelete(bottom: true,));
             },
           ),
           //32
@@ -896,7 +896,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryItemScreenWithPhoto(bottom: true,));
+              Get.to(()=>QueryItemScreenWithPhoto(bottom: true,));
             },
           ),
           //34 34б 34в 34г 34д 34а 34а 34б
@@ -935,7 +935,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryItemScreen2(bottom: true,));
+              Get.to(()=>QueryItemScreen2(bottom: true,));
             },
           ),
           //35а 35б
@@ -970,7 +970,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(TransportCompany(bottom: true,));
+              Get.to(()=>TransportCompany(bottom: true,));
             },
           ),
           //36 36б 36а 37а 37 37б 40 40а 40в 40г
@@ -1008,7 +1008,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ListQueryItemScreen2(bottom: true,));
+              Get.to(()=>ListQueryItemScreen2(bottom: true,));
             },
           ),
           //38 38а
@@ -1043,7 +1043,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryRegisterScreen(bottom: true,));
+              Get.to(()=>QueryRegisterScreen(bottom: true,));
             },
           ),
           //41 42 42а
@@ -1078,7 +1078,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryRegisterScreenUrFace(bottom: true,));
+              Get.to(()=>QueryRegisterScreenUrFace(bottom: true,));
             },
           ),
           //43 43а
@@ -1113,7 +1113,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(QueryRegisterScreenUrFace2OOO(bottom: true,));
+              Get.to(()=>QueryRegisterScreenUrFace2OOO(bottom: true,));
             },
           ),
           //48д
@@ -1148,7 +1148,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(OrderItem(bottom: true,));
+              Get.to(()=>OrderItem(bottom: true,));
             },
           ),
           // "Screens 47 47а 47г 47в ",
@@ -1183,7 +1183,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(OrderItemTreck(bottom: true,));
+              Get.to(()=>OrderItemTreck(bottom: true,));
             },
           ),
           // "Screens  47б",
@@ -1218,7 +1218,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(TrackOrderScreen(bottom: true,));
+              Get.to(()=>TrackOrderScreen(bottom: true,));
             },
           ),
           //"Screens 48б 48е  47 48б",
@@ -1253,7 +1253,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChangeDelivery(bottom: true,));
+              Get.to(()=>ChangeDelivery(bottom: true,));
             },
           ),
           //  "Screens 48е",
@@ -1288,7 +1288,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ChangeDeliveryType(bottom: true,));
+              Get.to(()=>ChangeDeliveryType(bottom: true,));
             },
           ),
           //74
@@ -1323,7 +1323,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(NoHistoryOrder(bottom: true,));
+              Get.to(()=>NoHistoryOrderScreen(bottom: true,));
             },
           ),
 
@@ -1359,7 +1359,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(OrderReset(bottom: true,));
+              Get.to(()=>OrderReset(bottom: true,));
             },
           ),
           //Screens 73, 73а
@@ -1394,7 +1394,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(HistoryOrders(bottom: true,));
+              Get.to(()=>HistoryOrdersScreen(bottom: true,));
             },
           ),
           // 73б 73в
@@ -1429,7 +1429,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(HistoryOrderItem(bottom: true,));
+              Get.to(()=>HistoryOrderItem(bottom: true,));
             },
           ),
           // 73д,73е 73ж
@@ -1464,7 +1464,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ResetItemOrderScreen(bottom: true,));
+              Get.to(()=>ResetItemOrderScreen(bottom: true,));
             },
           ),
           //78
@@ -1499,7 +1499,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(HistoryResetObmenOrders(bottom: true,));
+              Get.to(()=>HistoryResetObmenOrders(bottom: true,));
             },
           ),
           //73з
@@ -1534,7 +1534,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(NoResetScreen(bottom: true,));
+              Get.to(()=>NoResetScreen(bottom: true,));
             },
           ),
           //73и
@@ -1569,7 +1569,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(DoneResetScreen(bottom: true,));
+              Get.to(()=>DoneResetScreen(bottom: true,));
             },
           ),
           //73к
@@ -1604,7 +1604,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(CloseResetScreen(bottom: true,));
+              Get.to(()=>CloseResetScreen(bottom: true,));
             },
           ),
           //73л
@@ -1639,7 +1639,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(NoObmenScreen(bottom: true,));
+              Get.to(()=>NoObmenScreen(bottom: true,));
             },
           ),
           //73м
@@ -1674,7 +1674,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(DoneObmenrScreen(bottom: true,));
+              Get.to(()=>DoneObmenrScreen(bottom: true,));
             },
           ),
           //73н
@@ -1709,7 +1709,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(CloseObmenScreen(bottom: true,));
+              Get.to(()=>CloseObmenScreen(bottom: true,));
             },
           ),
           //87а
@@ -1744,7 +1744,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(NoFavoriteScreen(bottom: true,));
+              Get.to(()=>NoFavoriteScreen(bottom: true,));
             },
           ),
           //87
@@ -1779,7 +1779,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(FavoriteScreen(bottom: true,));
+              Get.to(()=>FavoriteScreen(bottom: true,));
             },
           ),
           //88 89  89а 89б 89в  89г 89д
@@ -1817,7 +1817,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(InformationScreen(bottom: true,));
+              Get.to(()=>InformationScreen(bottom: true,));
             },
           ),
           //90
@@ -1855,7 +1855,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProfilePage(bottom: true,));
+              Get.to(()=>ProfilePage(bottom: true,));
             },
           ),
           //57 62
@@ -1893,7 +1893,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MessageItemScreen());
+              Get.to(()=>MessageItemScreen());
             },
           ),
           //57а 57б 60
@@ -1931,7 +1931,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MessageItemScreen2());
+              Get.to(()=>MessageItemScreen2());
             },
           ),
           //91
@@ -1969,7 +1969,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProfileScreenBlock());
+              Get.to(()=>ProfileScreenBlock());
             },
           ),
           // 91а 91б
@@ -2007,7 +2007,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(ProfileScreenBlockQuery());
+              Get.to(()=>ProfileScreenBlockQuery());
             },
           ),
           // 92 93 94 95
@@ -2045,7 +2045,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(SellerScreen(bottom: true));
+              Get.to(()=>SellerScreen(bottom: true));
             },
           ),
           // 96
@@ -2083,7 +2083,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(SellerSendFeedback(bottom: true,));
+              Get.to(()=>SellerSendFeedback(bottom: true,));
             },
           ),
           // 96а
@@ -2121,7 +2121,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(SellerFeedbackScreen(bottom: true));
+              Get.to(()=>SellerFeedbackScreen(bottom: true));
             },
           ),
           // 93б
@@ -2159,7 +2159,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(CardIPScreen(bottom: true));
+              Get.to(()=>CardIPScreen(bottom: true));
             },
           ),
           // 93в
@@ -2197,7 +2197,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(CardOOOScreen(bottom: true));
+              Get.to(()=>CardOOOScreen(bottom: true));
             },
           ),
           //79 79а 79б 79в 86б 86в
@@ -2235,7 +2235,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MainDataProfile(bottom: true));
+              Get.to(()=>MainDataProfile(bottom: true));
             },
           ),
           //58 59 61 63
@@ -2273,7 +2273,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MessageItemScreen3());
+              Get.to(()=>MessageItemScreen3());
             },
           ),
           //63а 63б 63в
@@ -2311,7 +2311,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(MessageScreenCall(bottom: true,));
+              Get.to(()=>MessageScreenCall(bottom: true,));
             },
           ),
 

@@ -61,7 +61,7 @@ class MessageItemScreenCall3 extends StatelessWidget{
               ),
             ),
             onTap: (){
-              Get.to(CallScreen());
+              Get.to(()=>CallScreen());
             },
 
           ),

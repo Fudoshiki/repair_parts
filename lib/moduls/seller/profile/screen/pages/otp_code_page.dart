@@ -398,7 +398,7 @@ class OtpCodePage extends StatelessWidget{
                       onPressed: _profileController.time.value==0?(){
                         _profileController.time.value=1;
                       }:(){
-                        Get.to(EnterInnPage(bottom: false));
+                        Get.to(()=>EnterInnPage(bottom: false));
                       }
                   ),
                 ),
