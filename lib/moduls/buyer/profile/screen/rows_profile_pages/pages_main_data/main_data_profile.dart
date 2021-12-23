@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 
@@ -28,6 +29,8 @@ class MainDataProfileState extends State<MainDataProfile>{
 
   @override
   Widget build(BuildContext context) {
+    var maskFormatter = new MaskTextInputFormatter(mask: '+ # (###) ###-##-##', filter: { "#": RegExp(r'[0-9]') },initialText: _profileController.dataProfile!.user!.phone);
+
     return Scaffold(
       bottomNavigationBar: widget.bottom!=null?SizedBox(height: 70,
         child: CupertinoTabBar(
@@ -152,7 +155,7 @@ class MainDataProfileState extends State<MainDataProfile>{
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Иван",
+                        "${_profileController.dataProfile!.user!.firstname}",
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w700,
@@ -164,7 +167,7 @@ class MainDataProfileState extends State<MainDataProfile>{
                         height: 5,
                       ),
                       Text(
-                        "+ 7 (000) 000-00-00",
+                        "${maskFormatter.getMaskedText()}",
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w400,

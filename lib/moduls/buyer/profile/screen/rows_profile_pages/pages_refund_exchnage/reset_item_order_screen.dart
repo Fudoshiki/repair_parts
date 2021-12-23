@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 
-import 'obmen_item_order_screen.dart';
-import 'reset_item_query_success.dart';
+import '../../../../orders/screen/obmen_item_order_screen.dart';
+import '../../../../orders/screen/reset_item_query_success.dart';
 
 class ResetItemOrderScreen extends StatelessWidget{
   bool? bottom;

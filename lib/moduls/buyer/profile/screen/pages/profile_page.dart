@@ -5,19 +5,20 @@ import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/history_orders.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/no_history_order.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/no_order_screen.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_history_orders/history_orders.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_history_orders/no_history_order.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_orders/no_order_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_orders/order_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_queries/query_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_favorite/favorite_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_favorite/no_favorites_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_information/information_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_main_data/main_data_profile.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_refund_exchnage/history_reset_obmen_orders.dart';
 import 'package:repair_parts/routes/app_pages.dart';
 
-import 'no_query_screen.dart';
+import '../rows_profile_pages/pages_queries/no_query_screen.dart';
 
 class ProfilePage extends StatelessWidget{
   MainController _mainController =Get.find();
@@ -259,11 +260,20 @@ class ProfilePage extends StatelessWidget{
                           }
                       ),
                       Container(
+                        width: Get.width-96,
                         margin: EdgeInsets.only(
                           left: 16
                         ),
                         child: Text(
-                          "Иванов Иван Иванович",
+                         "${ _profileController.dataProfile!.user!.lastname!="null"
+                             ?"${_profileController.dataProfile!.user!.lastname} ":""}"+
+                              "${_profileController.dataProfile!.user!.firstname!="null"
+                                  ?"${_profileController.dataProfile!.user!.firstname} ":""}"+
+                              "${_profileController.dataProfile!.user!.firstname!="null"
+                                  ?"${_profileController.dataProfile!.user!.middlename}":""}"
+                              ,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: Color(0xff2e2e33),
                             fontSize: 20,
@@ -331,570 +341,256 @@ class ProfilePage extends StatelessWidget{
                   ),
                 ),
 
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 18,
-                              height: 18,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/zap.png"),
-                            ),
-                            Text(
-                              "Запросы",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          width: 8,
-                          height: 14,
-                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                        )
-
-                      ],
-                    ),
-                  ),
+                getRowProfilePage(
+                  icon: "zap",
+                  text: "Запросы",
+                  arrow: true,
                   onTap: (){
                     Get.to(()=>_profileController.dataOrderRequest.count==0?NoQueryScreen(bottom: true,):QueryScreen(bottom: true,));
-                  },
+                  }
                 ),
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 20,
-                              height: 20,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/orde.png"),
+                getRowProfilePage(
+                    icon: "orde",
+                    text: "Заказы",
+                    arrow: true,
+                    onTap: (){
+                      Get.to(()=>_profileController.dataOrders.count==0?NoOrderScreen(bottom: true,):OrderScreen(bottom: true,));
+                    }
+                ),
+                getRowProfilePage(
+                    icon: "hist",
+                    text: "История заказов",
+                    arrow: true,
+                    onTap: (){
+                      Get.to(()=>_profileController.dataHistoryOrder.length==0?NoHistoryOrderScreen():HistoryOrdersScreen());
+                    }
+                ),
+                getRowProfilePage(
+                    icon: "back",
+                    text: "Возврат/обмен",
+                    arrow: true,
+                    onTap: (){
+                      Get.to(()=>HistoryResetObmenOrders(bottom: true));
+
+                    }
+                ),
+                getRowProfilePage(
+                    icon: "pencil",
+                    text: "Основные данные",
+                    arrow: true,
+                    onTap: (){
+                      Get.to(()=>MainDataProfile(bottom: true,));
+                    }
+                ),
+                getRowProfilePage(
+                    icon: "faw",
+                    text: "Избранное",
+                    arrow: true,
+                    onTap: (){
+                      Get.to(()=>_profileController.dataFovorite.rows!.length==0?NoFavoriteScreen(bottom: true,):FavoriteScreen(bottom: true,));
+                    }
+                ),
+
+                getRowProfilePage(
+                    icon: "inf",
+                    text: "Информация",
+                    arrow: false,
+                    onTap: (){
+                      Get.to(()=>InformationScreen(bottom:true));
+
+                    }
+                ),
+                getRowProfilePage(
+                    icon: "exit",
+                    text: "Выйти",
+                    arrow: false,
+                    onTap: (){
+                      Get.dialog(
+                        Center(
+                          child: Container(
+                            height: 141,
+                            width: Get.width-40,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(6),
+                                color: Colors.white
                             ),
-                            Text(
-                              "Заказы",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                            Container(
-                                margin: EdgeInsets.only(
-                                    left: 8
-                                ),
-                                width: 24,
-                                height: 24,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Color(0xffE6332A)
-                                ),
-                                child: Center(
-                                  child: Text(
-                                    "3",
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600,
-                                        fontFamily: "Roboto"
+                            child:Column(
+                              children: [
+                                Container(
+                                    padding: EdgeInsets.only(left: 5,right: 5),
+                                    height: 90,
+                                    decoration: BoxDecoration(
+                                        border: Border(
+                                            bottom: BorderSide(
+                                                color: Color(0xffCBCBCB),
+                                                width: 1
+                                            )
+                                        )
                                     ),
-                                  ),
-                                )
-                            )
-                          ],
-                        ),
-                        Container(
-                          width: 8,
-                          height: 14,
-                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                        )
-
-                      ],
-                    ),
-                  ),
-                  onTap: (){
-                    Get.to(()=>_profileController.dataOrders.count==0?NoOrderScreen(bottom: true,):OrderScreen(bottom: true,));
-                  },
-                ),
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 20,
-                              height: 20,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/hist.png"),
-                            ),
-                            Text(
-                              "История заказов",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          width: 8,
-                          height: 14,
-                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                        )
-
-                      ],
-                    ),
-                  ),
-                  onTap: (){
-                    Get.to(()=>_profileController.dataHistoryOrder.length==0?NoHistoryOrderScreen():HistoryOrdersScreen());
-                  },
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 21,left: 14,
-                      top: 21
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 20,
-                            height: 20,
-                            margin: EdgeInsets.only(
-                                right: 20
-                            ),
-                            child: Image.asset("assets/image/back.png"),
-                          ),
-                          Text(
-                            "Возврат/обмен",
-                            style: TextStyle(
-                                color: Color(0xff2E2E33),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: "Roboto"
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 8,
-                        height: 14,
-                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                      )
-
-                    ],
-                  ),
-                ),
-
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 20,
-                              height: 20,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/pencil.png"),
-                            ),
-                            Text(
-                              "Основные данные",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          width: 8,
-                          height: 14,
-                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                        )
-
-                      ],
-                    ),
-                  ),
-                  onTap: (){
-                    Get.to(()=>MainDataProfile(bottom: true,));
-                  },
-                ),
-
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 20,
-                              height: 20,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/faw.png"),
-                            ),
-                            Text(
-                              "Избранное",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          width: 8,
-                          height: 14,
-                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                        )
-
-                      ],
-                    ),
-                  ),
-                  onTap: (){
-                    Get.to(()=>_profileController.dataFovorite.rows!.length==0?NoFavoriteScreen(bottom: true,):FavoriteScreen(bottom: true,));
-                  },
-                ),
-                Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: GestureDetector(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                width: 20,
-                                height: 20,
-                                margin: EdgeInsets.only(
-                                    right: 20
-                                ),
-                                child: Image.asset("assets/image/inf.png"),
-                              ),
-                              Text(
-                                "Информация",
-                                style: TextStyle(
-                                    color: Color(0xff2E2E33),
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                    fontFamily: "Roboto"
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      onTap: (){
-                        Get.to(()=>InformationScreen(bottom:true));
-                      },
-                    )
-                ),
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.symmetric(
-                        horizontal: 20
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 21,left: 14,
-                        top: 21
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              width: 20,
-                              height: 20,
-                              margin: EdgeInsets.only(
-                                  right: 20
-                              ),
-                              child: Image.asset("assets/image/exit.png"),
-                            ),
-                            Text(
-                              "Выйти",
-                              style: TextStyle(
-                                  color: Color(0xff2E2E33),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  fontFamily: "Roboto"
-                              ),
-                            ),
-                          ],
-                        ),
-
-
-                      ],
-                    ),
-                  ),
-                  onTap: (){
-                    Get.dialog(
-                      Center(
-                        child: Container(
-                          height: 141,
-                          width: Get.width-40,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6),
-                              color: Colors.white
-                          ),
-                          child:Column(
-                            children: [
-                              Container(
-                                  padding: EdgeInsets.only(left: 5,right: 5),
-                                  height: 90,
-                                  decoration: BoxDecoration(
-                                      border: Border(
-                                          bottom: BorderSide(
-                                              color: Color(0xffCBCBCB),
-                                              width: 1
+                                    child: Scaffold(
+                                      body: Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Text(
+                                                "Обратите внимание",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Roboto",
+                                                    color: Color(0xff2e2e33)
+                                                ),
+                                              ),
+                                              SizedBox(height: 8,),
+                                              Text(
+                                                "Вы уверены, что хотите выйти?",
+                                                style: TextStyle(
+                                                    fontSize: 12,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontFamily: "Roboto",
+                                                    color: Color(0xff2e2e33)
+                                                ),
+                                              )
+                                            ],
                                           )
-                                      )
-                                  ),
+                                        ],
+                                      ),
+                                    )
+                                ),
+                                Container(
+                                  height: 50,
+                                  padding: EdgeInsets.only(left: 5,right: 5),
+
                                   child: Scaffold(
                                     body: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          children: [
-                                            Text(
-                                              "Обратите внимание",
-                                              style: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w600,
-                                                  fontFamily: "Roboto",
-                                                  color: Color(0xff2e2e33)
+                                        GestureDetector(
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                                border: Border(
+                                                    right: BorderSide(
+                                                        color: Color(0xffCBCBCB),
+                                                        width: 1
+                                                    )
+                                                )
+                                            ),
+                                            width: (Get.width-50)/2,
+                                            child: Center(
+                                              child: Text(
+                                                "Выйти",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontFamily: "Roboto",
+                                                    color: Color(0xffE6332A)
+                                                ),
                                               ),
                                             ),
-                                            SizedBox(height: 8,),
-                                            Text(
-                                              "Вы уверены, что хотите выйти?",
-                                              style: TextStyle(
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: "Roboto",
-                                                  color: Color(0xff2e2e33)
+                                          ),
+                                          onTap: (){
+                                            _profileController.exit();
+                                          },
+                                        ),
+                                        GestureDetector(
+                                          child: Container(
+                                            width: (Get.width-50)/2,
+                                            child: Center(
+                                              child: Text(
+                                                "Отмена",
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontFamily: "Roboto",
+                                                    color: Color(0xff2e2e33)
+                                                ),
                                               ),
-                                            )
-                                          ],
+                                            ),
+                                          ),
+                                          onTap: (){
+                                            Get.back();
+                                          },
                                         )
+
                                       ],
                                     ),
-                                  )
-                              ),
-                              Container(
-                                height: 50,
-                                padding: EdgeInsets.only(left: 5,right: 5),
-
-                                child: Scaffold(
-                                  body: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      GestureDetector(
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                              border: Border(
-                                                  right: BorderSide(
-                                                      color: Color(0xffCBCBCB),
-                                                      width: 1
-                                                  )
-                                              )
-                                          ),
-                                          width: (Get.width-50)/2,
-                                          child: Center(
-                                            child: Text(
-                                              "Выйти",
-                                              style: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: "Roboto",
-                                                  color: Color(0xffE6332A)
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        onTap: (){
-                                          _profileController.exit();
-                                        },
-                                      ),
-                                      GestureDetector(
-                                        child: Container(
-                                          width: (Get.width-50)/2,
-                                          child: Center(
-                                            child: Text(
-                                              "Отмена",
-                                              style: TextStyle(
-                                                  fontSize: 16,
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: "Roboto",
-                                                  color: Color(0xff2e2e33)
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        onTap: (){
-                                          Get.back();
-                                        },
-                                      )
-
-                                    ],
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    );
-                  },
+                      );
+                    }
                 ),
+
+
+
+
 
               ],
             ),
           )
         ],
       ),
+    );
+  }
+  Widget getRowProfilePage({
+     icon, text,arrow, onTap
+  }){
+    return GestureDetector(
+      child: Container(
+        margin: EdgeInsets.symmetric(
+            horizontal: 20
+        ),
+        padding: EdgeInsets.only(
+            bottom: 21,left: 14,
+            top: 21
+        ),
+        decoration: BoxDecoration(
+            border: Border(
+                bottom: BorderSide(
+                    color: Color(0xffE7E7E7),
+                    width: 1
+                )
+            )
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 20,
+                  height: 20,
+                  margin: EdgeInsets.only(
+                      right: 20
+                  ),
+                  child: Image.asset("assets/image/${icon}.png"),
+                ),
+                Text(
+                  "$text",
+                  style: TextStyle(
+                      color: Color(0xff2E2E33),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: "Roboto"
+                  ),
+                ),
+              ],
+            ),
+           arrow? Container(
+              width: 8,
+              height: 14,
+              child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+            ):Container()
+
+          ],
+        ),
+      ),
+      onTap: onTap,
     );
   }
 

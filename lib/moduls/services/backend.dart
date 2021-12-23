@@ -10,6 +10,8 @@ import 'package:repair_parts/models/data_notification.dart';
 import 'package:repair_parts/models/data_order_request.dart';
 import 'package:repair_parts/models/data_orders.dart';
 import 'package:repair_parts/models/data_profile.dart';
+import 'package:repair_parts/models/data_refund_exchange.dart';
+import 'package:repair_parts/models/data_transport_types.dart';
 import 'package:repair_parts/models/user.dart';
 
 class Backend {
@@ -23,6 +25,8 @@ class Backend {
   DataCartProducts dataCartProducts = new DataCartProducts();
   DataOrderRequest dataOrderRequest =new DataOrderRequest();
   DataNotofication dataNotification =new DataNotofication();
+  DataRefundExchange dataRefundExchange = new DataRefundExchange();
+  List<DataTranspostType>? listDataTransportTypes =[];
   DataChat dataChat =new DataChat();
 
   dynamic dataHistoryOrder;
@@ -277,7 +281,7 @@ class Backend {
     }
 
   }
-  Future<DataOrderRequest?> getRefundExchange()async{
+  Future<DataRefundExchange?> getRefundExchange()async{
     GetStorage storage =GetStorage();
     var token = storage.read("bearer_token");
     dio.options=BaseOptions(
@@ -288,14 +292,31 @@ class Backend {
           "Authorization":"Bearer "+token
         }
     );
-    var datas = await dio.get("/order/request/list?pageSize=10");
-    print("getOrderRequest${datas.data}");
+    var datas = await dio.get("/order/refund-exchange/list?page=1");
+    print("getRefundExchange${datas.data}");
 
     if(datas.data!=null){
       print("${datas.data}");
-      var dataOrderRequest=DataOrderRequest.fromJson(datas.data['data']);
-      this.dataOrderRequest=dataOrderRequest ;
-      return dataOrderRequest;
+      var dataRefundExchange=DataRefundExchange.fromJson(datas.data['data']);
+      this.dataRefundExchange=dataRefundExchange ;
+      return dataRefundExchange;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+
+  Future<List<DataTranspostType>?> getTransportList()async{
+
+    var datas = await dio.get("/catalog/external?path=");
+    print("getTransportList${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var listDataTransportTypes=(datas.data['data'] as List?)?.map((dynamic e) => DataTranspostType.fromJson(e as Map<String,dynamic>)).toList();
+      this.listDataTransportTypes=listDataTransportTypes ;
+      return listDataTransportTypes;
     }else{
       print("${datas.statusCode}");
       return null;

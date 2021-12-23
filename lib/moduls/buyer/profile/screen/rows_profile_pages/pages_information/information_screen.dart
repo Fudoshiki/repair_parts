@@ -32,7 +32,7 @@ class InformationScreen extends StatelessWidget{
           backgroundColor: Colors.white,
           items: [
             _bottomNavigationitem.showItem(
-              true,
+              false,
               "home_icon.png",
               18,
               text: "Главная",
@@ -58,7 +58,7 @@ class InformationScreen extends StatelessWidget{
 
             ),
             _bottomNavigationitem.showItem(
-              false,
+              true,
               "profile_icon.png",
               18,
               text: "Кабинет",

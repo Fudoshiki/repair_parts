@@ -12,6 +12,7 @@ import 'package:repair_parts/models/data_favorite.dart';
 import 'package:repair_parts/models/data_order_request.dart';
 import 'package:repair_parts/models/data_orders.dart';
 import 'package:repair_parts/models/data_profile.dart';
+import 'package:repair_parts/models/data_refund_exchange.dart';
 import 'package:repair_parts/models/user.dart';
 import 'package:repair_parts/moduls/buyer/message/controller/message_controller.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/register_page.dart';
@@ -38,6 +39,7 @@ class ProfileController extends GetxController{
   DataFavorite dataFovorite=new DataFavorite();
   DataOrders dataOrders = new DataOrders();
   DataOrderRequest dataOrderRequest = new DataOrderRequest();
+  DataRefundExchange dataRefundExchange = new DataRefundExchange();
   dynamic dataHistoryOrder;
   MessageController messageController =Get.put(MessageController());
   DataCartProducts dataCartProducts =new DataCartProducts();
@@ -60,7 +62,7 @@ class ProfileController extends GetxController{
     });
   }
 
-  void getUser ()async{
+   getUser ()async{
     var user= await backendController.backend.requestGetUser();
 
    if(user!=null){
@@ -78,7 +80,8 @@ class ProfileController extends GetxController{
        backendController.backend.getOrders(),
        backendController.backend.getProductCartProducts(products),
        backendController.backend.getOrderRequest(),
-       backendController.backend.getHistoryOrders()
+       backendController.backend.getHistoryOrders(),
+       backendController.backend.getRefundExchange()
      ]);
      print("productswwwwww${this.dataProfile!.user!.cartProducts!.length}");
 
@@ -88,6 +91,7 @@ class ProfileController extends GetxController{
      dataCartProducts= backendController.backend.dataCartProducts;
      dataOrderRequest= backendController.backend.dataOrderRequest;
      dataHistoryOrder =backendController.backend.dataHistoryOrder;
+     dataRefundExchange = backendController.backend.dataRefundExchange;
      Get.appUpdate();
    }else{
      auth=false;
@@ -110,15 +114,7 @@ class ProfileController extends GetxController{
     try{
     var user=  await backendController.backend.requestLogin(phone: phone,role: role,confirmCode: code);
       if(user!=null){
-        this.dataProfile!.user=user;
-        var dataCompanies=await backendController.backend.getCompanies(dataProfile!.user!.id);
-        if(dataCompanies!=null){
-          this.dataCompanies=dataCompanies;
-        }
-        var dataFovorite =await backendController.backend.getFavorities();
-        if(dataFovorite!=null){
-          this.dataFovorite=dataFovorite;
-        }
+        await getUser();
         Get.forceAppUpdate();
       }
     }catch(e){

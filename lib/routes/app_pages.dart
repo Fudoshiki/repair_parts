@@ -4,7 +4,7 @@ import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen.dart';
 import 'package:repair_parts/moduls/buyer/message/binding/message_binding.dart';
 import 'package:repair_parts/moduls/buyer/message/screen/message_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/binding/order_binding.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_orders/order_screen.dart';
 import 'package:repair_parts/moduls/seller/main/screen/main_screen.dart';
 //START CONTROLLER
 import '/moduls/buyer/product/binding/product_binding.dart';

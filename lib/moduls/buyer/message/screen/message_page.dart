@@ -808,7 +808,9 @@ class MessagePage extends StatelessWidget{
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            getLatMessage(message.lastMessage!),
+                            message.lastMessage!=null
+                                ?  getLatMessage(message.lastMessage!)
+                                :getLatMessage(new LastMessage(text: "Ещё нет сообщений",files: [])),
                             message.unreadMessagesCount==0?Container():Container(
                               width: 24,
                               height: 24,
