@@ -7,10 +7,10 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/orders/controller/order_controller.dart';
 
-class QueryScreen2 extends StatelessWidget{
+class NoQueryScreen extends StatelessWidget{
   MainController _mainController =Get.find();
   bool? bottom;
-  QueryScreen2({@required this.bottom});
+  NoQueryScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override

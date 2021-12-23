@@ -111,7 +111,7 @@ class BacketScreen extends StatelessWidget{
                     top: 0
                   ),
                   children: [
-                    ...profileController.dataCartProducts!.rows!.map((e) => getProductFromCart(e.product)),
+                    ...profileController.dataCartProducts.rows!.map((e) => getProductFromCart(e.product)),
 
 
                     Container(
@@ -732,13 +732,20 @@ class BacketScreen extends StatelessWidget{
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
+          product.preview!="null"? Container(
             width: 80,
             height: 100,
             margin: EdgeInsets.only(
                 right: 20
             ),
             child: Image.asset("assets/image/DSC_0211 2.png"),
+          ):Container(
+            width: 80,
+            height: 100,
+            margin: EdgeInsets.only(
+                right: 20
+            ),
+            child: Image.asset("assets/image/no_image.png"),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,

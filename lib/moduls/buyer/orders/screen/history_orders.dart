@@ -558,9 +558,7 @@ class HistoryOrdersScreen extends StatelessWidget{
             child: ListView(
               padding: EdgeInsets.all(0),
               children: [
-                ...profileController.dataOrders.rows!.map((order) => getRowOrders(order)),
-
-
+                ...profileController.dataHistoryOrder!.map((order) => getRowOrders(order)),
               ],
             ),
           ),

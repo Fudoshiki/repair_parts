@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/components_main/text_field_component.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/company_ip_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/company_oop_screen.dart';
 
 import 'card_ip_seller_screen.dart';
 import 'create_organization_screen.dart';

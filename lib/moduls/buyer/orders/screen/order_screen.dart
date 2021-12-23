@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/models/rows_orders.dart';
 import 'package:repair_parts/moduls/buyer/backet/controller/backet_controller.dart';
 import 'package:repair_parts/moduls/buyer/home/controller/home_controller.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/orders/controller/order_controller.dart';
+import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 
 class OrderScreen extends StatelessWidget{
   OrderController _orderController = Get.put(OrderController());
@@ -13,7 +15,7 @@ class OrderScreen extends StatelessWidget{
   bool? bottom;
   OrderScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-
+  ProfileController profileController =Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -374,188 +376,90 @@ class OrderScreen extends StatelessWidget{
             child: ListView(
               padding: EdgeInsets.all(0),
               children: [
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                    bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                              right: 26
-                            ),
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Color(0xffE6332A)
-                            ),
-                            child: Center(
-                              child: Text(
-                                "1",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 13,
-                                    color: Colors.white,
-                                    fontFamily: "Roboto"
-                                ),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            "1-6",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Заказ оплачен",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                right: 26
-                            ),
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffD6D6D6)
-                            ),
-                          ),
-                          Text(
-                            "1-3",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Заказ отгружен",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                right: 26
-                            ),
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffD6D6D6)
-                            ),
-                          ),
-                          Text(
-                            "1-3",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Заказ оплачен",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
+                ...profileController.dataOrders.rows!.map((order) => getRowOrders(order)),
+
               ],
             ),
           ),
+        ],
+      ),
+    );
+  }
+  Widget getRowOrders(RowsOrders order){
+    return Container(
+      margin: EdgeInsets.only(
+          left: 20,
+          right: 20,
+          top: 22
+      ),
+      decoration: BoxDecoration(
+          border: Border(
+              bottom: BorderSide(
+                  color: Color(0xffE7E7E7),
+                  width: 1
+              )
+          )
+      ),
+      padding: EdgeInsets.only(
+          bottom: 22
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              order.notifications!.length!=0?Container(
+                margin: EdgeInsets.only(
+                    right: 26
+                ),
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6332A)
+                ),
+                child: Center(
+                  child: Text(
+                    "${order.notifications!.length}",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontFamily: "Roboto"
+                    ),
+                  ),
+                ),
+              ): Container(
+                margin: EdgeInsets.only(
+                    right: 26
+                ),
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffD6D6D6)
+                ),
+              ),
+              Text(
+                "${order.idOrder}",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: Color(0xff2e2e33),
+                    fontFamily: "Roboto"
+                ),
+              )
+            ],
+          ),
+          Text(
+            order.status=="PAID"?"Сделка завершена":"",
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 12,
+                color: Color(0xff717171),
+                fontFamily: "Roboto"
+            ),
+          )
         ],
       ),
     );

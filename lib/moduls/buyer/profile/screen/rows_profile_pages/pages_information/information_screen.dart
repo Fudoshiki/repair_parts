@@ -2,12 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_contacts_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_create_order_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_delivery_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_document_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_payment_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_reset-obmen_screen.dart';
+
+import 'information_contacts_screen.dart';
+import 'information_create_order_screen.dart';
+import 'information_delivery_screen.dart';
+import 'information_document_screen.dart';
+import 'information_payment_screen.dart';
+import 'information_reset-obmen_screen.dart';
 
 class InformationScreen extends StatelessWidget{
   bool? bottom;

@@ -2,9 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:repair_parts/models/data_cart_products.dart';
+import 'package:repair_parts/models/data_chat.dart';
 import 'package:repair_parts/models/data_companies.dart';
 import 'package:repair_parts/models/data_favorite.dart';
 import 'package:repair_parts/models/data_login.dart';
+import 'package:repair_parts/models/data_notification.dart';
+import 'package:repair_parts/models/data_order_request.dart';
 import 'package:repair_parts/models/data_orders.dart';
 import 'package:repair_parts/models/data_profile.dart';
 import 'package:repair_parts/models/user.dart';
@@ -18,7 +21,11 @@ class Backend {
   DataFavorite dataFovorite=new DataFavorite();
   DataOrders dataOrders = new DataOrders();
   DataCartProducts dataCartProducts = new DataCartProducts();
+  DataOrderRequest dataOrderRequest =new DataOrderRequest();
+  DataNotofication dataNotification =new DataNotofication();
+  DataChat dataChat =new DataChat();
 
+  dynamic dataHistoryOrder;
   Backend(){
     dio =new Dio(
       BaseOptions(
@@ -221,6 +228,133 @@ class Backend {
     }
 
   }
+  Future<DataOrderRequest?> getOrderRequest()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/order/request/list?pageSize=10");
+    print("getOrderRequest${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataOrderRequest=DataOrderRequest.fromJson(datas.data['data']);
+      this.dataOrderRequest=dataOrderRequest ;
+      return dataOrderRequest;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+  Future<dynamic?> getHistoryOrders()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/order/history?pageSize=10");
+    print("getOrders${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      this.dataHistoryOrder=datas.data['data']['rows'] ;
+      return dataHistoryOrder;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+  Future<DataOrderRequest?> getRefundExchange()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/order/request/list?pageSize=10");
+    print("getOrderRequest${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataOrderRequest=DataOrderRequest.fromJson(datas.data['data']);
+      this.dataOrderRequest=dataOrderRequest ;
+      return dataOrderRequest;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+
+  ///order/refund-exchange/list?page=1
+  Future<DataChat?> getChatList()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/chat/list?limit=10");
+    print("getChatList${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataChat=DataChat.fromJson(datas.data['data']);
+      this.dataChat=dataChat ;
+      return dataChat;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+  Future<DataNotofication?> getNotificationList()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/notification/list?limit=1&offset=0");
+    print("getNotificationList${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataNotification=DataNotofication.fromJson(datas.data['data']);
+      this.dataNotification=dataNotification ;
+      return dataNotification;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+
   Future<DataCartProducts?> getProductCartProducts(cartProducts)async{
     GetStorage storage =GetStorage();
     var token = storage.read("bearer_token");
@@ -244,6 +378,6 @@ class Backend {
 
   }
 
-///order/list?pageSize=10
+///order/history?pageSize=10
 
 }

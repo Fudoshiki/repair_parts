@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/main_data_profile_person_data.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/main_data_profile_companies.dart';
 
 import 'company_ip_screen.dart';
 import 'company_oop_screen.dart';
+import 'main_data_profile_companies.dart';
+import 'main_data_profile_person_data.dart';
 
 class MainDataProfile extends StatefulWidget {
   bool? bottom;

@@ -7,7 +7,7 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/message/controller/message_controller.dart';
 
 class MessageScreen extends StatelessWidget{
-  MessageController _messageController = Get.put(MessageController());
+  MessageController _messageController = Get.find();
   bool? bottom;
   MessageScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();

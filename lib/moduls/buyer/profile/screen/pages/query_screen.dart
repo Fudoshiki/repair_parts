@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/models/rows_order_request.dart';
 import 'package:repair_parts/moduls/buyer/backet/controller/backet_controller.dart';
 import 'package:repair_parts/moduls/buyer/home/controller/home_controller.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
@@ -20,8 +21,6 @@ class QueryScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
-
-
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -83,11 +82,7 @@ class QueryScreen extends StatelessWidget{
                 child: Icon(Icons.arrow_back,color: Color(0xff2e2e33),)
             ),
             onTap: (){
-              try{
-                _mainController.controllerProfilePage.jumpToPage(0);
-              }catch(e){
-                Get.back();
-              }
+              Get.back();
             },
           ),
           Container(
@@ -370,247 +365,8 @@ class QueryScreen extends StatelessWidget{
             child: ListView(
               padding: EdgeInsets.all(0),
               children: [
-                GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                        top: 22
-                    ),
-                    decoration: BoxDecoration(
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Color(0xffE7E7E7),
-                                width: 1
-                            )
-                        )
-                    ),
-                    padding: EdgeInsets.only(
-                        bottom: 22
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(
-                                  right: 26
-                              ),
-                              width: 24,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Color(0xffE6332A)
+                ..._profileController.dataOrderRequest.rows!.map((e) => getRowQuest(e))
 
-                              ),
-                              child: Center(
-                                child: Text(
-                                  "1",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 13,
-                                      color: Colors.white,
-                                      fontFamily: "Roboto"
-                                  ),
-                                ),
-                              ),
-                            ),
-                            Text(
-                              "1-6",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 14,
-                                  color: Color(0xff2e2e33),
-                                  fontFamily: "Roboto"
-                              ),
-                            )
-                          ],
-                        ),
-                        Text(
-                          "Запрос отправлен",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 12,
-                              color: Color(0xff2e2e33),
-                              fontFamily: "Roboto"
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                  onTap: (){
-                    _mainController.controllerProfilePage.jumpToPage(3);
-                  }
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                right: 26
-                            ),
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffD6D6D6)
-                            ),
-                          ),
-                          Text(
-                            "1-3",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Получено предложение",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                right: 26
-                            ),
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffD6D6D6)
-                            ),
-                          ),
-                          Text(
-                            "1-1",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Предложение обновлено",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 22
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 22
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.only(
-                                right: 26
-                            ),
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Color(0xffD6D6D6)
-                            ),
-                          ),
-                          Text(
-                            "1-17",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14,
-                                color: Color(0xff2e2e33),
-                                fontFamily: "Roboto"
-                            ),
-                          )
-                        ],
-                      ),
-                      Text(
-                        "Запрос отправлен",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12,
-                            color: Color(0xff2e2e33),
-                            fontFamily: "Roboto"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
@@ -618,5 +374,88 @@ class QueryScreen extends StatelessWidget{
       ),
     );
   }
+  Widget getRowQuest(RowsOrderRequest request){
+    return  Container(
+      margin: EdgeInsets.only(
+          left: 20,
+          right: 20,
+          top: 22
+      ),
+      decoration: BoxDecoration(
+          border: Border(
+              bottom: BorderSide(
+                  color: Color(0xffE7E7E7),
+                  width: 1
+              )
+          )
+      ),
+      padding: EdgeInsets.only(
+          bottom: 22
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              request.notifications!.length!=0
+                  ?Container(
+                margin: EdgeInsets.only(
+                    right: 26
+                ),
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffE6332A)
+
+                ),
+                child: Center(
+                  child: Text(
+                    "${request.notifications!.length}",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 13,
+                        color: Colors.white,
+                        fontFamily: "Roboto"
+                    ),
+                  ),
+                ),
+              )
+                  : Container(
+                margin: EdgeInsets.only(
+                    right: 26
+                ),
+                width: 24,
+                height: 24,
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(0xffD6D6D6)
+                ),
+              ),
+              Text(
+                "${request.idOrder}",
+                style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 14,
+                    color: Color(0xff2e2e33),
+                    fontFamily: "Roboto"
+                ),
+              )
+            ],
+          ),
+          Text(
+            request.status=="REQUESTED"?"Запрос отправлен":"Получено предложение",
+            style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 12,
+                color: Color(0xff2e2e33),
+                fontFamily: "Roboto"
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
 
 }

@@ -20,13 +20,13 @@ import 'package:repair_parts/moduls/buyer/orders/screen/change_delivery.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/change_delivery_type.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/history_order_item.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/history_orders.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/history_reset_obmen_orders.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/history_reset_obmen_orders.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/no_history_order.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_item.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_item_treck.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_reset.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/order_screen2.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/no_order_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/close_obmen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/close_reset.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/done_obmen.dart';
@@ -36,18 +36,18 @@ import 'package:repair_parts/moduls/buyer/orders/screen/pages_reset/no_reset.dar
 import 'package:repair_parts/moduls/buyer/orders/screen/reset_item_order_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/track_order_screen.dart';
 import 'package:repair_parts/moduls/buyer/product/screen/product_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/main_data_profile.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/profile_page.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen2.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/pages/no_query_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/register_page.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_favorite/favorite_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_favorite/no_favorites_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_information/information_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen2.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen_block.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen_block_query.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_favorite/favorite_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_favorite/no_favorites_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_information/information_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_main_data/main_data_profile.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/seller_screen/card_ip_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/seller_screen/card_ooo_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/seller_screen/seller_feedback_sended.dart';
@@ -542,7 +542,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(()=>QueryScreen2(bottom: true,));
+              Get.to(()=>NoQueryScreen(bottom: true,));
             },
           ),
           //30 33
@@ -647,7 +647,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(()=>OrderScreen2(bottom: true,));
+              Get.to(()=>NoOrderScreen(bottom: true,));
             },
           ),
           //49

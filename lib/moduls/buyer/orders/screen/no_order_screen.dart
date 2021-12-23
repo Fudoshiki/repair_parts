@@ -7,11 +7,11 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/orders/controller/order_controller.dart';
 
-class OrderScreen2 extends StatelessWidget{
+class NoOrderScreen extends StatelessWidget{
   OrderController _orderController = Get.put(OrderController());
   MainController _mainController =Get.find();
   bool? bottom;
-  OrderScreen2({@required this.bottom});
+  NoOrderScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
   @override

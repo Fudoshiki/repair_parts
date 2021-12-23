@@ -9,9 +9,11 @@ import 'package:repair_parts/models/cart_products.dart';
 import 'package:repair_parts/models/data_cart_products.dart';
 import 'package:repair_parts/models/data_companies.dart';
 import 'package:repair_parts/models/data_favorite.dart';
+import 'package:repair_parts/models/data_order_request.dart';
 import 'package:repair_parts/models/data_orders.dart';
 import 'package:repair_parts/models/data_profile.dart';
 import 'package:repair_parts/models/user.dart';
+import 'package:repair_parts/moduls/buyer/message/controller/message_controller.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/register_page.dart';
 import 'package:repair_parts/moduls/services/backend_controller.dart';
 
@@ -35,6 +37,9 @@ class ProfileController extends GetxController{
   DataCompanies dataCompanies =new DataCompanies();
   DataFavorite dataFovorite=new DataFavorite();
   DataOrders dataOrders = new DataOrders();
+  DataOrderRequest dataOrderRequest = new DataOrderRequest();
+  dynamic dataHistoryOrder;
+  MessageController messageController =Get.put(MessageController());
   DataCartProducts dataCartProducts =new DataCartProducts();
   @override
   void onInit() {
@@ -71,7 +76,9 @@ class ProfileController extends GetxController{
        backendController.backend.getCompanies(dataProfile!.user!.id),
        backendController.backend.getFavorities(),
        backendController.backend.getOrders(),
-       backendController.backend.getProductCartProducts(products)
+       backendController.backend.getProductCartProducts(products),
+       backendController.backend.getOrderRequest(),
+       backendController.backend.getHistoryOrders()
      ]);
      print("productswwwwww${this.dataProfile!.user!.cartProducts!.length}");
 
@@ -79,6 +86,8 @@ class ProfileController extends GetxController{
      dataFovorite=backendController.backend.dataFovorite;
      dataOrders=backendController.backend.dataOrders;
      dataCartProducts= backendController.backend.dataCartProducts;
+     dataOrderRequest= backendController.backend.dataOrderRequest;
+     dataHistoryOrder =backendController.backend.dataHistoryOrder;
      Get.appUpdate();
    }else{
      auth=false;

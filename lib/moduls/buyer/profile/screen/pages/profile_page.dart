@@ -5,11 +5,19 @@ import 'package:image_picker/image_picker.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/history_orders.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/no_history_order.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/no_order_screen.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/main_data_profile/main_data_profile.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_favorite/favorite_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages_favorite/no_favorites_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_favorite/favorite_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_favorite/no_favorites_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_information/information_screen.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_main_data/main_data_profile.dart';
 import 'package:repair_parts/routes/app_pages.dart';
+
+import 'no_query_screen.dart';
 
 class ProfilePage extends StatelessWidget{
   MainController _mainController =Get.find();
@@ -374,7 +382,7 @@ class ProfilePage extends StatelessWidget{
                     ),
                   ),
                   onTap: (){
-                    _mainController.controllerProfilePage.jumpToPage(1);
+                    Get.to(()=>_profileController.dataOrderRequest.count==0?NoQueryScreen(bottom: true,):QueryScreen(bottom: true,));
                   },
                 ),
                 GestureDetector(
@@ -449,56 +457,63 @@ class ProfilePage extends StatelessWidget{
                       ],
                     ),
                   ),
-
+                  onTap: (){
+                    Get.to(()=>_profileController.dataOrders.count==0?NoOrderScreen(bottom: true,):OrderScreen(bottom: true,));
+                  },
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                      horizontal: 20
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 21,left: 14,
-                      top: 21
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 20,
-                            height: 20,
-                            margin: EdgeInsets.only(
-                                right: 20
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        horizontal: 20
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 21,left: 14,
+                        top: 21
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Container(
+                              width: 20,
+                              height: 20,
+                              margin: EdgeInsets.only(
+                                  right: 20
+                              ),
+                              child: Image.asset("assets/image/hist.png"),
                             ),
-                            child: Image.asset("assets/image/hist.png"),
-                          ),
-                          Text(
-                            "История заказов",
-                            style: TextStyle(
-                                color: Color(0xff2E2E33),
-                                fontSize: 14,
-                                fontWeight: FontWeight.w400,
-                                fontFamily: "Roboto"
+                            Text(
+                              "История заказов",
+                              style: TextStyle(
+                                  color: Color(0xff2E2E33),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  fontFamily: "Roboto"
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: 8,
-                        height: 14,
-                        child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                      )
+                          ],
+                        ),
+                        Container(
+                          width: 8,
+                          height: 14,
+                          child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                        )
 
-                    ],
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    Get.to(()=>_profileController.dataHistoryOrder.length==0?NoHistoryOrderScreen():HistoryOrdersScreen());
+                  },
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(
@@ -703,7 +718,7 @@ class ProfilePage extends StatelessWidget{
                         ],
                       ),
                       onTap: (){
-                        Get.to(()=>ListAllScreen());
+                        Get.to(()=>InformationScreen(bottom:true));
                       },
                     )
                 ),

@@ -9,15 +9,16 @@ import 'package:repair_parts/moduls/buyer/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/choose_region.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/choose_seller.dart';
+import 'package:repair_parts/moduls/buyer/message/screen/message_page.dart';
 import 'package:repair_parts/moduls/buyer/message/screen/message_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/history_orders.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/no_history_order.dart';
 import 'package:repair_parts/moduls/buyer/orders/screen/order_screen.dart';
-import 'package:repair_parts/moduls/buyer/orders/screen/order_screen2.dart';
+import 'package:repair_parts/moduls/buyer/orders/screen/no_order_screen.dart';
 import 'package:repair_parts/moduls/buyer/product/screen/product_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen.dart';
-import 'package:repair_parts/moduls/buyer/profile/screen/pages/query_screen2.dart';
+import 'package:repair_parts/moduls/buyer/profile/screen/pages/no_query_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/profile_screen.dart';
 import 'package:repair_parts/moduls/buyer/query/screen/query_item_delete.dart';
 import 'package:repair_parts/moduls/buyer/query/screen/query_item_screen.dart';
@@ -52,17 +53,15 @@ class MainScreenState extends State<MainScreen>{
           ChooseSeller(),
         ],
       ),
-      profileController.dataOrders.count==0?NoHistoryOrderScreen():HistoryOrdersScreen(),
+      profileController.dataOrders.count==0?NoOrderScreen():OrderScreen(),
       profileController.dataProfile!.user!.cartProducts!.length==0?NoProductInBacketScreen():BacketScreen(),
 
-      MessageScreen(),
+      MessagePage(),
       PageView(
         physics :NeverScrollableScrollPhysics(),
         controller: _mainController.controllerProfilePage,
         children: [
           ProfileScreen(),
-          QueryScreen(),
-          QueryScreen2(),
           QueryItemScreen(),
           QueryItemDelete()
         ],

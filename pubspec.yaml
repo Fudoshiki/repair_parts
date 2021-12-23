@@ -34,6 +34,7 @@ dependencies:
   image_picker:
   flutter_sound:
   mask_text_input_formatter:
+  html:
 
 dev_dependencies:
   flutter_test:
