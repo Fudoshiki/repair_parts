@@ -212,7 +212,7 @@ class CatalogController extends GetxController{
   ];
   var currentIndex = 1.obs;
 
-  RxBool isBlock=false.obs;
+  RxBool isBlock=true.obs;
 
   var address= "Добавить адрес".obs;
   var chooseAddress = "Введите адрес".obs;

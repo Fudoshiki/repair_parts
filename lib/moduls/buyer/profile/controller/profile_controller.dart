@@ -68,17 +68,18 @@ class ProfileController extends GetxController{
    if(user!=null){
      this.dataProfile=user;
      String products="";
-
+     List prod=[];
      this.dataProfile!.user!.cartProducts!.forEach((e) {
        print("productswwwwww${e.id}+,");
-       products+="${jsonEncode(e.toJson())}";
+       products+="${jsonEncode(e.toJson())},";
+       prod.add(jsonEncode(e.toJson()));
      });
      print("productswwwwww${products}");
      await Future.wait([
        backendController.backend.getCompanies(dataProfile!.user!.id),
        backendController.backend.getFavorities(),
        backendController.backend.getOrders(),
-       backendController.backend.getProductCartProducts(products),
+       backendController.backend.getProductCartProducts(prod),
        backendController.backend.getOrderRequest(),
        backendController.backend.getHistoryOrders(),
        backendController.backend.getRefundExchange()

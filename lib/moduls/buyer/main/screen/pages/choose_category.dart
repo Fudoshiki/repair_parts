@@ -7,6 +7,7 @@ import 'package:repair_parts/moduls/buyer/catalog/controller/catalog_controller.
 import 'package:repair_parts/moduls/buyer/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 class ChooseCategory extends StatelessWidget{
   MainController _mainController = Get.find();
@@ -14,79 +15,7 @@ class ChooseCategory extends StatelessWidget{
   bool? bottom;
   ChooseCategory({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-
-  List<CatalogItem> array =[
-    new CatalogItem(
-        "car.png",
-        "Легковые",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-    new CatalogItem(
-        "track.png",
-        "Спецтехника",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-    new CatalogItem(
-        "fur.png",
-        "Грузовые",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-    new CatalogItem(
-        "bus.png",
-        "Автобусы",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-    new CatalogItem(
-        "buse.png",
-        "Автобусы",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-    new CatalogItem(
-        "moto.png",
-        "Мотоциклы",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-    new CatalogItem(
-        "engine.png",
-        "Двигатели",
-        [
-          "XCMG",
-          "КАМАЗ",
-          "ЛИАЗ",
-          "МАЗ",
-          "МТЛБ",
-        ]),
-  ];
+  BackendController backendController =Get.find();
 
   var accompanyings=[
     new CatalogItem(
@@ -262,7 +191,7 @@ class ChooseCategory extends StatelessWidget{
                       ),
                     ),
                   ),
-                  ...array.map((el){
+                  ...backendController.dataAutoTypes.rows!.map((el){
                     return CatalogItems(el,false);
                   }),
                   Container(

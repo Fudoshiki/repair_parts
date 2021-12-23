@@ -5,6 +5,7 @@ import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/catalog/component/accompanying_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/main/screen/pages/list_all_screen.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 import '../component/catalog_item.dart';
 
@@ -13,7 +14,7 @@ class CatalogScreen extends StatelessWidget{
   bool? bottom;
   CatalogScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-
+  BackendController backendController =Get.find();
   List<CatalogItem> array =[
     new CatalogItem(
         "car.png",
@@ -127,7 +128,7 @@ class CatalogScreen extends StatelessWidget{
   ];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return backendController.dataAutoTypes.rows!=null? Scaffold(
         bottomNavigationBar: bottom!=null? SizedBox(height: 70,
 
           child: CupertinoTabBar(
@@ -371,7 +372,7 @@ class CatalogScreen extends StatelessWidget{
                       ),
                     ),
                   ),
-                  ...array.map((el){
+                  ...backendController.backend.dataAutoTypes.rows!.map((el){
                     return CatalogItems(el,true);
                   }),
                   Container(
@@ -400,6 +401,8 @@ class CatalogScreen extends StatelessWidget{
             )
           ],
         )
+    ):Center(
+      child: CircularProgressIndicator(),
     );
   }
 

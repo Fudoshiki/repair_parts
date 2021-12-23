@@ -1,19 +1,36 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/components_main/block_product.dart';
 import 'package:repair_parts/components_main/item_block.dart';
 import 'package:repair_parts/components_main/item_row.dart';
+import 'package:repair_parts/components_main/loader.dart';
+import 'package:repair_parts/components_main/row_product.dart';
+import 'package:repair_parts/models/data_catalog_product_search.dart';
+import 'package:repair_parts/models/rows_auto_types.dart';
+import 'package:repair_parts/models/rows_brand_auto.dart';
 import 'package:repair_parts/moduls/buyer/catalog/controller/catalog_controller.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 import 'filter_page.dart';
 
-class ListItems extends StatelessWidget{
-  String title;
+class ListItems extends StatefulWidget {
+  RowsAutoTypes? autoType;
+  RowsBrandAuto? brandAuto;
   bool? bottom;
+
+  ListItems({this.autoType, this.brandAuto, this.bottom});
+
+  @override
+  State<StatefulWidget> createState() {
+    return ListItemsState();
+  }
+}
+class ListItemsState extends State<ListItems>{
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
-  ListItems(@required this.title,{@required this.bottom});
   var array=[
     {
       "image":[
@@ -31,75 +48,27 @@ class ListItems extends StatelessWidget{
       "length":"130",
       "size":"0,4",
     },
-    {
-      "image":[
 
-      ],
-      "title":"Бак верхний левый в сборе МТЛБ",
-      "arcticul":"Артикул: 5320-1109359",
-      "brend":"Бренд: ХТЗ",
-      "added_backet":false,
-      "follow":false,
-      "description":"Пружина распорная фильтра воздушного КАМАЗ - ПАО КАМАЗ, артикул 5320-1109359 купить по низкой цене оптом с доставкой по всем регионам России с нашего склада в г. Набережные Челны.",
-      "height":"130",
-      "width":"130",
-      "length":"130",
-      "size":"0,4",
-    },
-    {
-      "image":[
-        "off.png",
-      ],
-      "title":"Выключатель датчиков уровня топлива КАМАЗ 4310 312312 312312 3 212 213 ",
-      "arcticul":"Артикул: 5320-1109359",
-      "brend":"Бренд: ХТЗ",
-      "added_backet":true,
-      "follow":false,
-      "description":"Пружина распорная фильтра воздушного КАМАЗ - ПАО КАМАЗ, артикул 5320-1109359 купить по низкой цене оптом с доставкой по всем регионам России с нашего склада в г. Набережные Челны.",
-      "height":"130",
-      "width":"130",
-      "length":"130",
-      "size":"0,4",
-    },
-    {
-      "image":[
-        "DSC_0211 2.png",
-        "DSC_0211 2.png"
-      ],      "title":"Пружина распорная воздушного фильтра КАМАЗ ",
-      "arcticul":"Артикул: 5320-1109359",
-      "brend":"Бренд: ХТЗ",
-      "added_backet":false,
-      "follow":true,
-      "description":"Пружина распорная фильтра воздушного КАМАЗ - ПАО КАМАЗ, артикул 5320-1109359 купить по низкой цене оптом с доставкой по всем регионам России с нашего склада в г. Набережные Челны.",
-      "height":"130",
-      "width":"130",
-      "length":"130",
-      "size":"0,4",
-    },
-    {
-      "image":[
-        "DSC_0211 2.png",
-        "DSC_0211 2.png"
-      ],      "title":"Пружина распорная воздушного фильтра КАМАЗ ",
-      "arcticul":"Артикул: 5320-1109359",
-      "brend":"Бренд: ХТЗ",
-      "added_backet":false,
-      "follow":true,
-      "description":"Пружина распорная фильтра воздушного КАМАЗ - ПАО КАМАЗ, артикул 5320-1109359 купить по низкой цене оптом с доставкой по всем регионам России с нашего склада в г. Набережные Челны.",
-      "height":"130",
-      "width":"130",
-      "length":"130",
-      "size":"0,4",
-    }
   ];
   RxString typeSort="По дате".obs;
   RxBool row=true.obs;
   CatalogController catalogController=Get.find();
+  DataCatalogProductSearch? dataCatalogProductByBrandAuto=new DataCatalogProductSearch();
+  BackendController backendController = Get.find();
+
+  @override
+  void initState() {
+    backendController.backend.getDataCatalogProductByBrandAuto(widget.autoType!.label.toString(), widget.brandAuto!.label.toString()).then((value){
+      setState(() {
+        dataCatalogProductByBrandAuto=value;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
+      bottomNavigationBar: widget.bottom!=null?         SizedBox(height: 70,
 
 
         child: CupertinoTabBar(
@@ -256,7 +225,7 @@ class ListItems extends StatelessWidget{
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "$title",
+                  "${widget.brandAuto!.name}",
                   style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w900,
@@ -430,7 +399,7 @@ class ListItems extends StatelessWidget{
               ],
             ),
           ),
-          Obx(
+          dataCatalogProductByBrandAuto!.rows==null?Expanded(child: Loader()): Obx(
               ()=>catalogController.isBlock.value
                   ?Expanded(
                 child: ListView(
@@ -439,9 +408,9 @@ class ListItems extends StatelessWidget{
                     bottom: 21
                   ),
                   children: [
-                    ...array.map(
+                    ...dataCatalogProductByBrandAuto!.rows!.map(
                             (el){
-                          return ItemRow(el);
+                          return RowProduct(el);
                         }
                     )
                   ],
@@ -451,15 +420,15 @@ class ListItems extends StatelessWidget{
                 child: GridView.count(
                   crossAxisSpacing: 20,
                   mainAxisSpacing: 5,
-                  childAspectRatio: ((Get.width-40)/2)/329,
+                  childAspectRatio: ((Get.width-40)/2)/330,
                   crossAxisCount: 2,
                   padding: EdgeInsets.only(
                     left: 20,
                     right: 20,
                     bottom: 21
                   ),
-                  children: List.generate(array.length, (index) {
-                    return ItemBlock(array[index]);
+                  children: List.generate(dataCatalogProductByBrandAuto!.rows!.length, (index) {
+                    return BlockProduct(dataCatalogProductByBrandAuto!.rows![index]);
                   }),
                 ),
               )

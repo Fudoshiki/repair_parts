@@ -2,7 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/models/data_item_region.dart';
+import 'package:repair_parts/models/data_regions.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
+import "package:collection/collection.dart";
 
 class ChooseRegion extends StatelessWidget{
   MainController mainController = Get.find();
@@ -12,6 +16,7 @@ class ChooseRegion extends StatelessWidget{
   bool? bottom;
   ChooseRegion({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
+  BackendController backendController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -191,420 +196,8 @@ class ChooseRegion extends StatelessWidget{
                     ],
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.only(
-                    left: 20,
-                    right: 20,
-                    top: 9
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "A",
-                        style: TextStyle(
-                          color: Color(0xff2e2e33),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: "Roboto"
-                        ),
-                      ),
-                      GestureDetector(
-                        child: Container(
-                          margin: EdgeInsets.only(
-                              top: 8
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
 
-                                  ),
-                                  Text(
-                                      "Алтайский край (3)",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                              alt?Container(
-                                width: 8,
-                                height: 14,
-                                child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                              )   :Container(
-                                  width: 14,
-                                  height: 8,
-                                  child: Image.asset("assets/image/arrow_down.png",color: Color(0xff959595))
-                              )
-                            ],
-                          ),
-                        ),
-                        onTap: (){
-                          alt=!alt;
-                          Get.forceAppUpdate();
-                        },
-                      ),
-                      alt?Container(
-                        margin: EdgeInsets.only(
-                          left: 28
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(
-                                  top: 12
-                              ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
-
-                                  ),
-                                  Text(
-                                      "Алтайск",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(
-                                top: 12
-                              ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
-
-                                  ),
-                                  Text(
-                                      "Барнаул",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ):Container()
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 9
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Б",
-                        style: TextStyle(
-                            color: Color(0xff2e2e33),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: "Roboto"
-                        ),
-                      ),
-                      GestureDetector(
-                        child: Container(
-                          margin: EdgeInsets.only(
-                              top: 8
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
-
-                                  ),
-                                  Text(
-                                      "Алтайский край (3)",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                              brt?Container(
-                                width: 8,
-                                height: 14,
-                                child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                              )   :Container(
-                                  width: 14,
-                                  height: 8,
-                                  child: Image.asset("assets/image/arrow_down.png",color: Color(0xff959595))
-                              )                         ],
-                          ),
-                        ),
-                        onTap: (){
-                          brt=!brt;
-                          Get.forceAppUpdate();
-                        },
-                      ),
-                      brt?Container(
-                        margin: EdgeInsets.only(
-                            left: 28
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(
-                                  top: 12
-                              ),
-                              child: Row(
-                                children: [
-
-                                  Text(
-                                      "Ещё нет зарегистрированных организаций",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33).withOpacity(0.33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ):Container()
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
-                      top: 9
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "В",
-                        style: TextStyle(
-                            color: Color(0xff2e2e33),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: "Roboto"
-                        ),
-                      ),
-                      GestureDetector(
-                        child: Container(
-                          margin: EdgeInsets.only(
-                              top: 8
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
-
-                                  ),
-                                  Text(
-                                      "Брянская область (5)",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                              reg?Container(
-                                width: 8,
-                                height: 14,
-                                child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
-                              )   :Container(
-                                  width: 14,
-                                  height: 8,
-                                  child: Image.asset("assets/image/arrow_down.png",color: Color(0xff959595))
-                              )                ],
-                          ),
-                        ),
-                        onTap: (){
-                          reg=!reg;
-                          Get.forceAppUpdate();
-                        },
-                      ),
-                      reg?Container(
-                        margin: EdgeInsets.only(
-                            left: 28
-                        ),
-                        child: Column(
-                          children: [
-                            Container(
-                              margin: EdgeInsets.only(
-                                  top: 12
-                              ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
-
-                                  ),
-                                  Text(
-                                      "Алтайск",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(
-                                  top: 12
-                              ),
-                              child: Row(
-                                children: [
-                                  Container(
-                                    width: 20,
-                                    height: 20,
-                                    margin: EdgeInsets.only(
-                                      right: 20,
-                                    ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(4),
-                                        border: Border.all(
-                                            width: 1,
-                                            color: Color(0xffD6D6D6)
-                                        )
-                                    ),
-
-                                  ),
-                                  Text(
-                                      "Барнаул",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w400,
-                                          fontSize: 14,
-                                          color: Color(0xff2e2e33),
-                                          fontFamily: "Roboto"
-
-                                      )
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ):Container()
-                    ],
-                  ),
-                ),
-
+                ...groupBye(backendController.regionList)
               ],
             ),
           ),
@@ -668,6 +261,186 @@ class ChooseRegion extends StatelessWidget{
 
         ],
       ),
+    );
+  }
+  groupBye(searchList){
+    List<Widget> list = [];
+    var groupByDate = groupBy(searchList,
+            (DataRegions obj) => obj.nameWithType.toString().substring(0,1).toUpperCase());
+    groupByDate.forEach((date, liste) {
+      // Header
+      list.add(Container(
+        margin: EdgeInsets.only(
+            left: 20,
+            right: 20,
+            top: 9
+        ),
+        child: Text(
+          "${date}",
+          style: TextStyle(
+              color: Color(0xff2e2e33),
+              fontSize: 14,
+              fontWeight: FontWeight.w700,
+              fontFamily: "Roboto"
+          ),
+        ),
+      ));
+      // Group
+      liste.forEach((listItem) {
+        list.add(RegionItem(listItem));
+      });
+      // day section divider
+    });
+    return list;
+  }
+}
+class RegionItem extends StatefulWidget{
+  DataRegions region;
+
+  RegionItem(this.region);
+
+  @override
+  State<StatefulWidget> createState() {
+    return RegionItemState();
+  }
+
+}
+class RegionItemState extends State<RegionItem>{
+  BackendController backendController= Get.find();
+  bool choose=false;
+  List<DataItemRegion>? list=[];
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(
+        left: 20,
+        right: 20,
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.only(
+                top: 8
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 20,
+                      height: 20,
+                      margin: EdgeInsets.only(
+                        right: 20,
+                      ),
+                      padding: EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          border: Border.all(
+                              width: 1,
+                              color: Color(0xffD6D6D6)
+                          )
+                      ),
+
+                    ),
+                    Text(
+                        "${widget.region.nameWithType} ${widget.region.organizationBranchCount!=0?"(${widget.region.organizationBranchCount})":""}",
+                        style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 14,
+                            color: Color(0xff2e2e33),
+                            fontFamily: "Roboto"
+
+                        )
+                    )
+                  ],
+                ),
+                GestureDetector(
+                  child: choose?Container(
+                    width: 8,
+                    height: 14,
+                    child:Image.asset("assets/image/arrow_right.png",color: Color(0xff959595),),
+                  ):Container(
+                      width: 14,
+                      height: 8,
+                      child: Image.asset("assets/image/arrow_down.png",color: Color(0xff959595))
+                  ),
+                  onTap: ()async{
+                    setState(() {
+                      choose=!choose;
+                    });
+                    print("13");
+                    list=await backendController.backend.getCompanyFromRegion(widget.region.fiasId);
+                    setState(() {
+
+                    });
+                    print("${list!.length} ${choose}");
+                  },
+                )
+              ],
+            ),
+          ),
+          choose?Container(
+            margin: EdgeInsets.only(
+              left: 42
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: list!.length!=0
+                  ?list!.map((e){
+                return Container(
+                  margin: EdgeInsets.only(
+                      top: 10
+                  ),
+                  child:Row(
+                    children: [
+                      Container(
+                        width: 20,
+                        height: 20,
+                        margin: EdgeInsets.only(
+                          right: 20,
+                        ),
+                        padding: EdgeInsets.all(5),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                                width: 1,
+                                color: Color(0xffD6D6D6)
+                            )
+                        ),
+
+                      ),
+                      Text("${e.formalname}",
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: Color(0xff2e2e33),
+                            fontWeight: FontWeight.w400,
+                            fontFamily: "Roboto"
+                        ),),
+                    ],
+                  ),
+                );
+              }).toList()
+                  :[
+                Container(
+                    margin: EdgeInsets.only(
+                        top: 8
+                    ),
+                    child:    Text("Ещё нет зарегистрированных организаций",
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xff2E2E334D),
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Roboto"
+                      ),
+                    )
+                )
+              ],
+            ),
+          ):Container()
+        ],
+      )
     );
   }
 

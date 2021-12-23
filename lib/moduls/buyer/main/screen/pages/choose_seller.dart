@@ -2,21 +2,40 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/models/rows_sellers.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
-class ChooseSeller extends StatelessWidget{
-  MainController mainController = Get.find();
-  bool? bottom;
+class ChooseSeller extends StatefulWidget {
   ChooseSeller({@required this.bottom});
+  bool? bottom;
+
+  @override
+  State<StatefulWidget> createState() {
+    return ChooseSellerState();
+  }
+}
+class ChooseSellerState extends State<ChooseSeller>{
+  MainController mainController = Get.find();
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
+  BackendController backendController =Get.find();
+  List<SellerChoose> listSeller=[];
+  @override
+  void initState() {
+    backendController.dataSellers.rows!.forEach((element) {
+      listSeller.add(new SellerChoose(false, element));
+    });
+    setState(() {
+    });
+  }
+  bool allChoose=false;
+  bool allChooseSellerSend=false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
-
-
+      bottomNavigationBar: widget.bottom!=null?         SizedBox(height: 70,
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -148,235 +167,146 @@ class ChooseSeller extends StatelessWidget{
                       ),
                     )
                 ),
-                Container(
-                  margin: EdgeInsets.only(
-                    right: 20,
-                    left: 20,
-                    top: 26
-                  ),
-                  padding: EdgeInsets.only(
-                    bottom: 5
-                  ),
-                  decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(
-                          color: Color(0xffE7E7E7),
-                          width: 1
-                      )
-                    )
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
+                //allChooseSellerSend
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        right: 20,
+                        left: 20,
+                        top: 26
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 5
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
+                            )
+                        )
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        allChooseSellerSend?Container(
+                            width: 20,
+                            height: 20,
+                            margin: EdgeInsets.only(
+                              right: 20,
+
+                            ),
+                            padding: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                color: Color(0xffFFE9E8),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Image.asset("assets/image/done.png",
+                              width: 8,height: 6,)
+                        ): Container(
                           width: 20,
                           height: 20,
                           margin: EdgeInsets.only(
-                              right: 20,
-
+                            right: 20,
                           ),
                           padding: EdgeInsets.all(5),
                           decoration: BoxDecoration(
-                              color: Color(0xffFFE9E8),
-                              borderRadius: BorderRadius.circular(6)
+                              borderRadius: BorderRadius.circular(4),
+                              border: Border.all(
+                                  width: 1,
+                                  color: Color(0xffD6D6D6)
+                              )
                           ),
-                          child: Image.asset("assets/image/done.png",
-                            width: 8,height: 6,)
-                      ),
-                      Container(
-                        width: Get.width-100,
-                        child: Text(
-                          "Всегда отправлять только выбранным продавцам"
+
                         ),
-                      )
-                    ],
+                        Container(
+                          width: Get.width-100,
+                          child: Text(
+                              "Всегда отправлять только выбранным продавцам"
+                          ),
+                        )
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    setState(() {
+                      allChooseSellerSend=!allChooseSellerSend;
+                    });
+                  },
                 ),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: 20,
-                      left: 20,
-                      top: 26
-                  ),
-                  padding: EdgeInsets.only(
-                      bottom: 16
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(
-                              color: Color(0xffE7E7E7),
-                              width: 1
-                          )
-                      )
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        margin: EdgeInsets.only(
-                          right: 20,
-                        ),
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                width: 1,
-                                color: Color(0xffD6D6D6)
+                GestureDetector(
+                  child: Container(
+                    margin: EdgeInsets.only(
+                        right: 20,
+                        left: 20,
+                        top: 26
+                    ),
+                    padding: EdgeInsets.only(
+                        bottom: 16
+                    ),
+                    decoration: BoxDecoration(
+                        border: Border(
+                            bottom: BorderSide(
+                                color: Color(0xffE7E7E7),
+                                width: 1
                             )
-                        ),
+                        )
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        allChoose?Container(
+                            width: 20,
+                            height: 20,
+                            margin: EdgeInsets.only(
+                              right: 20,
 
-                      ),
-                      Container(
-                        width: Get.width-100,
-                        child: Text(
-                            "Выбрать всех"
+                            ),
+                            padding: EdgeInsets.all(5),
+                            decoration: BoxDecoration(
+                                color: Color(0xffFFE9E8),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Image.asset("assets/image/done.png",
+                              width: 8,height: 6,)
+                        ): Container(
+                          width: 20,
+                          height: 20,
+                          margin: EdgeInsets.only(
+                            right: 20,
+                          ),
+                          padding: EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4),
+                              border: Border.all(
+                                  width: 1,
+                                  color: Color(0xffD6D6D6)
+                              )
+                          ),
+
                         ),
-                      )
-                    ],
+                        Container(
+                          width: Get.width-100,
+                          child: Text(
+                              "Выбрать всех"
+                          ),
+                        )
+                      ],
+                    ),
                   ),
+                  onTap: (){
+                    listSeller.forEach((e){
+                      setState(() {
+                        e.value=!allChoose;
+                      });
+                    });
+                    setState(() {
+                      allChoose=!allChoose;
+                    });
+                  },
                 ),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: 20,
-                      left: 20,
-                      top: 12
-                  ),
+                ...listSeller.map((e) => SellerChooseItem(e)),
 
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        margin: EdgeInsets.only(
-                          right: 20,
-                        ),
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                width: 1,
-                                color: Color(0xffD6D6D6)
-                            )
-                        ),
-
-                      ),
-                      Container(
-                        width: Get.width-100,
-                        child: Text(
-                            "Продавец 1"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: 20,
-                      left: 20,
-                      top: 12
-                  ),
-
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        margin: EdgeInsets.only(
-                          right: 20,
-                        ),
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                width: 1,
-                                color: Color(0xffD6D6D6)
-                            )
-                        ),
-
-                      ),
-                      Container(
-                        width: Get.width-100,
-                        child: Text(
-                            "Продавец 2"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: 20,
-                      left: 20,
-                      top: 12
-                  ),
-
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        margin: EdgeInsets.only(
-                          right: 20,
-                        ),
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                width: 1,
-                                color: Color(0xffD6D6D6)
-                            )
-                        ),
-
-                      ),
-                      Container(
-                        width: Get.width-100,
-                        child: Text(
-                            "Продавец 3"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: 20,
-                      left: 20,
-                      top: 12
-                  ),
-
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        width: 20,
-                        height: 20,
-                        margin: EdgeInsets.only(
-                          right: 20,
-                        ),
-                        padding: EdgeInsets.all(5),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            border: Border.all(
-                                width: 1,
-                                color: Color(0xffD6D6D6)
-                            )
-                        ),
-
-                      ),
-                      Container(
-                        width: Get.width-100,
-                        child: Text(
-                            "Продавец 4"
-                        ),
-                      )
-                    ],
-                  ),
-                ),
 
               ],
             ),
@@ -444,4 +374,87 @@ class ChooseSeller extends StatelessWidget{
   }
 
 
+}
+class SellerChooseItem extends StatefulWidget{
+  SellerChoose sellerChoose;
+
+  SellerChooseItem(this.sellerChoose);
+
+  @override
+  State<StatefulWidget> createState() {
+    return SellerChooseItemState();
+  }
+
+}
+class SellerChooseItemState extends State<SellerChooseItem>{
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Container(
+        margin: EdgeInsets.only(
+            right: 20,
+            left: 20,
+            top: 12
+        ),
+
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            widget.sellerChoose.value
+                ?Container(
+                width: 20,
+                height: 20,
+                margin: EdgeInsets.only(
+                  right: 20,
+
+                ),
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    color: Color(0xffFFE9E8),
+                    borderRadius: BorderRadius.circular(6)
+                ),
+                child: Image.asset("assets/image/done.png",
+                  width: 8,height: 6,)
+            )
+                : Container(
+              width: 20,
+              height: 20,
+              margin: EdgeInsets.only(
+                right: 20,
+              ),
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(
+                      width: 1,
+                      color: Color(0xffD6D6D6)
+                  )
+              ),
+
+            ),
+            Container(
+              width: Get.width-100,
+              child: Text(
+                  widget.sellerChoose.seller.lastname==null&&widget.sellerChoose.seller.firstname==null&&widget.sellerChoose.seller.middlename==null
+                      ?"${widget.sellerChoose.seller.phone}"
+                      :"${widget.sellerChoose.seller.lastname==null?"":"${widget.sellerChoose.seller.lastname} "}${widget.sellerChoose.seller.firstname==null?"":"${widget.sellerChoose.seller.firstname} "}${widget.sellerChoose.seller.middlename==null?"":"${widget.sellerChoose.seller.middlename} "}"
+              ),
+            )
+          ],
+        ),
+      ),
+      onTap: (){
+        setState(() {
+          widget.sellerChoose.value=!widget.sellerChoose.value;
+        });
+      },
+    );
+  }
+
+}
+class SellerChoose {
+  bool value;
+  RowsSellers seller;
+
+  SellerChoose(this.value, this.seller);
 }

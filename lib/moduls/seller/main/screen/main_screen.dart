@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
-import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen2.dart';
+import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/message/screen/message_screen.dart';
 import 'package:repair_parts/moduls/buyer/profile/screen/rows_profile_pages/pages_orders/order_screen.dart';

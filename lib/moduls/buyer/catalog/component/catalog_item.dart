@@ -1,15 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/components_main/loader.dart';
+import 'package:repair_parts/models/data_brand_auto.dart';
+import 'package:repair_parts/models/rows_auto_types.dart';
+import 'package:repair_parts/models/rows_brand_auto.dart';
 import 'package:repair_parts/moduls/buyer/catalog/controller/catalog_controller.dart';
 import 'package:repair_parts/moduls/buyer/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/buyer/catalog/screen/pages/list_items.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 class CatalogItems extends StatefulWidget{
-  CatalogItem items;
+  RowsAutoTypes item;
   bool onTap;
-  CatalogItems(@required this.items,@required this.onTap);
+  CatalogItems(@required this.item,@required this.onTap);
 
   @override
   State<StatefulWidget> createState() {
@@ -20,7 +25,11 @@ class CatalogItems extends StatefulWidget{
 class CatalogItemState extends State<CatalogItems>{
   CatalogController _catalogController =Get.find();
   MainController _mainController =Get.find();
+  DataBrandAuto dataBrandAuto = new DataBrandAuto();
+  BackendController backendController =Get.find();
   bool opened=false;
+  bool chooseAll=false;
+  List<BrandAutoItem> list=[];
   @override
   void initState() {
 
@@ -28,9 +37,6 @@ class CatalogItemState extends State<CatalogItems>{
 
   @override
   Widget build(BuildContext context) {
-    return getCalogRow(widget.items.image, widget.items.title);
-  }
-  Widget getCalogRow(image,title){
     return Column(
       children: [
         GestureDetector(
@@ -56,13 +62,13 @@ class CatalogItemState extends State<CatalogItems>{
                       Container(
                         width: 36,
                         height: 20,
-                        child: Image.asset("assets/image/$image"),
+                        child: Image.network("https://inf.market/img/catalog/${widget.item.label}.png"),
                       ),
                       SizedBox(
                         width: 18,
                       ),
                       Text(
-                        "$title",
+                        "${widget.item.name}",
                         style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -79,7 +85,14 @@ class CatalogItemState extends State<CatalogItems>{
                 ],
               )
           ),
-          onTap: (){
+          onTap: ()async {
+            await backendController.backend.getBrandAuto(widget.item.label);
+            dataBrandAuto = backendController.backend.dataBrandAuto;
+            print("${dataBrandAuto.count}");
+            list=[];
+            dataBrandAuto.rows!.forEach((element) {
+              list.add(BrandAutoItem(false, element));
+            });
             setState(() {
               opened=!opened;
             });
@@ -87,30 +100,30 @@ class CatalogItemState extends State<CatalogItems>{
         ),
         opened?Container(
           margin: EdgeInsets.symmetric(
-            horizontal: 20
+              horizontal: 20
           ),
           child: Column(
             children: [
               Container(
                 margin: EdgeInsets.only(
-                  bottom: 29,top: 10
+                    bottom: 29,top: 10
                 ),
                 decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Color(0xffD6D6D6),
-                    width: 1
-                  ),
-                  borderRadius: BorderRadius.circular(6)
+                    border: Border.all(
+                        color: Color(0xffD6D6D6),
+                        width: 1
+                    ),
+                    borderRadius: BorderRadius.circular(6)
                 ),
                 height: 50,
                 child: TextField(
                   decoration: InputDecoration(
-                    hintText: "Поиск по марке",
+                      hintText: "Поиск по марке",
                       hintStyle: TextStyle(
-                        color: Color(0xff959595),
-                        fontSize: 14,
-                        fontFamily: "Roboto",
-                        fontWeight: FontWeight.w400
+                          color: Color(0xff959595),
+                          fontSize: 14,
+                          fontFamily: "Roboto",
+                          fontWeight: FontWeight.w400
                       ),
                       enabledBorder: InputBorder.none,
                       border: InputBorder.none,
@@ -133,87 +146,70 @@ class CatalogItemState extends State<CatalogItems>{
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.only(
-                    bottom: 22
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 20,
-                      height: 20,
-                      margin: EdgeInsets.only(
-                          right: 8
-                      ),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4),
-                        color: Color(0xffFFE9E8)
-                      ),
-                      child: Center(
-                        child: Icon(
-                          Icons.done,
-                          size: 15,
-                          color: Color(0xffE6332A),
-                        ),
-                      ),
-                    ),
-                    Text(
-                      "Выбрать все",
-                      style: TextStyle(
-                          color: Color(0xff2e2e33),
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: "Roboto"
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              ...widget.items.array.map((el){
-                return GestureDetector(
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        bottom: 22
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: 20,
-                          height: 20,
-                          margin: EdgeInsets.only(
-                              right: 8
-                          ),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4),
-                              border: Border.all(
-                                  color: Color(0xffD6D6D6)
-                              )
-                          ),
-                        ),
-                        Text(
-                          "${el}",
-                          style: TextStyle(
-                              color: Color(0xff2e2e33),
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: "Roboto"
-                          ),
-                        )
-                      ],
-                    ),
+              GestureDetector(
+                child: Container(
+                  margin: EdgeInsets.only(
+                      bottom: 22
                   ),
-                  onTap: (){
-                    if(
-                    widget.onTap
-                    ){
-                      Get.to(()=>ListItems(el));
-                    }else{
-                      _catalogController.chooseCategory.value=el;
-                      _mainController.controllerMainPage.jumpToPage(1);
-                  }
-                  }
-                );
-              })
+                  child: Row(
+                    children: [
+                      chooseAll?Container(
+                        width: 20,
+                        height: 20,
+                        margin: EdgeInsets.only(
+                            right: 8
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Color(0xffFFE9E8)
+                        ),
+                        padding: EdgeInsets.all(4),
+                        child: Center(
+                            child: Image.asset("assets/image/done.png")
+                        ),
+                      ):Container(
+                        width: 20,
+                        height: 20,
+                        margin: EdgeInsets.only(
+                            right: 8
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(
+                                color: Color(0xffD6D6D6)
+                            )
+                        ),
+                      ),
+                      Text(
+                        "Выбрать все",
+                        style: TextStyle(
+                            color: Color(0xff2e2e33),
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: "Roboto"
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                onTap: (){
+                  list.forEach((element) {
+                    element.choose=!chooseAll;
+                  });
+                  setState(() {
+                    chooseAll=!chooseAll;
+                  });
+                },
+              ),
+              dataBrandAuto.count==null?Loader():dataBrandAuto.count==0?Loader()
+                  :Column(
+                children: [
+                  ...list.map((e){
+                    return ItemBrandAuto(e,widget.item);
+                  })
+                ],
+              )
+
             ],
           ),
         ):Container()
@@ -221,5 +217,85 @@ class CatalogItemState extends State<CatalogItems>{
     );
   }
 
+
+
+}
+class ItemBrandAuto extends StatefulWidget {
+  BrandAutoItem row;
+  RowsAutoTypes rowsAutoTypes;
+  ItemBrandAuto(this.row,this.rowsAutoTypes);
+
+  @override
+  State<StatefulWidget> createState() {
+    return ItemBrandAutoState();
+  }
+
+}
+class ItemBrandAutoState extends State<ItemBrandAuto>{
+
+  @override
+  Widget build(BuildContext context) {
+      return GestureDetector(
+          child: Container(
+            margin: EdgeInsets.only(
+                bottom: 22
+            ),
+            child: Row(
+              children: [
+                widget.row.choose?Container(
+                  width: 20,
+                  height: 20,
+                  margin: EdgeInsets.only(
+                      right: 8
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: Color(0xffFFE9E8)
+                  ),
+                  padding: EdgeInsets.all(4),
+                  child: Center(
+                      child: Image.asset("assets/image/done.png")
+                  ),
+                ):Container(
+                  width: 20,
+                  height: 20,
+                  margin: EdgeInsets.only(
+                      right: 8
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(
+                          color: Color(0xffD6D6D6)
+                      )
+                  ),
+                ),
+                Text(
+                  "${widget.row.rowsAutoTypes.name}",
+                  style: TextStyle(
+                      color: Color(0xff2e2e33),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: "Roboto"
+                  ),
+                )
+              ],
+            ),
+          ),
+          onTap: (){
+            setState(() {
+              widget.row.choose=!widget.row.choose;
+            });
+            Get.to(ListItems(autoType:widget.rowsAutoTypes,brandAuto:widget.row.rowsAutoTypes, bottom: true));
+          }
+      );
+
+  }
+
+}
+class BrandAutoItem{
+  bool choose;
+  RowsBrandAuto rowsAutoTypes;
+
+  BrandAutoItem(this.choose, this.rowsAutoTypes);
 
 }

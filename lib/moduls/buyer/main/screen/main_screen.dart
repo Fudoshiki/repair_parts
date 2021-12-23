@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
+import 'package:repair_parts/moduls/buyer/backet/screen/no_product_in_backet_screen.dart';
 import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen.dart';
-import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen2.dart';
 import 'package:repair_parts/moduls/buyer/backet/screen/pages/done_query.dart';
 import 'package:repair_parts/moduls/buyer/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
@@ -54,7 +54,7 @@ class MainScreenState extends State<MainScreen>{
         ],
       ),
       profileController.dataOrders.count==0?NoOrderScreen():OrderScreen(),
-      profileController.dataProfile!.user!.cartProducts!.length==0?NoProductInBacketScreen():BacketScreen(),
+      BacketScreen(),
 
       MessagePage(),
       PageView(

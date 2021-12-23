@@ -1,17 +1,24 @@
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:repair_parts/models/data_auto_types.dart';
+import 'package:repair_parts/models/data_brand_auto.dart';
 import 'package:repair_parts/models/data_cart_products.dart';
+import 'package:repair_parts/models/data_catalog_product_search.dart';
 import 'package:repair_parts/models/data_chat.dart';
 import 'package:repair_parts/models/data_companies.dart';
 import 'package:repair_parts/models/data_favorite.dart';
+import 'package:repair_parts/models/data_item_region.dart';
 import 'package:repair_parts/models/data_login.dart';
 import 'package:repair_parts/models/data_notification.dart';
 import 'package:repair_parts/models/data_order_request.dart';
 import 'package:repair_parts/models/data_orders.dart';
 import 'package:repair_parts/models/data_profile.dart';
 import 'package:repair_parts/models/data_refund_exchange.dart';
+import 'package:repair_parts/models/data_regions.dart';
+import 'package:repair_parts/models/data_sellers.dart';
 import 'package:repair_parts/models/data_transport_types.dart';
+import 'package:repair_parts/models/rows_products.dart';
 import 'package:repair_parts/models/user.dart';
 
 class Backend {
@@ -26,10 +33,20 @@ class Backend {
   DataOrderRequest dataOrderRequest =new DataOrderRequest();
   DataNotofication dataNotification =new DataNotofication();
   DataRefundExchange dataRefundExchange = new DataRefundExchange();
-  List<DataTranspostType>? listDataTransportTypes =[];
   DataChat dataChat =new DataChat();
-
+  List<DataTranspostType>? listDataTransportTypes =[];
+  List<DataRegions>? listDataRegions =[];
+  List<DataItemRegion>? listDataItemRegion;
+  DataCatalogProductSearch dataCatalogProductByBrandAuto =new DataCatalogProductSearch();
   dynamic dataHistoryOrder;
+
+  DataSellers listSellers = new DataSellers();
+
+  DataAutoTypes dataAutoTypes = new DataAutoTypes();
+
+  DataBrandAuto dataBrandAuto = new DataBrandAuto();
+
+
   Backend(){
     dio =new Dio(
       BaseOptions(
@@ -323,8 +340,64 @@ class Backend {
     }
 
   }
+  Future<List<DataRegions>?> getRegionsList()async{
+    ////regions
+    var datas = await dio.get("/regions");
+    print("getRegionsList${datas.data}");
 
-  ///order/refund-exchange/list?page=1
+    if(datas.data!=null){
+      print("${datas.data}");
+      var listDataRegions=(datas.data['data'] as List?)?.map((dynamic e) => DataRegions.fromJson(e as Map<String,dynamic>)).toList();
+      this.listDataRegions=listDataRegions ;
+      return listDataRegions;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+  }
+  Future<List<DataItemRegion>?> getCompanyFromRegion(el)async{
+    ////regions
+    var datas = await dio.get("/regions/${el}");
+    print("getCompanyFromRegion${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var listDataItemRegion=(datas.data['data'] as List?)?.map((dynamic e) => DataItemRegion.fromJson(e as Map<String,dynamic>)).toList();
+      this.listDataItemRegion=listDataItemRegion ;
+      return listDataItemRegion;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+  }
+
+  Future<DataSellers?> getSellerList()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/user/list?role=seller&include[]=completedOrdersWithAuthUser");
+    print("getSellerList${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var listSellers=DataSellers.fromJson(datas.data['data']);
+      this.listSellers=listSellers ;
+      return listSellers;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+  }
+
+  ///user/list?role=seller&include[]=completedOrdersWithAuthUser
+
   Future<DataChat?> getChatList()async{
     GetStorage storage =GetStorage();
     var token = storage.read("bearer_token");
@@ -386,8 +459,8 @@ class Backend {
           "Authorization":"Bearer "+token
         }
     );
-    var products = await dio.get("/catalog/cart-products?cartProducts=[${cartProducts}]");
-    print("/catalog/cart-products?cartProducts=[${cartProducts}]");
+    var products = await dio.get("/catalog/cart-products?cartProducts=${cartProducts}");
+    print("/catalog/cart-products?cartProducts=${cartProducts}");
     print("getProductCartProducts ${products.data}");
     if(products!=null){
       var dataCartProducts= DataCartProducts.fromJson(products.data['data']);
@@ -399,6 +472,141 @@ class Backend {
 
   }
 
-///order/history?pageSize=10
+  Future<DataCatalogProductSearch?> getDataCatalogProductSearch(string)async {
+    var products = await dio.get("/catalog/products?search=$string");
+    print("/catalog/products?search=$string");
+    print("getProductCartProducts ${products.data}");
+    if(products!=null){
+      var dataCatalogProductSearch= DataCatalogProductSearch.fromJson(products.data['data']);
+      return dataCatalogProductSearch;
+    }else{
+      return null;
+    }
+  }
+  Future<DataCatalogProductSearch?> getDataCatalogProductByBrandAuto(autoType,autoBrand) async{
+    var products = await dio.get("/catalog/products?page=1&autoType=$autoType&autoBrand=$autoBrand");
+    print("/catalog/products?page=1&autoType=$autoType&autoBrand=$autoBrand");
+    print("getProductCartProducts ${products.data}");
+    if(products!=null){
+      var dataCatalogProductByBrandAuto= DataCatalogProductSearch.fromJson(products.data['data']);
+      return dataCatalogProductByBrandAuto;
+    }else{
+      return null;
+    }
+    //https://api.inf.market/catalog/products?page=2&autoType=dvigateli&autoBrand=cummins
+  }
 
+  Future<dynamic> addToFavoriteProduct(id)async{
+    //user/favorite-products
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var products = await dio.post("/user/favorite-products",data: {
+      "productId": "$id"
+    });
+    print("addToFavoriteProduct ${products.data}");
+    if(products!=null){
+      return dataCartProducts;
+    }else{
+      return null;
+    }
+  }
+  Future<dynamic> deleteFavoriteProduct(id)async{
+    //user/favorite-products
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var products = await dio.delete("/user/favorite-products/$id");
+    print("deleteFavoriteProduct ${products.data}");
+    if(products!=null){
+      return products;
+    }else{
+      return null;
+    }
+  }
+  Future<dynamic> addToCartProduct(String? id)async {
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var products = await dio.post("/user/cart-product",data: {"productId": "$id", "quantity": 1});
+    print("addToCartProduct ${products.data}");
+    if(products!=null){
+      return products;
+    }else{
+      return null;
+    }
+
+  }
+  Future<dynamic> deleteCartProduct(String? id) async{
+
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var products = await dio.delete("/user/cart-product",data: {
+      "productId": "$id"
+    });
+    print("deleteCartProduct ${products.data}");
+    if(products!=null){
+      return products;
+    }else{
+      return null;
+    }
+
+  }
+
+  Future<DataAutoTypes?> getAutoType() async{
+    var datas = await dio.get("/catalog/auto-types");
+    print("getAutoType${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataAutoTypes=DataAutoTypes.fromJson(datas.data['data']);
+      this.dataAutoTypes=dataAutoTypes ;
+      return dataAutoTypes;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+  }
+  Future<DataBrandAuto?> getBrandAuto(String? autoType) async{
+    var datas = await dio.get("/catalog/auto-brands?autoType=$autoType");
+    print("getBrandAuto${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataBrandAuto=DataBrandAuto.fromJson(datas.data['data']);
+      this.dataBrandAuto=dataBrandAuto ;
+      return dataBrandAuto;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+  }
+
+
+///catalog/auto-brands?autoType=legkovye
 }

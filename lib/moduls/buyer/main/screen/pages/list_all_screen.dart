@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/moduls/buyer/backet/screen/no_product_in_backet_screen.dart';
 import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen.dart';
-import 'package:repair_parts/moduls/buyer/backet/screen/backet_screen2.dart';
 import 'package:repair_parts/moduls/buyer/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/moduls/buyer/catalog/screen/pages/list_items.dart';
 import 'package:repair_parts/moduls/buyer/home/screen/home_screen.dart';
@@ -227,7 +227,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(()=>SearchPage(bottom: true,));
+              Get.to(()=>SearchPage());
             },
           ),
           //18,19
@@ -297,7 +297,7 @@ class ListAllScreen extends StatelessWidget{
 
             ),
             onTap:(){
-              Get.to(()=>ListItems("КАМАЗ",bottom: true,));
+              Get.to(()=>ListItems(bottom: true,));
             },
           ),
           //22а 22б 23

@@ -7,6 +7,7 @@ import 'package:repair_parts/moduls/buyer/catalog/controller/catalog_controller.
 import 'package:repair_parts/moduls/buyer/catalog/screen/catalog_screen.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 class ChooseCategorySeller extends StatelessWidget{
   MainController _mainController = Get.find();
@@ -14,7 +15,7 @@ class ChooseCategorySeller extends StatelessWidget{
   bool? bottom;
   ChooseCategorySeller({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
-
+  BackendController backendController =Get.find();
   List<CatalogItem> array =[
     new CatalogItem(
         "car.png",
@@ -256,7 +257,7 @@ class ChooseCategorySeller extends StatelessWidget{
                       ),
                     ),
                   ),
-                  ...array.map((el){
+                  ...backendController.dataAutoTypes.rows!.map((el){
                     return CatalogItems(el,false);
                   }),
                   Container(
