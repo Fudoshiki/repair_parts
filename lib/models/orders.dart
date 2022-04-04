@@ -1,5 +1,8 @@
 import 'notification.dart';
+import 'organization.dart';
 import 'products.dart';
+import 'reward.dart';
+import 'seller.dart';
 
 class Order {
   String? id;
@@ -26,6 +29,10 @@ class Order {
   List<Notifications>? notifications;
   List<dynamic>? unreadNotifications;
   List<Products>? products;
+  Organization? organization;
+  Seller? seller;
+  dynamic transportCompany;
+  Reward? reward;
 
   Order({
     this.id,

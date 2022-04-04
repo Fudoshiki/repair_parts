@@ -9,6 +9,7 @@ import 'package:repair_parts/moduls/buyer/home/controller/home_controller.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/message/controller/message_controller.dart';
 import 'package:html/parser.dart';
+import 'package:repair_parts/routes/app_pages.dart';
 class MessagePage extends StatelessWidget{
   MessageController _messageController = Get.find();
   bool? bottom;
@@ -707,7 +708,7 @@ class MessagePage extends StatelessWidget{
         )
     );
   }
-  Widget getRowChatMessage(RowsChat message){
+  Widget getRowChatMessage(RowsChat chat){
     return GestureDetector(
       child: Container(
           height: 100,
@@ -729,14 +730,14 @@ class MessagePage extends StatelessWidget{
           child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                message.members![0].user!.avatar!=null?Container(
+                chat.members![0].user!.avatar!=null?Container(
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
                       image: DecorationImage(
                           image: NetworkImage(
-                              "${message.members![0].user!.avatar}"
+                              "${chat.members![0].user!.avatar}"
                           ),fit: BoxFit.cover
                       )
                   ),
@@ -765,7 +766,7 @@ class MessagePage extends StatelessWidget{
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "${message.members![0].user!.lastname??""} ${message.members![0].user!.firstname??""}",
+                                  "${chat.members![0].user!.lastname??""} ${chat.members![0].user!.firstname??""}",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w700,
                                       fontSize: 16,
@@ -788,11 +789,11 @@ class MessagePage extends StatelessWidget{
                               ],
                             ),
                             Text(
-                              "${DateTime.parse("${message.lastMessageCreatedAt}").day>10
-                                  ?DateTime.parse("${message.lastMessageCreatedAt}").day
-                                  :"0"+DateTime.parse("${message.lastMessageCreatedAt}").day.toString()}."
-                                  "${DateTime.parse("${message.lastMessageCreatedAt}").month}."
-                                  "${DateTime.parse("${message.lastMessageCreatedAt}").year}",
+                              "${DateTime.parse("${chat.lastMessageCreatedAt}").day>10
+                                  ?DateTime.parse("${chat.lastMessageCreatedAt}").day
+                                  :"0"+DateTime.parse("${chat.lastMessageCreatedAt}").day.toString()}."
+                                  "${DateTime.parse("${chat.lastMessageCreatedAt}").month}."
+                                  "${DateTime.parse("${chat.lastMessageCreatedAt}").year}",
                               style: TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14,
@@ -808,10 +809,10 @@ class MessagePage extends StatelessWidget{
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            message.lastMessage!=null
-                                ?  getLatMessage(message.lastMessage!)
+                            chat.lastMessage!=null
+                                ?  getLatMessage(chat.lastMessage!)
                                 :getLatMessage(new LastMessage(text: "Ещё нет сообщений",files: [])),
-                            message.unreadMessagesCount==0?Container():Container(
+                            chat.unreadMessagesCount==0?Container():Container(
                               width: 24,
                               height: 24,
                               decoration: BoxDecoration(
@@ -820,7 +821,7 @@ class MessagePage extends StatelessWidget{
                               ),
                               child: Center(
                                 child: Text(
-                                  "${message.unreadMessagesCount}",
+                                  "${chat.unreadMessagesCount}",
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 13,
@@ -840,6 +841,7 @@ class MessagePage extends StatelessWidget{
           )
       ),
       onTap: (){
+        Get.toNamed(Routes.CHAT,arguments: chat.id);
       },
     );
   }

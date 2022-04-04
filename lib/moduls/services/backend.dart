@@ -6,13 +6,16 @@ import 'package:repair_parts/models/data_brand_auto.dart';
 import 'package:repair_parts/models/data_cart_products.dart';
 import 'package:repair_parts/models/data_catalog_product_search.dart';
 import 'package:repair_parts/models/data_chat.dart';
+import 'package:repair_parts/models/data_chat_by_id.dart';
 import 'package:repair_parts/models/data_companies.dart';
 import 'package:repair_parts/models/data_favorite.dart';
 import 'package:repair_parts/models/data_item_region.dart';
 import 'package:repair_parts/models/data_login.dart';
+import 'package:repair_parts/models/data_message_chat_by_id.dart';
 import 'package:repair_parts/models/data_notification.dart';
 import 'package:repair_parts/models/data_order_request.dart';
 import 'package:repair_parts/models/data_orders.dart';
+import 'package:repair_parts/models/data_product_by_id.dart';
 import 'package:repair_parts/models/data_profile.dart';
 import 'package:repair_parts/models/data_refund_exchange.dart';
 import 'package:repair_parts/models/data_regions.dart';
@@ -398,31 +401,6 @@ class Backend {
 
   ///user/list?role=seller&include[]=completedOrdersWithAuthUser
 
-  Future<DataChat?> getChatList()async{
-    GetStorage storage =GetStorage();
-    var token = storage.read("bearer_token");
-    dio.options=BaseOptions(
-        connectTimeout: 10000,
-
-        baseUrl: baseUrl,
-        headers: {
-          "Authorization":"Bearer "+token
-        }
-    );
-    var datas = await dio.get("/chat/list?limit=10");
-    print("getChatList${datas.data}");
-
-    if(datas.data!=null){
-      print("${datas.data}");
-      var dataChat=DataChat.fromJson(datas.data['data']);
-      this.dataChat=dataChat ;
-      return dataChat;
-    }else{
-      print("${datas.statusCode}");
-      return null;
-    }
-
-  }
   Future<DataNotofication?> getNotificationList()async{
     GetStorage storage =GetStorage();
     var token = storage.read("bearer_token");
@@ -495,7 +473,18 @@ class Backend {
     }
     //https://api.inf.market/catalog/products?page=2&autoType=dvigateli&autoBrand=cummins
   }
-
+  Future<DataProductById?> getDataProductById(id)async{
+    ///
+    var products = await dio.get("/catalog/products/$id?include[]=recommendedProducts&include[]=applicabilities&include[]=analogs");
+    print("/catalog/products/66281c37-e964-432b-813b-5b918b2e5320?include[]=recommendedProducts&include[]=applicabilities&include[]=analogs");
+    print("getDataProductById ${products.data}");
+    if(products!=null){
+      var dataCatalogProductByBrandAuto= DataProductById.fromJson(products.data['data']);
+      return dataCatalogProductByBrandAuto;
+    }else{
+      return null;
+    }
+  }
   Future<dynamic> addToFavoriteProduct(id)async{
     //user/favorite-products
     GetStorage storage =GetStorage();
@@ -607,6 +596,75 @@ class Backend {
     }
   }
 
+  Future<DataChat?> getChatList()async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
 
-///catalog/auto-brands?autoType=legkovye
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/chat/list?limit=10");
+    print("getChatList${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataChat=DataChat.fromJson(datas.data['data']);
+      this.dataChat=dataChat ;
+      return dataChat;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+  Future<DataChatById?> getChatById(id)async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/chat?chatId=$id");
+    print("getChatById${datas.data}");
+
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataChatById=DataChatById.fromJson(datas.data['data']);
+      return dataChatById;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+  }
+  Future<DataMessageChatById?> getChatMessageChatId(id)async{
+    GetStorage storage =GetStorage();
+    var token = storage.read("bearer_token");
+    dio.options=BaseOptions(
+        connectTimeout: 10000,
+        baseUrl: baseUrl,
+        headers: {
+          "Authorization":"Bearer "+token
+        }
+    );
+    var datas = await dio.get("/chat/message?chatId=$id&limit=10&offset=0");
+    print("getChatMessageChatId${datas.data}");
+    if(datas.data!=null){
+      print("${datas.data}");
+      var dataMessageChatById=DataMessageChatById.fromJson(datas.data['data']);
+      return dataMessageChatById;
+    }else{
+      print("${datas.statusCode}");
+      return null;
+    }
+
+  }
+
 }

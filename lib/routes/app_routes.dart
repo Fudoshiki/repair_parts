@@ -16,6 +16,7 @@ abstract class Routes {
   static const REGISTER = '/register';
   static const SETTINGS = '/settings';
   static const NOTIFICATION = '/notification';
+  static const CHAT = '/chat';
 
 
 }

@@ -1,32 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/models/data_product_by_id.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 class ProductController extends GetxController{
-  dynamic product={
-    "image":[
-      "DSC_0211 2.png",
-      "DSC_0211 2.png"
-    ],
-    "title":"Пружина распорная воздушного фильтра КАМАЗ",
-    "arcticul":"Артикул: 5320-1109359",
-    "brend":"Бренд: ХТЗ",
-    "added_backet":true,
-    "follow":true,
-    "description":"Пружина распорная фильтра воздушного КАМАЗ - ПАО КАМАЗ, артикул 5320-1109359 купить по низкой цене оптом с доставкой по всем регионам России с нашего склада в г. Набережные Челны.",
-    "height":"130",
-    "width":"130",
-    "length":"130",
-    "size":"0,4",
-  };
-  PageController pageController =new PageController();
-
+  DataProductById? dataProductById;
   var countIndex =0.obs;
+  BackendController backendController=Get.find();
+
+  PageController pageController =new PageController();
 
   @override
   void onInit() {
-
+   var id = Get.arguments;
+   print("$id");
+   getProductById(id);
   }
 
+  getProductById(id)async{
+    dataProductById=await backendController.backend.getDataProductById(id);
+    Get.forceAppUpdate();
+  }
   onPageChanged(i){
     countIndex.value=i;
     print(countIndex.value);

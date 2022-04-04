@@ -1,3 +1,5 @@
+import 'request_product.dart';
+
 class RefundExchangeRequest {
   String? id;
   int? idInt;
@@ -14,6 +16,9 @@ class RefundExchangeRequest {
   String? createdAt;
   String? updatedAt;
   dynamic deletedAt;
+  RequestProduct? requestProduct;
+  List<dynamic>? refundExchangeRequestFiles;
+  List<dynamic>? attachments;
 
   RefundExchangeRequest({
     this.id,
@@ -31,6 +36,9 @@ class RefundExchangeRequest {
     this.createdAt,
     this.updatedAt,
     this.deletedAt,
+    this.requestProduct,
+    this.refundExchangeRequestFiles,
+    this.attachments,
   });
 
   RefundExchangeRequest.fromJson(Map<String, dynamic> json) {
@@ -49,6 +57,9 @@ class RefundExchangeRequest {
     createdAt = json['createdAt'] as String?;
     updatedAt = json['updatedAt'] as String?;
     deletedAt = json['deletedAt'];
+    requestProduct = (json['requestProduct'] as Map<String,dynamic>?) != null ? RequestProduct.fromJson(json['requestProduct'] as Map<String,dynamic>) : null;
+    refundExchangeRequestFiles = json['refundExchangeRequestFiles'] as List?;
+    attachments = json['attachments'] as List?;
   }
 
   Map<String, dynamic> toJson() {
@@ -68,6 +79,9 @@ class RefundExchangeRequest {
     json['createdAt'] = createdAt;
     json['updatedAt'] = updatedAt;
     json['deletedAt'] = deletedAt;
+    json['requestProduct'] = requestProduct?.toJson();
+    json['refundExchangeRequestFiles'] = refundExchangeRequestFiles;
+    json['attachments'] = attachments;
     return json;
   }
 }

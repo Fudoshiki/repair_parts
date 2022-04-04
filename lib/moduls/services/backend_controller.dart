@@ -27,6 +27,7 @@ class BackendController extends GetxController {
     regionList= backend.listDataRegions;
     dataSellers=backend.listSellers;
     dataAutoTypes=backend.dataAutoTypes;
+    Get.forceAppUpdate();
   }
 
   @override

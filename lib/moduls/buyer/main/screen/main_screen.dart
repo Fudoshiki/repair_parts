@@ -47,10 +47,6 @@ class MainScreenState extends State<MainScreen>{
         children: [
           CatalogScreen(),
           SearchPage(),
-          ProductScreen(),
-          ChooseCategory(),
-          ChooseRegion(),
-          ChooseSeller(),
         ],
       ),
       profileController.dataOrders.count==0?NoOrderScreen():OrderScreen(),

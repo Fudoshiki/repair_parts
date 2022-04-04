@@ -1,20 +1,23 @@
+import 'dart:convert';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:repair_parts/components_main/loader.dart';
 import 'package:repair_parts/moduls/buyer/catalog/controller/catalog_controller.dart';
 import 'package:repair_parts/components_main/bottom_item.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/product/controller/product_controller.dart';
+import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
+import 'package:repair_parts/moduls/services/backend_controller.dart';
 
 class ProductScreen extends StatelessWidget{
-
-
   ProductController _productController = Get.put(ProductController());
-  CatalogController _catalogController = Get.find();
-  MainController _mainController =Get.find();
+  ProfileController profileController =Get.find();
+  BackendController backendController = Get.find();
   bool? bottom;
 
-  bool open=false;
+  MainController mainController =Get.find();
   ProductScreen({@required this.bottom});
   BottomNavigationItem _bottomNavigationitem = BottomNavigationItem();
 
@@ -22,8 +25,6 @@ class ProductScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: bottom!=null?         SizedBox(height: 70,
-
-
         child: CupertinoTabBar(
           border: Border(
             top: BorderSide(
@@ -71,21 +72,20 @@ class ProductScreen extends StatelessWidget{
       ):Container(
         height: 1,
       ),
-
       backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0,
           toolbarHeight: 0,
           backgroundColor: Colors.white,
         ),
-      body: Column(
+      body: _productController.dataProductById==null?Loader():Column(
         children: [
           Container(
             margin: EdgeInsets.only(
-              left: 20,
-              right: 20,
-              top: 10,
-              bottom: 10
+                left: 20,
+                right: 20,
+                top: 10,
+                bottom: 10
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -96,11 +96,7 @@ class ProductScreen extends StatelessWidget{
                     color: Color(0xff2E2E33),
                   ),
                   onTap: (){
-                    try{
-                      _mainController.controllerMainPage.jumpToPage(1);
-                    }catch(e){
-                      Get.back();
-                    }
+                    Get.back();
                   },
                 ),
                 GestureDetector(
@@ -110,15 +106,34 @@ class ProductScreen extends StatelessWidget{
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6),
                         border: Border.all(
-                            color: _productController.product!['follow']?Color(0xffE6332A):Color(0xffD6D6D6)
+                            color: profileController.dataProfile!.user!.favoriteProducts!.where((element){
+                              return element.productId==_productController.dataProductById!.product!.id;
+                            }).length!=0?Color(0xffE6332A):Color(0xffD6D6D6)
                         )
                     ),
                     child: Center(
-                      child: _productController.product['follow']?Image.asset('assets/image/start_act.png',height: 16,):Image.asset("assets/image/start.png",height: 16,),
+                      child: profileController.dataProfile!.user!.favoriteProducts!.where((element){
+                        return element.productId==_productController.dataProductById!.product!.id;
+                      }).length!=0?Image.asset('assets/image/start_act.png',height: 16,):Image.asset("assets/image/start.png",height: 16,),
                     ),
                   ),
-                  onTap: (){
-
+                  onTap: ()async{
+                    if(profileController.dataProfile!.user!.favoriteProducts!.where((element){
+                      return element.productId==_productController.dataProductById!.product!.id;
+                    }).length!=0){
+                      var data=await backendController.backend.deleteFavoriteProduct(_productController.dataProductById!.product!.id);
+                      if(data!=null){
+                        profileController.dataProfile=await backendController.backend.requestGetUser();
+                        Get.forceAppUpdate();
+                      }
+                    }else{
+                      var data=await backendController.backend.addToFavoriteProduct(_productController.dataProductById!.product!.id);
+                      if(data!=null){
+                        profileController.dataProfile=await backendController.backend.requestGetUser();
+                        Get.forceAppUpdate();
+                      }
+                      //addToFavoriteProduct
+                    }
                   },
                 )
               ],
@@ -127,56 +142,53 @@ class ProductScreen extends StatelessWidget{
           Expanded(
             child: ListView(
               children: [
-                _productController.product['image'].length!=0?Container(
+                // Preview
+                _productController.dataProductById!.product!.preview!=null?Container(
                   margin: EdgeInsets.only(
                     bottom: 26
                   ),
                   width: Get.width,
                   height: 280,
-                  child: PageView.builder(
-                    controller: _productController.pageController,
-                    onPageChanged: _productController.onPageChanged,
-                    itemCount: _productController.product['image'].length,
-                    itemBuilder: (c,i){
-                      return Image.asset("assets/image/${
-                          _productController.product['image'][i]
-                      }");
-                    },
-                  ),
-                ):Container(),
-                _productController.product['image'].length!=0?Obx(
-                    ()=>Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ...List.generate(_productController.product['image'].length,
-                                (el){
-                              return Container(
-                                margin: EdgeInsets.symmetric(
-                                    horizontal: 2
-                                ),
-                                width: 8,
-                                height: 8,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color:_productController.countIndex.value==el?Color(0xffE6332A):Color(0xffE7E7E7)
-                                ),
-                              );
-                            }
-                        )
-                      ],
-                    ),
-                ):Container(),
+                  child: Image.network("${_productController.dataProductById!.product!.preview}"),
+                ):Container( width: Get.width,
+                  height: 280,
+                child: Center(
+                  child: Image.asset("assets/image/no_image.png",height: 100,),
+                ),),
+                // _productController.dataProductById!.product!.preview!=null?Obx(
+                //     ()=>Row(
+                //       mainAxisAlignment: MainAxisAlignment.center,
+                //       children: [
+                //         ...List.generate(_productController.product['image'].length,
+                //                 (el){
+                //               return Container(
+                //                 margin: EdgeInsets.symmetric(
+                //                     horizontal: 2
+                //                 ),
+                //                 width: 8,
+                //                 height: 8,
+                //                 decoration: BoxDecoration(
+                //                     shape: BoxShape.circle,
+                //                     color:_productController.countIndex.value==el?Color(0xffE6332A):Color(0xffE7E7E7)
+                //                 ),
+                //               );
+                //             }
+                //         )
+                //       ],
+                //     ),
+                // ):Container(),
                 SizedBox(
                   height: 10,
                 ),
+                //Title
                 Container(
                   width: Get.width-140,
                   height: 40,
                   margin: EdgeInsets.symmetric(
-                    horizontal: 20
+                      horizontal: 20
                   ),
                   child: Text(
-                    "${_productController.product['title']}",
+                    "${_productController.dataProductById!.product!.name}",
                     style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 16,
@@ -185,16 +197,17 @@ class ProductScreen extends StatelessWidget{
                     ),
                   ),
                 ),
+                //Articul
                 Container(
                   padding: EdgeInsets.only(
-                    top: 15,
-                    bottom: 5
+                      top: 15,
+                      bottom: 5
                   ),
                   margin: EdgeInsets.symmetric(
                       horizontal: 20
                   ),
                   child: Text(
-                    "${_productController.product['arcticul']}",
+                    "Артикул: ${_productController.dataProductById!.product!.vendorCode}",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -203,13 +216,14 @@ class ProductScreen extends StatelessWidget{
                     ),
                   ),
                 ),
+                //Brand
                 Container(
                   margin: EdgeInsets.only(
-                      left: 20,
-                      right: 20,
+                    left: 20,
+                    right: 20,
                   ),
                   child: Text(
-                    "${_productController.product['brend']}",
+                    "Бренд: ${_productController.dataProductById!.product!.autoBrands!.map((e) => "${e.label} ").toString().split('(')[1].split(")")[0]}",
                     style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 12,
@@ -229,12 +243,13 @@ class ProductScreen extends StatelessWidget{
                   height: 1,
                   color: Color(0xffE7E7E7),
                 ),
+                //Description
                 Container(
                   padding: EdgeInsets.symmetric(
-                    horizontal: 20
+                      horizontal: 20
                   ),
                   margin: EdgeInsets.only(
-                    bottom: 16
+                      bottom: 16
                   ),
                   width: Get.width-40,
                   child: Column(
@@ -250,18 +265,19 @@ class ProductScreen extends StatelessWidget{
                         ),
                       ),
                       Text(
-                        "${_productController.product['description']}",
+                        "--//--",
                         style: TextStyle(
                             fontWeight: FontWeight.w400,
                             fontSize: 12,
                             color: Color(0xff2E2E33),
                             fontFamily: "Roboto",
-                          height: 1.7
+                            height: 1.7
                         ),
                       )
                     ],
                   ),
                 ),
+                //Options
                 Container(
                   padding: EdgeInsets.symmetric(
                       horizontal: 20
@@ -308,7 +324,7 @@ class ProductScreen extends StatelessWidget{
                                       ),
                                     ),
                                     Text(
-                                      "${_productController.product['length']}",
+                                      "${_productController.dataProductById!.product!.length!=null?"${_productController.dataProductById!.product!.length}":"-"}",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
@@ -332,7 +348,7 @@ class ProductScreen extends StatelessWidget{
                                       ),
                                     ),
                                     Text(
-                                      "${_productController.product['width']}",
+                                      "${_productController.dataProductById!.product!.width!=null?"${_productController.dataProductById!.product!.width}":"-"}",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
@@ -365,7 +381,7 @@ class ProductScreen extends StatelessWidget{
                                       ),
                                     ),
                                     Text(
-                                      "${_productController.product['height']}",
+                                      "${_productController.dataProductById!.product!.height!=null?"${_productController.dataProductById!.product!.height}":"-"}",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
@@ -389,7 +405,7 @@ class ProductScreen extends StatelessWidget{
                                       ),
                                     ),
                                     Text(
-                                      "${_productController.product['size']}",
+                                      "${_productController.dataProductById!.product!.weight!=null?"${_productController.dataProductById!.product!.weight}":"-"}",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
                                           fontSize: 12,
@@ -408,13 +424,15 @@ class ProductScreen extends StatelessWidget{
                     ],
                   ),
                 ),
+                //Recommended product
+
                 Container(
                   margin: EdgeInsets.only(
-                    top: 9,
-                    bottom: 19
+                      top: 9,
+                      bottom: 19
                   ),
                   padding: EdgeInsets.symmetric(
-                    horizontal: 20
+                      horizontal: 20
                   ),
                   child: Text(
                     "С этим товаром покупают",
@@ -428,35 +446,41 @@ class ProductScreen extends StatelessWidget{
                 ),
                 Container(
                   width: Get.width,
-                  height: 180,
+                  height: 155,
                   margin: EdgeInsets.only(
-                    bottom: 11
+                      bottom: 11
                   ),
                   child: ListView.builder(
+                    padding: EdgeInsets.only(top: 0),
                     scrollDirection: Axis.horizontal,
-                    itemCount: _catalogController.array.length,
+                    itemCount: _productController.dataProductById!.recommendedProducts!.length,
                     itemBuilder: (c,i){
                       return Container(
                         width: 93,
                         margin: EdgeInsets.only(
-                          left: 20
+                            left: 20
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                              width: 93,
-                              height: 100,
-                              padding: EdgeInsets.all(20),
-                              child: Image.asset("assets/image/no_image.png"),
-                            ),
+                           Container(
+                             width:93,
+                             height: 100,
+                             child:  Center(
+                               child: Container(
+                                 width: 50,
+                                 height: 50,
+                                 child: Image.asset("assets/image/no_image.png",height: 40,width: 40,),
+                               ),
+                             ),
+                           ),
                             SizedBox(
                               height: 8,
                             ),
                             Container(
                               height: 35,
                               child: Text(
-                                  "${_catalogController.array[i]['title']}",
+                                "${_productController.dataProductById!.recommendedProducts![i].name}",
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 2,
                                 style: TextStyle(
@@ -468,7 +492,7 @@ class ProductScreen extends StatelessWidget{
                               ),
                             ),
                             Text(
-                                "${_catalogController.array[i]['arcticul']}",
+                              "${_productController.dataProductById!.recommendedProducts![i].vendorCode}",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 10,
@@ -492,7 +516,9 @@ class ProductScreen extends StatelessWidget{
               height: 50,
               width: Get.width-40,
               decoration: BoxDecoration(
-                  color: !open?Colors.white:Color(0xffE6332A),
+                  color: profileController.dataProfile!.user!.cartProducts!.where((element){
+                    return element.productId==_productController.dataProductById!.product!.id;
+                  }).length!=0?Colors.white:Color(0xffE6332A),
                   borderRadius: BorderRadius.circular(6),
                   border: Border.all(
                       color: Color(0xffE6332A),
@@ -501,19 +527,47 @@ class ProductScreen extends StatelessWidget{
               ),
               child: Center(
                 child: Text(
-                  open?"Добавить в корзину":"Перейти в корзину",
+                  profileController.dataProfile!.user!.cartProducts!.where((element){
+                    return element.productId==_productController.dataProductById!.product!.id;
+                  }).length!=0?"Перейти в корзину":"Добавить в корзину",
                   style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
-                      color: !open?Color(0xffE6332A):Colors.white,
+                      color: profileController.dataProfile!.user!.cartProducts!.where((element){
+                        return element.productId==_productController.dataProductById!.product!.id;
+                      }).length!=0?Color(0xffE6332A):Colors.white,
                       fontFamily: "Roboto"
                   ),
                 ),
               ),
             ),
-            onTap: (){
-              open=!open;
-              Get.forceAppUpdate();
+            onTap: ()async{
+              if(profileController.dataProfile!.user!.cartProducts!.where((element){
+                return element.productId==_productController.dataProductById!.product!.id;
+              }).length!=0){
+                // var data=await backendController.backend.deleteCartProduct(product.id);
+                // if(data!=null){
+                //   _profileController.dataProfile=await backendController.backend.requestGetUser();
+                //   Get.forceAppUpdate();
+                // }
+                Get.back();
+                mainController.onIndexChanged(2);
+              }else{
+                var data=await backendController.backend.addToCartProduct(_productController.dataProductById!.product!.id);
+                if(data!=null){
+                  profileController.dataProfile=await backendController.backend.requestGetUser();
+                  List prod=[];
+                  profileController.dataProfile!.user!.cartProducts!.forEach((e) {
+                    print("productswwwwww${e.id}+,");
+                    prod.add(jsonEncode(e.toJson()));
+                  });
+                  await backendController.backend.getProductCartProducts(prod);
+                  profileController.dataCartProducts=backendController.backend.dataCartProducts;
+
+                  Get.forceAppUpdate();
+                }
+                //addToFavoriteProduct
+              }
             },
           )
         ],

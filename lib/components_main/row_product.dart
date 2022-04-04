@@ -7,6 +7,7 @@ import 'package:repair_parts/models/rows_products.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
 import 'package:repair_parts/moduls/buyer/profile/controller/profile_controller.dart';
 import 'package:repair_parts/moduls/services/backend_controller.dart';
+import 'package:repair_parts/routes/app_pages.dart';
 
 class RowProduct extends StatelessWidget{
   RowsProducts product;
@@ -38,7 +39,7 @@ class RowProduct extends StatelessWidget{
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            product.preview!=null?
+            product.preview==null?
             Container(
               width: 80,
               height: 100,
@@ -229,7 +230,7 @@ class RowProduct extends StatelessWidget{
         ),
       ),
       onTap: (){
-        Get.forceAppUpdate();
+        Get.toNamed(Routes.PRODUCT,arguments: product.id);
       },
     );
   }

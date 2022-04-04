@@ -1,6 +1,8 @@
 import 'package:get/get.dart';
 import 'package:repair_parts/moduls/buyer/backet/binding/backet_binding.dart';
 import 'package:repair_parts/moduls/buyer/backet/screen/no_product_in_backet_screen.dart';
+import 'package:repair_parts/moduls/buyer/chat/binding/chat_binding.dart';
+import 'package:repair_parts/moduls/buyer/chat/screen/chat_with_seller.dart';
 import 'package:repair_parts/moduls/buyer/message/binding/message_binding.dart';
 import 'package:repair_parts/moduls/buyer/message/screen/message_screen.dart';
 import 'package:repair_parts/moduls/buyer/orders/binding/order_binding.dart';
@@ -55,7 +57,7 @@ class AppPages {
       ),
       GetPage(
         name: Routes.PRODUCT,
-        page: () => ProductScreen(),
+        page: () => ProductScreen(bottom: true,),
         binding: ProductBinding(),
       ),
       GetPage(
@@ -72,6 +74,11 @@ class AppPages {
         name: Routes.MESSAGE,
         page: () => MessageScreen(),
         binding: MessageBinding(),
+      ),
+      GetPage(
+        name: Routes.CHAT,
+        page: () => ChatWithSeller(),
+        binding: ChatBinding(),
       ),
     ];
   }

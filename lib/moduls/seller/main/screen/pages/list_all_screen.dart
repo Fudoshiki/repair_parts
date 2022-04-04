@@ -81,7 +81,6 @@ import 'package:repair_parts/moduls/seller/profile/screen/register_oop_inn/regis
 import 'package:repair_parts/moduls/seller/profile/screen/rewards_calculator.dart';
 import 'package:repair_parts/moduls/seller/profile/screen/search_track_number.dart';
 
-import '../../../product_seller_screen.dart';
 
 class ListAllScreenSeller extends StatelessWidget{
 
@@ -1183,7 +1182,6 @@ class ListAllScreenSeller extends StatelessWidget{
                 )
             ),
             onTap:(){
-              Get.to(()=>ProductScreenSeller2(bottom: true,));
             },
           ),
           //14a

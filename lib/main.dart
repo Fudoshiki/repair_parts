@@ -43,10 +43,7 @@ void main() async {
     permanent: true,
   );
 
-  Get.put<ProductController>(
-    ProductController(),
-    permanent: true,
-  );
+
   Get.put<CatalogController>(
     CatalogController(),
     permanent: true,
@@ -57,7 +54,7 @@ void main() async {
     ConnectivityAppWrapper(
       app: GetMaterialApp(
         smartManagement: SmartManagement.full,
-        debugShowCheckedModeBanner: false,
+        debugShowCheckedModeBanner: true,
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

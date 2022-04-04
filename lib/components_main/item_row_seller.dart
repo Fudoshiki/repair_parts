@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:repair_parts/moduls/buyer/main/controller/main_controller.dart';
-import 'package:repair_parts/moduls/seller/main/screen/pages/product_screen_seller.dart';
 
 class ItemRowSeller extends StatelessWidget{
   dynamic el;
@@ -107,7 +106,6 @@ class ItemRowSeller extends StatelessWidget{
         ),
       ),
       onTap: (){
-        Get.to(()=>ProductScreenSeller(bottom: true,));
       },
     );
   }

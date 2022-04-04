@@ -1,44 +1,41 @@
-import 'files.dart';
+import 'members.dart';
 
-class LastMessage {
+class DataChatById {
   String? id;
   int? idInt;
   String? authorId;
-  String? chatId;
-  dynamic text;
-  bool? isUnread;
-  dynamic params;
+  dynamic name;
+  int? type;
+  String? lastMessageCreatedAt;
   String? createdAt;
   String? updatedAt;
   dynamic deletedAt;
-  List<Files>? files;
+  List<Members>? members;
 
-  LastMessage({
+  DataChatById({
     this.id,
     this.idInt,
     this.authorId,
-    this.chatId,
-    this.text,
-    this.isUnread,
-    this.params,
+    this.name,
+    this.type,
+    this.lastMessageCreatedAt,
     this.createdAt,
     this.updatedAt,
     this.deletedAt,
-    this.files,
+    this.members,
   });
 
-  LastMessage.fromJson(Map<String, dynamic> json) {
+  DataChatById.fromJson(Map<String, dynamic> json) {
     id = json['id'] as String?;
     idInt = json['idInt'] as int?;
     authorId = json['authorId'] as String?;
-    chatId = json['chatId'] as String?;
-    text = json['text'];
-    isUnread = json['isUnread'] as bool?;
-    params = json['params'];
+    name = json['name'];
+    type = json['type'] as int?;
+    lastMessageCreatedAt = json['lastMessageCreatedAt'] as String?;
     createdAt = json['createdAt'] as String?;
     updatedAt = json['updatedAt'] as String?;
     deletedAt = json['deletedAt'];
-    files = (json['files'] as List?)?.map((dynamic e) => Files.fromJson(e['file'] as Map<String,dynamic>)).toList();
+    members = (json['members'] as List?)?.map((dynamic e) => Members.fromJson(e as Map<String,dynamic>)).toList();
   }
 
   Map<String, dynamic> toJson() {
@@ -46,15 +43,13 @@ class LastMessage {
     json['id'] = id;
     json['idInt'] = idInt;
     json['authorId'] = authorId;
-    json['chatId'] = chatId;
-    json['text'] = text;
-    json['isUnread'] = isUnread;
-    json['params'] = params;
+    json['name'] = name;
+    json['type'] = type;
+    json['lastMessageCreatedAt'] = lastMessageCreatedAt;
     json['createdAt'] = createdAt;
     json['updatedAt'] = updatedAt;
     json['deletedAt'] = deletedAt;
-    json['files'] = files?.map((e) => e.toJson()).toList();
+    json['members'] = members?.map((e) => e.toJson()).toList();
     return json;
   }
 }
-

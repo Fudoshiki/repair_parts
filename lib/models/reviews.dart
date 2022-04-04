@@ -1,41 +1,36 @@
-
-
-class Files {
+class Reviews {
   String? id;
   int? idInt;
-  dynamic userId;
-  String? name;
-  String? ext;
-  int? size;
-  String? path;
-  int? duration;
+  String? receiverId;
+  String? authorId;
+  String? orderId;
+  int? rating;
+  dynamic text;
   String? createdAt;
   String? updatedAt;
   dynamic deletedAt;
 
-  Files({
+  Reviews({
     this.id,
     this.idInt,
-    this.userId,
-    this.name,
-    this.ext,
-    this.size,
-    this.path,
-    this.duration,
+    this.receiverId,
+    this.authorId,
+    this.orderId,
+    this.rating,
+    this.text,
     this.createdAt,
     this.updatedAt,
     this.deletedAt,
   });
 
-  Files.fromJson(Map<String, dynamic> json) {
+  Reviews.fromJson(Map<String, dynamic> json) {
     id = json['id'] as String?;
     idInt = json['idInt'] as int?;
-    userId = json['userId'];
-    name = json['name'] as String?;
-    ext = json['ext'] as String?;
-    size = json['size'] as int?;
-    path = json['path'] as String?;
-    duration = json['duration'] as int?;
+    receiverId = json['receiverId'] as String?;
+    authorId = json['authorId'] as String?;
+    orderId = json['orderId'] as String?;
+    rating = json['rating'] as int?;
+    text = json['text'];
     createdAt = json['createdAt'] as String?;
     updatedAt = json['updatedAt'] as String?;
     deletedAt = json['deletedAt'];
@@ -45,12 +40,11 @@ class Files {
     final Map<String, dynamic> json = <String, dynamic>{};
     json['id'] = id;
     json['idInt'] = idInt;
-    json['userId'] = userId;
-    json['name'] = name;
-    json['ext'] = ext;
-    json['size'] = size;
-    json['path'] = path;
-    json['duration'] = duration;
+    json['receiverId'] = receiverId;
+    json['authorId'] = authorId;
+    json['orderId'] = orderId;
+    json['rating'] = rating;
+    json['text'] = text;
     json['createdAt'] = createdAt;
     json['updatedAt'] = updatedAt;
     json['deletedAt'] = deletedAt;
