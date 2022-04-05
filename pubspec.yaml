@@ -18,17 +18,17 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   get:
   dio:
-  http: 0.13.3
+  http:
   flutter_swiper:
   flutter_tags:
   get_storage:
-  flutter_svg: 0.23.0
+  flutter_svg:
   shimmer:
-  json_to_model: 3.0.3
+  json_to_model:
   build_runner:
   json_annotation:
   connectivity_wrapper:
-  cupertino_icons: ^1.0.2
+  cupertino_icons:
   dotted_border:
   flutter_google_places:
   image_picker:
@@ -55,4 +55,3 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
-
